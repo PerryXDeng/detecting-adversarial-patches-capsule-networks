@@ -30,16 +30,23 @@ flags.DEFINE_integer('epoch', 100, 'epoch')
 flags.DEFINE_integer('iter_routing', 2, 'number of iterations')
 flags.DEFINE_float('epsilon', 1e-9, 'epsilon')
 flags.DEFINE_float('lrn_rate', 3e-3, 'learning rate to use in Adam optimiser')
-flags.DEFINE_float('val_prop', 0.1, 
-                   'proportion of test dataset to use for validation')
-flags.DEFINE_boolean('weight_reg', False, 
+flags.DEFINE_boolean('weight_reg', False,
                      'train with regularization of weights')
+flags.DEFINE_float('nn_weight_reg_lambda', 2e-7, '''lagrange multiplier for
+                   l2 weight regularization constraint of non-capsule weights''')
+flags.DEFINE_float('capsule_weight_reg_lambda', 0, '''lagrange multiplier for
+                    l2 weight regularization constraint of capsule weights''')
+flags.DEFINE_float('recon_loss_lambda', 1, '''lagrange multiplier for
+                   reconstruction loss constraint''')
 flags.DEFINE_string('norm', 'norm2', 'norm type')
-flags.DEFINE_float('final_lambda', 0.01, 'final lambda in EM routing')
+flags.DEFINE_float('final_temp', 0.01, '''final temperature used in
+                   EM routing activations''')
 flags.DEFINE_boolean('affine_voting', True, '''whether to use affine instead
                      of linear transformations to calculate votes''')
-flags.DEFINE_float('drop_rate', 0.5, 'proportion of routes dropped')
-
+flags.DEFINE_float('drop_rate', 0.5, 'proportion of routes or capsules dropped')
+flags.DEFINE_boolean('dropout', False, '''whether to apply dropout''')
+flags.DEFINE_boolean('dropconnect', False, '''whether to apply dropconnect''')
+flags.DEFINE_boolean('dropout_extra', False, '''whether to apply extra dropout''')
 #------------------------------------------------------------------------------
 # ARCHITECTURE PARAMETERS
 #------------------------------------------------------------------------------
@@ -50,8 +57,42 @@ flags.DEFINE_integer('A', 64, 'number of channels in output from ReLU Conv1')
 flags.DEFINE_integer('B', 8, 'number of capsules in output from PrimaryCaps')
 flags.DEFINE_integer('C', 16, 'number of channels in output from ConvCaps1')
 flags.DEFINE_integer('D', 16, 'number of channels in output from ConvCaps2')
+flags.DEFINE_boolean('deeper', False, '''whether or not to go deeper''')
+flags.DEFINE_boolean('rescap', False, '''whether or not to go deeper with residual
+                      capsule routing''')
+flags.DEFINE_integer('E', 8, 'number of channels in output from ConvCaps3')
+flags.DEFINE_integer('F', 16, 'number of channels in output from ConvCaps4')
+flags.DEFINE_integer('G', 16, 'number of channels in output from ConvCaps5')
+flags.DEFINE_boolean('recon_loss', False, '''whether to apply reconstruction
+                     loss''')
+flags.DEFINE_integer('num_bg_classes', 0, '''number of background
+                      classes for decoder''')
+flags.DEFINE_integer('X', 512, 'number of neurons in reconstructive layer 1')
+flags.DEFINE_integer('Y', 1024, 'number of neurons in reconstructive layer 2')
+flags.DEFINE_boolean('zeroed_bg_reconstruction', False, '''whether to return
+                      counter factual reconstruction output on zeroed bg''')
+#------------------------------------------------------------------------------
+# ADVERSARIAL PATCH PARAMETERS
+#------------------------------------------------------------------------------
+# also modify recon_loss and recon_loss_lambda to adjust patch optimization parameters
+flags.DEFINE_boolean('new_patch', False, '''whether to start training a new patch from ckpt,
+                                         which excludes restoring of certain variables''')
+flags.DEFINE_float('max_rotation', 22.5, '''max degree of rotation in random
+                                         patch transformations''')
+# train scale values from https://github.com/tensorflow/cleverhans/blob/master/examples/adversarial_patch/AdversarialPatch.ipynb
+flags.DEFINE_float('scale_min', 0.3, '''patch scaling minimum''')
+flags.DEFINE_float('scale_max', 1.5, '''patch scaling maximum''')
+flags.DEFINE_integer('target_class', 0, '''the targeted class for adversarial patch''')
+flags.DEFINE_boolean('carliniwagner', True, '''whether to use carlini's adversarial loss''')
+flags.DEFINE_float('adv_conf_thres', 20, '''logit confidence of the adversarial example,
+                                            default to 20 per C&W 17 for best transferability''')
 
-
+# for sampling reconstruction losses
+flags.DEFINE_boolean('adv_patch', True, '''whether to sample reconstruction losses with
+                                        adversarial patch at different scales''')
+flags.DEFINE_boolean('save_patch', False, '''whether to save the patch''')
+flags.DEFINE_string('partition', "train", '''dataset partition to sample reconstruction losses from''')
+flags.DEFINE_string('patch_path', None, '''filepath of the patch to be loaded''')
 #------------------------------------------------------------------------------
 # ENVIRONMENT SETTINGS
 #------------------------------------------------------------------------------
@@ -167,7 +208,7 @@ def load_or_save_hyperparams(train_dir=None):
     logger.info("Loaded parameters from file: {}".format(params_path))
 
   # Save parameters to file
-  elif FLAGS.mode == 'train': 
+  if FLAGS.mode == 'train' and train_dir is not None: 
     params_dir_path = os.path.join(train_dir, "params")
     os.makedirs(params_dir_path, exist_ok=True)
     params_file_path = os.path.join(params_dir_path, "params.json")
@@ -232,27 +273,36 @@ from data_pipelines import mnist as data_mnist
 from data_pipelines import cifar10 as data_cifar10
 def get_create_inputs(dataset_name: str, mode="train"):
   
+  force_train_set = False
   if mode == "train":
     is_train = True
   else:
     # for dataset pipelines that don't have validation set up
     is_train = False
-    
+    if mode == "train_whole":
+      force_train_set = True
+   
   path = get_dataset_path(dataset_name)
   
   options = {'smallNORB':
-                 lambda: data_norb.create_inputs_norb(path, is_train),
+                 lambda: data_norb.create_inputs_norb(path, is_train, force_train_set),
              'mnist':
-                 lambda: data_mnist.create_inputs(is_train),
+                 lambda: data_mnist.create_inputs(is_train, force_train_set),
              'cifar10':
-                 lambda: data_cifar10.create_inputs(is_train)}
+                 lambda: data_cifar10.create_inputs(is_train, force_train_set)}
   return options[dataset_name]
 
 
 import models as mod
 def get_dataset_architecture(dataset_name: str):
-  options = {'smallNORB': mod.build_arch_smallnorb,
-             'baseline': mod.build_arch_baseline,
-             'mnist': mod.build_arch_smallnorb,
-             'cifar10': mod.build_arch_smallnorb}
-  return options[dataset_name]
+  # options = {'smallNORB': mod.build_arch_smallnorb,
+  #            'baseline': mod.build_arch_baseline,
+  #            'mnist': mod.build_arch_smallnorb,
+  #            'cifar10': mod.build_arch_smallnorb}
+  # return options[dataset_name]
+  if FLAGS.deeper == True:
+    return mod.build_arch_deepcap
+  if FLAGS.rescap == True:
+    return mod.build_arch_rescap
+  return mod.build_arch_smallnorb 
+
