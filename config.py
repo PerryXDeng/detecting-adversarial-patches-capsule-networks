@@ -33,14 +33,14 @@ flags.DEFINE_float('lrn_rate', 3e-3, 'learning rate to use in Adam optimiser')
 flags.DEFINE_boolean('weight_reg', False,
                      'train with regularization of weights')
 flags.DEFINE_float('nn_weight_reg_lambda', 2e-7, '''lagrange multiplier for
-                   l2 weight regularization constraint of non-capsule weights''')
+                    l2 weight regularization constraint of non-capsule weights''')
 flags.DEFINE_float('capsule_weight_reg_lambda', 0, '''lagrange multiplier for
                     l2 weight regularization constraint of capsule weights''')
 flags.DEFINE_float('recon_loss_lambda', 1, '''lagrange multiplier for
-                   reconstruction loss constraint''')
+                    reconstruction loss constraint''')
 flags.DEFINE_string('norm', 'norm2', 'norm type')
 flags.DEFINE_float('final_temp', 0.01, '''final temperature used in
-                   EM routing activations''')
+                    EM routing activations''')
 flags.DEFINE_boolean('affine_voting', True, '''whether to use affine instead
                      of linear transformations to calculate votes''')
 flags.DEFINE_float('drop_rate', 0.5, 'proportion of routes or capsules dropped')
@@ -51,20 +51,24 @@ flags.DEFINE_boolean('dropout_extra', False, '''whether to apply extra dropout''
 # ARCHITECTURE PARAMETERS
 #------------------------------------------------------------------------------
 flags.DEFINE_string('dataset', 'smallNORB',
-                    '''dataset name: currently only "smallNORB, mnist, and
-                    cifar10" supported, feel free to add your own''')
+                    '''dataset name: currently only "smallNORB, mnist,
+                     cifar10, svhn, and imagenet64" supported,
+                     feel free to add your own''')
 flags.DEFINE_integer('A', 64, 'number of channels in output from ReLU Conv1')
 flags.DEFINE_integer('B', 8, 'number of capsules in output from PrimaryCaps')
 flags.DEFINE_integer('C', 16, 'number of channels in output from ConvCaps1')
 flags.DEFINE_integer('D', 16, 'number of channels in output from ConvCaps2')
 flags.DEFINE_boolean('deeper', False, '''whether or not to go deeper''')
-flags.DEFINE_boolean('rescap', False, '''whether or not to go deeper with residual
-                      capsule routing''')
+flags.DEFINE_boolean('rescap', False, '''whether or not to add residual
+                      capsule routes to the final class layer''') # not supported yet
 flags.DEFINE_integer('E', 8, 'number of channels in output from ConvCaps3')
 flags.DEFINE_integer('F', 16, 'number of channels in output from ConvCaps4')
 flags.DEFINE_integer('G', 16, 'number of channels in output from ConvCaps5')
 flags.DEFINE_boolean('recon_loss', False, '''whether to apply reconstruction
-                     loss''')
+                      loss''')
+flags.DEFINE_boolean('multi_weighted_pred_recon', False, '''whether to use multiple
+                      weighted predicted classes instead of single label for decoder
+                      input''')
 flags.DEFINE_integer('num_bg_classes', 0, '''number of background
                       classes for decoder''')
 flags.DEFINE_integer('X', 512, 'number of neurons in reconstructive layer 1')
@@ -75,6 +79,8 @@ flags.DEFINE_boolean('zeroed_bg_reconstruction', False, '''whether to return
 # ADVERSARIAL PATCH PARAMETERS
 #------------------------------------------------------------------------------
 # also modify recon_loss and recon_loss_lambda to adjust patch optimization parameters
+flags.DEFINE_boolean('train_on_test', True, '''whether to train patch on the test dataset
+                                           for stronger performance''')
 flags.DEFINE_boolean('new_patch', False, '''whether to start training a new patch from ckpt,
                                          which excludes restoring of certain variables''')
 flags.DEFINE_float('max_rotation', 22.5, '''max degree of rotation in random
@@ -227,7 +233,9 @@ def get_dataset_path(dataset_name: str):
   # those are actually saved under ~/tensorflow_datasets/
   options = {'smallNORB': 'data/smallNORB/tfrecord',
              'mnist': '',
-             'cifar10': ''}
+             'cifar10': '',
+             'svhn': '',
+             'imagenet64': ''}
   path = FLAGS.storage + options[dataset_name]
   return path
 
@@ -237,25 +245,30 @@ def get_dataset_size_train(dataset_name: str):
              'smallNORB': 23400 * 2,
              'fashion_mnist': 55000, 
              'cifar10': 50000, 
-             'cifar100': 50000}
+             'cifar100': 50000,
+             'svhn': 73257,
+             'imagenet64': 1281167}
   return options[dataset_name]
 
 
 def get_dataset_size_test(dataset_name: str):
+  if dataset_name is 'imagenet64':
+    logger.info("%s pipeline is not set up for testing, using validation set for testing instead"%dataset_name)
+    return get_dataset_size_validate(dataset_name)
   options = {'mnist': 10000, 
              'smallNORB': 23400 * 2,
              'fashion_mnist': 10000, 
              'cifar10': 10000, 
-             'cifar100': 10000}
+             'cifar100': 10000,
+             'svhn': 26032}
   return options[dataset_name]
 
 
 def get_dataset_size_validate(dataset_name: str):
-  if dataset_name is 'smallNORB' or dataset_name is 'mnist':
-    print("%s pipeline is not set up for validation, using test set for validation instead")
-  options = {'smallNORB': get_dataset_size_test(dataset_name),
-             'mnist': get_dataset_size_test(dataset_name),
-             'cifar10': get_dataset_size_test(dataset_name)}
+  if dataset_name == 'smallNORB' or dataset_name == 'mnist' or dataset_name == 'cifar10' or dataset_name == 'svhn':
+    logger.info("%s pipeline is not set up for validation, using test set for validation instead"%dataset_name)
+    return get_dataset_size_test(dataset_name)
+  options = {'imagenet64': 50000}
   return options[dataset_name]
 
 
@@ -264,32 +277,42 @@ def get_num_classes(dataset_name: str):
              'smallNORB': 5, 
              'fashion_mnist': 10, 
              'cifar10': 10, 
-             'cifar100': 100}
+             'cifar100': 100,
+             'svhn': 10,
+             'imagenet64': 1000}
   return options[dataset_name]
 
 
 from data_pipelines import norb as data_norb
 from data_pipelines import mnist as data_mnist
 from data_pipelines import cifar10 as data_cifar10
+from data_pipelines import svhn as data_svhn
+from data_pipelines import imagenet64 as data_imagenet64
 def get_create_inputs(dataset_name: str, mode="train"):
   
-  force_train_set = False
+  force_set = None
   if mode == "train":
     is_train = True
   else:
     # for dataset pipelines that don't have validation set up
     is_train = False
-    if mode == "train_whole":
-      force_train_set = True
+  if mode == "train_whole":
+    force_set = "train"
+  elif mode == "train_on_test":
+    force_set = "test"
    
   path = get_dataset_path(dataset_name)
   
   options = {'smallNORB':
-                 lambda: data_norb.create_inputs_norb(path, is_train, force_train_set),
+                 lambda: data_norb.create_inputs_norb(path, is_train, force_set),
              'mnist':
-                 lambda: data_mnist.create_inputs(is_train, force_train_set),
+                 lambda: data_mnist.create_inputs(is_train, force_set),
              'cifar10':
-                 lambda: data_cifar10.create_inputs(is_train, force_train_set)}
+                 lambda: data_cifar10.create_inputs(is_train, force_set),
+             'svhn':
+                 lambda: data_svhn.create_inputs(is_train, force_set),
+             'imagenet64':
+                 lambda: data_imagenet64.create_inputs(is_train, force_set)}
   return options[dataset_name]
 
 
@@ -300,9 +323,7 @@ def get_dataset_architecture(dataset_name: str):
   #            'mnist': mod.build_arch_smallnorb,
   #            'cifar10': mod.build_arch_smallnorb}
   # return options[dataset_name]
-  if FLAGS.deeper == True:
+  if FLAGS.deeper:
     return mod.build_arch_deepcap
-  if FLAGS.rescap == True:
-    return mod.build_arch_rescap
   return mod.build_arch_smallnorb 
 
