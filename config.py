@@ -284,7 +284,7 @@ from data_pipelines import norb as data_norb
 from data_pipelines import mnist as data_mnist
 from data_pipelines import cifar10 as data_cifar10
 from data_pipelines import svhn as data_svhn
-from data_pipelines import imagenet64 as data_imagenet64
+from data_pipelines import imagenet56 as data_imagenet64
 def get_create_inputs(dataset_name: str, mode="train"):
   
   force_set = None
@@ -308,8 +308,8 @@ def get_create_inputs(dataset_name: str, mode="train"):
                  lambda: data_cifar10.create_inputs(is_train, force_set),
              'svhn':
                  lambda: data_svhn.create_inputs(is_train, force_set),
-             'imagenet64':
-                 lambda: data_imagenet64.create_inputs(is_train, force_set)}
+             'imagenet56':
+                 lambda: data_imagenet56.create_inputs(is_train, force_set)}
   return options[dataset_name]
 
 
