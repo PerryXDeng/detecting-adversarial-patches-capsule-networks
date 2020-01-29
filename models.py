@@ -112,10 +112,6 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
       tf.summary.histogram("activation", activation)
        
     #----- Conv Caps 1 -----#
-    # activation_in: (64, 7, 7, 8, 1) 
-    # pose_in: (64, 7, 7, 16, 16) 
-    # activation_out: (64, 5, 5, 32, 1)
-    # pose_out: (64, 5, 5, 32, 16)
     activation, pose = lyr.conv_caps(
         activation_in = activation,
         pose_in = pose,
@@ -129,10 +125,6 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
         affine_voting = FLAGS.affine_voting)
     
     #----- Conv Caps 2 -----#
-    # activation_in: (64, 7, 7, 8, 1) 
-    # pose_in: (64, 7, 7, 16, 1) 
-    # activation_out: (64, 5, 5, 32, 1)
-    # pose_out: (64, 5, 5, 32, 16)
     activation, pose = lyr.conv_caps(
         activation_in = activation, 
         pose_in = pose, 
@@ -145,12 +137,36 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
         dropout = FLAGS.dropout if is_train else False,
         dropconnect = FLAGS.dropconnect if is_train else False,
         affine_voting = FLAGS.affine_voting)
+
+    #----- Conv Caps 3 -----#
+    # not part of Hintin's architecture
+    if FLAGS.E > 0:
+      activation, pose = lyr.conv_caps(
+          activation_in = mid_activation,
+          pose_in = mid_pose,
+          kernel = 3,
+          stride = 1,
+          ncaps_out = FLAGS.E,
+          name = 'lyr.conv_caps3',
+          dropout = FLAGS.dropout_extra if is_train else False,
+          weights_regularizer = capsule_weights_regularizer,
+          affine_voting = FLAGS.affine_voting)
+    
+    #----- Conv Caps 4 -----#
+    if FLAGS.F > 0:
+      activation, pose = lyr.conv_caps(
+          activation_in = activation, 
+          pose_in = pose,
+          kernel = 3,
+          stride = 1,
+          ncaps_out = FLAGS.F, 
+          name = 'lyr.conv_caps4',
+          weights_regularizer = capsule_weights_regularizer,
+          dropout = FLAGS.dropout if is_train else False,
+          share_class_kernel=False,
+          affine_voting = FLAGS.affine_voting)
     
     #----- Class Caps -----#
-    # activation_in: (64, 5, 5, 32, 1)
-    # pose_in: (64, 5, 5, 32, 16)
-    # activation_out: (64, 5)
-    # pose_out: (64, 5, 16) 
     class_activation_out, class_pose_out = lyr.fc_caps(
         activation_in = activation,
         pose_in = pose,
@@ -363,37 +379,7 @@ def build_arch_deepcap(inp, is_train: bool, num_classes: int, y=None):
         share_class_kernel=True,
         affine_voting = FLAGS.affine_voting)
     
-    #----- Conv Caps 4 -----#
-    # activation_in: (bs, 5, 5, E, 1) 
-    # pose_in: (bs, 5, 5, E, 1) 
-    # activation_out: (bs, 5, 5, F, 1)
-    # pose_out: (bs, 5, 5, F, 16)
-    activation, pose = lyr.conv_caps(
-        activation_in = mid_activation,
-        pose_in = mid_pose,
-        kernel = 1, 
-        stride = 1, 
-        ncaps_out = FLAGS.F,
-        name = 'lyr.conv_caps4',
-        weights_regularizer = capsule_weights_regularizer,
-        affine_voting = FLAGS.affine_voting)
-    
-    #----- Conv Caps 5 -----#
-    # activation_in: (bs, 5, 5, C, 1) 
-    # pose_in: (bs, 5, 5, C, 1) 
-    # activation_out: (bs, 3, 3, D, 1)
-    # pose_out: (bs, 3, 3, D, 16)
-    activation, pose = lyr.conv_caps(
-        activation_in = activation, 
-        pose_in = pose,
-        kernel = 3,
-        stride = 1,
-        ncaps_out = FLAGS.G, 
-        name = 'lyr.conv_caps5',
-        weights_regularizer = capsule_weights_regularizer,
-        share_class_kernel=False,
-        affine_voting = FLAGS.affine_voting)
- 
+
     #----- Class Caps -----#
     # activation_in: (64, 5, 5, 32, 1)
     # pose_in: (64, 5, 5, 32, 16)
