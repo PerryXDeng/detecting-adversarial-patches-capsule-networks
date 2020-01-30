@@ -52,7 +52,7 @@ flags.DEFINE_boolean('dropout_extra', False, '''whether to apply extra dropout''
 #------------------------------------------------------------------------------
 flags.DEFINE_string('dataset', 'smallNORB',
                     '''dataset name: currently only "smallNORB, mnist,
-                     cifar10, svhn, and imagenet64" supported,
+                     cifar10, svhn, and imagenet" supported,
                      feel free to add your own''')
 flags.DEFINE_integer('A', 64, 'number of channels in output from ReLU Conv1')
 flags.DEFINE_integer('B', 8, 'number of capsules in output from PrimaryCaps')
@@ -232,7 +232,7 @@ def get_dataset_path(dataset_name: str):
              'mnist': '',
              'cifar10': '',
              'svhn': '',
-             'imagenet64': ''}
+             'imagenet56': ''}
   path = FLAGS.storage + options[dataset_name]
   return path
 
@@ -244,12 +244,12 @@ def get_dataset_size_train(dataset_name: str):
              'cifar10': 50000, 
              'cifar100': 50000,
              'svhn': 73257,
-             'imagenet64': 1281167}
+             'imagenet56': 1281167}
   return options[dataset_name]
 
 
 def get_dataset_size_test(dataset_name: str):
-  if dataset_name is 'imagenet64':
+  if dataset_name is 'imagenet56':
     logger.info("%s pipeline is not set up for testing, using validation set for testing instead"%dataset_name)
     return get_dataset_size_validate(dataset_name)
   options = {'mnist': 10000, 
@@ -265,7 +265,7 @@ def get_dataset_size_validate(dataset_name: str):
   if dataset_name == 'smallNORB' or dataset_name == 'mnist' or dataset_name == 'cifar10' or dataset_name == 'svhn':
     logger.info("%s pipeline is not set up for validation, using test set for validation instead"%dataset_name)
     return get_dataset_size_test(dataset_name)
-  options = {'imagenet64': 50000}
+  options = {'imagenet56': 50000}
   return options[dataset_name]
 
 
@@ -276,7 +276,7 @@ def get_num_classes(dataset_name: str):
              'cifar10': 10, 
              'cifar100': 100,
              'svhn': 10,
-             'imagenet64': 1000}
+             'imagenet56': 1000}
   return options[dataset_name]
 
 
@@ -284,7 +284,7 @@ from data_pipelines import norb as data_norb
 from data_pipelines import mnist as data_mnist
 from data_pipelines import cifar10 as data_cifar10
 from data_pipelines import svhn as data_svhn
-from data_pipelines import imagenet56 as data_imagenet64
+from data_pipelines import imagenet56 as data_imagenet56
 def get_create_inputs(dataset_name: str, mode="train"):
   
   force_set = None
