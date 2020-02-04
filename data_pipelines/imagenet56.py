@@ -8,20 +8,16 @@ def _floatify_and_normalize(datapoint):
   return img, datapoint["label"]
 
 
-def _train_preprocess(datapoint):
-  img = datapoint["image"]
+def _train_preprocess(img, lab):
   img = tf.random_crop(img, [56, 56, 3])
   img = tf.image.random_brightness(img, max_delta=2.0)
-  img = tf.image.random_contrat(img, lower=0.5, upper=1.5)
-  datapoint["image"] = img
-  return datapoint
+  img = tf.image.random_contrast(img, lower=0.5, upper=1.5)
+  return img, lab
 
 
-def _val_preprocess(datapoint):
-  img = datapoint["image"]
-  img = tf.central_crop(img, [56, 56, 3])
-  datapoint["image"] = img
-  return datapoint
+def _val_preprocess(img, lab):
+  img = tf.image.central_crop(img, 0.875)
+  return img, lab
 
 
 def create_inputs(is_train, force_set=None):
