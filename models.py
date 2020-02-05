@@ -24,10 +24,13 @@ logger = daiquiri.getLogger(__name__)
 # CAPSNET FOR SMALLNORB
 #------------------------------------------------------------------------------
 def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
-  
-  logger.info('input shape: {}'.format(inp.get_shape()))
+  inp_shape = inp.get_shape() 
+  logger.info('input shape: {}'.format(inp_shape))
   batch_size = FLAGS.batch_size//FLAGS.num_gpus
-  inp.set_shape([batch_size] + inp.get_shape()[1:].as_list())
+  offset = 1
+  if len(inp_shape.as_list()) == 3:
+    offset = 0
+  inp.set_shape([batch_size] + inp_shape[offset:].as_list())
   spatial_size = int(inp.get_shape()[1])
 
   # xavier initialization is necessary here to provide higher stability
@@ -178,7 +181,13 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
         dropout = False,
         dropconnect = FLAGS.dropconnect if is_train else False,
         affine_voting = FLAGS.affine_voting)
-
+    act_shape = class_activation_out.get_shape() 
+    offset = 1
+    if len(act_shape.as_list()) == 1:
+      offset = 0
+    class_activation_out = tf.reshape(class_activation_out, [batch_size] + act_shape[offset:].as_list())
+    class_pose_out = tf.reshape(class_pose_out, [batch_size] + act_shape[offset:].as_list() + [16])
+ 
     if FLAGS.recon_loss:
       if FLAGS.multi_weighted_pred_recon:
         class_input = tf.multiply(class_pose_out, tf.expand_dims(class_activation_out, -1))
@@ -206,6 +215,10 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
           dropout=False,
           dropconnect=FLAGS.dropconnect if is_train else False,
           affine_voting=FLAGS.affine_voting)
+        act_shape = bg_activation.get_shape() 
+        bg_activation = tf.reshape(bg_activation, [batch_size] + act_shape[offset:].as_list())
+        bg_pose = tf.reshape(bg_pose, [batch_size] + act_shape[offset:].as_list() + [16])
+ 
         weighted_bg = tf.multiply(bg_pose, tf.expand_dims(bg_activation, -1))
         bg_size = int(np.prod(weighted_bg.get_shape()[1:]))
         flattened_bg = tf.reshape(weighted_bg, [batch_size, bg_size])
