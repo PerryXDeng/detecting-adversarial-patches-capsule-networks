@@ -239,6 +239,8 @@ def main(args):
           patch = np.squeeze(patch, axis=-1)
         formatted = (patch * 255).astype('uint8')
         img = Image.fromarray(formatted)
+        save_dir = os.path.join(FLAGS.storage, 'logs/',
+                                FLAGS.dataset, FLAGS.logdir)
         img.save(os.path.join(FLAGS.load_dir, "test", "saved_patch.png"))
         return
           

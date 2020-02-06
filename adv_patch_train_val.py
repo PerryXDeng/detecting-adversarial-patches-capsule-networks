@@ -28,6 +28,7 @@ logger = daiquiri.getLogger(__name__)
 # for logging detached images
 from io import BytesIO
 import matplotlib.pyplot as plt
+from PIL import Image
 
 
 def main(args):
@@ -677,6 +678,11 @@ def main(args):
             summary_writer.add_summary(summary_val, epoch)
             log_images(summary_writer, "patch", [patch], epoch)
             log_images(summary_writer, "patched_input", x, epoch)
+            if patch.shape[-1] == 1:
+              patch = np.squeeze(patch, axis=-1)
+            formatted = (patch * 255).astype('uint8')
+            img = Image.fromarray(formatted)
+            img.save(os.path.join(train_dir, "saved_patch.png"))
  
   # Close (main loop)
   sess_train.close()
