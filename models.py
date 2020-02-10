@@ -240,7 +240,7 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
                   'decoder_out': decoder_output, 'input': inp}
       if FLAGS.zeroed_bg_reconstruction:
         scope.reuse_variables()
-        zeroed_bg_decoder_input = tf.concat([tf.zeros(weighted_bg.get_shape()), class_input], 1)
+        zeroed_bg_decoder_input = tf.concat([tf.zeros(flattened_bg.get_shape()), class_input], 1)
         recon = slim.fully_connected(zeroed_bg_decoder_input, FLAGS.X,
                                      activation_fn=tf.nn.tanh,
                                      scope="recon_1")

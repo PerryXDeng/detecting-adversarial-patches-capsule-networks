@@ -81,6 +81,7 @@ def main(args):
   logger.info('BUILD TEST GRAPH')
   g_test = tf.Graph()
   with g_test.as_default():
+    tf.train.get_or_create_global_step()
     # Get data
     input_dict = create_inputs_test()
     batch_x = input_dict['image']
@@ -104,7 +105,7 @@ def main(args):
             batch_labels,
             scope,
             num_classes,
-            reuse_variables=True,
+            reuse_variables=tf.AUTO_REUSE,
             is_train=False)
 
         # Keep track of losses and logits across for each tower
