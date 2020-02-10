@@ -207,7 +207,10 @@ def load_or_save_hyperparams(train_dir=None):
         if name in specified_flags:
           pass
         else:
-          FLAGS.__flags[name].value = value 
+          try:
+            FLAGS.__flags[name].value = value
+          except KeyError:
+            pass # ignore deprecated arguments
     logger.info("Loaded parameters from file: {}".format(params_path))
 
   # Save parameters to file
