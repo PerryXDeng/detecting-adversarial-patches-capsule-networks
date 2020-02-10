@@ -226,13 +226,14 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
       else:
         decoder_input = class_input
       output_size = int(np.prod(inp.get_shape()[1:]))
-      recon_1 = slim.fully_connected(decoder_input, FLAGS.X,
-                                     activation_fn=tf.nn.tanh,
-                                     scope="recon_1")
-      recon_2 = slim.fully_connected(recon_1, FLAGS.Y,
+      recon = slim.fully_connected(decoder_input, FLAGS.X,
+                                   activation_fn=tf.nn.tanh,
+                                   scope="recon_1")
+      if FLAGS.Y > 0:
+        recon = slim.fully_connected(recon, FLAGS.Y,
                                      activation_fn=tf.nn.tanh,
                                      scope="recon_2")
-      decoder_output = slim.fully_connected(recon_2, output_size,
+      decoder_output = slim.fully_connected(recon, output_size,
                                             activation_fn=tf.nn.sigmoid,
                                             scope="decoder_output")
       out_dict = {'scores': class_activation_out, 'pose_out': class_pose_out,
@@ -240,13 +241,14 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
       if FLAGS.zeroed_bg_reconstruction:
         scope.reuse_variables()
         zeroed_bg_decoder_input = tf.concat([tf.zeros(weighted_bg.get_shape()), class_input], 1)
-        recon_1 = slim.fully_connected(zeroed_bg_decoder_input, FLAGS.X,
-                                       activation_fn=tf.nn.tanh,
-                                       scope="recon_1")
-        recon_2 = slim.fully_connected(recon_1, FLAGS.Y,
+        recon = slim.fully_connected(zeroed_bg_decoder_input, FLAGS.X,
+                                     activation_fn=tf.nn.tanh,
+                                     scope="recon_1")
+        if FLAGS.Y > 0:
+          recon = slim.fully_connected(recon, FLAGS.Y,
                                        activation_fn=tf.nn.tanh,
                                        scope="recon_2")
-        zeroed_bg_decoder_output = slim.fully_connected(recon_2, output_size,
+        zeroed_bg_decoder_output = slim.fully_connected(recon, output_size,
                                               activation_fn=tf.nn.sigmoid,
                                               scope="decoder_output")
         out_dict['zeroed_bg_decoder_out'] = zeroed_bg_decoder_output
