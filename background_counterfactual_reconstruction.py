@@ -95,8 +95,8 @@ def main(args):
     # MULTI GPU - TEST
     # --------------------------------------------------------------------------
     # Calculate the logits for each model tower
-    with tf.device('/gpu:%0'):
-      with tf.name_scope('tower_%0') as scope:
+    with tf.device('/gpu:0'):
+      with tf.name_scope('tower_0') as scope:
         with slim.arg_scope([slim.variable], device='/cpu:0'):
           loss, logits, recon, cf_recon = tower_fn(
             build_arch,
