@@ -189,6 +189,10 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
     class_pose_out = tf.reshape(class_pose_out, [batch_size] + act_shape[offset:].as_list() + [16])
  
     if FLAGS.recon_loss:
+      if FLAGS.relu_recon:
+        recon_fn = tf.nn.relu
+      else:
+        recon_fn = tf.nn.tanh
       if not FLAGS.new_bg_recon_arch:
         if FLAGS.multi_weighted_pred_recon:
           class_input = tf.multiply(class_pose_out, tf.expand_dims(class_activation_out, -1))
@@ -228,11 +232,11 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
           decoder_input = class_input
         output_size = int(np.prod(inp.get_shape()[1:]))
         recon = slim.fully_connected(decoder_input, FLAGS.X,
-                                     activation_fn=tf.nn.tanh,
+                                     activation_fn=recon_fn,
                                      scope="recon_1")
         if FLAGS.Y > 0:
           recon = slim.fully_connected(recon, FLAGS.Y,
-                                       activation_fn=tf.nn.tanh,
+                                       activation_fn=recon_fn,
                                        scope="recon_2")
         decoder_output = slim.fully_connected(recon, output_size,
                                               activation_fn=tf.nn.sigmoid,
@@ -243,11 +247,11 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
           scope.reuse_variables()
           zeroed_bg_decoder_input = tf.concat([tf.zeros(flattened_bg.get_shape()), class_input], 1)
           recon = slim.fully_connected(zeroed_bg_decoder_input, FLAGS.X,
-                                       activation_fn=tf.nn.tanh,
+                                       activation_fn=recon_fn,
                                        scope="recon_1")
           if FLAGS.Y > 0:
             recon = slim.fully_connected(recon, FLAGS.Y,
-                                         activation_fn=tf.nn.tanh,
+                                         activation_fn=recon_fn,
                                          scope="recon_2")
           zeroed_bg_decoder_output = slim.fully_connected(recon, output_size,
                                                 activation_fn=tf.nn.sigmoid,
@@ -273,11 +277,11 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
           class_input = tf.boolean_mask(class_pose_out, recon_mask, name="masked_pose")
         output_size = int(np.prod(inp.get_shape()[1:]))
         class_recon = slim.fully_connected(class_input, FLAGS.X,
-                                     activation_fn=tf.nn.tanh,
+                                     activation_fn=recon_fn,
                                      scope="class_recon_1")
         if FLAGS.Y > 0:
           class_recon = slim.fully_connected(class_recon, FLAGS.Y,
-                                       activation_fn=tf.nn.tanh,
+                                       activation_fn=recon_fn,
                                        scope="class_recon_2")
         class_output = slim.fully_connected(class_recon, output_size,
                                               activation_fn=tf.nn.sigmoid,
@@ -301,11 +305,11 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
           bg_pose_flattened = tf.reshape(bg_pose, [batch_size] + np.prod(act_shape[offset:].as_list()) * 16)
           bg_input = tf.concat(bg_activation_flattened, bg_pose_flattened)
           bg_recon = slim.fully_connected(bg_input, FLAGS.X,
-                                             activation_fn=tf.nn.tanh,
+                                             activation_fn=recon_fn,
                                              scope="bg_recon_1")
           if FLAGS.Y > 0:
             bg_recon = slim.fully_connected(bg_recon, FLAGS.Y,
-                                               activation_fn=tf.nn.tanh,
+                                               activation_fn=recon_fn,
                                                scope="bg_recon_2")
           bg_output = slim.fully_connected(bg_recon, output_size,
                                               activation_fn=tf.nn.sigmoid,

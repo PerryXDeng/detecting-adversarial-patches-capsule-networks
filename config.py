@@ -65,6 +65,7 @@ flags.DEFINE_integer('F', 0, 'number of channels in output from ConvCaps4')
 flags.DEFINE_integer('G', 0, 'number of channels in output from ConvCaps5')
 flags.DEFINE_boolean('recon_loss', False, '''whether to apply reconstruction
                       loss''')
+flags.DEFINE_boolean('relu_recon', False, '''whether to use relu instead of tanh''')
 flags.DEFINE_boolean('multi_weighted_pred_recon', False, '''whether to use multiple
                       weighted predicted classes instead of single label for decoder
                       input''')
