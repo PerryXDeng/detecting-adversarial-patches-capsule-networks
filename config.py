@@ -38,6 +38,8 @@ flags.DEFINE_float('capsule_weight_reg_lambda', 0, '''lagrange multiplier for
                     l2 weight regularization constraint of capsule weights''')
 flags.DEFINE_float('recon_loss_lambda', 1, '''lagrange multiplier for
                     reconstruction loss constraint''')
+flags.DEFINE_float('recon_diff_lambda', 0.2, '''lagrange multiplier for
+                    difference between bg recon and class recon''')
 flags.DEFINE_string('norm', 'norm2', 'norm type')
 flags.DEFINE_float('final_temp', 0.01, '''final temperature used in
                     EM routing activations''')
@@ -70,6 +72,9 @@ flags.DEFINE_integer('num_bg_classes', 0, '''number of background
                       classes for decoder''')
 flags.DEFINE_integer('X', 512, 'number of neurons in reconstructive layer 1')
 flags.DEFINE_integer('Y', 1024, 'number of neurons in reconstructive layer 2')
+flags.DEFINE_boolean('new_bg_recon_arch', False, '''instead of concat bg recon,
+                                                    add after recon. also concat
+                                                    activation instead of multiply''')
 flags.DEFINE_boolean('zeroed_bg_reconstruction', False, '''whether to return
                       counter factual reconstruction output on zeroed bg''')
 #------------------------------------------------------------------------------
