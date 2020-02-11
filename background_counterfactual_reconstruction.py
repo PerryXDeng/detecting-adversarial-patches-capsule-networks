@@ -30,6 +30,7 @@ import config as conf
 import models as mod
 import metrics as met
 from PIL import Image
+import matplotlib.pyplot as plt
 
 
 def main(args):
@@ -111,7 +112,8 @@ def main(args):
         # Keep track of losses and logits across for each tower
         recon_images = tf.reshape(recon, batch_x.get_shape())
         cf_recon_images = tf.reshape(cf_recon, batch_x.get_shape())
-        images = {"reconstructed_images":recon_images, "reconstructed_images_zeroed_background":cf_recon_images}
+        images = {"reconstructed_images":recon_images, "reconstructed_images_zeroed_background":cf_recon_images,
+                  "input":batch_x}
     saver = tf.train.Saver(max_to_keep=None)
 
 
@@ -155,18 +157,28 @@ def main(args):
 
       for i in range(dataset_size_test):
         out = sess_test.run([images])
-        reconstructed_image, reconstructed_image_zeroed_background =\
-            out[0]["reconstructed_images"], out[0]["reconstructed_images_zeroed_background"]
+        reconstructed_image, reconstructed_image_zeroed_background, input_img =\
+            out[0]["reconstructed_images"], out[0]["reconstructed_images_zeroed_background"], out[0]["input"]
         if reconstructed_image.shape[0] == 1:
           reconstructed_image = np.squeeze(reconstructed_image, axis=0)
           reconstructed_image_zeroed_background = np.squeeze(reconstructed_image_zeroed_background, axis=0)
+          input_img = np.squeeze(input_img, axis=0)
         if reconstructed_image.shape[-1] == 1:
           reconstructed_image = np.squeeze(reconstructed_image, axis=-1)
           reconstructed_image_zeroed_background = np.squeeze(reconstructed_image_zeroed_background, axis=-1)
+          input_img = np.squeeze(input_img, axis=-1)
         reconstructed_image = Image.fromarray((reconstructed_image * 255).astype('uint8'))
-        reconstructed_image_zeroed_background = Image.fromarray((reconstructed_image_zeroed_background * 255).astype('uint8'))
-        reconstructed_image.show()
-        reconstructed_image_zeroed_background.show()
+        reconstructed_image_zeroed_background = Image.fromarray(
+          (reconstructed_image_zeroed_background * 255).astype('uint8'))
+        input_img = Image.fromarray((input_img * 255).astype('uint8'))
+        fig = plt.figure(figsize=(1, 3))
+        fig.add_subplot(1,3,1)
+        plt.imshow(input_img)
+        fig.add_subplot(1,3,2)
+        plt.imshow(reconstructed_image)
+        fig.add_subplot(1,3,3)
+        plt.imshow(reconstructed_image_zeroed_background)
+        plt.show()
 
 
 def tower_fn(build_arch,
