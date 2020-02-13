@@ -1,0 +1,3 @@
+95th percentile of Correctly Classified Reconstruction Loss: 0.024140937449999955
+99th percentile of Correctly Classified Reconstruction Loss: 0.03350143245999998
+
