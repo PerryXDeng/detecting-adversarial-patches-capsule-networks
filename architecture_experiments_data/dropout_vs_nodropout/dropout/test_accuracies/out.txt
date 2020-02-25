@@ -1,0 +1,12 @@
+run-dropout_20200208_08_47_18_986273__train_summary-tag-val_acc.csv
+        Wall time  Step     Value
+223  1.581573e+09   223  0.955156
+run-dropout_20200207_19_27_54_817239__train_summary-tag-val_acc.csv
+       Wall time  Step     Value
+98  1.581298e+09    98  0.954429
+run-dropout_20200207_19_27_54_844857__train_summary-tag-val_acc.csv
+        Wall time  Step     Value
+232  1.581536e+09   232  0.957186
+run-dropout_20200207_19_27_54_844767__train_summary-tag-val_acc.csv
+        Wall time  Step     Value
+225  1.581534e+09   225  0.955241
