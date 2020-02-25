@@ -1,0 +1,1454 @@
+2020-02-20 17:42:42 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/svhn/single_pred_0_bg/20200217_17:51:24:583757_/train/params/params.json
+2020-02-20 17:42:42 INFO: Parameters saved to file: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/params/params.json
+2020-02-20 17:42:42 INFO: Using dataset: svhn
+2020-02-20 17:42:42 INFO: svhn pipeline is not set up for validation, using test set for validation instead
+2020-02-20 17:42:42 INFO: BUILD TRAIN GRAPH
+2020-02-20 17:42:42 WARNING: From train_val.py:85: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-02-20 17:42:42 WARNING: From train_val.py:94: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+2020-02-20 17:42:42 WARNING: From train_val.py:98: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+2020-02-20 17:42:42 WARNING: From train_val.py:99: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2020-02-20 17:42:42 INFO: Overwrite dataset info from restored data version.
+2020-02-20 17:42:42 INFO: Reusing dataset svhn_cropped (/home/xxd9704/tensorflow_datasets/svhn_cropped/1.0.0)
+2020-02-20 17:42:42 INFO: Constructing tf.data.Dataset for split train, from /home/xxd9704/tensorflow_datasets/svhn_cropped/1.0.0
+2020-02-20 17:42:42 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/svhn.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-02-20 17:42:42 INFO: TOWER 0
+2020-02-20 17:42:42 WARNING: From train_val.py:692: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-02-20 17:42:42 WARNING: From train_val.py:692: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-02-20 17:42:42 INFO: input shape: (12, 32, 32, 3)
+2020-02-20 17:42:43 INFO: relu_conv1 output shape: (12, 16, 16, 128)
+2020-02-20 17:42:43 INFO: primary_caps pose shape: (12, 16, 16, 32, 16)
+2020-02-20 17:42:43 INFO: primary_caps activation shape (12, 16, 16, 32, 1)
+2020-02-20 17:42:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-02-20 17:42:43 INFO: lyr.conv_caps1 votes shape: (588, 288, 24, 16)
+2020-02-20 17:42:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-02-20 17:42:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-02-20 17:42:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-02-20 17:42:43 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 24, 16)
+2020-02-20 17:42:43 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 24, 1)
+2020-02-20 17:42:43 INFO: lyr.conv_caps2 votes shape: (300, 216, 32, 16)
+2020-02-20 17:42:44 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 32, 16)
+2020-02-20 17:42:44 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 32, 1)
+2020-02-20 17:42:44 INFO: class_caps votes original shape: (300, 32, 10, 16)
+2020-02-20 17:42:44 INFO: class_caps votes in to routing shape: (12, 800, 10, 16)
+2020-02-20 17:42:44 INFO: class_caps activation shape: (12, 10)
+2020-02-20 17:42:44 INFO: class_caps pose shape: (12, 10, 16)
+2020-02-20 17:42:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:464: The name tf.train.get_global_step is deprecated. Please use tf.compat.v1.train.get_global_step instead.
+
+2020-02-20 17:42:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:562: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+2020-02-20 17:42:46 INFO: TOWER 1
+2020-02-20 17:42:46 INFO: input shape: (12, 32, 32, 3)
+2020-02-20 17:42:46 INFO: relu_conv1 output shape: (12, 16, 16, 128)
+2020-02-20 17:42:46 INFO: primary_caps pose shape: (12, 16, 16, 32, 16)
+2020-02-20 17:42:46 INFO: primary_caps activation shape (12, 16, 16, 32, 1)
+2020-02-20 17:42:46 INFO: lyr.conv_caps1 votes shape: (588, 288, 24, 16)
+2020-02-20 17:42:46 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 24, 16)
+2020-02-20 17:42:46 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 24, 1)
+2020-02-20 17:42:46 INFO: lyr.conv_caps2 votes shape: (300, 216, 32, 16)
+2020-02-20 17:42:46 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 32, 16)
+2020-02-20 17:42:46 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 32, 1)
+2020-02-20 17:42:46 INFO: class_caps votes original shape: (300, 32, 10, 16)
+2020-02-20 17:42:46 INFO: class_caps votes in to routing shape: (12, 800, 10, 16)
+2020-02-20 17:42:46 INFO: class_caps activation shape: (12, 10)
+2020-02-20 17:42:46 INFO: class_caps pose shape: (12, 10, 16)
+2020-02-20 17:42:49 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/metrics.py:27: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-02-20 17:42:49 WARNING: From train_val.py:210: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-02-20 17:42:49 INFO: Trainable Parameters: 4215460
+2020-02-20 17:42:49 WARNING: From train_val.py:218: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2020-02-20 17:42:49 INFO: BUILD TRAINING SET ACCURACY GRAPH
+2020-02-20 17:42:49 INFO: Overwrite dataset info from restored data version.
+2020-02-20 17:42:49 INFO: Reusing dataset svhn_cropped (/home/xxd9704/tensorflow_datasets/svhn_cropped/1.0.0)
+2020-02-20 17:42:49 INFO: Constructing tf.data.Dataset for split train, from /home/xxd9704/tensorflow_datasets/svhn_cropped/1.0.0
+2020-02-20 17:42:49 INFO: input shape: (12, 32, 32, 3)
+2020-02-20 17:42:49 INFO: relu_conv1 output shape: (12, 16, 16, 128)
+2020-02-20 17:42:49 INFO: primary_caps pose shape: (12, 16, 16, 32, 16)
+2020-02-20 17:42:49 INFO: primary_caps activation shape (12, 16, 16, 32, 1)
+2020-02-20 17:42:49 INFO: lyr.conv_caps1 votes shape: (588, 288, 24, 16)
+2020-02-20 17:42:49 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 24, 16)
+2020-02-20 17:42:49 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 24, 1)
+2020-02-20 17:42:49 INFO: lyr.conv_caps2 votes shape: (300, 216, 32, 16)
+2020-02-20 17:42:49 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 32, 16)
+2020-02-20 17:42:49 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 32, 1)
+2020-02-20 17:42:49 INFO: class_caps votes original shape: (300, 32, 10, 16)
+2020-02-20 17:42:49 INFO: class_caps votes in to routing shape: (12, 800, 10, 16)
+2020-02-20 17:42:49 INFO: class_caps activation shape: (12, 10)
+2020-02-20 17:42:49 INFO: class_caps pose shape: (12, 10, 16)
+2020-02-20 17:42:49 INFO: input shape: (12, 32, 32, 3)
+2020-02-20 17:42:49 INFO: relu_conv1 output shape: (12, 16, 16, 128)
+2020-02-20 17:42:49 INFO: primary_caps pose shape: (12, 16, 16, 32, 16)
+2020-02-20 17:42:50 INFO: primary_caps activation shape (12, 16, 16, 32, 1)
+2020-02-20 17:42:50 INFO: lyr.conv_caps1 votes shape: (588, 288, 24, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 24, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 24, 1)
+2020-02-20 17:42:50 INFO: lyr.conv_caps2 votes shape: (300, 216, 32, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 32, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 32, 1)
+2020-02-20 17:42:50 INFO: class_caps votes original shape: (300, 32, 10, 16)
+2020-02-20 17:42:50 INFO: class_caps votes in to routing shape: (12, 800, 10, 16)
+2020-02-20 17:42:50 INFO: class_caps activation shape: (12, 10)
+2020-02-20 17:42:50 INFO: class_caps pose shape: (12, 10, 16)
+2020-02-20 17:42:50 INFO: BUILD VALIDATION GRAPH
+2020-02-20 17:42:50 INFO: Overwrite dataset info from restored data version.
+2020-02-20 17:42:50 INFO: Reusing dataset svhn_cropped (/home/xxd9704/tensorflow_datasets/svhn_cropped/1.0.0)
+2020-02-20 17:42:50 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/svhn_cropped/1.0.0
+2020-02-20 17:42:50 INFO: input shape: (12, 32, 32, 3)
+2020-02-20 17:42:50 INFO: relu_conv1 output shape: (12, 16, 16, 128)
+2020-02-20 17:42:50 INFO: primary_caps pose shape: (12, 16, 16, 32, 16)
+2020-02-20 17:42:50 INFO: primary_caps activation shape (12, 16, 16, 32, 1)
+2020-02-20 17:42:50 INFO: lyr.conv_caps1 votes shape: (588, 288, 24, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 24, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 24, 1)
+2020-02-20 17:42:50 INFO: lyr.conv_caps2 votes shape: (300, 216, 32, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 32, 16)
+2020-02-20 17:42:50 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 32, 1)
+2020-02-20 17:42:51 INFO: class_caps votes original shape: (300, 32, 10, 16)
+2020-02-20 17:42:51 INFO: class_caps votes in to routing shape: (12, 800, 10, 16)
+2020-02-20 17:42:51 INFO: class_caps activation shape: (12, 10)
+2020-02-20 17:42:51 INFO: class_caps pose shape: (12, 10, 16)
+2020-02-20 17:42:51 INFO: input shape: (12, 32, 32, 3)
+2020-02-20 17:42:51 INFO: relu_conv1 output shape: (12, 16, 16, 128)
+2020-02-20 17:42:51 INFO: primary_caps pose shape: (12, 16, 16, 32, 16)
+2020-02-20 17:42:51 INFO: primary_caps activation shape (12, 16, 16, 32, 1)
+2020-02-20 17:42:51 INFO: lyr.conv_caps1 votes shape: (588, 288, 24, 16)
+2020-02-20 17:42:51 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 24, 16)
+2020-02-20 17:42:51 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 24, 1)
+2020-02-20 17:42:51 INFO: lyr.conv_caps2 votes shape: (300, 216, 32, 16)
+2020-02-20 17:42:51 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 32, 16)
+2020-02-20 17:42:51 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 32, 1)
+2020-02-20 17:42:51 INFO: class_caps votes original shape: (300, 32, 10, 16)
+2020-02-20 17:42:51 INFO: class_caps votes in to routing shape: (12, 800, 10, 16)
+2020-02-20 17:42:51 INFO: class_caps activation shape: (12, 10)
+2020-02-20 17:42:51 INFO: class_caps pose shape: (12, 10, 16)
+2020-02-20 17:42:53 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-02-20 17:42:53 INFO: Restoring parameters from logs/svhn/single_pred_0_bg/20200217_17:51:24:583757_/train/checkpoint/model.ckpt104-317408
+2020-02-20 17:42:53 INFO: Restored checkpoint
+2020-02-20 17:42:53 WARNING: From train_val.py:435: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-02-20 17:43:10 INFO: Save Model
+2020-02-20 17:43:10 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt104-317408 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-20 17:43:10 INFO: Start Train Set Accuracy
+2020-02-20 17:43:10 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt104-317408
+2020-02-20 18:39:29 INFO: TRN ckpt-317408 avg_acc: 97.09% avg_loss: 0.4795
+2020-02-20 18:39:29 INFO: Write Train Summary
+2020-02-20 18:39:29 INFO: Start Validation
+2020-02-20 18:39:29 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt104-317408
+2020-02-20 18:59:28 INFO: VAL ckpt-317408 avg_acc: 94.14% avg_loss: 0.6229
+2020-02-20 18:59:28 INFO: Write Val Summary
+2020-02-20 18:59:28 INFO: Reset streaming metrics
+2020-02-20 19:03:58 INFO: Write Train Summary
+2020-02-20 19:08:52 INFO: Write Train Summary
+2020-02-20 19:13:46 INFO: Write Train Summary
+2020-02-20 19:18:40 INFO: Write Train Summary
+2020-02-20 19:23:34 INFO: Write Train Summary
+2020-02-20 19:28:28 INFO: Write Train Summary
+2020-02-20 19:33:22 INFO: Write Train Summary
+2020-02-20 19:36:50 INFO: Reset streaming metrics
+2020-02-20 19:38:15 INFO: Write Train Summary
+2020-02-20 19:43:09 INFO: Write Train Summary
+2020-02-20 19:48:03 INFO: Write Train Summary
+2020-02-20 19:52:57 INFO: Write Train Summary
+2020-02-20 19:57:51 INFO: Write Train Summary
+2020-02-20 20:02:45 INFO: Write Train Summary
+2020-02-20 20:07:38 INFO: Write Train Summary
+2020-02-20 20:12:32 INFO: Write Train Summary
+2020-02-20 20:14:12 INFO: Reset streaming metrics
+2020-02-20 20:17:26 INFO: Write Train Summary
+2020-02-20 20:22:20 INFO: Write Train Summary
+2020-02-20 20:27:14 INFO: Write Train Summary
+2020-02-20 20:32:08 INFO: Write Train Summary
+2020-02-20 20:37:02 INFO: Write Train Summary
+2020-02-20 20:41:55 INFO: Write Train Summary
+2020-02-20 20:46:49 INFO: Write Train Summary
+2020-02-20 20:51:34 INFO: Reset streaming metrics
+2020-02-20 20:51:43 INFO: Write Train Summary
+2020-02-20 20:56:37 INFO: Write Train Summary
+2020-02-20 21:01:31 INFO: Write Train Summary
+2020-02-20 21:06:25 INFO: Write Train Summary
+2020-02-20 21:11:18 INFO: Write Train Summary
+2020-02-20 21:16:13 INFO: Write Train Summary
+2020-02-20 21:21:08 INFO: Write Train Summary
+2020-02-20 21:26:03 INFO: Write Train Summary
+2020-02-20 21:29:00 INFO: Save Model
+2020-02-20 21:29:00 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt105-320460 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-20 21:29:00 INFO: Start Train Set Accuracy
+2020-02-20 21:29:00 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt105-320460
+2020-02-20 22:25:17 INFO: TRN ckpt-320460 avg_acc: 97.70% avg_loss: 0.4675
+2020-02-20 22:25:17 INFO: Write Train Summary
+2020-02-20 22:25:17 INFO: Start Validation
+2020-02-20 22:25:17 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt105-320460
+2020-02-20 22:45:16 INFO: VAL ckpt-320460 avg_acc: 94.60% avg_loss: 0.6066
+2020-02-20 22:45:16 INFO: Write Val Summary
+2020-02-20 22:45:16 INFO: Reset streaming metrics
+2020-02-20 22:47:14 INFO: Write Train Summary
+2020-02-20 22:52:09 INFO: Write Train Summary
+2020-02-20 22:57:03 INFO: Write Train Summary
+2020-02-20 23:01:58 INFO: Write Train Summary
+2020-02-20 23:06:53 INFO: Write Train Summary
+2020-02-20 23:11:48 INFO: Write Train Summary
+2020-02-20 23:16:42 INFO: Write Train Summary
+2020-02-20 23:21:37 INFO: Write Train Summary
+2020-02-20 23:22:45 INFO: Reset streaming metrics
+2020-02-20 23:26:32 INFO: Write Train Summary
+2020-02-20 23:31:26 INFO: Write Train Summary
+2020-02-20 23:36:20 INFO: Write Train Summary
+2020-02-20 23:41:14 INFO: Write Train Summary
+2020-02-20 23:46:08 INFO: Write Train Summary
+2020-02-20 23:51:02 INFO: Write Train Summary
+2020-02-20 23:55:56 INFO: Write Train Summary
+2020-02-21 00:00:08 INFO: Reset streaming metrics
+2020-02-21 00:00:49 INFO: Write Train Summary
+2020-02-21 00:05:42 INFO: Write Train Summary
+2020-02-21 00:10:36 INFO: Write Train Summary
+2020-02-21 00:15:30 INFO: Write Train Summary
+2020-02-21 00:20:24 INFO: Write Train Summary
+2020-02-21 00:25:18 INFO: Write Train Summary
+2020-02-21 00:30:13 INFO: Write Train Summary
+2020-02-21 00:35:07 INFO: Write Train Summary
+2020-02-21 00:37:31 INFO: Reset streaming metrics
+2020-02-21 00:40:01 INFO: Write Train Summary
+2020-02-21 00:44:55 INFO: Write Train Summary
+2020-02-21 00:49:49 INFO: Write Train Summary
+2020-02-21 00:54:43 INFO: Write Train Summary
+2020-02-21 00:59:38 INFO: Write Train Summary
+2020-02-21 01:04:32 INFO: Write Train Summary
+2020-02-21 01:09:27 INFO: Write Train Summary
+2020-02-21 01:14:21 INFO: Write Train Summary
+2020-02-21 01:14:56 INFO: Save Model
+2020-02-21 01:14:56 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt106-323512 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-21 01:14:57 INFO: Start Train Set Accuracy
+2020-02-21 01:14:57 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt106-323512
+2020-02-21 02:11:07 INFO: TRN ckpt-323512 avg_acc: 97.25% avg_loss: 0.4874
+2020-02-21 02:11:07 INFO: Write Train Summary
+2020-02-21 02:11:07 INFO: Start Validation
+2020-02-21 02:11:07 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt106-323512
+2020-02-21 02:31:02 INFO: VAL ckpt-323512 avg_acc: 94.46% avg_loss: 0.6216
+2020-02-21 02:31:02 INFO: Write Val Summary
+2020-02-21 02:31:02 INFO: Reset streaming metrics
+2020-02-21 02:35:21 INFO: Write Train Summary
+2020-02-21 02:40:15 INFO: Write Train Summary
+2020-02-21 02:45:09 INFO: Write Train Summary
+2020-02-21 02:50:03 INFO: Write Train Summary
+2020-02-21 02:54:57 INFO: Write Train Summary
+2020-02-21 02:59:51 INFO: Write Train Summary
+2020-02-21 03:04:45 INFO: Write Train Summary
+2020-02-21 03:08:25 INFO: Reset streaming metrics
+2020-02-21 03:09:39 INFO: Write Train Summary
+2020-02-21 03:14:33 INFO: Write Train Summary
+2020-02-21 03:19:27 INFO: Write Train Summary
+2020-02-21 03:24:21 INFO: Write Train Summary
+2020-02-21 03:29:15 INFO: Write Train Summary
+2020-02-21 03:34:09 INFO: Write Train Summary
+2020-02-21 03:39:03 INFO: Write Train Summary
+2020-02-21 03:43:57 INFO: Write Train Summary
+2020-02-21 03:45:49 INFO: Reset streaming metrics
+2020-02-21 03:48:51 INFO: Write Train Summary
+2020-02-21 03:53:45 INFO: Write Train Summary
+2020-02-21 03:58:39 INFO: Write Train Summary
+2020-02-21 04:03:33 INFO: Write Train Summary
+2020-02-21 04:08:27 INFO: Write Train Summary
+2020-02-21 04:13:21 INFO: Write Train Summary
+2020-02-21 04:18:15 INFO: Write Train Summary
+2020-02-21 04:23:09 INFO: Write Train Summary
+2020-02-21 04:23:12 INFO: Reset streaming metrics
+2020-02-21 04:28:03 INFO: Write Train Summary
+2020-02-21 04:32:57 INFO: Write Train Summary
+2020-02-21 04:37:51 INFO: Write Train Summary
+2020-02-21 04:42:45 INFO: Write Train Summary
+2020-02-21 04:47:39 INFO: Write Train Summary
+2020-02-21 04:52:33 INFO: Write Train Summary
+2020-02-21 04:57:27 INFO: Write Train Summary
+2020-02-21 05:00:35 INFO: Save Model
+2020-02-21 05:00:35 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt107-326564 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-21 05:00:36 INFO: Start Train Set Accuracy
+2020-02-21 05:00:36 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt107-326564
+2020-02-21 05:56:45 INFO: TRN ckpt-326564 avg_acc: 97.52% avg_loss: 0.4855
+2020-02-21 05:56:45 INFO: Write Train Summary
+2020-02-21 05:56:45 INFO: Start Validation
+2020-02-21 05:56:45 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt107-326564
+2020-02-21 06:16:41 INFO: VAL ckpt-326564 avg_acc: 94.43% avg_loss: 0.6331
+2020-02-21 06:16:41 INFO: Write Val Summary
+2020-02-21 06:16:41 INFO: Reset streaming metrics
+2020-02-21 06:18:27 INFO: Write Train Summary
+2020-02-21 06:23:21 INFO: Write Train Summary
+2020-02-21 06:28:15 INFO: Write Train Summary
+2020-02-21 06:33:09 INFO: Write Train Summary
+2020-02-21 06:38:03 INFO: Write Train Summary
+2020-02-21 06:42:57 INFO: Write Train Summary
+2020-02-21 06:47:51 INFO: Write Train Summary
+2020-02-21 06:52:45 INFO: Write Train Summary
+2020-02-21 06:54:04 INFO: Reset streaming metrics
+2020-02-21 06:57:38 INFO: Write Train Summary
+2020-02-21 07:02:32 INFO: Write Train Summary
+2020-02-21 07:07:26 INFO: Write Train Summary
+2020-02-21 07:12:20 INFO: Write Train Summary
+2020-02-21 07:17:14 INFO: Write Train Summary
+2020-02-21 07:22:08 INFO: Write Train Summary
+2020-02-21 07:27:02 INFO: Write Train Summary
+2020-02-21 07:31:26 INFO: Reset streaming metrics
+2020-02-21 07:31:56 INFO: Write Train Summary
+2020-02-21 07:36:50 INFO: Write Train Summary
+2020-02-21 07:41:44 INFO: Write Train Summary
+2020-02-21 07:46:38 INFO: Write Train Summary
+2020-02-21 07:51:32 INFO: Write Train Summary
+2020-02-21 07:56:26 INFO: Write Train Summary
+2020-02-21 08:01:20 INFO: Write Train Summary
+2020-02-21 08:06:14 INFO: Write Train Summary
+2020-02-21 08:08:50 INFO: Reset streaming metrics
+2020-02-21 08:11:08 INFO: Write Train Summary
+2020-02-21 08:16:02 INFO: Write Train Summary
+2020-02-21 08:20:56 INFO: Write Train Summary
+2020-02-21 08:25:50 INFO: Write Train Summary
+2020-02-21 08:30:44 INFO: Write Train Summary
+2020-02-21 08:35:38 INFO: Write Train Summary
+2020-02-21 08:40:32 INFO: Write Train Summary
+2020-02-21 08:45:26 INFO: Write Train Summary
+2020-02-21 08:46:14 INFO: Save Model
+2020-02-21 08:46:14 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt108-329616 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-21 08:46:14 INFO: Start Train Set Accuracy
+2020-02-21 08:46:14 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt108-329616
+2020-02-21 09:42:25 INFO: TRN ckpt-329616 avg_acc: 97.46% avg_loss: 0.4969
+2020-02-21 09:42:25 INFO: Write Train Summary
+2020-02-21 09:42:25 INFO: Start Validation
+2020-02-21 09:42:26 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt108-329616
+2020-02-21 10:02:21 INFO: VAL ckpt-329616 avg_acc: 94.53% avg_loss: 0.6390
+2020-02-21 10:02:21 INFO: Write Val Summary
+2020-02-21 10:02:21 INFO: Reset streaming metrics
+2020-02-21 10:06:28 INFO: Write Train Summary
+2020-02-21 10:11:22 INFO: Write Train Summary
+2020-02-21 10:16:16 INFO: Write Train Summary
+2020-02-21 10:21:10 INFO: Write Train Summary
+2020-02-21 10:26:04 INFO: Write Train Summary
+2020-02-21 10:30:58 INFO: Write Train Summary
+2020-02-21 10:35:52 INFO: Write Train Summary
+2020-02-21 10:39:44 INFO: Reset streaming metrics
+2020-02-21 10:40:46 INFO: Write Train Summary
+2020-02-21 10:45:39 INFO: Write Train Summary
+2020-02-21 10:50:33 INFO: Write Train Summary
+2020-02-21 10:55:26 INFO: Write Train Summary
+2020-02-21 11:00:19 INFO: Write Train Summary
+2020-02-21 11:05:13 INFO: Write Train Summary
+2020-02-21 11:10:06 INFO: Write Train Summary
+2020-02-21 11:15:00 INFO: Write Train Summary
+2020-02-21 11:17:03 INFO: Reset streaming metrics
+2020-02-21 11:19:54 INFO: Write Train Summary
+2020-02-21 11:24:47 INFO: Write Train Summary
+2020-02-21 11:29:40 INFO: Write Train Summary
+2020-02-21 11:34:33 INFO: Write Train Summary
+2020-02-21 11:39:27 INFO: Write Train Summary
+2020-02-21 11:44:20 INFO: Write Train Summary
+2020-02-21 11:49:13 INFO: Write Train Summary
+2020-02-21 11:54:07 INFO: Write Train Summary
+2020-02-21 11:54:21 INFO: Reset streaming metrics
+2020-02-21 11:59:00 INFO: Write Train Summary
+2020-02-21 12:03:53 INFO: Write Train Summary
+2020-02-21 12:08:47 INFO: Write Train Summary
+2020-02-21 12:13:41 INFO: Write Train Summary
+2020-02-21 12:18:34 INFO: Write Train Summary
+2020-02-21 12:23:27 INFO: Write Train Summary
+2020-02-21 12:28:21 INFO: Write Train Summary
+2020-02-21 12:31:40 INFO: Save Model
+2020-02-21 12:31:40 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt109-332668 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-21 12:31:41 INFO: Start Train Set Accuracy
+2020-02-21 12:31:41 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt109-332668
+2020-02-21 13:27:55 INFO: TRN ckpt-332668 avg_acc: 97.28% avg_loss: 0.5172
+2020-02-21 13:27:56 INFO: Write Train Summary
+2020-02-21 13:27:56 INFO: Start Validation
+2020-02-21 13:27:56 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt109-332668
+2020-02-21 13:47:53 INFO: VAL ckpt-332668 avg_acc: 94.33% avg_loss: 0.6669
+2020-02-21 13:47:53 INFO: Write Val Summary
+2020-02-21 13:47:53 INFO: Reset streaming metrics
+2020-02-21 13:49:26 INFO: Write Train Summary
+2020-02-21 13:54:20 INFO: Write Train Summary
+2020-02-21 13:59:13 INFO: Write Train Summary
+2020-02-21 14:04:06 INFO: Write Train Summary
+2020-02-21 14:08:59 INFO: Write Train Summary
+2020-02-21 14:13:52 INFO: Write Train Summary
+2020-02-21 14:18:45 INFO: Write Train Summary
+2020-02-21 14:23:38 INFO: Write Train Summary
+2020-02-21 14:25:09 INFO: Reset streaming metrics
+2020-02-21 14:28:32 INFO: Write Train Summary
+2020-02-21 14:33:25 INFO: Write Train Summary
+2020-02-21 14:38:19 INFO: Write Train Summary
+2020-02-21 14:43:13 INFO: Write Train Summary
+2020-02-21 14:48:06 INFO: Write Train Summary
+2020-02-21 14:53:00 INFO: Write Train Summary
+2020-02-21 14:57:53 INFO: Write Train Summary
+2020-02-21 15:02:29 INFO: Reset streaming metrics
+2020-02-21 15:02:47 INFO: Write Train Summary
+2020-02-21 15:07:40 INFO: Write Train Summary
+2020-02-21 15:12:34 INFO: Write Train Summary
+2020-02-21 15:17:28 INFO: Write Train Summary
+2020-02-21 15:22:21 INFO: Write Train Summary
+2020-02-21 15:27:15 INFO: Write Train Summary
+2020-02-21 15:32:09 INFO: Write Train Summary
+2020-02-21 15:37:03 INFO: Write Train Summary
+2020-02-21 15:39:51 INFO: Reset streaming metrics
+2020-02-21 15:41:58 INFO: Write Train Summary
+2020-02-21 15:46:53 INFO: Write Train Summary
+2020-02-21 15:51:47 INFO: Write Train Summary
+2020-02-21 15:56:41 INFO: Write Train Summary
+2020-02-21 16:01:35 INFO: Write Train Summary
+2020-02-21 16:06:29 INFO: Write Train Summary
+2020-02-21 16:11:24 INFO: Write Train Summary
+2020-02-21 16:16:18 INFO: Write Train Summary
+2020-02-21 16:17:17 INFO: Save Model
+2020-02-21 16:17:17 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt110-335720 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-21 16:17:17 INFO: Start Train Set Accuracy
+2020-02-21 16:17:17 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt110-335720
+2020-02-21 17:13:29 INFO: TRN ckpt-335720 avg_acc: 97.69% avg_loss: 0.5034
+2020-02-21 17:13:29 INFO: Write Train Summary
+2020-02-21 17:13:29 INFO: Start Validation
+2020-02-21 17:13:29 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt110-335720
+2020-02-21 17:33:26 INFO: VAL ckpt-335720 avg_acc: 94.50% avg_loss: 0.6579
+2020-02-21 17:33:26 INFO: Write Val Summary
+2020-02-21 17:33:26 INFO: Reset streaming metrics
+2020-02-21 17:37:21 INFO: Write Train Summary
+2020-02-21 17:42:15 INFO: Write Train Summary
+2020-02-21 17:47:09 INFO: Write Train Summary
+2020-02-21 17:52:04 INFO: Write Train Summary
+2020-02-21 17:56:58 INFO: Write Train Summary
+2020-02-21 18:01:51 INFO: Write Train Summary
+2020-02-21 18:06:46 INFO: Write Train Summary
+2020-02-21 18:10:50 INFO: Reset streaming metrics
+2020-02-21 18:11:41 INFO: Write Train Summary
+2020-02-21 18:16:35 INFO: Write Train Summary
+2020-02-21 18:21:29 INFO: Write Train Summary
+2020-02-21 18:26:23 INFO: Write Train Summary
+2020-02-21 18:31:17 INFO: Write Train Summary
+2020-02-21 18:36:11 INFO: Write Train Summary
+2020-02-21 18:41:05 INFO: Write Train Summary
+2020-02-21 18:45:59 INFO: Write Train Summary
+2020-02-21 18:48:14 INFO: Reset streaming metrics
+2020-02-21 18:50:53 INFO: Write Train Summary
+2020-02-21 18:55:47 INFO: Write Train Summary
+2020-02-21 19:00:41 INFO: Write Train Summary
+2020-02-21 19:05:35 INFO: Write Train Summary
+2020-02-21 19:10:30 INFO: Write Train Summary
+2020-02-21 19:15:24 INFO: Write Train Summary
+2020-02-21 19:20:17 INFO: Write Train Summary
+2020-02-21 19:25:11 INFO: Write Train Summary
+2020-02-21 19:25:38 INFO: Reset streaming metrics
+2020-02-21 19:30:06 INFO: Write Train Summary
+2020-02-21 19:35:00 INFO: Write Train Summary
+2020-02-21 19:39:54 INFO: Write Train Summary
+2020-02-21 19:44:48 INFO: Write Train Summary
+2020-02-21 19:49:42 INFO: Write Train Summary
+2020-02-21 19:54:36 INFO: Write Train Summary
+2020-02-21 19:59:30 INFO: Write Train Summary
+2020-02-21 20:03:02 INFO: Save Model
+2020-02-21 20:03:02 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt111-338772 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-21 20:03:03 INFO: Start Train Set Accuracy
+2020-02-21 20:03:03 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt111-338772
+2020-02-21 20:59:14 INFO: TRN ckpt-338772 avg_acc: 97.54% avg_loss: 0.5097
+2020-02-21 20:59:14 INFO: Write Train Summary
+2020-02-21 20:59:14 INFO: Start Validation
+2020-02-21 20:59:14 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt111-338772
+2020-02-21 21:19:10 INFO: VAL ckpt-338772 avg_acc: 94.27% avg_loss: 0.6732
+2020-02-21 21:19:10 INFO: Write Val Summary
+2020-02-21 21:19:10 INFO: Reset streaming metrics
+2020-02-21 21:20:33 INFO: Write Train Summary
+2020-02-21 21:25:27 INFO: Write Train Summary
+2020-02-21 21:30:21 INFO: Write Train Summary
+2020-02-21 21:35:15 INFO: Write Train Summary
+2020-02-21 21:40:09 INFO: Write Train Summary
+2020-02-21 21:45:03 INFO: Write Train Summary
+2020-02-21 21:49:57 INFO: Write Train Summary
+2020-02-21 21:54:51 INFO: Write Train Summary
+2020-02-21 21:56:34 INFO: Reset streaming metrics
+2020-02-21 21:59:46 INFO: Write Train Summary
+2020-02-21 22:04:40 INFO: Write Train Summary
+2020-02-21 22:09:34 INFO: Write Train Summary
+2020-02-21 22:14:28 INFO: Write Train Summary
+2020-02-21 22:19:22 INFO: Write Train Summary
+2020-02-21 22:24:16 INFO: Write Train Summary
+2020-02-21 22:29:10 INFO: Write Train Summary
+2020-02-21 22:33:58 INFO: Reset streaming metrics
+2020-02-21 22:34:04 INFO: Write Train Summary
+2020-02-21 22:38:59 INFO: Write Train Summary
+2020-02-21 22:43:54 INFO: Write Train Summary
+2020-02-21 22:48:48 INFO: Write Train Summary
+2020-02-21 22:53:42 INFO: Write Train Summary
+2020-02-21 22:58:36 INFO: Write Train Summary
+2020-02-21 23:03:30 INFO: Write Train Summary
+2020-02-21 23:08:24 INFO: Write Train Summary
+2020-02-21 23:11:24 INFO: Reset streaming metrics
+2020-02-21 23:13:19 INFO: Write Train Summary
+2020-02-21 23:18:14 INFO: Write Train Summary
+2020-02-21 23:23:08 INFO: Write Train Summary
+2020-02-21 23:28:02 INFO: Write Train Summary
+2020-02-21 23:32:56 INFO: Write Train Summary
+2020-02-21 23:37:50 INFO: Write Train Summary
+2020-02-21 23:42:44 INFO: Write Train Summary
+2020-02-21 23:47:39 INFO: Write Train Summary
+2020-02-21 23:48:50 INFO: Save Model
+2020-02-21 23:48:50 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt112-341824 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-21 23:48:50 INFO: Start Train Set Accuracy
+2020-02-21 23:48:50 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt112-341824
+2020-02-22 00:45:04 INFO: TRN ckpt-341824 avg_acc: 97.60% avg_loss: 0.5094
+2020-02-22 00:45:04 INFO: Write Train Summary
+2020-02-22 00:45:04 INFO: Start Validation
+2020-02-22 00:45:05 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt112-341824
+2020-02-22 01:05:01 INFO: VAL ckpt-341824 avg_acc: 94.57% avg_loss: 0.6683
+2020-02-22 01:05:01 INFO: Write Val Summary
+2020-02-22 01:05:01 INFO: Reset streaming metrics
+2020-02-22 01:08:44 INFO: Write Train Summary
+2020-02-22 01:13:39 INFO: Write Train Summary
+2020-02-22 01:18:33 INFO: Write Train Summary
+2020-02-22 01:23:27 INFO: Write Train Summary
+2020-02-22 01:28:21 INFO: Write Train Summary
+2020-02-22 01:33:15 INFO: Write Train Summary
+2020-02-22 01:38:09 INFO: Write Train Summary
+2020-02-22 01:42:25 INFO: Reset streaming metrics
+2020-02-22 01:43:03 INFO: Write Train Summary
+2020-02-22 01:47:57 INFO: Write Train Summary
+2020-02-22 01:52:52 INFO: Write Train Summary
+2020-02-22 01:57:46 INFO: Write Train Summary
+2020-02-22 02:02:40 INFO: Write Train Summary
+2020-02-22 02:07:34 INFO: Write Train Summary
+2020-02-22 02:12:29 INFO: Write Train Summary
+2020-02-22 02:17:24 INFO: Write Train Summary
+2020-02-22 02:19:52 INFO: Reset streaming metrics
+2020-02-22 02:22:19 INFO: Write Train Summary
+2020-02-22 02:27:13 INFO: Write Train Summary
+2020-02-22 02:32:07 INFO: Write Train Summary
+2020-02-22 02:37:01 INFO: Write Train Summary
+2020-02-22 02:41:55 INFO: Write Train Summary
+2020-02-22 02:46:50 INFO: Write Train Summary
+2020-02-22 02:51:44 INFO: Write Train Summary
+2020-02-22 02:56:39 INFO: Write Train Summary
+2020-02-22 02:57:17 INFO: Reset streaming metrics
+2020-02-22 03:01:33 INFO: Write Train Summary
+2020-02-22 03:06:27 INFO: Write Train Summary
+2020-02-22 03:11:21 INFO: Write Train Summary
+2020-02-22 03:16:15 INFO: Write Train Summary
+2020-02-22 03:21:10 INFO: Write Train Summary
+2020-02-22 03:26:04 INFO: Write Train Summary
+2020-02-22 03:30:58 INFO: Write Train Summary
+2020-02-22 03:34:42 INFO: Save Model
+2020-02-22 03:34:42 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt113-344876 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-22 03:34:42 INFO: Start Train Set Accuracy
+2020-02-22 03:34:42 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt113-344876
+2020-02-22 04:30:55 INFO: TRN ckpt-344876 avg_acc: 97.73% avg_loss: 0.5152
+2020-02-22 04:30:56 INFO: Write Train Summary
+2020-02-22 04:30:56 INFO: Start Validation
+2020-02-22 04:30:56 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt113-344876
+2020-02-22 04:50:52 INFO: VAL ckpt-344876 avg_acc: 94.56% avg_loss: 0.6722
+2020-02-22 04:50:52 INFO: Write Val Summary
+2020-02-22 04:50:52 INFO: Reset streaming metrics
+2020-02-22 04:52:02 INFO: Write Train Summary
+2020-02-22 04:56:56 INFO: Write Train Summary
+2020-02-22 05:01:51 INFO: Write Train Summary
+2020-02-22 05:06:45 INFO: Write Train Summary
+2020-02-22 05:11:39 INFO: Write Train Summary
+2020-02-22 05:16:33 INFO: Write Train Summary
+2020-02-22 05:21:27 INFO: Write Train Summary
+2020-02-22 05:26:21 INFO: Write Train Summary
+2020-02-22 05:28:16 INFO: Reset streaming metrics
+2020-02-22 05:31:15 INFO: Write Train Summary
+2020-02-22 05:36:10 INFO: Write Train Summary
+2020-02-22 05:41:04 INFO: Write Train Summary
+2020-02-22 05:45:58 INFO: Write Train Summary
+2020-02-22 05:50:52 INFO: Write Train Summary
+2020-02-22 05:55:46 INFO: Write Train Summary
+2020-02-22 06:00:40 INFO: Write Train Summary
+2020-02-22 06:05:35 INFO: Write Train Summary
+2020-02-22 06:05:41 INFO: Reset streaming metrics
+2020-02-22 06:10:29 INFO: Write Train Summary
+2020-02-22 06:15:24 INFO: Write Train Summary
+2020-02-22 06:20:18 INFO: Write Train Summary
+2020-02-22 06:25:12 INFO: Write Train Summary
+2020-02-22 06:30:06 INFO: Write Train Summary
+2020-02-22 06:35:00 INFO: Write Train Summary
+2020-02-22 06:39:54 INFO: Write Train Summary
+2020-02-22 06:43:06 INFO: Reset streaming metrics
+2020-02-22 06:44:49 INFO: Write Train Summary
+2020-02-22 06:49:43 INFO: Write Train Summary
+2020-02-22 06:54:37 INFO: Write Train Summary
+2020-02-22 06:59:31 INFO: Write Train Summary
+2020-02-22 07:04:25 INFO: Write Train Summary
+2020-02-22 07:09:19 INFO: Write Train Summary
+2020-02-22 07:14:13 INFO: Write Train Summary
+2020-02-22 07:19:07 INFO: Write Train Summary
+2020-02-22 07:20:30 INFO: Save Model
+2020-02-22 07:20:30 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt114-347928 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-22 07:20:31 INFO: Start Train Set Accuracy
+2020-02-22 07:20:31 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt114-347928
+2020-02-22 08:16:41 INFO: TRN ckpt-347928 avg_acc: 97.62% avg_loss: 0.5235
+2020-02-22 08:16:41 INFO: Write Train Summary
+2020-02-22 08:16:41 INFO: Start Validation
+2020-02-22 08:16:41 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt114-347928
+2020-02-22 08:36:37 INFO: VAL ckpt-347928 avg_acc: 94.35% avg_loss: 0.6818
+2020-02-22 08:36:38 INFO: Write Val Summary
+2020-02-22 08:36:38 INFO: Reset streaming metrics
+2020-02-22 08:40:10 INFO: Write Train Summary
+2020-02-22 08:45:04 INFO: Write Train Summary
+2020-02-22 08:49:59 INFO: Write Train Summary
+2020-02-22 08:54:53 INFO: Write Train Summary
+2020-02-22 08:59:47 INFO: Write Train Summary
+2020-02-22 09:04:41 INFO: Write Train Summary
+2020-02-22 09:09:35 INFO: Write Train Summary
+2020-02-22 09:14:03 INFO: Reset streaming metrics
+2020-02-22 09:14:30 INFO: Write Train Summary
+2020-02-22 09:19:24 INFO: Write Train Summary
+2020-02-22 09:24:18 INFO: Write Train Summary
+2020-02-22 09:29:13 INFO: Write Train Summary
+2020-02-22 09:34:07 INFO: Write Train Summary
+2020-02-22 09:39:01 INFO: Write Train Summary
+2020-02-22 09:43:55 INFO: Write Train Summary
+2020-02-22 09:48:49 INFO: Write Train Summary
+2020-02-22 09:51:28 INFO: Reset streaming metrics
+2020-02-22 09:53:43 INFO: Write Train Summary
+2020-02-22 09:58:38 INFO: Write Train Summary
+2020-02-22 10:03:32 INFO: Write Train Summary
+2020-02-22 10:08:26 INFO: Write Train Summary
+2020-02-22 10:13:20 INFO: Write Train Summary
+2020-02-22 10:18:14 INFO: Write Train Summary
+2020-02-22 10:23:09 INFO: Write Train Summary
+2020-02-22 10:28:04 INFO: Write Train Summary
+2020-02-22 10:28:54 INFO: Reset streaming metrics
+2020-02-22 10:32:58 INFO: Write Train Summary
+2020-02-22 10:37:52 INFO: Write Train Summary
+2020-02-22 10:42:46 INFO: Write Train Summary
+2020-02-22 10:47:41 INFO: Write Train Summary
+2020-02-22 10:52:36 INFO: Write Train Summary
+2020-02-22 10:57:30 INFO: Write Train Summary
+2020-02-22 11:02:24 INFO: Write Train Summary
+2020-02-22 11:06:19 INFO: Save Model
+2020-02-22 11:06:20 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt115-350980 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-22 11:06:21 INFO: Start Train Set Accuracy
+2020-02-22 11:06:21 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt115-350980
+2020-02-22 12:02:33 INFO: TRN ckpt-350980 avg_acc: 97.47% avg_loss: 0.5381
+2020-02-22 12:02:33 INFO: Write Train Summary
+2020-02-22 12:02:33 INFO: Start Validation
+2020-02-22 12:02:33 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt115-350980
+2020-02-22 12:22:30 INFO: VAL ckpt-350980 avg_acc: 94.25% avg_loss: 0.7009
+2020-02-22 12:22:30 INFO: Write Val Summary
+2020-02-22 12:22:30 INFO: Reset streaming metrics
+2020-02-22 12:23:29 INFO: Write Train Summary
+2020-02-22 12:28:23 INFO: Write Train Summary
+2020-02-22 12:33:17 INFO: Write Train Summary
+2020-02-22 12:38:11 INFO: Write Train Summary
+2020-02-22 12:43:06 INFO: Write Train Summary
+2020-02-22 12:48:02 INFO: Write Train Summary
+2020-02-22 12:52:56 INFO: Write Train Summary
+2020-02-22 12:57:51 INFO: Write Train Summary
+2020-02-22 12:59:59 INFO: Reset streaming metrics
+2020-02-22 13:02:46 INFO: Write Train Summary
+2020-02-22 13:07:40 INFO: Write Train Summary
+2020-02-22 13:12:34 INFO: Write Train Summary
+2020-02-22 13:17:28 INFO: Write Train Summary
+2020-02-22 13:22:23 INFO: Write Train Summary
+2020-02-22 13:27:17 INFO: Write Train Summary
+2020-02-22 13:32:11 INFO: Write Train Summary
+2020-02-22 13:37:05 INFO: Write Train Summary
+2020-02-22 13:37:23 INFO: Reset streaming metrics
+2020-02-22 13:42:00 INFO: Write Train Summary
+2020-02-22 13:46:54 INFO: Write Train Summary
+2020-02-22 13:51:48 INFO: Write Train Summary
+2020-02-22 13:56:43 INFO: Write Train Summary
+2020-02-22 14:01:38 INFO: Write Train Summary
+2020-02-22 14:06:32 INFO: Write Train Summary
+2020-02-22 14:11:26 INFO: Write Train Summary
+2020-02-22 14:14:49 INFO: Reset streaming metrics
+2020-02-22 14:16:20 INFO: Write Train Summary
+2020-02-22 14:21:14 INFO: Write Train Summary
+2020-02-22 14:26:08 INFO: Write Train Summary
+2020-02-22 14:31:03 INFO: Write Train Summary
+2020-02-22 14:35:57 INFO: Write Train Summary
+2020-02-22 14:40:51 INFO: Write Train Summary
+2020-02-22 14:45:45 INFO: Write Train Summary
+2020-02-22 14:50:39 INFO: Write Train Summary
+2020-02-22 14:52:14 INFO: Save Model
+2020-02-22 14:52:15 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt116-354032 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-22 14:52:15 INFO: Start Train Set Accuracy
+2020-02-22 14:52:15 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt116-354032
+2020-02-22 15:48:26 INFO: TRN ckpt-354032 avg_acc: 97.81% avg_loss: 0.5231
+2020-02-22 15:48:26 INFO: Write Train Summary
+2020-02-22 15:48:26 INFO: Start Validation
+2020-02-22 15:48:26 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt116-354032
+2020-02-22 16:08:22 INFO: VAL ckpt-354032 avg_acc: 94.63% avg_loss: 0.6884
+2020-02-22 16:08:22 INFO: Write Val Summary
+2020-02-22 16:08:22 INFO: Reset streaming metrics
+2020-02-22 16:11:42 INFO: Write Train Summary
+2020-02-22 16:16:36 INFO: Write Train Summary
+2020-02-22 16:21:30 INFO: Write Train Summary
+2020-02-22 16:26:24 INFO: Write Train Summary
+2020-02-22 16:31:19 INFO: Write Train Summary
+2020-02-22 16:36:14 INFO: Write Train Summary
+2020-02-22 16:41:08 INFO: Write Train Summary
+2020-02-22 16:45:47 INFO: Reset streaming metrics
+2020-02-22 16:46:02 INFO: Write Train Summary
+2020-02-22 16:50:56 INFO: Write Train Summary
+2020-02-22 16:55:50 INFO: Write Train Summary
+2020-02-22 17:00:44 INFO: Write Train Summary
+2020-02-22 17:05:39 INFO: Write Train Summary
+2020-02-22 17:10:34 INFO: Write Train Summary
+2020-02-22 17:15:29 INFO: Write Train Summary
+2020-02-22 17:20:24 INFO: Write Train Summary
+2020-02-22 17:23:16 INFO: Reset streaming metrics
+2020-02-22 17:25:19 INFO: Write Train Summary
+2020-02-22 17:30:14 INFO: Write Train Summary
+2020-02-22 17:35:09 INFO: Write Train Summary
+2020-02-22 17:40:04 INFO: Write Train Summary
+2020-02-22 17:44:58 INFO: Write Train Summary
+2020-02-22 17:49:52 INFO: Write Train Summary
+2020-02-22 17:54:46 INFO: Write Train Summary
+2020-02-22 17:59:40 INFO: Write Train Summary
+2020-02-22 18:00:42 INFO: Reset streaming metrics
+2020-02-22 18:04:34 INFO: Write Train Summary
+2020-02-22 18:09:28 INFO: Write Train Summary
+2020-02-22 18:14:22 INFO: Write Train Summary
+2020-02-22 18:19:16 INFO: Write Train Summary
+2020-02-22 18:24:10 INFO: Write Train Summary
+2020-02-22 18:29:04 INFO: Write Train Summary
+2020-02-22 18:34:00 INFO: Write Train Summary
+2020-02-22 18:38:07 INFO: Save Model
+2020-02-22 18:38:07 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt117-357084 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-22 18:38:08 INFO: Start Train Set Accuracy
+2020-02-22 18:38:08 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt117-357084
+2020-02-22 19:34:20 INFO: TRN ckpt-357084 avg_acc: 97.90% avg_loss: 0.5241
+2020-02-22 19:34:21 INFO: Write Train Summary
+2020-02-22 19:34:21 INFO: Start Validation
+2020-02-22 19:34:21 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt117-357084
+2020-02-22 19:54:17 INFO: VAL ckpt-357084 avg_acc: 94.63% avg_loss: 0.6862
+2020-02-22 19:54:17 INFO: Write Val Summary
+2020-02-22 19:54:17 INFO: Reset streaming metrics
+2020-02-22 19:55:04 INFO: Write Train Summary
+2020-02-22 19:59:58 INFO: Write Train Summary
+2020-02-22 20:04:52 INFO: Write Train Summary
+2020-02-22 20:09:46 INFO: Write Train Summary
+2020-02-22 20:14:41 INFO: Write Train Summary
+2020-02-22 20:19:35 INFO: Write Train Summary
+2020-02-22 20:24:30 INFO: Write Train Summary
+2020-02-22 20:29:25 INFO: Write Train Summary
+2020-02-22 20:31:44 INFO: Reset streaming metrics
+2020-02-22 20:34:20 INFO: Write Train Summary
+2020-02-22 20:39:14 INFO: Write Train Summary
+2020-02-22 20:44:08 INFO: Write Train Summary
+2020-02-22 20:49:02 INFO: Write Train Summary
+2020-02-22 20:53:56 INFO: Write Train Summary
+2020-02-22 20:58:51 INFO: Write Train Summary
+2020-02-22 21:03:45 INFO: Write Train Summary
+2020-02-22 21:08:40 INFO: Write Train Summary
+2020-02-22 21:09:11 INFO: Reset streaming metrics
+2020-02-22 21:13:36 INFO: Write Train Summary
+2020-02-22 21:18:30 INFO: Write Train Summary
+2020-02-22 21:23:25 INFO: Write Train Summary
+2020-02-22 21:28:19 INFO: Write Train Summary
+2020-02-22 21:33:13 INFO: Write Train Summary
+2020-02-22 21:38:07 INFO: Write Train Summary
+2020-02-22 21:43:01 INFO: Write Train Summary
+2020-02-22 21:46:36 INFO: Reset streaming metrics
+2020-02-22 21:47:56 INFO: Write Train Summary
+2020-02-22 21:52:50 INFO: Write Train Summary
+2020-02-22 21:57:43 INFO: Write Train Summary
+2020-02-22 22:02:38 INFO: Write Train Summary
+2020-02-22 22:07:32 INFO: Write Train Summary
+2020-02-22 22:12:26 INFO: Write Train Summary
+2020-02-22 22:17:21 INFO: Write Train Summary
+2020-02-22 22:22:16 INFO: Write Train Summary
+2020-02-22 22:24:02 INFO: Save Model
+2020-02-22 22:24:02 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt118-360136 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-22 22:24:03 INFO: Start Train Set Accuracy
+2020-02-22 22:24:03 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt118-360136
+2020-02-22 23:20:20 INFO: TRN ckpt-360136 avg_acc: 97.89% avg_loss: 0.5266
+2020-02-22 23:20:20 INFO: Write Train Summary
+2020-02-22 23:20:20 INFO: Start Validation
+2020-02-22 23:20:20 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt118-360136
+2020-02-22 23:40:17 INFO: VAL ckpt-360136 avg_acc: 94.52% avg_loss: 0.7064
+2020-02-22 23:40:17 INFO: Write Val Summary
+2020-02-22 23:40:17 INFO: Reset streaming metrics
+2020-02-22 23:43:26 INFO: Write Train Summary
+2020-02-22 23:48:20 INFO: Write Train Summary
+2020-02-22 23:53:15 INFO: Write Train Summary
+2020-02-22 23:58:09 INFO: Write Train Summary
+2020-02-23 00:03:04 INFO: Write Train Summary
+2020-02-23 00:07:59 INFO: Write Train Summary
+2020-02-23 00:12:53 INFO: Write Train Summary
+2020-02-23 00:17:45 INFO: Reset streaming metrics
+2020-02-23 00:17:48 INFO: Write Train Summary
+2020-02-23 00:22:43 INFO: Write Train Summary
+2020-02-23 00:27:38 INFO: Write Train Summary
+2020-02-23 00:32:33 INFO: Write Train Summary
+2020-02-23 00:37:28 INFO: Write Train Summary
+2020-02-23 00:42:23 INFO: Write Train Summary
+2020-02-23 00:47:18 INFO: Write Train Summary
+2020-02-23 00:52:13 INFO: Write Train Summary
+2020-02-23 00:55:15 INFO: Reset streaming metrics
+2020-02-23 00:57:07 INFO: Write Train Summary
+2020-02-23 01:02:01 INFO: Write Train Summary
+2020-02-23 01:06:55 INFO: Write Train Summary
+2020-02-23 01:11:50 INFO: Write Train Summary
+2020-02-23 01:16:44 INFO: Write Train Summary
+2020-02-23 01:21:38 INFO: Write Train Summary
+2020-02-23 01:26:33 INFO: Write Train Summary
+2020-02-23 01:31:27 INFO: Write Train Summary
+2020-02-23 01:32:40 INFO: Reset streaming metrics
+2020-02-23 01:36:21 INFO: Write Train Summary
+2020-02-23 01:41:15 INFO: Write Train Summary
+2020-02-23 01:46:09 INFO: Write Train Summary
+2020-02-23 01:51:04 INFO: Write Train Summary
+2020-02-23 01:55:59 INFO: Write Train Summary
+2020-02-23 02:00:53 INFO: Write Train Summary
+2020-02-23 02:05:47 INFO: Write Train Summary
+2020-02-23 02:10:06 INFO: Save Model
+2020-02-23 02:10:06 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt119-363188 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-23 02:10:06 INFO: Start Train Set Accuracy
+2020-02-23 02:10:06 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt119-363188
+2020-02-23 03:06:16 INFO: TRN ckpt-363188 avg_acc: 97.74% avg_loss: 0.5390
+2020-02-23 03:06:16 INFO: Write Train Summary
+2020-02-23 03:06:16 INFO: Start Validation
+2020-02-23 03:06:16 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt119-363188
+2020-02-23 03:26:12 INFO: VAL ckpt-363188 avg_acc: 94.28% avg_loss: 0.7119
+2020-02-23 03:26:12 INFO: Write Val Summary
+2020-02-23 03:26:12 INFO: Reset streaming metrics
+2020-02-23 03:26:47 INFO: Write Train Summary
+2020-02-23 03:31:41 INFO: Write Train Summary
+2020-02-23 03:36:35 INFO: Write Train Summary
+2020-02-23 03:41:29 INFO: Write Train Summary
+2020-02-23 03:46:24 INFO: Write Train Summary
+2020-02-23 03:51:18 INFO: Write Train Summary
+2020-02-23 03:56:12 INFO: Write Train Summary
+2020-02-23 04:01:06 INFO: Write Train Summary
+2020-02-23 04:03:36 INFO: Reset streaming metrics
+2020-02-23 04:06:00 INFO: Write Train Summary
+2020-02-23 04:10:54 INFO: Write Train Summary
+2020-02-23 04:15:49 INFO: Write Train Summary
+2020-02-23 04:20:43 INFO: Write Train Summary
+2020-02-23 04:25:37 INFO: Write Train Summary
+2020-02-23 04:30:31 INFO: Write Train Summary
+2020-02-23 04:35:25 INFO: Write Train Summary
+2020-02-23 04:40:20 INFO: Write Train Summary
+2020-02-23 04:41:02 INFO: Reset streaming metrics
+2020-02-23 04:45:15 INFO: Write Train Summary
+2020-02-23 04:50:10 INFO: Write Train Summary
+2020-02-23 04:55:05 INFO: Write Train Summary
+2020-02-23 05:00:00 INFO: Write Train Summary
+2020-02-23 05:04:55 INFO: Write Train Summary
+2020-02-23 05:09:50 INFO: Write Train Summary
+2020-02-23 05:14:45 INFO: Write Train Summary
+2020-02-23 05:18:32 INFO: Reset streaming metrics
+2020-02-23 05:19:40 INFO: Write Train Summary
+2020-02-23 05:24:35 INFO: Write Train Summary
+2020-02-23 05:29:29 INFO: Write Train Summary
+2020-02-23 05:34:23 INFO: Write Train Summary
+2020-02-23 05:39:16 INFO: Write Train Summary
+2020-02-23 05:44:11 INFO: Write Train Summary
+2020-02-23 05:49:05 INFO: Write Train Summary
+2020-02-23 05:54:00 INFO: Write Train Summary
+2020-02-23 05:55:59 INFO: Save Model
+2020-02-23 05:55:59 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt120-366240 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-23 05:55:59 INFO: Start Train Set Accuracy
+2020-02-23 05:55:59 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt120-366240
+2020-02-23 06:52:09 INFO: TRN ckpt-366240 avg_acc: 97.41% avg_loss: 0.5627
+2020-02-23 06:52:09 INFO: Write Train Summary
+2020-02-23 06:52:09 INFO: Start Validation
+2020-02-23 06:52:09 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt120-366240
+2020-02-23 07:12:05 INFO: VAL ckpt-366240 avg_acc: 94.14% avg_loss: 0.7378
+2020-02-23 07:12:06 INFO: Write Val Summary
+2020-02-23 07:12:06 INFO: Reset streaming metrics
+2020-02-23 07:15:02 INFO: Write Train Summary
+2020-02-23 07:19:56 INFO: Write Train Summary
+2020-02-23 07:24:50 INFO: Write Train Summary
+2020-02-23 07:29:45 INFO: Write Train Summary
+2020-02-23 07:34:40 INFO: Write Train Summary
+2020-02-23 07:39:34 INFO: Write Train Summary
+2020-02-23 07:44:28 INFO: Write Train Summary
+2020-02-23 07:49:22 INFO: Write Train Summary
+2020-02-23 07:49:31 INFO: Reset streaming metrics
+2020-02-23 07:54:16 INFO: Write Train Summary
+2020-02-23 07:59:10 INFO: Write Train Summary
+2020-02-23 08:04:05 INFO: Write Train Summary
+2020-02-23 08:09:00 INFO: Write Train Summary
+2020-02-23 08:13:55 INFO: Write Train Summary
+2020-02-23 08:18:50 INFO: Write Train Summary
+2020-02-23 08:23:45 INFO: Write Train Summary
+2020-02-23 08:27:01 INFO: Reset streaming metrics
+2020-02-23 08:28:41 INFO: Write Train Summary
+2020-02-23 08:33:35 INFO: Write Train Summary
+2020-02-23 08:38:30 INFO: Write Train Summary
+2020-02-23 08:43:25 INFO: Write Train Summary
+2020-02-23 08:48:21 INFO: Write Train Summary
+2020-02-23 08:53:16 INFO: Write Train Summary
+2020-02-23 08:58:11 INFO: Write Train Summary
+2020-02-23 09:03:05 INFO: Write Train Summary
+2020-02-23 09:04:31 INFO: Reset streaming metrics
+2020-02-23 09:08:00 INFO: Write Train Summary
+2020-02-23 09:12:54 INFO: Write Train Summary
+2020-02-23 09:17:48 INFO: Write Train Summary
+2020-02-23 09:22:43 INFO: Write Train Summary
+2020-02-23 09:27:37 INFO: Write Train Summary
+2020-02-23 09:32:31 INFO: Write Train Summary
+2020-02-23 09:37:25 INFO: Write Train Summary
+2020-02-23 09:41:56 INFO: Save Model
+2020-02-23 09:41:56 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt121-369292 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-23 09:41:56 INFO: Start Train Set Accuracy
+2020-02-23 09:41:56 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt121-369292
+2020-02-23 10:38:09 INFO: TRN ckpt-369292 avg_acc: 97.70% avg_loss: 0.5401
+2020-02-23 10:38:09 INFO: Write Train Summary
+2020-02-23 10:38:09 INFO: Start Validation
+2020-02-23 10:38:09 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt121-369292
+2020-02-23 10:58:06 INFO: VAL ckpt-369292 avg_acc: 94.50% avg_loss: 0.7139
+2020-02-23 10:58:06 INFO: Write Val Summary
+2020-02-23 10:58:06 INFO: Reset streaming metrics
+2020-02-23 10:58:29 INFO: Write Train Summary
+2020-02-23 11:03:24 INFO: Write Train Summary
+2020-02-23 11:08:18 INFO: Write Train Summary
+2020-02-23 11:13:12 INFO: Write Train Summary
+2020-02-23 11:18:07 INFO: Write Train Summary
+2020-02-23 11:23:02 INFO: Write Train Summary
+2020-02-23 11:27:57 INFO: Write Train Summary
+2020-02-23 11:32:52 INFO: Write Train Summary
+2020-02-23 11:35:34 INFO: Reset streaming metrics
+2020-02-23 11:37:46 INFO: Write Train Summary
+2020-02-23 11:42:40 INFO: Write Train Summary
+2020-02-23 11:47:34 INFO: Write Train Summary
+2020-02-23 11:52:28 INFO: Write Train Summary
+2020-02-23 11:57:22 INFO: Write Train Summary
+2020-02-23 12:02:17 INFO: Write Train Summary
+2020-02-23 12:07:12 INFO: Write Train Summary
+2020-02-23 12:12:07 INFO: Write Train Summary
+2020-02-23 12:13:00 INFO: Reset streaming metrics
+2020-02-23 12:17:01 INFO: Write Train Summary
+2020-02-23 12:21:55 INFO: Write Train Summary
+2020-02-23 12:26:49 INFO: Write Train Summary
+2020-02-23 12:31:43 INFO: Write Train Summary
+2020-02-23 12:36:37 INFO: Write Train Summary
+2020-02-23 12:41:32 INFO: Write Train Summary
+2020-02-23 12:46:27 INFO: Write Train Summary
+2020-02-23 12:50:26 INFO: Reset streaming metrics
+2020-02-23 12:51:22 INFO: Write Train Summary
+2020-02-23 12:56:17 INFO: Write Train Summary
+2020-02-23 13:01:13 INFO: Write Train Summary
+2020-02-23 13:06:08 INFO: Write Train Summary
+2020-02-23 13:11:02 INFO: Write Train Summary
+2020-02-23 13:15:57 INFO: Write Train Summary
+2020-02-23 13:20:51 INFO: Write Train Summary
+2020-02-23 13:25:45 INFO: Write Train Summary
+2020-02-23 13:27:54 INFO: Save Model
+2020-02-23 13:27:55 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt122-372344 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-23 13:27:55 INFO: Start Train Set Accuracy
+2020-02-23 13:27:55 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt122-372344
+2020-02-23 14:24:10 INFO: TRN ckpt-372344 avg_acc: 97.90% avg_loss: 0.5402
+2020-02-23 14:24:11 INFO: Write Train Summary
+2020-02-23 14:24:11 INFO: Start Validation
+2020-02-23 14:24:11 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt122-372344
+2020-02-23 14:44:09 INFO: VAL ckpt-372344 avg_acc: 94.71% avg_loss: 0.7108
+2020-02-23 14:44:09 INFO: Write Val Summary
+2020-02-23 14:44:09 INFO: Reset streaming metrics
+2020-02-23 14:46:54 INFO: Write Train Summary
+2020-02-23 14:51:47 INFO: Write Train Summary
+2020-02-23 14:56:41 INFO: Write Train Summary
+2020-02-23 15:01:36 INFO: Write Train Summary
+2020-02-23 15:06:31 INFO: Write Train Summary
+2020-02-23 15:11:26 INFO: Write Train Summary
+2020-02-23 15:16:21 INFO: Write Train Summary
+2020-02-23 15:21:16 INFO: Write Train Summary
+2020-02-23 15:21:38 INFO: Reset streaming metrics
+2020-02-23 15:26:11 INFO: Write Train Summary
+2020-02-23 15:31:06 INFO: Write Train Summary
+2020-02-23 15:36:01 INFO: Write Train Summary
+2020-02-23 15:40:56 INFO: Write Train Summary
+2020-02-23 15:45:51 INFO: Write Train Summary
+2020-02-23 15:50:46 INFO: Write Train Summary
+2020-02-23 15:55:41 INFO: Write Train Summary
+2020-02-23 15:59:08 INFO: Reset streaming metrics
+2020-02-23 16:00:36 INFO: Write Train Summary
+2020-02-23 16:05:30 INFO: Write Train Summary
+2020-02-23 16:10:24 INFO: Write Train Summary
+2020-02-23 16:15:18 INFO: Write Train Summary
+2020-02-23 16:20:12 INFO: Write Train Summary
+2020-02-23 16:25:06 INFO: Write Train Summary
+2020-02-23 16:30:00 INFO: Write Train Summary
+2020-02-23 16:34:54 INFO: Write Train Summary
+2020-02-23 16:36:31 INFO: Reset streaming metrics
+2020-02-23 16:39:48 INFO: Write Train Summary
+2020-02-23 16:44:42 INFO: Write Train Summary
+2020-02-23 16:49:36 INFO: Write Train Summary
+2020-02-23 16:54:31 INFO: Write Train Summary
+2020-02-23 16:59:26 INFO: Write Train Summary
+2020-02-23 17:04:21 INFO: Write Train Summary
+2020-02-23 17:09:15 INFO: Write Train Summary
+2020-02-23 17:13:57 INFO: Save Model
+2020-02-23 17:13:57 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt123-375396 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-23 17:13:58 INFO: Start Train Set Accuracy
+2020-02-23 17:13:58 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt123-375396
+2020-02-23 18:10:12 INFO: TRN ckpt-375396 avg_acc: 97.96% avg_loss: 0.5443
+2020-02-23 18:10:12 INFO: Write Train Summary
+2020-02-23 18:10:12 INFO: Start Validation
+2020-02-23 18:10:12 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt123-375396
+2020-02-23 18:30:08 INFO: VAL ckpt-375396 avg_acc: 94.56% avg_loss: 0.7221
+2020-02-23 18:30:08 INFO: Write Val Summary
+2020-02-23 18:30:09 INFO: Reset streaming metrics
+2020-02-23 18:30:20 INFO: Write Train Summary
+2020-02-23 18:35:14 INFO: Write Train Summary
+2020-02-23 18:40:08 INFO: Write Train Summary
+2020-02-23 18:45:02 INFO: Write Train Summary
+2020-02-23 18:49:56 INFO: Write Train Summary
+2020-02-23 18:54:49 INFO: Write Train Summary
+2020-02-23 18:59:43 INFO: Write Train Summary
+2020-02-23 19:04:37 INFO: Write Train Summary
+2020-02-23 19:07:33 INFO: Reset streaming metrics
+2020-02-23 19:09:35 INFO: Write Train Summary
+2020-02-23 19:14:30 INFO: Write Train Summary
+2020-02-23 19:19:25 INFO: Write Train Summary
+2020-02-23 19:24:21 INFO: Write Train Summary
+2020-02-23 19:29:16 INFO: Write Train Summary
+2020-02-23 19:34:12 INFO: Write Train Summary
+2020-02-23 19:39:06 INFO: Write Train Summary
+2020-02-23 19:44:00 INFO: Write Train Summary
+2020-02-23 19:45:05 INFO: Reset streaming metrics
+2020-02-23 19:48:54 INFO: Write Train Summary
+2020-02-23 19:53:48 INFO: Write Train Summary
+2020-02-23 19:58:43 INFO: Write Train Summary
+2020-02-23 20:03:38 INFO: Write Train Summary
+2020-02-23 20:08:32 INFO: Write Train Summary
+2020-02-23 20:13:25 INFO: Write Train Summary
+2020-02-23 20:18:19 INFO: Write Train Summary
+2020-02-23 20:22:30 INFO: Reset streaming metrics
+2020-02-23 20:23:14 INFO: Write Train Summary
+2020-02-23 20:28:08 INFO: Write Train Summary
+2020-02-23 20:33:03 INFO: Write Train Summary
+2020-02-23 20:37:58 INFO: Write Train Summary
+2020-02-23 20:42:52 INFO: Write Train Summary
+2020-02-23 20:47:46 INFO: Write Train Summary
+2020-02-23 20:52:39 INFO: Write Train Summary
+2020-02-23 20:57:33 INFO: Write Train Summary
+2020-02-23 20:59:54 INFO: Save Model
+2020-02-23 20:59:55 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt124-378448 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-23 20:59:55 INFO: Start Train Set Accuracy
+2020-02-23 20:59:55 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt124-378448
+2020-02-23 21:56:09 INFO: TRN ckpt-378448 avg_acc: 98.09% avg_loss: 0.5347
+2020-02-23 21:56:09 INFO: Write Train Summary
+2020-02-23 21:56:09 INFO: Start Validation
+2020-02-23 21:56:09 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt124-378448
+2020-02-23 22:16:06 INFO: VAL ckpt-378448 avg_acc: 94.57% avg_loss: 0.7187
+2020-02-23 22:16:06 INFO: Write Val Summary
+2020-02-23 22:16:06 INFO: Reset streaming metrics
+2020-02-23 22:18:39 INFO: Write Train Summary
+2020-02-23 22:23:33 INFO: Write Train Summary
+2020-02-23 22:28:26 INFO: Write Train Summary
+2020-02-23 22:33:20 INFO: Write Train Summary
+2020-02-23 22:38:15 INFO: Write Train Summary
+2020-02-23 22:43:09 INFO: Write Train Summary
+2020-02-23 22:48:03 INFO: Write Train Summary
+2020-02-23 22:52:56 INFO: Write Train Summary
+2020-02-23 22:53:29 INFO: Reset streaming metrics
+2020-02-23 22:57:50 INFO: Write Train Summary
+2020-02-23 23:02:45 INFO: Write Train Summary
+2020-02-23 23:07:40 INFO: Write Train Summary
+2020-02-23 23:12:34 INFO: Write Train Summary
+2020-02-23 23:17:28 INFO: Write Train Summary
+2020-02-23 23:22:22 INFO: Write Train Summary
+2020-02-23 23:27:15 INFO: Write Train Summary
+2020-02-23 23:30:54 INFO: Reset streaming metrics
+2020-02-23 23:32:10 INFO: Write Train Summary
+2020-02-23 23:37:04 INFO: Write Train Summary
+2020-02-23 23:41:58 INFO: Write Train Summary
+2020-02-23 23:46:52 INFO: Write Train Summary
+2020-02-23 23:51:46 INFO: Write Train Summary
+2020-02-23 23:56:40 INFO: Write Train Summary
+2020-02-24 00:01:34 INFO: Write Train Summary
+2020-02-24 00:06:28 INFO: Write Train Summary
+2020-02-24 00:08:16 INFO: Reset streaming metrics
+2020-02-24 00:11:21 INFO: Write Train Summary
+2020-02-24 00:16:16 INFO: Write Train Summary
+2020-02-24 00:21:10 INFO: Write Train Summary
+2020-02-24 00:26:04 INFO: Write Train Summary
+2020-02-24 00:30:57 INFO: Write Train Summary
+2020-02-24 00:35:51 INFO: Write Train Summary
+2020-02-24 00:40:45 INFO: Write Train Summary
+2020-02-24 00:45:39 INFO: Write Train Summary
+2020-02-24 00:45:39 INFO: Save Model
+2020-02-24 00:45:39 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt125-381500 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-24 00:45:39 INFO: Start Train Set Accuracy
+2020-02-24 00:45:39 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt125-381500
+2020-02-24 01:42:01 INFO: TRN ckpt-381500 avg_acc: 97.88% avg_loss: 0.5526
+2020-02-24 01:42:01 INFO: Write Train Summary
+2020-02-24 01:42:01 INFO: Start Validation
+2020-02-24 01:42:01 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt125-381500
+2020-02-24 02:01:57 INFO: VAL ckpt-381500 avg_acc: 94.61% avg_loss: 0.7268
+2020-02-24 02:01:57 INFO: Write Val Summary
+2020-02-24 02:01:57 INFO: Reset streaming metrics
+2020-02-24 02:06:51 INFO: Write Train Summary
+2020-02-24 02:11:46 INFO: Write Train Summary
+2020-02-24 02:16:41 INFO: Write Train Summary
+2020-02-24 02:21:35 INFO: Write Train Summary
+2020-02-24 02:26:29 INFO: Write Train Summary
+2020-02-24 02:31:22 INFO: Write Train Summary
+2020-02-24 02:36:16 INFO: Write Train Summary
+2020-02-24 02:39:22 INFO: Reset streaming metrics
+2020-02-24 02:41:11 INFO: Write Train Summary
+2020-02-24 02:46:06 INFO: Write Train Summary
+2020-02-24 02:51:01 INFO: Write Train Summary
+2020-02-24 02:55:56 INFO: Write Train Summary
+2020-02-24 03:00:51 INFO: Write Train Summary
+2020-02-24 03:05:46 INFO: Write Train Summary
+2020-02-24 03:10:41 INFO: Write Train Summary
+2020-02-24 03:15:36 INFO: Write Train Summary
+2020-02-24 03:16:54 INFO: Reset streaming metrics
+2020-02-24 03:20:31 INFO: Write Train Summary
+2020-02-24 03:25:26 INFO: Write Train Summary
+2020-02-24 03:30:21 INFO: Write Train Summary
+2020-02-24 03:35:16 INFO: Write Train Summary
+2020-02-24 03:40:10 INFO: Write Train Summary
+2020-02-24 03:45:04 INFO: Write Train Summary
+2020-02-24 03:49:58 INFO: Write Train Summary
+2020-02-24 03:54:20 INFO: Reset streaming metrics
+2020-02-24 03:54:52 INFO: Write Train Summary
+2020-02-24 03:59:46 INFO: Write Train Summary
+2020-02-24 04:04:40 INFO: Write Train Summary
+2020-02-24 04:09:34 INFO: Write Train Summary
+2020-02-24 04:14:28 INFO: Write Train Summary
+2020-02-24 04:19:23 INFO: Write Train Summary
+2020-02-24 04:24:18 INFO: Write Train Summary
+2020-02-24 04:29:12 INFO: Write Train Summary
+2020-02-24 04:31:45 INFO: Save Model
+2020-02-24 04:31:45 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt126-384552 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-24 04:31:46 INFO: Start Train Set Accuracy
+2020-02-24 04:31:46 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt126-384552
+2020-02-24 05:27:59 INFO: TRN ckpt-384552 avg_acc: 97.86% avg_loss: 0.5471
+2020-02-24 05:27:59 INFO: Write Train Summary
+2020-02-24 05:27:59 INFO: Start Validation
+2020-02-24 05:27:59 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt126-384552
+2020-02-24 05:47:56 INFO: VAL ckpt-384552 avg_acc: 94.57% avg_loss: 0.7293
+2020-02-24 05:47:56 INFO: Write Val Summary
+2020-02-24 05:47:56 INFO: Reset streaming metrics
+2020-02-24 05:50:17 INFO: Write Train Summary
+2020-02-24 05:55:11 INFO: Write Train Summary
+2020-02-24 06:00:05 INFO: Write Train Summary
+2020-02-24 06:04:59 INFO: Write Train Summary
+2020-02-24 06:09:53 INFO: Write Train Summary
+2020-02-24 06:14:48 INFO: Write Train Summary
+2020-02-24 06:19:43 INFO: Write Train Summary
+2020-02-24 06:24:38 INFO: Write Train Summary
+2020-02-24 06:25:23 INFO: Reset streaming metrics
+2020-02-24 06:29:34 INFO: Write Train Summary
+2020-02-24 06:34:28 INFO: Write Train Summary
+2020-02-24 06:39:23 INFO: Write Train Summary
+2020-02-24 06:44:18 INFO: Write Train Summary
+2020-02-24 06:49:12 INFO: Write Train Summary
+2020-02-24 06:54:06 INFO: Write Train Summary
+2020-02-24 06:59:00 INFO: Write Train Summary
+2020-02-24 07:02:49 INFO: Reset streaming metrics
+2020-02-24 07:03:54 INFO: Write Train Summary
+2020-02-24 07:08:48 INFO: Write Train Summary
+2020-02-24 07:13:44 INFO: Write Train Summary
+2020-02-24 07:18:39 INFO: Write Train Summary
+2020-02-24 07:23:34 INFO: Write Train Summary
+2020-02-24 07:28:29 INFO: Write Train Summary
+2020-02-24 07:33:25 INFO: Write Train Summary
+2020-02-24 07:38:20 INFO: Write Train Summary
+2020-02-24 07:40:21 INFO: Reset streaming metrics
+2020-02-24 07:43:15 INFO: Write Train Summary
+2020-02-24 07:48:09 INFO: Write Train Summary
+2020-02-24 07:53:03 INFO: Write Train Summary
+2020-02-24 07:57:58 INFO: Write Train Summary
+2020-02-24 08:02:53 INFO: Write Train Summary
+2020-02-24 08:07:48 INFO: Write Train Summary
+2020-02-24 08:12:41 INFO: Write Train Summary
+2020-02-24 08:17:35 INFO: Write Train Summary
+2020-02-24 08:17:47 INFO: Save Model
+2020-02-24 08:17:47 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt127-387604 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-24 08:17:47 INFO: Start Train Set Accuracy
+2020-02-24 08:17:47 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt127-387604
+2020-02-24 09:14:02 INFO: TRN ckpt-387604 avg_acc: 98.12% avg_loss: 0.5366
+2020-02-24 09:14:02 INFO: Write Train Summary
+2020-02-24 09:14:02 INFO: Start Validation
+2020-02-24 09:14:02 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt127-387604
+2020-02-24 09:33:59 INFO: VAL ckpt-387604 avg_acc: 94.81% avg_loss: 0.7103
+2020-02-24 09:34:00 INFO: Write Val Summary
+2020-02-24 09:34:00 INFO: Reset streaming metrics
+2020-02-24 09:38:41 INFO: Write Train Summary
+2020-02-24 09:43:35 INFO: Write Train Summary
+2020-02-24 09:48:29 INFO: Write Train Summary
+2020-02-24 09:53:22 INFO: Write Train Summary
+2020-02-24 09:58:16 INFO: Write Train Summary
+2020-02-24 10:03:10 INFO: Write Train Summary
+2020-02-24 10:08:03 INFO: Write Train Summary
+2020-02-24 10:11:20 INFO: Reset streaming metrics
+2020-02-24 10:12:57 INFO: Write Train Summary
+2020-02-24 10:17:52 INFO: Write Train Summary
+2020-02-24 10:22:46 INFO: Write Train Summary
+2020-02-24 10:27:40 INFO: Write Train Summary
+2020-02-24 10:32:34 INFO: Write Train Summary
+2020-02-24 10:37:28 INFO: Write Train Summary
+2020-02-24 10:42:22 INFO: Write Train Summary
+2020-02-24 10:47:17 INFO: Write Train Summary
+2020-02-24 10:48:46 INFO: Reset streaming metrics
+2020-02-24 10:52:12 INFO: Write Train Summary
+2020-02-24 10:57:06 INFO: Write Train Summary
+2020-02-24 11:02:02 INFO: Write Train Summary
+2020-02-24 11:06:56 INFO: Write Train Summary
+2020-02-24 11:11:50 INFO: Write Train Summary
+2020-02-24 11:16:44 INFO: Write Train Summary
+2020-02-24 11:21:38 INFO: Write Train Summary
+2020-02-24 11:26:11 INFO: Reset streaming metrics
+2020-02-24 11:26:32 INFO: Write Train Summary
+2020-02-24 11:31:26 INFO: Write Train Summary
+2020-02-24 11:36:20 INFO: Write Train Summary
+2020-02-24 11:41:13 INFO: Write Train Summary
+2020-02-24 11:46:07 INFO: Write Train Summary
+2020-02-24 11:51:02 INFO: Write Train Summary
+2020-02-24 11:55:57 INFO: Write Train Summary
+2020-02-24 12:00:51 INFO: Write Train Summary
+2020-02-24 12:03:35 INFO: Save Model
+2020-02-24 12:03:36 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt128-390656 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-24 12:03:36 INFO: Start Train Set Accuracy
+2020-02-24 12:03:36 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt128-390656
+2020-02-24 12:59:48 INFO: TRN ckpt-390656 avg_acc: 97.99% avg_loss: 0.5521
+2020-02-24 12:59:48 INFO: Write Train Summary
+2020-02-24 12:59:48 INFO: Start Validation
+2020-02-24 12:59:48 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt128-390656
+2020-02-24 17:13:01 INFO: VAL ckpt-390656 avg_acc: 94.46% avg_loss: 0.7305
+2020-02-24 17:13:49 INFO: Write Val Summary
+2020-02-24 17:15:14 INFO: Reset streaming metrics
+2020-02-24 17:17:24 INFO: Write Train Summary
+2020-02-24 17:22:18 INFO: Write Train Summary
+2020-02-24 17:27:13 INFO: Write Train Summary
+2020-02-24 17:32:07 INFO: Write Train Summary
+2020-02-24 17:37:02 INFO: Write Train Summary
+2020-02-24 17:41:57 INFO: Write Train Summary
+2020-02-24 17:46:51 INFO: Write Train Summary
+2020-02-24 17:51:47 INFO: Write Train Summary
+2020-02-24 17:52:43 INFO: Reset streaming metrics
+2020-02-24 17:56:41 INFO: Write Train Summary
+2020-02-24 18:01:35 INFO: Write Train Summary
+2020-02-24 18:06:28 INFO: Write Train Summary
+2020-02-24 18:11:22 INFO: Write Train Summary
+2020-02-24 18:16:16 INFO: Write Train Summary
+2020-02-24 18:21:10 INFO: Write Train Summary
+2020-02-24 18:26:04 INFO: Write Train Summary
+2020-02-24 18:30:05 INFO: Reset streaming metrics
+2020-02-24 18:30:58 INFO: Write Train Summary
+2020-02-24 18:35:52 INFO: Write Train Summary
+2020-02-24 18:40:46 INFO: Write Train Summary
+2020-02-24 18:45:39 INFO: Write Train Summary
+2020-02-24 18:50:33 INFO: Write Train Summary
+2020-02-24 18:55:27 INFO: Write Train Summary
+2020-02-24 19:00:21 INFO: Write Train Summary
+2020-02-24 19:05:15 INFO: Write Train Summary
+2020-02-24 19:07:27 INFO: Reset streaming metrics
+2020-02-24 19:10:09 INFO: Write Train Summary
+2020-02-24 19:15:02 INFO: Write Train Summary
+2020-02-24 19:19:56 INFO: Write Train Summary
+2020-02-24 19:24:50 INFO: Write Train Summary
+2020-02-24 19:29:44 INFO: Write Train Summary
+2020-02-24 19:34:37 INFO: Write Train Summary
+2020-02-24 19:39:31 INFO: Write Train Summary
+2020-02-24 19:44:24 INFO: Write Train Summary
+2020-02-24 19:44:48 INFO: Save Model
+2020-02-24 19:44:48 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt129-393708 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-24 19:44:48 INFO: Start Train Set Accuracy
+2020-02-24 19:44:48 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt129-393708
+2020-02-24 20:41:00 INFO: TRN ckpt-393708 avg_acc: 97.92% avg_loss: 0.5501
+2020-02-24 20:41:00 INFO: Write Train Summary
+2020-02-24 20:41:00 INFO: Start Validation
+2020-02-24 20:41:00 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt129-393708
+2020-02-24 21:00:56 INFO: VAL ckpt-393708 avg_acc: 94.75% avg_loss: 0.7226
+2020-02-24 21:00:56 INFO: Write Val Summary
+2020-02-24 21:00:56 INFO: Reset streaming metrics
+2020-02-24 21:05:26 INFO: Write Train Summary
+2020-02-24 21:10:20 INFO: Write Train Summary
+2020-02-24 21:15:14 INFO: Write Train Summary
+2020-02-24 21:20:08 INFO: Write Train Summary
+2020-02-24 21:25:01 INFO: Write Train Summary
+2020-02-24 21:29:56 INFO: Write Train Summary
+2020-02-24 21:34:49 INFO: Write Train Summary
+2020-02-24 21:38:18 INFO: Reset streaming metrics
+2020-02-24 21:39:43 INFO: Write Train Summary
+2020-02-24 21:44:37 INFO: Write Train Summary
+2020-02-24 21:49:30 INFO: Write Train Summary
+2020-02-24 21:54:24 INFO: Write Train Summary
+2020-02-24 21:59:18 INFO: Write Train Summary
+2020-02-24 22:04:11 INFO: Write Train Summary
+2020-02-24 22:09:04 INFO: Write Train Summary
+2020-02-24 22:13:58 INFO: Write Train Summary
+2020-02-24 22:15:38 INFO: Reset streaming metrics
+2020-02-24 22:18:52 INFO: Write Train Summary
+2020-02-24 22:23:46 INFO: Write Train Summary
+2020-02-24 22:28:40 INFO: Write Train Summary
+2020-02-24 22:33:34 INFO: Write Train Summary
+2020-02-24 22:38:28 INFO: Write Train Summary
+2020-02-24 22:43:22 INFO: Write Train Summary
+2020-02-24 22:48:15 INFO: Write Train Summary
+2020-02-24 22:53:00 INFO: Reset streaming metrics
+2020-02-24 22:53:09 INFO: Write Train Summary
+2020-02-24 22:58:03 INFO: Write Train Summary
+2020-02-24 23:02:56 INFO: Write Train Summary
+2020-02-24 23:07:50 INFO: Write Train Summary
+2020-02-24 23:12:44 INFO: Write Train Summary
+2020-02-24 23:17:37 INFO: Write Train Summary
+2020-02-24 23:22:32 INFO: Write Train Summary
+2020-02-24 23:27:27 INFO: Write Train Summary
+2020-02-24 23:30:24 INFO: Save Model
+2020-02-24 23:30:24 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt130-396760 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-24 23:30:24 INFO: Start Train Set Accuracy
+2020-02-24 23:30:25 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt130-396760
+2020-02-25 00:26:47 INFO: TRN ckpt-396760 avg_acc: 97.98% avg_loss: 0.5417
+2020-02-25 00:26:47 INFO: Write Train Summary
+2020-02-25 00:26:47 INFO: Start Validation
+2020-02-25 00:26:47 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt130-396760
+2020-02-25 00:46:45 INFO: VAL ckpt-396760 avg_acc: 94.65% avg_loss: 0.7268
+2020-02-25 00:46:45 INFO: Write Val Summary
+2020-02-25 00:46:45 INFO: Reset streaming metrics
+2020-02-25 00:48:42 INFO: Write Train Summary
+2020-02-25 00:53:36 INFO: Write Train Summary
+2020-02-25 00:58:30 INFO: Write Train Summary
+2020-02-25 01:03:24 INFO: Write Train Summary
+2020-02-25 01:08:17 INFO: Write Train Summary
+2020-02-25 01:13:11 INFO: Write Train Summary
+2020-02-25 01:18:05 INFO: Write Train Summary
+2020-02-25 01:22:59 INFO: Write Train Summary
+2020-02-25 01:24:06 INFO: Reset streaming metrics
+2020-02-25 01:27:53 INFO: Write Train Summary
+2020-02-25 01:32:46 INFO: Write Train Summary
+2020-02-25 01:37:40 INFO: Write Train Summary
+2020-02-25 01:42:34 INFO: Write Train Summary
+2020-02-25 01:47:27 INFO: Write Train Summary
+2020-02-25 01:52:21 INFO: Write Train Summary
+2020-02-25 01:57:15 INFO: Write Train Summary
+2020-02-25 02:01:27 INFO: Reset streaming metrics
+2020-02-25 02:02:09 INFO: Write Train Summary
+2020-02-25 02:07:02 INFO: Write Train Summary
+2020-02-25 02:11:56 INFO: Write Train Summary
+2020-02-25 02:16:50 INFO: Write Train Summary
+2020-02-25 02:21:43 INFO: Write Train Summary
+2020-02-25 02:26:37 INFO: Write Train Summary
+2020-02-25 02:31:31 INFO: Write Train Summary
+2020-02-25 02:36:24 INFO: Write Train Summary
+2020-02-25 02:38:49 INFO: Reset streaming metrics
+2020-02-25 02:41:19 INFO: Write Train Summary
+2020-02-25 02:46:12 INFO: Write Train Summary
+2020-02-25 02:51:06 INFO: Write Train Summary
+2020-02-25 02:56:00 INFO: Write Train Summary
+2020-02-25 03:00:53 INFO: Write Train Summary
+2020-02-25 03:05:47 INFO: Write Train Summary
+2020-02-25 03:10:41 INFO: Write Train Summary
+2020-02-25 03:15:35 INFO: Write Train Summary
+2020-02-25 03:16:10 INFO: Save Model
+2020-02-25 03:16:10 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt131-399812 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-25 03:16:11 INFO: Start Train Set Accuracy
+2020-02-25 03:16:11 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt131-399812
+2020-02-25 04:12:27 INFO: TRN ckpt-399812 avg_acc: 98.15% avg_loss: 0.5444
+2020-02-25 04:12:27 INFO: Write Train Summary
+2020-02-25 04:12:27 INFO: Start Validation
+2020-02-25 04:12:27 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt131-399812
+2020-02-25 04:32:25 INFO: VAL ckpt-399812 avg_acc: 94.61% avg_loss: 0.7314
+2020-02-25 04:32:25 INFO: Write Val Summary
+2020-02-25 04:32:25 INFO: Reset streaming metrics
+2020-02-25 04:36:43 INFO: Write Train Summary
+2020-02-25 04:41:37 INFO: Write Train Summary
+2020-02-25 04:46:30 INFO: Write Train Summary
+2020-02-25 04:51:24 INFO: Write Train Summary
+2020-02-25 04:56:18 INFO: Write Train Summary
+2020-02-25 05:01:12 INFO: Write Train Summary
+2020-02-25 05:06:05 INFO: Write Train Summary
+2020-02-25 05:09:46 INFO: Reset streaming metrics
+2020-02-25 05:10:59 INFO: Write Train Summary
+2020-02-25 05:15:54 INFO: Write Train Summary
+2020-02-25 05:20:49 INFO: Write Train Summary
+2020-02-25 05:25:45 INFO: Write Train Summary
+2020-02-25 05:30:40 INFO: Write Train Summary
+2020-02-25 05:35:35 INFO: Write Train Summary
+2020-02-25 05:40:30 INFO: Write Train Summary
+2020-02-25 05:45:26 INFO: Write Train Summary
+2020-02-25 05:47:18 INFO: Reset streaming metrics
+2020-02-25 05:50:20 INFO: Write Train Summary
+2020-02-25 05:55:14 INFO: Write Train Summary
+2020-02-25 06:00:07 INFO: Write Train Summary
+2020-02-25 06:05:01 INFO: Write Train Summary
+2020-02-25 06:09:55 INFO: Write Train Summary
+2020-02-25 06:14:49 INFO: Write Train Summary
+2020-02-25 06:19:42 INFO: Write Train Summary
+2020-02-25 06:24:36 INFO: Write Train Summary
+2020-02-25 06:24:39 INFO: Reset streaming metrics
+2020-02-25 06:29:30 INFO: Write Train Summary
+2020-02-25 06:34:24 INFO: Write Train Summary
+2020-02-25 06:39:17 INFO: Write Train Summary
+2020-02-25 06:44:11 INFO: Write Train Summary
+2020-02-25 06:49:05 INFO: Write Train Summary
+2020-02-25 06:53:58 INFO: Write Train Summary
+2020-02-25 06:58:52 INFO: Write Train Summary
+2020-02-25 07:02:00 INFO: Save Model
+2020-02-25 07:02:00 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt132-402864 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-25 07:02:01 INFO: Start Train Set Accuracy
+2020-02-25 07:02:01 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt132-402864
+2020-02-25 07:58:16 INFO: TRN ckpt-402864 avg_acc: 98.00% avg_loss: 0.5512
+2020-02-25 07:58:16 INFO: Write Train Summary
+2020-02-25 07:58:16 INFO: Start Validation
+2020-02-25 07:58:16 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt132-402864
+2020-02-25 08:18:13 INFO: VAL ckpt-402864 avg_acc: 94.38% avg_loss: 0.7452
+2020-02-25 08:18:13 INFO: Write Val Summary
+2020-02-25 08:18:13 INFO: Reset streaming metrics
+2020-02-25 08:19:59 INFO: Write Train Summary
+2020-02-25 08:24:53 INFO: Write Train Summary
+2020-02-25 08:29:46 INFO: Write Train Summary
+2020-02-25 08:34:40 INFO: Write Train Summary
+2020-02-25 08:39:34 INFO: Write Train Summary
+2020-02-25 08:44:28 INFO: Write Train Summary
+2020-02-25 08:49:22 INFO: Write Train Summary
+2020-02-25 08:54:15 INFO: Write Train Summary
+2020-02-25 08:55:34 INFO: Reset streaming metrics
+2020-02-25 08:59:09 INFO: Write Train Summary
+2020-02-25 09:04:03 INFO: Write Train Summary
+2020-02-25 09:08:57 INFO: Write Train Summary
+2020-02-25 09:13:50 INFO: Write Train Summary
+2020-02-25 09:18:44 INFO: Write Train Summary
+2020-02-25 09:23:37 INFO: Write Train Summary
+2020-02-25 09:28:31 INFO: Write Train Summary
+2020-02-25 09:32:56 INFO: Reset streaming metrics
+2020-02-25 09:33:25 INFO: Write Train Summary
+2020-02-25 09:38:19 INFO: Write Train Summary
+2020-02-25 09:43:12 INFO: Write Train Summary
+2020-02-25 09:48:06 INFO: Write Train Summary
+2020-02-25 09:53:00 INFO: Write Train Summary
+2020-02-25 09:57:54 INFO: Write Train Summary
+2020-02-25 10:02:47 INFO: Write Train Summary
+2020-02-25 10:07:41 INFO: Write Train Summary
+2020-02-25 10:10:17 INFO: Reset streaming metrics
+2020-02-25 10:12:35 INFO: Write Train Summary
+2020-02-25 10:17:28 INFO: Write Train Summary
+2020-02-25 10:22:22 INFO: Write Train Summary
+2020-02-25 10:27:16 INFO: Write Train Summary
+2020-02-25 10:32:09 INFO: Write Train Summary
+2020-02-25 10:37:03 INFO: Write Train Summary
+2020-02-25 10:41:57 INFO: Write Train Summary
+2020-02-25 10:46:50 INFO: Write Train Summary
+2020-02-25 10:47:37 INFO: Save Model
+2020-02-25 10:47:37 INFO: ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt133-405916 is not in all_model_checkpoint_paths. Manually adding it.
+2020-02-25 10:47:38 INFO: Start Train Set Accuracy
+2020-02-25 10:47:38 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt133-405916
+2020-02-25 11:43:51 INFO: TRN ckpt-405916 avg_acc: 98.05% avg_loss: 0.5515
+2020-02-25 11:43:51 INFO: Write Train Summary
+2020-02-25 11:43:51 INFO: Start Validation
+2020-02-25 11:43:51 INFO: Restoring parameters from ./logs/svhn/single_pred_0_bg/20200220_17:42:42:547446_/train/checkpoint/model.ckpt133-405916
+2020-02-25 12:03:47 INFO: VAL ckpt-405916 avg_acc: 94.47% avg_loss: 0.7427
+2020-02-25 12:03:47 INFO: Write Val Summary
+2020-02-25 12:03:47 INFO: Reset streaming metrics
+2020-02-25 12:07:54 INFO: Write Train Summary
+2020-02-25 12:12:48 INFO: Write Train Summary
+2020-02-25 12:17:42 INFO: Write Train Summary
+2020-02-25 12:22:36 INFO: Write Train Summary
+2020-02-25 12:27:30 INFO: Write Train Summary
