@@ -38,6 +38,8 @@ flags.DEFINE_float('capsule_weight_reg_lambda', 0, '''lagrange multiplier for
                     l2 weight regularization constraint of capsule weights''')
 flags.DEFINE_float('recon_loss_lambda', 1, '''lagrange multiplier for
                     reconstruction loss constraint''')
+flags.DEFINE_float('recon_diff_lambda', 0.2, '''lagrange multiplier for
+                    difference between bg recon and class recon''')
 flags.DEFINE_string('norm', 'norm2', 'norm type')
 flags.DEFINE_float('final_temp', 0.01, '''final temperature used in
                     EM routing activations''')
@@ -52,20 +54,18 @@ flags.DEFINE_boolean('dropout_extra', False, '''whether to apply extra dropout''
 #------------------------------------------------------------------------------
 flags.DEFINE_string('dataset', 'smallNORB',
                     '''dataset name: currently only "smallNORB, mnist,
-                     cifar10, svhn, and imagenet64" supported,
+                     cifar10, svhn, and imagenet" supported,
                      feel free to add your own''')
 flags.DEFINE_integer('A', 64, 'number of channels in output from ReLU Conv1')
 flags.DEFINE_integer('B', 8, 'number of capsules in output from PrimaryCaps')
 flags.DEFINE_integer('C', 16, 'number of channels in output from ConvCaps1')
 flags.DEFINE_integer('D', 16, 'number of channels in output from ConvCaps2')
-flags.DEFINE_boolean('deeper', False, '''whether or not to go deeper''')
-flags.DEFINE_boolean('rescap', False, '''whether or not to add residual
-                      capsule routes to the final class layer''') # not supported yet
-flags.DEFINE_integer('E', 8, 'number of channels in output from ConvCaps3')
-flags.DEFINE_integer('F', 16, 'number of channels in output from ConvCaps4')
-flags.DEFINE_integer('G', 16, 'number of channels in output from ConvCaps5')
+flags.DEFINE_integer('E', 0, 'number of channels in output from ConvCaps3')
+flags.DEFINE_integer('F', 0, 'number of channels in output from ConvCaps4')
+flags.DEFINE_integer('G', 0, 'number of channels in output from ConvCaps5')
 flags.DEFINE_boolean('recon_loss', False, '''whether to apply reconstruction
                       loss''')
+flags.DEFINE_boolean('relu_recon', False, '''whether to use relu instead of tanh''')
 flags.DEFINE_boolean('multi_weighted_pred_recon', False, '''whether to use multiple
                       weighted predicted classes instead of single label for decoder
                       input''')
@@ -73,6 +73,9 @@ flags.DEFINE_integer('num_bg_classes', 0, '''number of background
                       classes for decoder''')
 flags.DEFINE_integer('X', 512, 'number of neurons in reconstructive layer 1')
 flags.DEFINE_integer('Y', 1024, 'number of neurons in reconstructive layer 2')
+flags.DEFINE_boolean('new_bg_recon_arch', False, '''instead of concat bg recon,
+                                                    add after recon. also concat
+                                                    activation instead of multiply''')
 flags.DEFINE_boolean('zeroed_bg_reconstruction', False, '''whether to return
                       counter factual reconstruction output on zeroed bg''')
 #------------------------------------------------------------------------------
@@ -210,7 +213,10 @@ def load_or_save_hyperparams(train_dir=None):
         if name in specified_flags:
           pass
         else:
-          FLAGS.__flags[name].value = value 
+          try:
+            FLAGS.__flags[name].value = value
+          except KeyError:
+            pass # ignore deprecated arguments
     logger.info("Loaded parameters from file: {}".format(params_path))
 
   # Save parameters to file
@@ -235,7 +241,7 @@ def get_dataset_path(dataset_name: str):
              'mnist': '',
              'cifar10': '',
              'svhn': '',
-             'imagenet64': ''}
+             'imagenet56': ''}
   path = FLAGS.storage + options[dataset_name]
   return path
 
@@ -247,12 +253,12 @@ def get_dataset_size_train(dataset_name: str):
              'cifar10': 50000, 
              'cifar100': 50000,
              'svhn': 73257,
-             'imagenet64': 1281167}
+             'imagenet56': 1281167}
   return options[dataset_name]
 
 
 def get_dataset_size_test(dataset_name: str):
-  if dataset_name is 'imagenet64':
+  if dataset_name is 'imagenet56':
     logger.info("%s pipeline is not set up for testing, using validation set for testing instead"%dataset_name)
     return get_dataset_size_validate(dataset_name)
   options = {'mnist': 10000, 
@@ -268,7 +274,7 @@ def get_dataset_size_validate(dataset_name: str):
   if dataset_name == 'smallNORB' or dataset_name == 'mnist' or dataset_name == 'cifar10' or dataset_name == 'svhn':
     logger.info("%s pipeline is not set up for validation, using test set for validation instead"%dataset_name)
     return get_dataset_size_test(dataset_name)
-  options = {'imagenet64': 50000}
+  options = {'imagenet56': 50000}
   return options[dataset_name]
 
 
@@ -279,7 +285,7 @@ def get_num_classes(dataset_name: str):
              'cifar10': 10, 
              'cifar100': 100,
              'svhn': 10,
-             'imagenet64': 1000}
+             'imagenet56': 1000}
   return options[dataset_name]
 
 
@@ -287,7 +293,7 @@ from data_pipelines import norb as data_norb
 from data_pipelines import mnist as data_mnist
 from data_pipelines import cifar10 as data_cifar10
 from data_pipelines import svhn as data_svhn
-from data_pipelines import imagenet64 as data_imagenet64
+from data_pipelines import imagenet56 as data_imagenet56
 def get_create_inputs(dataset_name: str, mode="train"):
   
   force_set = None
@@ -311,8 +317,8 @@ def get_create_inputs(dataset_name: str, mode="train"):
                  lambda: data_cifar10.create_inputs(is_train, force_set),
              'svhn':
                  lambda: data_svhn.create_inputs(is_train, force_set),
-             'imagenet64':
-                 lambda: data_imagenet64.create_inputs(is_train, force_set)}
+             'imagenet56':
+                 lambda: data_imagenet56.create_inputs(is_train, force_set)}
   return options[dataset_name]
 
 
@@ -323,7 +329,5 @@ def get_dataset_architecture(dataset_name: str):
   #            'mnist': mod.build_arch_smallnorb,
   #            'cifar10': mod.build_arch_smallnorb}
   # return options[dataset_name]
-  if FLAGS.deeper:
-    return mod.build_arch_deepcap
   return mod.build_arch_smallnorb 
 

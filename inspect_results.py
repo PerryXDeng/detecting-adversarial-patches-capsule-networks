@@ -239,6 +239,8 @@ def main(args):
           patch = np.squeeze(patch, axis=-1)
         formatted = (patch * 255).astype('uint8')
         img = Image.fromarray(formatted)
+        save_dir = os.path.join(FLAGS.storage, 'logs/',
+                                FLAGS.dataset, FLAGS.logdir)
         img.save(os.path.join(FLAGS.load_dir, "test", "saved_patch.png"))
         return
           
@@ -258,10 +260,10 @@ def main(args):
             patch = np.asarray(Image.open(FLAGS.patch_path), dtype=np.float32)
             if len(patch.shape) < 3:
               patch = np.expand_dims(patch, axis=-1)
-          if patch_dims[-1] == 1:
-            patch = np.mean(patch, axis=-1, keepdims=True)
-          patch = patch/255
-          feed_dict[patch_feed] = patch
+            if patch_dims[-1] == 1:
+              patch = np.mean(patch, axis=-1, keepdims=True)
+            patch = patch/255
+            feed_dict[patch_feed] = patch
           out = sess_test.run([test_metrics], feed_dict=feed_dict)
           test_metrics_v = out[0]
           #ckpt_num = re.split('-', ckpt)[-1]

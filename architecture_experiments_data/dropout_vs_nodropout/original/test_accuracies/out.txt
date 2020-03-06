@@ -1,0 +1,12 @@
+run-original_20200207_14_38_33_147452__train_summary-tag-val_acc.csv
+        Wall time  Step     Value
+224  1.581504e+09   224  0.945216
+run-original_20200207_14_38_33_147052__train_summary-tag-val_acc.csv
+        Wall time  Step     Value
+127  1.581338e+09   127  0.940364
+run-original_20200207_14_38_33_146551__train_summary-tag-val_acc.csv
+        Wall time  Step     Value
+180  1.581435e+09   180  0.944767
+run-original_20200207_14_38_33_147307__train_summary-tag-val_acc.csv
+        Wall time  Step     Value
+205  1.581470e+09   205  0.942822

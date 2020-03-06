@@ -1,0 +1,2229 @@
+2019-12-25 13:38:42 INFO: Loaded parameters from file: /data/perry/matrix-capsules-with-em-routing/logs/cifar10/bg_recon_2/20191122_14:20:00:808255_/train/params/params.json
+2019-12-25 13:38:42 INFO: Parameters saved to file: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/params/params.json
+2019-12-25 13:38:42 INFO: Using dataset: cifar10
+2019-12-25 13:38:42 INFO: cifar10 pipeline is not set up for validation, using test set for validation instead
+2019-12-25 13:38:42 INFO: BUILD TRAIN GRAPH
+2019-12-25 13:38:42 WARNING: From train_val.py:85: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2019-12-25 13:38:42 WARNING: From train_val.py:94: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+2019-12-25 13:38:42 WARNING: From train_val.py:98: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+2019-12-25 13:38:42 WARNING: From train_val.py:99: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2019-12-25 13:38:42 INFO: Overwrite dataset info from restored data version.
+2019-12-25 13:38:42 INFO: Reusing dataset cifar10 (/data/perry/tensorflow_datasets/cifar10/1.0.2)
+2019-12-25 13:38:42 INFO: Constructing tf.data.Dataset for split train, from /data/perry/tensorflow_datasets/cifar10/1.0.2
+2019-12-25 13:38:42 WARNING: From /data/perry/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2019-12-25 13:38:42 INFO: TOWER 0
+2019-12-25 13:38:42 WARNING: From train_val.py:692: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2019-12-25 13:38:42 WARNING: From train_val.py:692: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2019-12-25 13:38:42 INFO: input shape: (16, 32, 32, 3)
+2019-12-25 13:38:43 INFO: relu_conv1 output shape: (16, 16, 16, 256)
+2019-12-25 13:38:43 INFO: primary_caps pose shape: (16, 16, 16, 32, 16)
+2019-12-25 13:38:43 INFO: primary_caps activation shape (16, 16, 16, 32, 1)
+2019-12-25 13:38:43 WARNING: From /data/perry/matrix-capsules-with-em-routing/models.py:112: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2019-12-25 13:38:43 INFO: lyr.conv_caps1 votes shape: (784, 288, 32, 16)
+2019-12-25 13:38:43 WARNING: From /data/perry/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2019-12-25 13:38:43 WARNING: From /data/perry/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-12-25 13:38:43 WARNING: From /data/perry/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2019-12-25 13:38:43 INFO: lyr.conv_caps1 pose_out shape: (16, 7, 7, 32, 16)
+2019-12-25 13:38:43 INFO: lyr.conv_caps1 activation_out shape: (16, 7, 7, 32, 1)
+2019-12-25 13:38:43 INFO: lyr.conv_caps2 votes shape: (400, 288, 32, 16)
+2019-12-25 13:38:43 INFO: lyr.conv_caps2 pose_out shape: (16, 5, 5, 32, 16)
+2019-12-25 13:38:43 INFO: lyr.conv_caps2 activation_out shape: (16, 5, 5, 32, 1)
+2019-12-25 13:38:43 INFO: class_caps votes original shape: (400, 32, 10, 16)
+2019-12-25 13:38:43 INFO: class_caps votes in to routing shape: (16, 800, 10, 16)
+2019-12-25 13:38:43 INFO: class_caps activation shape: (16, 10)
+2019-12-25 13:38:43 INFO: class_caps pose shape: (16, 10, 16)
+2019-12-25 13:38:43 INFO: bg_caps votes original shape: (400, 32, 2, 16)
+2019-12-25 13:38:43 INFO: bg_caps votes in to routing shape: (16, 800, 2, 16)
+2019-12-25 13:38:44 INFO: bg_caps activation shape: (16, 2)
+2019-12-25 13:38:44 INFO: bg_caps pose shape: (16, 2, 16)
+2019-12-25 13:38:44 WARNING: From /data/perry/matrix-capsules-with-em-routing/models.py:867: The name tf.train.get_global_step is deprecated. Please use tf.compat.v1.train.get_global_step instead.
+
+2019-12-25 13:38:44 WARNING: From /data/perry/matrix-capsules-with-em-routing/models.py:965: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+2019-12-25 13:38:48 INFO: TOWER 1
+2019-12-25 13:38:48 INFO: input shape: (16, 32, 32, 3)
+2019-12-25 13:38:48 INFO: relu_conv1 output shape: (16, 16, 16, 256)
+2019-12-25 13:38:48 INFO: primary_caps pose shape: (16, 16, 16, 32, 16)
+2019-12-25 13:38:48 INFO: primary_caps activation shape (16, 16, 16, 32, 1)
+2019-12-25 13:38:48 INFO: lyr.conv_caps1 votes shape: (784, 288, 32, 16)
+2019-12-25 13:38:48 INFO: lyr.conv_caps1 pose_out shape: (16, 7, 7, 32, 16)
+2019-12-25 13:38:48 INFO: lyr.conv_caps1 activation_out shape: (16, 7, 7, 32, 1)
+2019-12-25 13:38:48 INFO: lyr.conv_caps2 votes shape: (400, 288, 32, 16)
+2019-12-25 13:38:48 INFO: lyr.conv_caps2 pose_out shape: (16, 5, 5, 32, 16)
+2019-12-25 13:38:48 INFO: lyr.conv_caps2 activation_out shape: (16, 5, 5, 32, 1)
+2019-12-25 13:38:48 INFO: class_caps votes original shape: (400, 32, 10, 16)
+2019-12-25 13:38:48 INFO: class_caps votes in to routing shape: (16, 800, 10, 16)
+2019-12-25 13:38:49 INFO: class_caps activation shape: (16, 10)
+2019-12-25 13:38:49 INFO: class_caps pose shape: (16, 10, 16)
+2019-12-25 13:38:49 INFO: bg_caps votes original shape: (400, 32, 2, 16)
+2019-12-25 13:38:49 INFO: bg_caps votes in to routing shape: (16, 800, 2, 16)
+2019-12-25 13:38:49 INFO: bg_caps activation shape: (16, 2)
+2019-12-25 13:38:49 INFO: bg_caps pose shape: (16, 2, 16)
+2019-12-25 13:38:53 WARNING: From /data/perry/matrix-capsules-with-em-routing/metrics.py:27: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2019-12-25 13:38:53 WARNING: From train_val.py:210: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2019-12-25 13:38:53 INFO: Trainable Parameters: 4460728
+2019-12-25 13:38:53 WARNING: From train_val.py:218: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2019-12-25 13:38:53 INFO: BUILD TRAINING SET ACCURACY GRAPH
+2019-12-25 13:38:53 INFO: Overwrite dataset info from restored data version.
+2019-12-25 13:38:53 INFO: Reusing dataset cifar10 (/data/perry/tensorflow_datasets/cifar10/1.0.2)
+2019-12-25 13:38:53 INFO: Constructing tf.data.Dataset for split train, from /data/perry/tensorflow_datasets/cifar10/1.0.2
+2019-12-25 13:38:53 INFO: input shape: (16, 32, 32, 3)
+2019-12-25 13:38:53 INFO: relu_conv1 output shape: (16, 16, 16, 256)
+2019-12-25 13:38:53 INFO: primary_caps pose shape: (16, 16, 16, 32, 16)
+2019-12-25 13:38:53 INFO: primary_caps activation shape (16, 16, 16, 32, 1)
+2019-12-25 13:38:53 INFO: lyr.conv_caps1 votes shape: (784, 288, 32, 16)
+2019-12-25 13:38:54 INFO: lyr.conv_caps1 pose_out shape: (16, 7, 7, 32, 16)
+2019-12-25 13:38:54 INFO: lyr.conv_caps1 activation_out shape: (16, 7, 7, 32, 1)
+2019-12-25 13:38:54 INFO: lyr.conv_caps2 votes shape: (400, 288, 32, 16)
+2019-12-25 13:38:54 INFO: lyr.conv_caps2 pose_out shape: (16, 5, 5, 32, 16)
+2019-12-25 13:38:54 INFO: lyr.conv_caps2 activation_out shape: (16, 5, 5, 32, 1)
+2019-12-25 13:38:54 INFO: class_caps votes original shape: (400, 32, 10, 16)
+2019-12-25 13:38:54 INFO: class_caps votes in to routing shape: (16, 800, 10, 16)
+2019-12-25 13:38:54 INFO: class_caps activation shape: (16, 10)
+2019-12-25 13:38:54 INFO: class_caps pose shape: (16, 10, 16)
+2019-12-25 13:38:54 INFO: bg_caps votes original shape: (400, 32, 2, 16)
+2019-12-25 13:38:54 INFO: bg_caps votes in to routing shape: (16, 800, 2, 16)
+2019-12-25 13:38:54 INFO: bg_caps activation shape: (16, 2)
+2019-12-25 13:38:54 INFO: bg_caps pose shape: (16, 2, 16)
+2019-12-25 13:38:55 INFO: input shape: (16, 32, 32, 3)
+2019-12-25 13:38:55 INFO: relu_conv1 output shape: (16, 16, 16, 256)
+2019-12-25 13:38:55 INFO: primary_caps pose shape: (16, 16, 16, 32, 16)
+2019-12-25 13:38:55 INFO: primary_caps activation shape (16, 16, 16, 32, 1)
+2019-12-25 13:38:55 INFO: lyr.conv_caps1 votes shape: (784, 288, 32, 16)
+2019-12-25 13:38:55 INFO: lyr.conv_caps1 pose_out shape: (16, 7, 7, 32, 16)
+2019-12-25 13:38:55 INFO: lyr.conv_caps1 activation_out shape: (16, 7, 7, 32, 1)
+2019-12-25 13:38:55 INFO: lyr.conv_caps2 votes shape: (400, 288, 32, 16)
+2019-12-25 13:38:55 INFO: lyr.conv_caps2 pose_out shape: (16, 5, 5, 32, 16)
+2019-12-25 13:38:55 INFO: lyr.conv_caps2 activation_out shape: (16, 5, 5, 32, 1)
+2019-12-25 13:38:55 INFO: class_caps votes original shape: (400, 32, 10, 16)
+2019-12-25 13:38:55 INFO: class_caps votes in to routing shape: (16, 800, 10, 16)
+2019-12-25 13:38:55 INFO: class_caps activation shape: (16, 10)
+2019-12-25 13:38:55 INFO: class_caps pose shape: (16, 10, 16)
+2019-12-25 13:38:55 INFO: bg_caps votes original shape: (400, 32, 2, 16)
+2019-12-25 13:38:55 INFO: bg_caps votes in to routing shape: (16, 800, 2, 16)
+2019-12-25 13:38:55 INFO: bg_caps activation shape: (16, 2)
+2019-12-25 13:38:55 INFO: bg_caps pose shape: (16, 2, 16)
+2019-12-25 13:38:55 INFO: BUILD VALIDATION GRAPH
+2019-12-25 13:38:55 INFO: Overwrite dataset info from restored data version.
+2019-12-25 13:38:55 INFO: Reusing dataset cifar10 (/data/perry/tensorflow_datasets/cifar10/1.0.2)
+2019-12-25 13:38:55 INFO: Constructing tf.data.Dataset for split test, from /data/perry/tensorflow_datasets/cifar10/1.0.2
+2019-12-25 13:38:56 INFO: input shape: (16, 32, 32, 3)
+2019-12-25 13:38:56 INFO: relu_conv1 output shape: (16, 16, 16, 256)
+2019-12-25 13:38:56 INFO: primary_caps pose shape: (16, 16, 16, 32, 16)
+2019-12-25 13:38:56 INFO: primary_caps activation shape (16, 16, 16, 32, 1)
+2019-12-25 13:38:56 INFO: lyr.conv_caps1 votes shape: (784, 288, 32, 16)
+2019-12-25 13:38:56 INFO: lyr.conv_caps1 pose_out shape: (16, 7, 7, 32, 16)
+2019-12-25 13:38:56 INFO: lyr.conv_caps1 activation_out shape: (16, 7, 7, 32, 1)
+2019-12-25 13:38:56 INFO: lyr.conv_caps2 votes shape: (400, 288, 32, 16)
+2019-12-25 13:38:56 INFO: lyr.conv_caps2 pose_out shape: (16, 5, 5, 32, 16)
+2019-12-25 13:38:56 INFO: lyr.conv_caps2 activation_out shape: (16, 5, 5, 32, 1)
+2019-12-25 13:38:56 INFO: class_caps votes original shape: (400, 32, 10, 16)
+2019-12-25 13:38:56 INFO: class_caps votes in to routing shape: (16, 800, 10, 16)
+2019-12-25 13:38:56 INFO: class_caps activation shape: (16, 10)
+2019-12-25 13:38:56 INFO: class_caps pose shape: (16, 10, 16)
+2019-12-25 13:38:56 INFO: bg_caps votes original shape: (400, 32, 2, 16)
+2019-12-25 13:38:56 INFO: bg_caps votes in to routing shape: (16, 800, 2, 16)
+2019-12-25 13:38:56 INFO: bg_caps activation shape: (16, 2)
+2019-12-25 13:38:56 INFO: bg_caps pose shape: (16, 2, 16)
+2019-12-25 13:38:57 INFO: input shape: (16, 32, 32, 3)
+2019-12-25 13:38:57 INFO: relu_conv1 output shape: (16, 16, 16, 256)
+2019-12-25 13:38:57 INFO: primary_caps pose shape: (16, 16, 16, 32, 16)
+2019-12-25 13:38:57 INFO: primary_caps activation shape (16, 16, 16, 32, 1)
+2019-12-25 13:38:57 INFO: lyr.conv_caps1 votes shape: (784, 288, 32, 16)
+2019-12-25 13:38:57 INFO: lyr.conv_caps1 pose_out shape: (16, 7, 7, 32, 16)
+2019-12-25 13:38:57 INFO: lyr.conv_caps1 activation_out shape: (16, 7, 7, 32, 1)
+2019-12-25 13:38:57 INFO: lyr.conv_caps2 votes shape: (400, 288, 32, 16)
+2019-12-25 13:38:57 INFO: lyr.conv_caps2 pose_out shape: (16, 5, 5, 32, 16)
+2019-12-25 13:38:57 INFO: lyr.conv_caps2 activation_out shape: (16, 5, 5, 32, 1)
+2019-12-25 13:38:57 INFO: class_caps votes original shape: (400, 32, 10, 16)
+2019-12-25 13:38:57 INFO: class_caps votes in to routing shape: (16, 800, 10, 16)
+2019-12-25 13:38:57 INFO: class_caps activation shape: (16, 10)
+2019-12-25 13:38:57 INFO: class_caps pose shape: (16, 10, 16)
+2019-12-25 13:38:57 INFO: bg_caps votes original shape: (400, 32, 2, 16)
+2019-12-25 13:38:57 INFO: bg_caps votes in to routing shape: (16, 800, 2, 16)
+2019-12-25 13:38:57 INFO: bg_caps activation shape: (16, 2)
+2019-12-25 13:38:57 INFO: bg_caps pose shape: (16, 2, 16)
+2019-12-25 13:38:59 WARNING: From /data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2019-12-25 13:38:59 INFO: Restoring parameters from logs/cifar10/bg_recon_2/20191122_14:20:00:808255_/train/checkpoint/model.ckpt135-421875
+2019-12-25 13:39:00 INFO: Restored checkpoint
+2019-12-25 13:39:00 WARNING: From train_val.py:435: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2019-12-25 13:41:01 INFO: Write Train Summary
+2019-12-25 13:47:11 INFO: Write Train Summary
+2019-12-25 13:53:19 INFO: Write Train Summary
+2019-12-25 13:59:28 INFO: Write Train Summary
+2019-12-25 14:05:36 INFO: Write Train Summary
+2019-12-25 14:11:44 INFO: Write Train Summary
+2019-12-25 14:17:53 INFO: Write Train Summary
+2019-12-25 14:19:10 INFO: Reset streaming metrics
+2019-12-25 14:24:02 INFO: Write Train Summary
+2019-12-25 14:30:11 INFO: Write Train Summary
+2019-12-25 14:36:21 INFO: Write Train Summary
+2019-12-25 14:42:29 INFO: Write Train Summary
+2019-12-25 14:48:39 INFO: Write Train Summary
+2019-12-25 14:54:47 INFO: Write Train Summary
+2019-12-25 15:00:56 INFO: Write Train Summary
+2019-12-25 15:07:04 INFO: Write Train Summary
+2019-12-25 15:07:11 INFO: Save Model
+2019-12-25 15:07:12 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt271-423302 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-25 15:07:12 INFO: Start Train Set Accuracy
+2019-12-25 15:07:12 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt271-423302
+2019-12-25 15:42:02 INFO: TRN ckpt-423302 avg_acc: 96.85% avg_loss: 1.1014
+2019-12-25 15:42:02 INFO: Write Train Summary
+2019-12-25 15:42:02 INFO: Start Validation
+2019-12-25 15:42:02 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt271-423302
+2019-12-25 15:49:03 INFO: VAL ckpt-423302 avg_acc: 79.85% avg_loss: 1.8758
+2019-12-25 15:49:03 INFO: Write Val Summary
+2019-12-25 15:49:03 INFO: Reset streaming metrics
+2019-12-25 15:55:06 INFO: Write Train Summary
+2019-12-25 16:01:14 INFO: Write Train Summary
+2019-12-25 16:07:23 INFO: Write Train Summary
+2019-12-25 16:13:31 INFO: Write Train Summary
+2019-12-25 16:19:40 INFO: Write Train Summary
+2019-12-25 16:25:50 INFO: Write Train Summary
+2019-12-25 16:31:59 INFO: Write Train Summary
+2019-12-25 16:37:06 INFO: Reset streaming metrics
+2019-12-25 16:38:09 INFO: Write Train Summary
+2019-12-25 16:44:18 INFO: Write Train Summary
+2019-12-25 16:50:26 INFO: Write Train Summary
+2019-12-25 16:56:35 INFO: Write Train Summary
+2019-12-25 17:02:41 INFO: Write Train Summary
+2019-12-25 17:08:47 INFO: Write Train Summary
+2019-12-25 17:14:54 INFO: Write Train Summary
+2019-12-25 17:21:02 INFO: Write Train Summary
+2019-12-25 17:24:55 INFO: Save Model
+2019-12-25 17:24:55 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt272-424864 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-25 17:24:56 INFO: Start Train Set Accuracy
+2019-12-25 17:24:56 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt272-424864
+2019-12-25 17:59:39 INFO: TRN ckpt-424864 avg_acc: 96.82% avg_loss: 1.0963
+2019-12-25 17:59:39 INFO: Write Train Summary
+2019-12-25 17:59:39 INFO: Start Validation
+2019-12-25 17:59:39 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt272-424864
+2019-12-25 18:06:34 INFO: VAL ckpt-424864 avg_acc: 79.13% avg_loss: 1.8744
+2019-12-25 18:06:34 INFO: Write Val Summary
+2019-12-25 18:06:34 INFO: Reset streaming metrics
+2019-12-25 18:08:46 INFO: Write Train Summary
+2019-12-25 18:14:54 INFO: Write Train Summary
+2019-12-25 18:21:01 INFO: Write Train Summary
+2019-12-25 18:27:08 INFO: Write Train Summary
+2019-12-25 18:33:15 INFO: Write Train Summary
+2019-12-25 18:39:23 INFO: Write Train Summary
+2019-12-25 18:45:31 INFO: Write Train Summary
+2019-12-25 18:51:38 INFO: Write Train Summary
+2019-12-25 18:54:24 INFO: Reset streaming metrics
+2019-12-25 18:57:45 INFO: Write Train Summary
+2019-12-25 19:03:52 INFO: Write Train Summary
+2019-12-25 19:09:58 INFO: Write Train Summary
+2019-12-25 19:16:04 INFO: Write Train Summary
+2019-12-25 19:22:08 INFO: Write Train Summary
+2019-12-25 19:28:16 INFO: Write Train Summary
+2019-12-25 19:34:23 INFO: Write Train Summary
+2019-12-25 19:40:28 INFO: Write Train Summary
+2019-12-25 19:42:02 INFO: Save Model
+2019-12-25 19:42:03 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt273-426426 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-25 19:42:03 INFO: Start Train Set Accuracy
+2019-12-25 19:42:03 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt273-426426
+2019-12-25 20:16:48 INFO: TRN ckpt-426426 avg_acc: 97.05% avg_loss: 1.0845
+2019-12-25 20:16:48 INFO: Write Train Summary
+2019-12-25 20:16:48 INFO: Start Validation
+2019-12-25 20:16:48 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt273-426426
+2019-12-25 20:23:44 INFO: VAL ckpt-426426 avg_acc: 79.63% avg_loss: 1.8762
+2019-12-25 20:23:44 INFO: Write Val Summary
+2019-12-25 20:23:44 INFO: Reset streaming metrics
+2019-12-25 20:28:16 INFO: Write Train Summary
+2019-12-25 20:34:24 INFO: Write Train Summary
+2019-12-25 20:40:30 INFO: Write Train Summary
+2019-12-25 20:46:38 INFO: Write Train Summary
+2019-12-25 20:52:47 INFO: Write Train Summary
+2019-12-25 20:58:58 INFO: Write Train Summary
+2019-12-25 21:05:05 INFO: Write Train Summary
+2019-12-25 21:11:12 INFO: Write Train Summary
+2019-12-25 21:11:38 INFO: Reset streaming metrics
+2019-12-25 21:17:20 INFO: Write Train Summary
+2019-12-25 21:23:27 INFO: Write Train Summary
+2019-12-25 21:29:34 INFO: Write Train Summary
+2019-12-25 21:35:42 INFO: Write Train Summary
+2019-12-25 21:41:50 INFO: Write Train Summary
+2019-12-25 21:47:58 INFO: Write Train Summary
+2019-12-25 21:54:06 INFO: Write Train Summary
+2019-12-25 21:59:30 INFO: Save Model
+2019-12-25 21:59:31 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt274-427988 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-25 21:59:31 INFO: Start Train Set Accuracy
+2019-12-25 21:59:31 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt274-427988
+2019-12-25 22:34:19 INFO: TRN ckpt-427988 avg_acc: 97.26% avg_loss: 1.0748
+2019-12-25 22:34:19 INFO: Write Train Summary
+2019-12-25 22:34:19 INFO: Start Validation
+2019-12-25 22:34:19 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt274-427988
+2019-12-25 22:41:17 INFO: VAL ckpt-427988 avg_acc: 79.78% avg_loss: 1.8755
+2019-12-25 22:41:17 INFO: Write Val Summary
+2019-12-25 22:41:17 INFO: Reset streaming metrics
+2019-12-25 22:42:01 INFO: Write Train Summary
+2019-12-25 22:48:10 INFO: Write Train Summary
+2019-12-25 22:54:18 INFO: Write Train Summary
+2019-12-25 23:00:26 INFO: Write Train Summary
+2019-12-25 23:06:34 INFO: Write Train Summary
+2019-12-25 23:12:41 INFO: Write Train Summary
+2019-12-25 23:18:49 INFO: Write Train Summary
+2019-12-25 23:24:57 INFO: Write Train Summary
+2019-12-25 23:29:10 INFO: Reset streaming metrics
+2019-12-25 23:31:04 INFO: Write Train Summary
+2019-12-25 23:37:10 INFO: Write Train Summary
+2019-12-25 23:43:15 INFO: Write Train Summary
+2019-12-25 23:49:23 INFO: Write Train Summary
+2019-12-25 23:55:29 INFO: Write Train Summary
+2019-12-26 00:01:36 INFO: Write Train Summary
+2019-12-26 00:07:42 INFO: Write Train Summary
+2019-12-26 00:13:50 INFO: Write Train Summary
+2019-12-26 00:16:54 INFO: Save Model
+2019-12-26 00:16:54 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt275-429550 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 00:16:55 INFO: Start Train Set Accuracy
+2019-12-26 00:16:55 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt275-429550
+2019-12-26 00:51:37 INFO: TRN ckpt-429550 avg_acc: 96.97% avg_loss: 1.0743
+2019-12-26 00:51:37 INFO: Write Train Summary
+2019-12-26 00:51:37 INFO: Start Validation
+2019-12-26 00:51:37 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt275-429550
+2019-12-26 00:58:32 INFO: VAL ckpt-429550 avg_acc: 79.50% avg_loss: 1.8766
+2019-12-26 00:58:32 INFO: Write Val Summary
+2019-12-26 00:58:32 INFO: Reset streaming metrics
+2019-12-26 01:01:35 INFO: Write Train Summary
+2019-12-26 01:07:43 INFO: Write Train Summary
+2019-12-26 01:13:50 INFO: Write Train Summary
+2019-12-26 01:19:58 INFO: Write Train Summary
+2019-12-26 01:26:05 INFO: Write Train Summary
+2019-12-26 01:32:13 INFO: Write Train Summary
+2019-12-26 01:38:21 INFO: Write Train Summary
+2019-12-26 01:44:27 INFO: Write Train Summary
+2019-12-26 01:46:21 INFO: Reset streaming metrics
+2019-12-26 01:50:35 INFO: Write Train Summary
+2019-12-26 01:56:39 INFO: Write Train Summary
+2019-12-26 02:02:46 INFO: Write Train Summary
+2019-12-26 02:08:53 INFO: Write Train Summary
+2019-12-26 02:15:00 INFO: Write Train Summary
+2019-12-26 02:21:05 INFO: Write Train Summary
+2019-12-26 02:27:13 INFO: Write Train Summary
+2019-12-26 02:33:21 INFO: Write Train Summary
+2019-12-26 02:34:06 INFO: Save Model
+2019-12-26 02:34:06 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt276-431112 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 02:34:07 INFO: Start Train Set Accuracy
+2019-12-26 02:34:07 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt276-431112
+2019-12-26 03:08:47 INFO: TRN ckpt-431112 avg_acc: 97.21% avg_loss: 1.0603
+2019-12-26 03:08:47 INFO: Write Train Summary
+2019-12-26 03:08:47 INFO: Start Validation
+2019-12-26 03:08:47 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt276-431112
+2019-12-26 03:15:44 INFO: VAL ckpt-431112 avg_acc: 79.22% avg_loss: 1.8839
+2019-12-26 03:15:44 INFO: Write Val Summary
+2019-12-26 03:15:44 INFO: Reset streaming metrics
+2019-12-26 03:21:07 INFO: Write Train Summary
+2019-12-26 03:27:13 INFO: Write Train Summary
+2019-12-26 03:33:21 INFO: Write Train Summary
+2019-12-26 03:39:30 INFO: Write Train Summary
+2019-12-26 03:45:37 INFO: Write Train Summary
+2019-12-26 03:51:46 INFO: Write Train Summary
+2019-12-26 03:57:54 INFO: Write Train Summary
+2019-12-26 04:03:35 INFO: Reset streaming metrics
+2019-12-26 04:04:00 INFO: Write Train Summary
+2019-12-26 04:10:07 INFO: Write Train Summary
+2019-12-26 04:16:15 INFO: Write Train Summary
+2019-12-26 04:22:24 INFO: Write Train Summary
+2019-12-26 04:28:30 INFO: Write Train Summary
+2019-12-26 04:34:36 INFO: Write Train Summary
+2019-12-26 04:40:44 INFO: Write Train Summary
+2019-12-26 04:46:50 INFO: Write Train Summary
+2019-12-26 04:51:20 INFO: Save Model
+2019-12-26 04:51:20 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt277-432674 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 04:51:21 INFO: Start Train Set Accuracy
+2019-12-26 04:51:21 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt277-432674
+2019-12-26 05:26:05 INFO: TRN ckpt-432674 avg_acc: 97.31% avg_loss: 1.0704
+2019-12-26 05:26:05 INFO: Write Train Summary
+2019-12-26 05:26:05 INFO: Start Validation
+2019-12-26 05:26:05 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt277-432674
+2019-12-26 05:33:02 INFO: VAL ckpt-432674 avg_acc: 79.22% avg_loss: 1.8855
+2019-12-26 05:33:02 INFO: Write Val Summary
+2019-12-26 05:33:02 INFO: Reset streaming metrics
+2019-12-26 05:34:38 INFO: Write Train Summary
+2019-12-26 05:40:46 INFO: Write Train Summary
+2019-12-26 05:46:53 INFO: Write Train Summary
+2019-12-26 05:53:00 INFO: Write Train Summary
+2019-12-26 05:59:06 INFO: Write Train Summary
+2019-12-26 06:05:11 INFO: Write Train Summary
+2019-12-26 06:11:19 INFO: Write Train Summary
+2019-12-26 06:17:25 INFO: Write Train Summary
+2019-12-26 06:20:46 INFO: Reset streaming metrics
+2019-12-26 06:23:31 INFO: Write Train Summary
+2019-12-26 06:29:38 INFO: Write Train Summary
+2019-12-26 06:35:46 INFO: Write Train Summary
+2019-12-26 06:41:53 INFO: Write Train Summary
+2019-12-26 06:47:59 INFO: Write Train Summary
+2019-12-26 06:54:06 INFO: Write Train Summary
+2019-12-26 07:00:13 INFO: Write Train Summary
+2019-12-26 07:06:21 INFO: Write Train Summary
+2019-12-26 07:08:32 INFO: Save Model
+2019-12-26 07:08:32 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt278-434236 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 07:08:33 INFO: Start Train Set Accuracy
+2019-12-26 07:08:33 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt278-434236
+2019-12-26 07:43:13 INFO: TRN ckpt-434236 avg_acc: 97.28% avg_loss: 1.0498
+2019-12-26 07:43:13 INFO: Write Train Summary
+2019-12-26 07:43:13 INFO: Start Validation
+2019-12-26 07:43:13 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt278-434236
+2019-12-26 07:50:09 INFO: VAL ckpt-434236 avg_acc: 79.76% avg_loss: 1.8968
+2019-12-26 07:50:09 INFO: Write Val Summary
+2019-12-26 07:50:09 INFO: Reset streaming metrics
+2019-12-26 07:54:03 INFO: Write Train Summary
+2019-12-26 08:00:13 INFO: Write Train Summary
+2019-12-26 08:06:21 INFO: Write Train Summary
+2019-12-26 08:12:30 INFO: Write Train Summary
+2019-12-26 08:18:36 INFO: Write Train Summary
+2019-12-26 08:24:43 INFO: Write Train Summary
+2019-12-26 08:30:49 INFO: Write Train Summary
+2019-12-26 08:36:54 INFO: Write Train Summary
+2019-12-26 08:37:57 INFO: Reset streaming metrics
+2019-12-26 08:43:01 INFO: Write Train Summary
+2019-12-26 08:49:10 INFO: Write Train Summary
+2019-12-26 08:55:15 INFO: Write Train Summary
+2019-12-26 09:01:23 INFO: Write Train Summary
+2019-12-26 09:07:31 INFO: Write Train Summary
+2019-12-26 09:13:40 INFO: Write Train Summary
+2019-12-26 09:19:47 INFO: Write Train Summary
+2019-12-26 09:25:48 INFO: Save Model
+2019-12-26 09:25:48 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt279-435798 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 09:25:49 INFO: Start Train Set Accuracy
+2019-12-26 09:25:49 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt279-435798
+2019-12-26 10:00:34 INFO: TRN ckpt-435798 avg_acc: 97.46% avg_loss: 1.0454
+2019-12-26 10:00:34 INFO: Write Train Summary
+2019-12-26 10:00:34 INFO: Start Validation
+2019-12-26 10:00:34 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt279-435798
+2019-12-26 10:07:30 INFO: VAL ckpt-435798 avg_acc: 79.73% avg_loss: 1.8668
+2019-12-26 10:07:30 INFO: Write Val Summary
+2019-12-26 10:07:30 INFO: Reset streaming metrics
+2019-12-26 10:07:37 INFO: Write Train Summary
+2019-12-26 10:13:44 INFO: Write Train Summary
+2019-12-26 10:19:52 INFO: Write Train Summary
+2019-12-26 10:26:01 INFO: Write Train Summary
+2019-12-26 10:32:07 INFO: Write Train Summary
+2019-12-26 10:38:14 INFO: Write Train Summary
+2019-12-26 10:44:21 INFO: Write Train Summary
+2019-12-26 10:50:29 INFO: Write Train Summary
+2019-12-26 10:55:19 INFO: Reset streaming metrics
+2019-12-26 10:56:36 INFO: Write Train Summary
+2019-12-26 11:02:46 INFO: Write Train Summary
+2019-12-26 11:08:51 INFO: Write Train Summary
+2019-12-26 11:14:58 INFO: Write Train Summary
+2019-12-26 11:21:04 INFO: Write Train Summary
+2019-12-26 11:27:11 INFO: Write Train Summary
+2019-12-26 11:33:18 INFO: Write Train Summary
+2019-12-26 11:39:25 INFO: Write Train Summary
+2019-12-26 11:43:05 INFO: Save Model
+2019-12-26 11:43:05 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt280-437360 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 11:43:06 INFO: Start Train Set Accuracy
+2019-12-26 11:43:06 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt280-437360
+2019-12-26 12:17:47 INFO: TRN ckpt-437360 avg_acc: 97.52% avg_loss: 1.0427
+2019-12-26 12:17:47 INFO: Write Train Summary
+2019-12-26 12:17:47 INFO: Start Validation
+2019-12-26 12:17:47 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt280-437360
+2019-12-26 12:24:43 INFO: VAL ckpt-437360 avg_acc: 79.56% avg_loss: 1.8636
+2019-12-26 12:24:43 INFO: Write Val Summary
+2019-12-26 12:24:43 INFO: Reset streaming metrics
+2019-12-26 12:27:09 INFO: Write Train Summary
+2019-12-26 12:33:16 INFO: Write Train Summary
+2019-12-26 12:39:23 INFO: Write Train Summary
+2019-12-26 12:45:29 INFO: Write Train Summary
+2019-12-26 12:51:37 INFO: Write Train Summary
+2019-12-26 12:57:42 INFO: Write Train Summary
+2019-12-26 13:03:51 INFO: Write Train Summary
+2019-12-26 13:09:58 INFO: Write Train Summary
+2019-12-26 13:12:29 INFO: Reset streaming metrics
+2019-12-26 13:16:05 INFO: Write Train Summary
+2019-12-26 13:22:10 INFO: Write Train Summary
+2019-12-26 13:28:16 INFO: Write Train Summary
+2019-12-26 13:34:23 INFO: Write Train Summary
+2019-12-26 13:40:30 INFO: Write Train Summary
+2019-12-26 13:46:38 INFO: Write Train Summary
+2019-12-26 13:52:45 INFO: Write Train Summary
+2019-12-26 13:58:53 INFO: Write Train Summary
+2019-12-26 14:00:14 INFO: Save Model
+2019-12-26 14:00:15 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt281-438922 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 14:00:15 INFO: Start Train Set Accuracy
+2019-12-26 14:00:15 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt281-438922
+2019-12-26 14:35:00 INFO: TRN ckpt-438922 avg_acc: 97.65% avg_loss: 1.0302
+2019-12-26 14:35:00 INFO: Write Train Summary
+2019-12-26 14:35:00 INFO: Start Validation
+2019-12-26 14:35:00 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt281-438922
+2019-12-26 14:41:56 INFO: VAL ckpt-438922 avg_acc: 79.59% avg_loss: 1.8698
+2019-12-26 14:41:56 INFO: Write Val Summary
+2019-12-26 14:41:56 INFO: Reset streaming metrics
+2019-12-26 14:46:44 INFO: Write Train Summary
+2019-12-26 14:52:51 INFO: Write Train Summary
+2019-12-26 14:58:58 INFO: Write Train Summary
+2019-12-26 15:05:05 INFO: Write Train Summary
+2019-12-26 15:11:13 INFO: Write Train Summary
+2019-12-26 15:17:21 INFO: Write Train Summary
+2019-12-26 15:23:29 INFO: Write Train Summary
+2019-12-26 15:29:36 INFO: Write Train Summary
+2019-12-26 15:29:46 INFO: Reset streaming metrics
+2019-12-26 15:35:40 INFO: Write Train Summary
+2019-12-26 15:41:48 INFO: Write Train Summary
+2019-12-26 15:47:56 INFO: Write Train Summary
+2019-12-26 15:54:03 INFO: Write Train Summary
+2019-12-26 16:00:10 INFO: Write Train Summary
+2019-12-26 16:06:19 INFO: Write Train Summary
+2019-12-26 16:12:29 INFO: Write Train Summary
+2019-12-26 16:17:38 INFO: Save Model
+2019-12-26 16:17:38 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt282-440484 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 16:17:39 INFO: Start Train Set Accuracy
+2019-12-26 16:17:39 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt282-440484
+2019-12-26 16:52:21 INFO: TRN ckpt-440484 avg_acc: 97.48% avg_loss: 1.0452
+2019-12-26 16:52:21 INFO: Write Train Summary
+2019-12-26 16:52:21 INFO: Start Validation
+2019-12-26 16:52:21 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt282-440484
+2019-12-26 16:59:17 INFO: VAL ckpt-440484 avg_acc: 79.50% avg_loss: 1.8828
+2019-12-26 16:59:17 INFO: Write Val Summary
+2019-12-26 16:59:17 INFO: Reset streaming metrics
+2019-12-26 17:00:16 INFO: Write Train Summary
+2019-12-26 17:06:23 INFO: Write Train Summary
+2019-12-26 17:12:30 INFO: Write Train Summary
+2019-12-26 17:18:37 INFO: Write Train Summary
+2019-12-26 17:24:44 INFO: Write Train Summary
+2019-12-26 17:30:53 INFO: Write Train Summary
+2019-12-26 17:37:00 INFO: Write Train Summary
+2019-12-26 17:43:07 INFO: Write Train Summary
+2019-12-26 17:47:05 INFO: Reset streaming metrics
+2019-12-26 17:49:13 INFO: Write Train Summary
+2019-12-26 17:55:21 INFO: Write Train Summary
+2019-12-26 18:01:29 INFO: Write Train Summary
+2019-12-26 18:07:34 INFO: Write Train Summary
+2019-12-26 18:13:41 INFO: Write Train Summary
+2019-12-26 18:19:48 INFO: Write Train Summary
+2019-12-26 18:25:55 INFO: Write Train Summary
+2019-12-26 18:32:03 INFO: Write Train Summary
+2019-12-26 18:34:52 INFO: Save Model
+2019-12-26 18:34:52 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt283-442046 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 18:34:53 INFO: Start Train Set Accuracy
+2019-12-26 18:34:53 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt283-442046
+2019-12-26 19:09:30 INFO: TRN ckpt-442046 avg_acc: 97.76% avg_loss: 1.0263
+2019-12-26 19:09:30 INFO: Write Train Summary
+2019-12-26 19:09:30 INFO: Start Validation
+2019-12-26 19:09:30 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt283-442046
+2019-12-26 19:16:25 INFO: VAL ckpt-442046 avg_acc: 79.82% avg_loss: 1.8744
+2019-12-26 19:16:25 INFO: Write Val Summary
+2019-12-26 19:16:25 INFO: Reset streaming metrics
+2019-12-26 19:19:44 INFO: Write Train Summary
+2019-12-26 19:25:49 INFO: Write Train Summary
+2019-12-26 19:31:56 INFO: Write Train Summary
+2019-12-26 19:38:03 INFO: Write Train Summary
+2019-12-26 19:44:10 INFO: Write Train Summary
+2019-12-26 19:50:18 INFO: Write Train Summary
+2019-12-26 19:56:28 INFO: Write Train Summary
+2019-12-26 20:02:33 INFO: Write Train Summary
+2019-12-26 20:04:14 INFO: Reset streaming metrics
+2019-12-26 20:08:43 INFO: Write Train Summary
+2019-12-26 20:14:49 INFO: Write Train Summary
+2019-12-26 20:20:56 INFO: Write Train Summary
+2019-12-26 20:27:02 INFO: Write Train Summary
+2019-12-26 20:33:10 INFO: Write Train Summary
+2019-12-26 20:39:18 INFO: Write Train Summary
+2019-12-26 20:45:27 INFO: Write Train Summary
+2019-12-26 20:51:35 INFO: Write Train Summary
+2019-12-26 20:52:04 INFO: Save Model
+2019-12-26 20:52:04 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt284-443608 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 20:52:05 INFO: Start Train Set Accuracy
+2019-12-26 20:52:05 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt284-443608
+2019-12-26 21:26:46 INFO: TRN ckpt-443608 avg_acc: 97.71% avg_loss: 1.0281
+2019-12-26 21:26:46 INFO: Write Train Summary
+2019-12-26 21:26:46 INFO: Start Validation
+2019-12-26 21:26:46 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt284-443608
+2019-12-26 21:33:41 INFO: VAL ckpt-443608 avg_acc: 79.54% avg_loss: 1.8874
+2019-12-26 21:33:41 INFO: Write Val Summary
+2019-12-26 21:33:41 INFO: Reset streaming metrics
+2019-12-26 21:39:18 INFO: Write Train Summary
+2019-12-26 21:45:23 INFO: Write Train Summary
+2019-12-26 21:51:30 INFO: Write Train Summary
+2019-12-26 21:57:37 INFO: Write Train Summary
+2019-12-26 22:03:45 INFO: Write Train Summary
+2019-12-26 22:09:53 INFO: Write Train Summary
+2019-12-26 22:15:59 INFO: Write Train Summary
+2019-12-26 22:21:25 INFO: Reset streaming metrics
+2019-12-26 22:22:06 INFO: Write Train Summary
+2019-12-26 22:28:11 INFO: Write Train Summary
+2019-12-26 22:34:20 INFO: Write Train Summary
+2019-12-26 22:40:29 INFO: Write Train Summary
+2019-12-26 22:46:36 INFO: Write Train Summary
+2019-12-26 22:52:44 INFO: Write Train Summary
+2019-12-26 22:58:53 INFO: Write Train Summary
+2019-12-26 23:05:00 INFO: Write Train Summary
+2019-12-26 23:09:16 INFO: Save Model
+2019-12-26 23:09:17 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt285-445170 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-26 23:09:17 INFO: Start Train Set Accuracy
+2019-12-26 23:09:17 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt285-445170
+2019-12-26 23:44:00 INFO: TRN ckpt-445170 avg_acc: 97.83% avg_loss: 1.0257
+2019-12-26 23:44:00 INFO: Write Train Summary
+2019-12-26 23:44:00 INFO: Start Validation
+2019-12-26 23:44:00 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt285-445170
+2019-12-26 23:50:55 INFO: VAL ckpt-445170 avg_acc: 79.48% avg_loss: 1.8885
+2019-12-26 23:50:55 INFO: Write Val Summary
+2019-12-26 23:50:55 INFO: Reset streaming metrics
+2019-12-26 23:52:44 INFO: Write Train Summary
+2019-12-26 23:58:50 INFO: Write Train Summary
+2019-12-27 00:05:00 INFO: Write Train Summary
+2019-12-27 00:11:10 INFO: Write Train Summary
+2019-12-27 00:17:19 INFO: Write Train Summary
+2019-12-27 00:23:26 INFO: Write Train Summary
+2019-12-27 00:29:33 INFO: Write Train Summary
+2019-12-27 00:35:41 INFO: Write Train Summary
+2019-12-27 00:38:48 INFO: Reset streaming metrics
+2019-12-27 00:41:48 INFO: Write Train Summary
+2019-12-27 00:47:55 INFO: Write Train Summary
+2019-12-27 00:54:03 INFO: Write Train Summary
+2019-12-27 01:00:10 INFO: Write Train Summary
+2019-12-27 01:06:16 INFO: Write Train Summary
+2019-12-27 01:12:22 INFO: Write Train Summary
+2019-12-27 01:18:31 INFO: Write Train Summary
+2019-12-27 01:24:38 INFO: Write Train Summary
+2019-12-27 01:26:35 INFO: Save Model
+2019-12-27 01:26:35 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt286-446732 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 01:26:36 INFO: Start Train Set Accuracy
+2019-12-27 01:26:36 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt286-446732
+2019-12-27 02:01:16 INFO: TRN ckpt-446732 avg_acc: 97.89% avg_loss: 1.0136
+2019-12-27 02:01:16 INFO: Write Train Summary
+2019-12-27 02:01:16 INFO: Start Validation
+2019-12-27 02:01:16 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt286-446732
+2019-12-27 02:08:10 INFO: VAL ckpt-446732 avg_acc: 79.73% avg_loss: 1.8856
+2019-12-27 02:08:10 INFO: Write Val Summary
+2019-12-27 02:08:10 INFO: Reset streaming metrics
+2019-12-27 02:12:19 INFO: Write Train Summary
+2019-12-27 02:18:26 INFO: Write Train Summary
+2019-12-27 02:24:34 INFO: Write Train Summary
+2019-12-27 02:30:42 INFO: Write Train Summary
+2019-12-27 02:36:48 INFO: Write Train Summary
+2019-12-27 02:42:54 INFO: Write Train Summary
+2019-12-27 02:49:01 INFO: Write Train Summary
+2019-12-27 02:55:10 INFO: Write Train Summary
+2019-12-27 02:55:58 INFO: Reset streaming metrics
+2019-12-27 03:01:18 INFO: Write Train Summary
+2019-12-27 03:07:26 INFO: Write Train Summary
+2019-12-27 03:13:33 INFO: Write Train Summary
+2019-12-27 03:19:42 INFO: Write Train Summary
+2019-12-27 03:25:48 INFO: Write Train Summary
+2019-12-27 03:31:55 INFO: Write Train Summary
+2019-12-27 03:38:02 INFO: Write Train Summary
+2019-12-27 03:43:45 INFO: Save Model
+2019-12-27 03:43:45 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt287-448294 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 03:43:46 INFO: Start Train Set Accuracy
+2019-12-27 03:43:46 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt287-448294
+2019-12-27 04:18:27 INFO: TRN ckpt-448294 avg_acc: 97.95% avg_loss: 1.0079
+2019-12-27 04:18:27 INFO: Write Train Summary
+2019-12-27 04:18:27 INFO: Start Validation
+2019-12-27 04:18:27 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt287-448294
+2019-12-27 04:25:22 INFO: VAL ckpt-448294 avg_acc: 79.50% avg_loss: 1.8817
+2019-12-27 04:25:22 INFO: Write Val Summary
+2019-12-27 04:25:22 INFO: Reset streaming metrics
+2019-12-27 04:25:44 INFO: Write Train Summary
+2019-12-27 04:31:51 INFO: Write Train Summary
+2019-12-27 04:37:59 INFO: Write Train Summary
+2019-12-27 04:44:08 INFO: Write Train Summary
+2019-12-27 04:50:14 INFO: Write Train Summary
+2019-12-27 04:56:20 INFO: Write Train Summary
+2019-12-27 05:02:28 INFO: Write Train Summary
+2019-12-27 05:08:33 INFO: Write Train Summary
+2019-12-27 05:13:10 INFO: Reset streaming metrics
+2019-12-27 05:14:41 INFO: Write Train Summary
+2019-12-27 05:20:48 INFO: Write Train Summary
+2019-12-27 05:26:55 INFO: Write Train Summary
+2019-12-27 05:33:03 INFO: Write Train Summary
+2019-12-27 05:39:10 INFO: Write Train Summary
+2019-12-27 05:45:16 INFO: Write Train Summary
+2019-12-27 05:51:25 INFO: Write Train Summary
+2019-12-27 05:57:31 INFO: Write Train Summary
+2019-12-27 06:00:57 INFO: Save Model
+2019-12-27 06:00:57 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt288-449856 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 06:00:58 INFO: Start Train Set Accuracy
+2019-12-27 06:00:58 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt288-449856
+2019-12-27 06:35:34 INFO: TRN ckpt-449856 avg_acc: 98.09% avg_loss: 0.9955
+2019-12-27 06:35:34 INFO: Write Train Summary
+2019-12-27 06:35:34 INFO: Start Validation
+2019-12-27 06:35:34 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt288-449856
+2019-12-27 06:42:28 INFO: VAL ckpt-449856 avg_acc: 80.11% avg_loss: 1.8674
+2019-12-27 06:42:28 INFO: Write Val Summary
+2019-12-27 06:42:28 INFO: Reset streaming metrics
+2019-12-27 06:45:10 INFO: Write Train Summary
+2019-12-27 06:51:17 INFO: Write Train Summary
+2019-12-27 06:57:24 INFO: Write Train Summary
+2019-12-27 07:03:29 INFO: Write Train Summary
+2019-12-27 07:09:35 INFO: Write Train Summary
+2019-12-27 07:15:43 INFO: Write Train Summary
+2019-12-27 07:21:48 INFO: Write Train Summary
+2019-12-27 07:27:55 INFO: Write Train Summary
+2019-12-27 07:30:11 INFO: Reset streaming metrics
+2019-12-27 07:34:03 INFO: Write Train Summary
+2019-12-27 07:40:10 INFO: Write Train Summary
+2019-12-27 07:46:17 INFO: Write Train Summary
+2019-12-27 07:52:23 INFO: Write Train Summary
+2019-12-27 07:58:30 INFO: Write Train Summary
+2019-12-27 08:04:38 INFO: Write Train Summary
+2019-12-27 08:10:45 INFO: Write Train Summary
+2019-12-27 08:16:52 INFO: Write Train Summary
+2019-12-27 08:17:58 INFO: Save Model
+2019-12-27 08:17:58 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt289-451418 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 08:17:59 INFO: Start Train Set Accuracy
+2019-12-27 08:17:59 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt289-451418
+2019-12-27 08:52:34 INFO: TRN ckpt-451418 avg_acc: 98.03% avg_loss: 0.9988
+2019-12-27 08:52:34 INFO: Write Train Summary
+2019-12-27 08:52:34 INFO: Start Validation
+2019-12-27 08:52:34 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt289-451418
+2019-12-27 08:59:29 INFO: VAL ckpt-451418 avg_acc: 79.31% avg_loss: 1.8817
+2019-12-27 08:59:29 INFO: Write Val Summary
+2019-12-27 08:59:29 INFO: Reset streaming metrics
+2019-12-27 09:04:31 INFO: Write Train Summary
+2019-12-27 09:10:40 INFO: Write Train Summary
+2019-12-27 09:16:43 INFO: Write Train Summary
+2019-12-27 09:22:51 INFO: Write Train Summary
+2019-12-27 09:28:56 INFO: Write Train Summary
+2019-12-27 09:35:04 INFO: Write Train Summary
+2019-12-27 09:41:13 INFO: Write Train Summary
+2019-12-27 09:47:17 INFO: Reset streaming metrics
+2019-12-27 09:47:21 INFO: Write Train Summary
+2019-12-27 09:53:29 INFO: Write Train Summary
+2019-12-27 09:59:35 INFO: Write Train Summary
+2019-12-27 10:05:43 INFO: Write Train Summary
+2019-12-27 10:11:52 INFO: Write Train Summary
+2019-12-27 10:17:58 INFO: Write Train Summary
+2019-12-27 10:24:05 INFO: Write Train Summary
+2019-12-27 10:30:11 INFO: Write Train Summary
+2019-12-27 10:35:05 INFO: Save Model
+2019-12-27 10:35:05 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt290-452980 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 10:35:06 INFO: Start Train Set Accuracy
+2019-12-27 10:35:06 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt290-452980
+2019-12-27 11:09:43 INFO: TRN ckpt-452980 avg_acc: 98.19% avg_loss: 0.9896
+2019-12-27 11:09:43 INFO: Write Train Summary
+2019-12-27 11:09:43 INFO: Start Validation
+2019-12-27 11:09:43 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt290-452980
+2019-12-27 11:16:39 INFO: VAL ckpt-452980 avg_acc: 79.62% avg_loss: 1.8670
+2019-12-27 11:16:39 INFO: Write Val Summary
+2019-12-27 11:16:39 INFO: Reset streaming metrics
+2019-12-27 11:17:52 INFO: Write Train Summary
+2019-12-27 11:24:00 INFO: Write Train Summary
+2019-12-27 11:30:05 INFO: Write Train Summary
+2019-12-27 11:36:10 INFO: Write Train Summary
+2019-12-27 11:42:18 INFO: Write Train Summary
+2019-12-27 11:48:26 INFO: Write Train Summary
+2019-12-27 11:54:35 INFO: Write Train Summary
+2019-12-27 12:00:42 INFO: Write Train Summary
+2019-12-27 12:04:26 INFO: Reset streaming metrics
+2019-12-27 12:06:49 INFO: Write Train Summary
+2019-12-27 12:12:55 INFO: Write Train Summary
+2019-12-27 12:19:01 INFO: Write Train Summary
+2019-12-27 12:25:08 INFO: Write Train Summary
+2019-12-27 12:31:16 INFO: Write Train Summary
+2019-12-27 12:37:23 INFO: Write Train Summary
+2019-12-27 12:43:30 INFO: Write Train Summary
+2019-12-27 12:49:39 INFO: Write Train Summary
+2019-12-27 12:52:14 INFO: Save Model
+2019-12-27 12:52:14 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt291-454542 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 12:52:15 INFO: Start Train Set Accuracy
+2019-12-27 12:52:15 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt291-454542
+2019-12-27 13:26:52 INFO: TRN ckpt-454542 avg_acc: 98.17% avg_loss: 0.9927
+2019-12-27 13:26:52 INFO: Write Train Summary
+2019-12-27 13:26:52 INFO: Start Validation
+2019-12-27 13:26:52 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt291-454542
+2019-12-27 13:33:47 INFO: VAL ckpt-454542 avg_acc: 79.50% avg_loss: 1.8651
+2019-12-27 13:33:47 INFO: Write Val Summary
+2019-12-27 13:33:47 INFO: Reset streaming metrics
+2019-12-27 13:37:19 INFO: Write Train Summary
+2019-12-27 13:43:23 INFO: Write Train Summary
+2019-12-27 13:49:31 INFO: Write Train Summary
+2019-12-27 13:55:37 INFO: Write Train Summary
+2019-12-27 14:01:46 INFO: Write Train Summary
+2019-12-27 14:07:52 INFO: Write Train Summary
+2019-12-27 14:14:00 INFO: Write Train Summary
+2019-12-27 14:20:07 INFO: Write Train Summary
+2019-12-27 14:21:32 INFO: Reset streaming metrics
+2019-12-27 14:26:16 INFO: Write Train Summary
+2019-12-27 14:32:22 INFO: Write Train Summary
+2019-12-27 14:38:29 INFO: Write Train Summary
+2019-12-27 14:44:37 INFO: Write Train Summary
+2019-12-27 14:50:42 INFO: Write Train Summary
+2019-12-27 14:56:49 INFO: Write Train Summary
+2019-12-27 15:02:56 INFO: Write Train Summary
+2019-12-27 15:09:04 INFO: Write Train Summary
+2019-12-27 15:09:18 INFO: Save Model
+2019-12-27 15:09:19 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt292-456104 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 15:09:19 INFO: Start Train Set Accuracy
+2019-12-27 15:09:19 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt292-456104
+2019-12-27 15:43:53 INFO: TRN ckpt-456104 avg_acc: 98.17% avg_loss: 0.9894
+2019-12-27 15:43:53 INFO: Write Train Summary
+2019-12-27 15:43:53 INFO: Start Validation
+2019-12-27 15:43:53 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt292-456104
+2019-12-27 15:50:49 INFO: VAL ckpt-456104 avg_acc: 79.26% avg_loss: 1.8769
+2019-12-27 15:50:49 INFO: Write Val Summary
+2019-12-27 15:50:49 INFO: Reset streaming metrics
+2019-12-27 15:56:38 INFO: Write Train Summary
+2019-12-27 16:02:43 INFO: Write Train Summary
+2019-12-27 16:08:50 INFO: Write Train Summary
+2019-12-27 16:14:59 INFO: Write Train Summary
+2019-12-27 16:21:05 INFO: Write Train Summary
+2019-12-27 16:27:13 INFO: Write Train Summary
+2019-12-27 16:33:16 INFO: Write Train Summary
+2019-12-27 16:38:28 INFO: Reset streaming metrics
+2019-12-27 16:39:23 INFO: Write Train Summary
+2019-12-27 16:45:30 INFO: Write Train Summary
+2019-12-27 16:51:38 INFO: Write Train Summary
+2019-12-27 16:57:46 INFO: Write Train Summary
+2019-12-27 17:03:53 INFO: Write Train Summary
+2019-12-27 17:10:00 INFO: Write Train Summary
+2019-12-27 17:16:06 INFO: Write Train Summary
+2019-12-27 17:22:14 INFO: Write Train Summary
+2019-12-27 17:26:16 INFO: Save Model
+2019-12-27 17:26:16 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt293-457666 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 17:26:17 INFO: Start Train Set Accuracy
+2019-12-27 17:26:17 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt293-457666
+2019-12-27 18:00:58 INFO: TRN ckpt-457666 avg_acc: 98.11% avg_loss: 0.9909
+2019-12-27 18:00:58 INFO: Write Train Summary
+2019-12-27 18:00:58 INFO: Start Validation
+2019-12-27 18:00:58 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt293-457666
+2019-12-27 18:07:52 INFO: VAL ckpt-457666 avg_acc: 79.50% avg_loss: 1.8720
+2019-12-27 18:07:52 INFO: Write Val Summary
+2019-12-27 18:07:52 INFO: Reset streaming metrics
+2019-12-27 18:09:56 INFO: Write Train Summary
+2019-12-27 18:16:03 INFO: Write Train Summary
+2019-12-27 18:22:11 INFO: Write Train Summary
+2019-12-27 18:28:19 INFO: Write Train Summary
+2019-12-27 18:34:28 INFO: Write Train Summary
+2019-12-27 18:40:36 INFO: Write Train Summary
+2019-12-27 18:46:45 INFO: Write Train Summary
+2019-12-27 18:52:52 INFO: Write Train Summary
+2019-12-27 18:55:45 INFO: Reset streaming metrics
+2019-12-27 18:58:58 INFO: Write Train Summary
+2019-12-27 19:05:05 INFO: Write Train Summary
+2019-12-27 19:11:13 INFO: Write Train Summary
+2019-12-27 19:17:20 INFO: Write Train Summary
+2019-12-27 19:23:27 INFO: Write Train Summary
+2019-12-27 19:29:33 INFO: Write Train Summary
+2019-12-27 19:35:40 INFO: Write Train Summary
+2019-12-27 19:41:46 INFO: Write Train Summary
+2019-12-27 19:43:28 INFO: Save Model
+2019-12-27 19:43:28 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt294-459228 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 19:43:29 INFO: Start Train Set Accuracy
+2019-12-27 19:43:29 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt294-459228
+2019-12-27 20:18:09 INFO: TRN ckpt-459228 avg_acc: 98.38% avg_loss: 0.9687
+2019-12-27 20:18:09 INFO: Write Train Summary
+2019-12-27 20:18:09 INFO: Start Validation
+2019-12-27 20:18:09 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt294-459228
+2019-12-27 20:25:05 INFO: VAL ckpt-459228 avg_acc: 79.65% avg_loss: 1.8682
+2019-12-27 20:25:05 INFO: Write Val Summary
+2019-12-27 20:25:05 INFO: Reset streaming metrics
+2019-12-27 20:29:28 INFO: Write Train Summary
+2019-12-27 20:35:37 INFO: Write Train Summary
+2019-12-27 20:41:43 INFO: Write Train Summary
+2019-12-27 20:47:50 INFO: Write Train Summary
+2019-12-27 20:53:56 INFO: Write Train Summary
+2019-12-27 21:00:02 INFO: Write Train Summary
+2019-12-27 21:06:08 INFO: Write Train Summary
+2019-12-27 21:12:14 INFO: Write Train Summary
+2019-12-27 21:12:47 INFO: Reset streaming metrics
+2019-12-27 21:18:22 INFO: Write Train Summary
+2019-12-27 21:24:29 INFO: Write Train Summary
+2019-12-27 21:30:35 INFO: Write Train Summary
+2019-12-27 21:36:42 INFO: Write Train Summary
+2019-12-27 21:42:50 INFO: Write Train Summary
+2019-12-27 21:48:57 INFO: Write Train Summary
+2019-12-27 21:55:04 INFO: Write Train Summary
+2019-12-27 22:00:34 INFO: Save Model
+2019-12-27 22:00:34 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt295-460790 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-27 22:00:35 INFO: Start Train Set Accuracy
+2019-12-27 22:00:35 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt295-460790
+2019-12-27 22:35:11 INFO: TRN ckpt-460790 avg_acc: 98.23% avg_loss: 0.9789
+2019-12-27 22:35:11 INFO: Write Train Summary
+2019-12-27 22:35:11 INFO: Start Validation
+2019-12-27 22:35:11 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt295-460790
+2019-12-27 22:42:08 INFO: VAL ckpt-460790 avg_acc: 79.41% avg_loss: 1.8746
+2019-12-27 22:42:08 INFO: Write Val Summary
+2019-12-27 22:42:08 INFO: Reset streaming metrics
+2019-12-27 22:42:44 INFO: Write Train Summary
+2019-12-27 22:48:51 INFO: Write Train Summary
+2019-12-27 22:54:58 INFO: Write Train Summary
+2019-12-27 23:01:04 INFO: Write Train Summary
+2019-12-27 23:07:12 INFO: Write Train Summary
+2019-12-27 23:13:18 INFO: Write Train Summary
+2019-12-27 23:19:25 INFO: Write Train Summary
+2019-12-27 23:25:34 INFO: Write Train Summary
+2019-12-27 23:29:54 INFO: Reset streaming metrics
+2019-12-27 23:31:41 INFO: Write Train Summary
+2019-12-27 23:37:48 INFO: Write Train Summary
+2019-12-27 23:43:56 INFO: Write Train Summary
+2019-12-27 23:50:03 INFO: Write Train Summary
+2019-12-27 23:56:11 INFO: Write Train Summary
+2019-12-28 00:02:18 INFO: Write Train Summary
+2019-12-28 00:08:23 INFO: Write Train Summary
+2019-12-28 00:14:31 INFO: Write Train Summary
+2019-12-28 00:17:41 INFO: Save Model
+2019-12-28 00:17:41 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt296-462352 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 00:17:42 INFO: Start Train Set Accuracy
+2019-12-28 00:17:42 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt296-462352
+2019-12-28 00:52:22 INFO: TRN ckpt-462352 avg_acc: 98.15% avg_loss: 0.9739
+2019-12-28 00:52:22 INFO: Write Train Summary
+2019-12-28 00:52:22 INFO: Start Validation
+2019-12-28 00:52:22 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt296-462352
+2019-12-28 00:59:18 INFO: VAL ckpt-462352 avg_acc: 79.35% avg_loss: 1.8847
+2019-12-28 00:59:18 INFO: Write Val Summary
+2019-12-28 00:59:18 INFO: Reset streaming metrics
+2019-12-28 01:02:14 INFO: Write Train Summary
+2019-12-28 01:08:22 INFO: Write Train Summary
+2019-12-28 01:14:30 INFO: Write Train Summary
+2019-12-28 01:20:37 INFO: Write Train Summary
+2019-12-28 01:26:46 INFO: Write Train Summary
+2019-12-28 01:32:53 INFO: Write Train Summary
+2019-12-28 01:38:59 INFO: Write Train Summary
+2019-12-28 01:45:07 INFO: Write Train Summary
+2019-12-28 01:47:08 INFO: Reset streaming metrics
+2019-12-28 01:51:13 INFO: Write Train Summary
+2019-12-28 01:57:20 INFO: Write Train Summary
+2019-12-28 02:03:27 INFO: Write Train Summary
+2019-12-28 02:09:33 INFO: Write Train Summary
+2019-12-28 02:15:39 INFO: Write Train Summary
+2019-12-28 02:21:41 INFO: Write Train Summary
+2019-12-28 02:27:50 INFO: Write Train Summary
+2019-12-28 02:33:57 INFO: Write Train Summary
+2019-12-28 02:34:48 INFO: Save Model
+2019-12-28 02:34:48 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt297-463914 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 02:34:49 INFO: Start Train Set Accuracy
+2019-12-28 02:34:49 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt297-463914
+2019-12-28 03:09:28 INFO: TRN ckpt-463914 avg_acc: 98.36% avg_loss: 0.9749
+2019-12-28 03:09:28 INFO: Write Train Summary
+2019-12-28 03:09:28 INFO: Start Validation
+2019-12-28 03:09:28 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt297-463914
+2019-12-28 03:16:24 INFO: VAL ckpt-463914 avg_acc: 79.78% avg_loss: 1.8635
+2019-12-28 03:16:24 INFO: Write Val Summary
+2019-12-28 03:16:24 INFO: Reset streaming metrics
+2019-12-28 03:21:41 INFO: Write Train Summary
+2019-12-28 03:27:49 INFO: Write Train Summary
+2019-12-28 03:33:56 INFO: Write Train Summary
+2019-12-28 03:40:02 INFO: Write Train Summary
+2019-12-28 03:46:10 INFO: Write Train Summary
+2019-12-28 03:52:19 INFO: Write Train Summary
+2019-12-28 03:58:26 INFO: Write Train Summary
+2019-12-28 04:04:15 INFO: Reset streaming metrics
+2019-12-28 04:04:33 INFO: Write Train Summary
+2019-12-28 04:10:39 INFO: Write Train Summary
+2019-12-28 04:16:45 INFO: Write Train Summary
+2019-12-28 04:22:52 INFO: Write Train Summary
+2019-12-28 04:28:58 INFO: Write Train Summary
+2019-12-28 04:35:05 INFO: Write Train Summary
+2019-12-28 04:41:12 INFO: Write Train Summary
+2019-12-28 04:47:19 INFO: Write Train Summary
+2019-12-28 04:51:59 INFO: Save Model
+2019-12-28 04:51:59 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt298-465476 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 04:52:00 INFO: Start Train Set Accuracy
+2019-12-28 04:52:00 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt298-465476
+2019-12-28 05:26:38 INFO: TRN ckpt-465476 avg_acc: 98.41% avg_loss: 0.9684
+2019-12-28 05:26:38 INFO: Write Train Summary
+2019-12-28 05:26:38 INFO: Start Validation
+2019-12-28 05:26:38 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt298-465476
+2019-12-28 05:33:34 INFO: VAL ckpt-465476 avg_acc: 79.52% avg_loss: 1.8676
+2019-12-28 05:33:34 INFO: Write Val Summary
+2019-12-28 05:33:34 INFO: Reset streaming metrics
+2019-12-28 05:35:02 INFO: Write Train Summary
+2019-12-28 05:41:08 INFO: Write Train Summary
+2019-12-28 05:47:15 INFO: Write Train Summary
+2019-12-28 05:53:24 INFO: Write Train Summary
+2019-12-28 05:59:32 INFO: Write Train Summary
+2019-12-28 06:05:39 INFO: Write Train Summary
+2019-12-28 06:11:46 INFO: Write Train Summary
+2019-12-28 06:17:52 INFO: Write Train Summary
+2019-12-28 06:21:22 INFO: Reset streaming metrics
+2019-12-28 06:24:00 INFO: Write Train Summary
+2019-12-28 06:30:06 INFO: Write Train Summary
+2019-12-28 06:36:14 INFO: Write Train Summary
+2019-12-28 06:42:21 INFO: Write Train Summary
+2019-12-28 06:48:28 INFO: Write Train Summary
+2019-12-28 06:54:37 INFO: Write Train Summary
+2019-12-28 07:00:44 INFO: Write Train Summary
+2019-12-28 07:06:51 INFO: Write Train Summary
+2019-12-28 07:09:11 INFO: Save Model
+2019-12-28 07:09:11 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt299-467038 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 07:09:12 INFO: Start Train Set Accuracy
+2019-12-28 07:09:12 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt299-467038
+2019-12-28 07:43:52 INFO: TRN ckpt-467038 avg_acc: 98.46% avg_loss: 0.9614
+2019-12-28 07:43:52 INFO: Write Train Summary
+2019-12-28 07:43:52 INFO: Start Validation
+2019-12-28 07:43:52 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt299-467038
+2019-12-28 07:50:48 INFO: VAL ckpt-467038 avg_acc: 79.48% avg_loss: 1.8821
+2019-12-28 07:50:48 INFO: Write Val Summary
+2019-12-28 07:50:48 INFO: Reset streaming metrics
+2019-12-28 07:54:35 INFO: Write Train Summary
+2019-12-28 08:00:41 INFO: Write Train Summary
+2019-12-28 08:06:47 INFO: Write Train Summary
+2019-12-28 08:12:55 INFO: Write Train Summary
+2019-12-28 08:19:02 INFO: Write Train Summary
+2019-12-28 08:25:09 INFO: Write Train Summary
+2019-12-28 08:31:16 INFO: Write Train Summary
+2019-12-28 08:37:25 INFO: Write Train Summary
+2019-12-28 08:38:33 INFO: Reset streaming metrics
+2019-12-28 08:43:30 INFO: Write Train Summary
+2019-12-28 08:49:36 INFO: Write Train Summary
+2019-12-28 08:55:42 INFO: Write Train Summary
+2019-12-28 09:01:49 INFO: Write Train Summary
+2019-12-28 09:07:56 INFO: Write Train Summary
+2019-12-28 09:14:03 INFO: Write Train Summary
+2019-12-28 09:20:10 INFO: Write Train Summary
+2019-12-28 09:26:17 INFO: Write Train Summary
+2019-12-28 09:26:17 INFO: Save Model
+2019-12-28 09:26:17 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt300-468600 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 09:26:18 INFO: Start Train Set Accuracy
+2019-12-28 09:26:18 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt300-468600
+2019-12-28 10:00:57 INFO: TRN ckpt-468600 avg_acc: 98.54% avg_loss: 0.9551
+2019-12-28 10:00:57 INFO: Write Train Summary
+2019-12-28 10:00:57 INFO: Start Validation
+2019-12-28 10:00:57 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt300-468600
+2019-12-28 10:07:55 INFO: VAL ckpt-468600 avg_acc: 79.48% avg_loss: 1.8722
+2019-12-28 10:07:55 INFO: Write Val Summary
+2019-12-28 10:07:55 INFO: Reset streaming metrics
+2019-12-28 10:14:02 INFO: Write Train Summary
+2019-12-28 10:20:10 INFO: Write Train Summary
+2019-12-28 10:26:18 INFO: Write Train Summary
+2019-12-28 10:32:25 INFO: Write Train Summary
+2019-12-28 10:38:32 INFO: Write Train Summary
+2019-12-28 10:44:41 INFO: Write Train Summary
+2019-12-28 10:50:50 INFO: Write Train Summary
+2019-12-28 10:55:47 INFO: Reset streaming metrics
+2019-12-28 10:56:57 INFO: Write Train Summary
+2019-12-28 11:03:04 INFO: Write Train Summary
+2019-12-28 11:09:09 INFO: Write Train Summary
+2019-12-28 11:15:16 INFO: Write Train Summary
+2019-12-28 11:21:24 INFO: Write Train Summary
+2019-12-28 11:27:32 INFO: Write Train Summary
+2019-12-28 11:33:39 INFO: Write Train Summary
+2019-12-28 11:39:45 INFO: Write Train Summary
+2019-12-28 11:43:34 INFO: Save Model
+2019-12-28 11:43:34 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt301-470162 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 11:43:35 INFO: Start Train Set Accuracy
+2019-12-28 11:43:35 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt301-470162
+2019-12-28 12:18:15 INFO: TRN ckpt-470162 avg_acc: 98.49% avg_loss: 0.9572
+2019-12-28 12:18:15 INFO: Write Train Summary
+2019-12-28 12:18:15 INFO: Start Validation
+2019-12-28 12:18:15 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt301-470162
+2019-12-28 12:25:11 INFO: VAL ckpt-470162 avg_acc: 79.51% avg_loss: 1.8848
+2019-12-28 12:25:11 INFO: Write Val Summary
+2019-12-28 12:25:11 INFO: Reset streaming metrics
+2019-12-28 12:27:30 INFO: Write Train Summary
+2019-12-28 12:33:39 INFO: Write Train Summary
+2019-12-28 12:39:44 INFO: Write Train Summary
+2019-12-28 12:45:52 INFO: Write Train Summary
+2019-12-28 12:52:00 INFO: Write Train Summary
+2019-12-28 12:58:08 INFO: Write Train Summary
+2019-12-28 13:04:15 INFO: Write Train Summary
+2019-12-28 13:10:24 INFO: Write Train Summary
+2019-12-28 13:13:03 INFO: Reset streaming metrics
+2019-12-28 13:16:32 INFO: Write Train Summary
+2019-12-28 13:22:38 INFO: Write Train Summary
+2019-12-28 13:28:45 INFO: Write Train Summary
+2019-12-28 13:34:52 INFO: Write Train Summary
+2019-12-28 13:40:59 INFO: Write Train Summary
+2019-12-28 13:47:08 INFO: Write Train Summary
+2019-12-28 13:53:16 INFO: Write Train Summary
+2019-12-28 13:59:24 INFO: Write Train Summary
+2019-12-28 14:00:51 INFO: Save Model
+2019-12-28 14:00:51 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt302-471724 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 14:00:52 INFO: Start Train Set Accuracy
+2019-12-28 14:00:52 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt302-471724
+2019-12-28 14:35:34 INFO: TRN ckpt-471724 avg_acc: 98.34% avg_loss: 0.9566
+2019-12-28 14:35:34 INFO: Write Train Summary
+2019-12-28 14:35:34 INFO: Start Validation
+2019-12-28 14:35:34 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt302-471724
+2019-12-28 14:42:29 INFO: VAL ckpt-471724 avg_acc: 79.41% avg_loss: 1.8776
+2019-12-28 14:42:29 INFO: Write Val Summary
+2019-12-28 14:42:29 INFO: Reset streaming metrics
+2019-12-28 14:47:08 INFO: Write Train Summary
+2019-12-28 14:53:15 INFO: Write Train Summary
+2019-12-28 14:59:23 INFO: Write Train Summary
+2019-12-28 15:05:30 INFO: Write Train Summary
+2019-12-28 15:11:39 INFO: Write Train Summary
+2019-12-28 15:17:46 INFO: Write Train Summary
+2019-12-28 15:23:53 INFO: Write Train Summary
+2019-12-28 15:29:59 INFO: Write Train Summary
+2019-12-28 15:30:17 INFO: Reset streaming metrics
+2019-12-28 15:36:06 INFO: Write Train Summary
+2019-12-28 15:42:13 INFO: Write Train Summary
+2019-12-28 15:48:21 INFO: Write Train Summary
+2019-12-28 15:54:29 INFO: Write Train Summary
+2019-12-28 16:00:38 INFO: Write Train Summary
+2019-12-28 16:06:47 INFO: Write Train Summary
+2019-12-28 16:12:54 INFO: Write Train Summary
+2019-12-28 16:18:08 INFO: Save Model
+2019-12-28 16:18:09 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt303-473286 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 16:18:09 INFO: Start Train Set Accuracy
+2019-12-28 16:18:09 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt303-473286
+2019-12-28 16:52:52 INFO: TRN ckpt-473286 avg_acc: 98.40% avg_loss: 0.9569
+2019-12-28 16:52:52 INFO: Write Train Summary
+2019-12-28 16:52:52 INFO: Start Validation
+2019-12-28 16:52:52 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt303-473286
+2019-12-28 16:59:49 INFO: VAL ckpt-473286 avg_acc: 79.20% avg_loss: 1.8869
+2019-12-28 16:59:49 INFO: Write Val Summary
+2019-12-28 16:59:49 INFO: Reset streaming metrics
+2019-12-28 17:00:41 INFO: Write Train Summary
+2019-12-28 17:06:49 INFO: Write Train Summary
+2019-12-28 17:12:55 INFO: Write Train Summary
+2019-12-28 17:19:04 INFO: Write Train Summary
+2019-12-28 17:25:12 INFO: Write Train Summary
+2019-12-28 17:31:19 INFO: Write Train Summary
+2019-12-28 17:37:28 INFO: Write Train Summary
+2019-12-28 17:43:35 INFO: Write Train Summary
+2019-12-28 17:47:42 INFO: Reset streaming metrics
+2019-12-28 17:49:44 INFO: Write Train Summary
+2019-12-28 17:55:51 INFO: Write Train Summary
+2019-12-28 18:01:59 INFO: Write Train Summary
+2019-12-28 18:08:07 INFO: Write Train Summary
+2019-12-28 18:14:16 INFO: Write Train Summary
+2019-12-28 18:20:25 INFO: Write Train Summary
+2019-12-28 18:26:31 INFO: Write Train Summary
+2019-12-28 18:32:40 INFO: Write Train Summary
+2019-12-28 18:35:35 INFO: Save Model
+2019-12-28 18:35:35 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt304-474848 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 18:35:35 INFO: Start Train Set Accuracy
+2019-12-28 18:35:35 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt304-474848
+2019-12-28 19:10:20 INFO: TRN ckpt-474848 avg_acc: 98.51% avg_loss: 0.9436
+2019-12-28 19:10:20 INFO: Write Train Summary
+2019-12-28 19:10:20 INFO: Start Validation
+2019-12-28 19:10:20 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt304-474848
+2019-12-28 19:17:16 INFO: VAL ckpt-474848 avg_acc: 79.44% avg_loss: 1.8695
+2019-12-28 19:17:16 INFO: Write Val Summary
+2019-12-28 19:17:16 INFO: Reset streaming metrics
+2019-12-28 19:20:27 INFO: Write Train Summary
+2019-12-28 19:26:34 INFO: Write Train Summary
+2019-12-28 19:32:42 INFO: Write Train Summary
+2019-12-28 19:38:50 INFO: Write Train Summary
+2019-12-28 19:44:58 INFO: Write Train Summary
+2019-12-28 19:51:05 INFO: Write Train Summary
+2019-12-28 19:57:11 INFO: Write Train Summary
+2019-12-28 20:03:20 INFO: Write Train Summary
+2019-12-28 20:05:06 INFO: Reset streaming metrics
+2019-12-28 20:09:27 INFO: Write Train Summary
+2019-12-28 20:15:36 INFO: Write Train Summary
+2019-12-28 20:21:43 INFO: Write Train Summary
+2019-12-28 20:27:51 INFO: Write Train Summary
+2019-12-28 20:33:58 INFO: Write Train Summary
+2019-12-28 20:40:03 INFO: Write Train Summary
+2019-12-28 20:46:09 INFO: Write Train Summary
+2019-12-28 20:52:14 INFO: Write Train Summary
+2019-12-28 20:52:51 INFO: Save Model
+2019-12-28 20:52:51 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt305-476410 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 20:52:52 INFO: Start Train Set Accuracy
+2019-12-28 20:52:52 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt305-476410
+2019-12-28 21:27:34 INFO: TRN ckpt-476410 avg_acc: 98.47% avg_loss: 0.9386
+2019-12-28 21:27:34 INFO: Write Train Summary
+2019-12-28 21:27:34 INFO: Start Validation
+2019-12-28 21:27:34 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt305-476410
+2019-12-28 21:34:31 INFO: VAL ckpt-476410 avg_acc: 79.57% avg_loss: 1.8615
+2019-12-28 21:34:31 INFO: Write Val Summary
+2019-12-28 21:34:31 INFO: Reset streaming metrics
+2019-12-28 21:40:02 INFO: Write Train Summary
+2019-12-28 21:46:09 INFO: Write Train Summary
+2019-12-28 21:52:15 INFO: Write Train Summary
+2019-12-28 21:58:23 INFO: Write Train Summary
+2019-12-28 22:04:29 INFO: Write Train Summary
+2019-12-28 22:10:36 INFO: Write Train Summary
+2019-12-28 22:16:42 INFO: Write Train Summary
+2019-12-28 22:22:18 INFO: Reset streaming metrics
+2019-12-28 22:22:51 INFO: Write Train Summary
+2019-12-28 22:28:59 INFO: Write Train Summary
+2019-12-28 22:35:09 INFO: Write Train Summary
+2019-12-28 22:41:16 INFO: Write Train Summary
+2019-12-28 22:47:24 INFO: Write Train Summary
+2019-12-28 22:53:30 INFO: Write Train Summary
+2019-12-28 22:59:35 INFO: Write Train Summary
+2019-12-28 23:05:43 INFO: Write Train Summary
+2019-12-28 23:10:07 INFO: Save Model
+2019-12-28 23:10:07 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt306-477972 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-28 23:10:08 INFO: Start Train Set Accuracy
+2019-12-28 23:10:08 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt306-477972
+2019-12-28 23:44:53 INFO: TRN ckpt-477972 avg_acc: 98.62% avg_loss: 0.9361
+2019-12-28 23:44:53 INFO: Write Train Summary
+2019-12-28 23:44:53 INFO: Start Validation
+2019-12-28 23:44:53 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt306-477972
+2019-12-28 23:51:47 INFO: VAL ckpt-477972 avg_acc: 79.76% avg_loss: 1.8609
+2019-12-28 23:51:47 INFO: Write Val Summary
+2019-12-28 23:51:47 INFO: Reset streaming metrics
+2019-12-28 23:53:31 INFO: Write Train Summary
+2019-12-28 23:59:38 INFO: Write Train Summary
+2019-12-29 00:05:46 INFO: Write Train Summary
+2019-12-29 00:11:53 INFO: Write Train Summary
+2019-12-29 00:17:59 INFO: Write Train Summary
+2019-12-29 00:24:06 INFO: Write Train Summary
+2019-12-29 00:30:14 INFO: Write Train Summary
+2019-12-29 00:36:23 INFO: Write Train Summary
+2019-12-29 00:39:39 INFO: Reset streaming metrics
+2019-12-29 00:42:32 INFO: Write Train Summary
+2019-12-29 00:48:40 INFO: Write Train Summary
+2019-12-29 00:54:50 INFO: Write Train Summary
+2019-12-29 01:00:58 INFO: Write Train Summary
+2019-12-29 01:07:08 INFO: Write Train Summary
+2019-12-29 01:13:19 INFO: Write Train Summary
+2019-12-29 01:19:32 INFO: Write Train Summary
+2019-12-29 01:25:44 INFO: Write Train Summary
+2019-12-29 01:27:51 INFO: Save Model
+2019-12-29 01:27:51 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt307-479534 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 01:27:52 INFO: Start Train Set Accuracy
+2019-12-29 01:27:52 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt307-479534
+2019-12-29 02:02:44 INFO: TRN ckpt-479534 avg_acc: 98.77% avg_loss: 0.9352
+2019-12-29 02:02:44 INFO: Write Train Summary
+2019-12-29 02:02:44 INFO: Start Validation
+2019-12-29 02:02:44 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt307-479534
+2019-12-29 02:09:42 INFO: VAL ckpt-479534 avg_acc: 79.62% avg_loss: 1.8739
+2019-12-29 02:09:42 INFO: Write Val Summary
+2019-12-29 02:09:42 INFO: Reset streaming metrics
+2019-12-29 02:13:49 INFO: Write Train Summary
+2019-12-29 02:20:02 INFO: Write Train Summary
+2019-12-29 02:26:15 INFO: Write Train Summary
+2019-12-29 02:32:26 INFO: Write Train Summary
+2019-12-29 02:38:37 INFO: Write Train Summary
+2019-12-29 02:44:50 INFO: Write Train Summary
+2019-12-29 02:51:02 INFO: Write Train Summary
+2019-12-29 02:57:12 INFO: Write Train Summary
+2019-12-29 02:58:08 INFO: Reset streaming metrics
+2019-12-29 03:03:23 INFO: Write Train Summary
+2019-12-29 03:09:37 INFO: Write Train Summary
+2019-12-29 03:15:49 INFO: Write Train Summary
+2019-12-29 03:22:00 INFO: Write Train Summary
+2019-12-29 03:28:07 INFO: Write Train Summary
+2019-12-29 03:34:15 INFO: Write Train Summary
+2019-12-29 03:40:24 INFO: Write Train Summary
+2019-12-29 03:46:18 INFO: Save Model
+2019-12-29 03:46:18 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt308-481096 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 03:46:18 INFO: Start Train Set Accuracy
+2019-12-29 03:46:18 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt308-481096
+2019-12-29 04:21:00 INFO: TRN ckpt-481096 avg_acc: 98.63% avg_loss: 0.9286
+2019-12-29 04:21:00 INFO: Write Train Summary
+2019-12-29 04:21:00 INFO: Start Validation
+2019-12-29 04:21:00 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt308-481096
+2019-12-29 04:27:56 INFO: VAL ckpt-481096 avg_acc: 79.54% avg_loss: 1.8705
+2019-12-29 04:27:56 INFO: Write Val Summary
+2019-12-29 04:27:56 INFO: Reset streaming metrics
+2019-12-29 04:28:11 INFO: Write Train Summary
+2019-12-29 04:34:18 INFO: Write Train Summary
+2019-12-29 04:40:25 INFO: Write Train Summary
+2019-12-29 04:46:32 INFO: Write Train Summary
+2019-12-29 04:52:37 INFO: Write Train Summary
+2019-12-29 04:58:44 INFO: Write Train Summary
+2019-12-29 05:04:51 INFO: Write Train Summary
+2019-12-29 05:10:59 INFO: Write Train Summary
+2019-12-29 05:15:43 INFO: Reset streaming metrics
+2019-12-29 05:17:08 INFO: Write Train Summary
+2019-12-29 05:23:17 INFO: Write Train Summary
+2019-12-29 05:29:23 INFO: Write Train Summary
+2019-12-29 05:35:30 INFO: Write Train Summary
+2019-12-29 05:41:34 INFO: Write Train Summary
+2019-12-29 05:47:39 INFO: Write Train Summary
+2019-12-29 05:53:47 INFO: Write Train Summary
+2019-12-29 05:59:54 INFO: Write Train Summary
+2019-12-29 06:03:27 INFO: Save Model
+2019-12-29 06:03:27 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt309-482658 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 06:03:28 INFO: Start Train Set Accuracy
+2019-12-29 06:03:28 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt309-482658
+2019-12-29 06:38:05 INFO: TRN ckpt-482658 avg_acc: 98.59% avg_loss: 0.9273
+2019-12-29 06:38:05 INFO: Write Train Summary
+2019-12-29 06:38:05 INFO: Start Validation
+2019-12-29 06:38:05 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt309-482658
+2019-12-29 06:45:00 INFO: VAL ckpt-482658 avg_acc: 79.51% avg_loss: 1.8819
+2019-12-29 06:45:00 INFO: Write Val Summary
+2019-12-29 06:45:00 INFO: Reset streaming metrics
+2019-12-29 06:47:34 INFO: Write Train Summary
+2019-12-29 06:53:41 INFO: Write Train Summary
+2019-12-29 06:59:46 INFO: Write Train Summary
+2019-12-29 07:05:50 INFO: Write Train Summary
+2019-12-29 07:11:59 INFO: Write Train Summary
+2019-12-29 07:18:07 INFO: Write Train Summary
+2019-12-29 07:24:16 INFO: Write Train Summary
+2019-12-29 07:30:24 INFO: Write Train Summary
+2019-12-29 07:32:47 INFO: Reset streaming metrics
+2019-12-29 07:36:31 INFO: Write Train Summary
+2019-12-29 07:42:39 INFO: Write Train Summary
+2019-12-29 07:48:44 INFO: Write Train Summary
+2019-12-29 07:54:51 INFO: Write Train Summary
+2019-12-29 08:00:58 INFO: Write Train Summary
+2019-12-29 08:07:06 INFO: Write Train Summary
+2019-12-29 08:13:10 INFO: Write Train Summary
+2019-12-29 08:19:19 INFO: Write Train Summary
+2019-12-29 08:20:33 INFO: Save Model
+2019-12-29 08:20:33 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt310-484220 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 08:20:34 INFO: Start Train Set Accuracy
+2019-12-29 08:20:34 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt310-484220
+2019-12-29 08:55:15 INFO: TRN ckpt-484220 avg_acc: 98.66% avg_loss: 0.9254
+2019-12-29 08:55:15 INFO: Write Train Summary
+2019-12-29 08:55:15 INFO: Start Validation
+2019-12-29 08:55:15 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt310-484220
+2019-12-29 09:02:09 INFO: VAL ckpt-484220 avg_acc: 79.50% avg_loss: 1.8772
+2019-12-29 09:02:09 INFO: Write Val Summary
+2019-12-29 09:02:09 INFO: Reset streaming metrics
+2019-12-29 09:07:02 INFO: Write Train Summary
+2019-12-29 09:13:08 INFO: Write Train Summary
+2019-12-29 09:19:14 INFO: Write Train Summary
+2019-12-29 09:25:21 INFO: Write Train Summary
+2019-12-29 09:31:30 INFO: Write Train Summary
+2019-12-29 09:37:37 INFO: Write Train Summary
+2019-12-29 09:43:44 INFO: Write Train Summary
+2019-12-29 09:49:53 INFO: Write Train Summary
+2019-12-29 09:49:56 INFO: Reset streaming metrics
+2019-12-29 09:56:01 INFO: Write Train Summary
+2019-12-29 10:02:05 INFO: Write Train Summary
+2019-12-29 10:08:13 INFO: Write Train Summary
+2019-12-29 10:14:18 INFO: Write Train Summary
+2019-12-29 10:20:27 INFO: Write Train Summary
+2019-12-29 10:26:33 INFO: Write Train Summary
+2019-12-29 10:32:42 INFO: Write Train Summary
+2019-12-29 10:37:42 INFO: Save Model
+2019-12-29 10:37:42 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt311-485782 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 10:37:43 INFO: Start Train Set Accuracy
+2019-12-29 10:37:43 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt311-485782
+2019-12-29 11:12:23 INFO: TRN ckpt-485782 avg_acc: 98.74% avg_loss: 0.9188
+2019-12-29 11:12:23 INFO: Write Train Summary
+2019-12-29 11:12:23 INFO: Start Validation
+2019-12-29 11:12:23 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt311-485782
+2019-12-29 11:19:18 INFO: VAL ckpt-485782 avg_acc: 79.54% avg_loss: 1.8601
+2019-12-29 11:19:18 INFO: Write Val Summary
+2019-12-29 11:19:18 INFO: Reset streaming metrics
+2019-12-29 11:20:24 INFO: Write Train Summary
+2019-12-29 11:26:30 INFO: Write Train Summary
+2019-12-29 11:32:36 INFO: Write Train Summary
+2019-12-29 11:38:43 INFO: Write Train Summary
+2019-12-29 11:44:51 INFO: Write Train Summary
+2019-12-29 11:50:58 INFO: Write Train Summary
+2019-12-29 11:57:07 INFO: Write Train Summary
+2019-12-29 12:03:15 INFO: Write Train Summary
+2019-12-29 12:07:08 INFO: Reset streaming metrics
+2019-12-29 12:09:23 INFO: Write Train Summary
+2019-12-29 12:15:29 INFO: Write Train Summary
+2019-12-29 12:21:38 INFO: Write Train Summary
+2019-12-29 12:27:45 INFO: Write Train Summary
+2019-12-29 12:33:52 INFO: Write Train Summary
+2019-12-29 12:39:59 INFO: Write Train Summary
+2019-12-29 12:46:08 INFO: Write Train Summary
+2019-12-29 12:52:16 INFO: Write Train Summary
+2019-12-29 12:54:58 INFO: Save Model
+2019-12-29 12:54:58 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt312-487344 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 12:54:59 INFO: Start Train Set Accuracy
+2019-12-29 12:54:59 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt312-487344
+2019-12-29 13:29:37 INFO: TRN ckpt-487344 avg_acc: 98.81% avg_loss: 0.9142
+2019-12-29 13:29:37 INFO: Write Train Summary
+2019-12-29 13:29:37 INFO: Start Validation
+2019-12-29 13:29:37 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt312-487344
+2019-12-29 13:36:33 INFO: VAL ckpt-487344 avg_acc: 79.74% avg_loss: 1.8587
+2019-12-29 13:36:33 INFO: Write Val Summary
+2019-12-29 13:36:33 INFO: Reset streaming metrics
+2019-12-29 13:39:58 INFO: Write Train Summary
+2019-12-29 13:46:03 INFO: Write Train Summary
+2019-12-29 13:52:12 INFO: Write Train Summary
+2019-12-29 13:58:19 INFO: Write Train Summary
+2019-12-29 14:04:25 INFO: Write Train Summary
+2019-12-29 14:10:31 INFO: Write Train Summary
+2019-12-29 14:16:39 INFO: Write Train Summary
+2019-12-29 14:22:46 INFO: Write Train Summary
+2019-12-29 14:24:19 INFO: Reset streaming metrics
+2019-12-29 14:28:52 INFO: Write Train Summary
+2019-12-29 14:35:00 INFO: Write Train Summary
+2019-12-29 14:41:07 INFO: Write Train Summary
+2019-12-29 14:47:15 INFO: Write Train Summary
+2019-12-29 14:53:21 INFO: Write Train Summary
+2019-12-29 14:59:28 INFO: Write Train Summary
+2019-12-29 15:05:36 INFO: Write Train Summary
+2019-12-29 15:11:44 INFO: Write Train Summary
+2019-12-29 15:12:06 INFO: Save Model
+2019-12-29 15:12:06 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt313-488906 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 15:12:07 INFO: Start Train Set Accuracy
+2019-12-29 15:12:07 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt313-488906
+2019-12-29 15:46:44 INFO: TRN ckpt-488906 avg_acc: 98.35% avg_loss: 0.9399
+2019-12-29 15:46:44 INFO: Write Train Summary
+2019-12-29 15:46:44 INFO: Start Validation
+2019-12-29 15:46:44 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt313-488906
+2019-12-29 15:53:40 INFO: VAL ckpt-488906 avg_acc: 78.38% avg_loss: 1.9156
+2019-12-29 15:53:40 INFO: Write Val Summary
+2019-12-29 15:53:40 INFO: Reset streaming metrics
+2019-12-29 15:59:25 INFO: Write Train Summary
+2019-12-29 16:05:33 INFO: Write Train Summary
+2019-12-29 16:11:40 INFO: Write Train Summary
+2019-12-29 16:17:47 INFO: Write Train Summary
+2019-12-29 16:23:55 INFO: Write Train Summary
+2019-12-29 16:30:02 INFO: Write Train Summary
+2019-12-29 16:36:10 INFO: Write Train Summary
+2019-12-29 16:41:28 INFO: Reset streaming metrics
+2019-12-29 16:42:15 INFO: Write Train Summary
+2019-12-29 16:48:21 INFO: Write Train Summary
+2019-12-29 16:54:27 INFO: Write Train Summary
+2019-12-29 17:00:36 INFO: Write Train Summary
+2019-12-29 17:06:45 INFO: Write Train Summary
+2019-12-29 17:12:51 INFO: Write Train Summary
+2019-12-29 17:18:57 INFO: Write Train Summary
+2019-12-29 17:25:06 INFO: Write Train Summary
+2019-12-29 17:29:16 INFO: Save Model
+2019-12-29 17:29:16 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt314-490468 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 17:29:17 INFO: Start Train Set Accuracy
+2019-12-29 17:29:17 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt314-490468
+2019-12-29 18:03:56 INFO: TRN ckpt-490468 avg_acc: 98.84% avg_loss: 0.9108
+2019-12-29 18:03:56 INFO: Write Train Summary
+2019-12-29 18:03:56 INFO: Start Validation
+2019-12-29 18:03:56 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt314-490468
+2019-12-29 18:10:52 INFO: VAL ckpt-490468 avg_acc: 79.23% avg_loss: 1.8887
+2019-12-29 18:10:52 INFO: Write Val Summary
+2019-12-29 18:10:52 INFO: Reset streaming metrics
+2019-12-29 18:12:50 INFO: Write Train Summary
+2019-12-29 18:18:59 INFO: Write Train Summary
+2019-12-29 18:25:08 INFO: Write Train Summary
+2019-12-29 18:31:15 INFO: Write Train Summary
+2019-12-29 18:37:22 INFO: Write Train Summary
+2019-12-29 18:43:29 INFO: Write Train Summary
+2019-12-29 18:49:34 INFO: Write Train Summary
+2019-12-29 18:55:41 INFO: Write Train Summary
+2019-12-29 18:58:40 INFO: Reset streaming metrics
+2019-12-29 19:01:47 INFO: Write Train Summary
+2019-12-29 19:07:55 INFO: Write Train Summary
+2019-12-29 19:14:02 INFO: Write Train Summary
+2019-12-29 19:20:11 INFO: Write Train Summary
+2019-12-29 19:26:17 INFO: Write Train Summary
+2019-12-29 19:32:24 INFO: Write Train Summary
+2019-12-29 19:38:32 INFO: Write Train Summary
+2019-12-29 19:44:39 INFO: Write Train Summary
+2019-12-29 19:46:30 INFO: Save Model
+2019-12-29 19:46:30 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt315-492030 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 19:46:31 INFO: Start Train Set Accuracy
+2019-12-29 19:46:31 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt315-492030
+2019-12-29 20:21:09 INFO: TRN ckpt-492030 avg_acc: 98.87% avg_loss: 0.8999
+2019-12-29 20:21:09 INFO: Write Train Summary
+2019-12-29 20:21:09 INFO: Start Validation
+2019-12-29 20:21:09 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt315-492030
+2019-12-29 20:28:05 INFO: VAL ckpt-492030 avg_acc: 79.35% avg_loss: 1.8529
+2019-12-29 20:28:05 INFO: Write Val Summary
+2019-12-29 20:28:05 INFO: Reset streaming metrics
+2019-12-29 20:32:22 INFO: Write Train Summary
+2019-12-29 20:38:30 INFO: Write Train Summary
+2019-12-29 20:44:38 INFO: Write Train Summary
+2019-12-29 20:50:46 INFO: Write Train Summary
+2019-12-29 20:56:52 INFO: Write Train Summary
+2019-12-29 21:02:56 INFO: Write Train Summary
+2019-12-29 21:09:04 INFO: Write Train Summary
+2019-12-29 21:15:10 INFO: Write Train Summary
+2019-12-29 21:15:51 INFO: Reset streaming metrics
+2019-12-29 21:21:20 INFO: Write Train Summary
+2019-12-29 21:27:26 INFO: Write Train Summary
+2019-12-29 21:33:32 INFO: Write Train Summary
+2019-12-29 21:39:40 INFO: Write Train Summary
+2019-12-29 21:45:47 INFO: Write Train Summary
+2019-12-29 21:51:53 INFO: Write Train Summary
+2019-12-29 21:57:59 INFO: Write Train Summary
+2019-12-29 22:03:38 INFO: Save Model
+2019-12-29 22:03:38 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt316-493592 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-29 22:03:39 INFO: Start Train Set Accuracy
+2019-12-29 22:03:39 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt316-493592
+2019-12-29 22:38:16 INFO: TRN ckpt-493592 avg_acc: 98.81% avg_loss: 0.9052
+2019-12-29 22:38:16 INFO: Write Train Summary
+2019-12-29 22:38:16 INFO: Start Validation
+2019-12-29 22:38:16 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt316-493592
+2019-12-29 22:45:11 INFO: VAL ckpt-493592 avg_acc: 79.28% avg_loss: 1.8682
+2019-12-29 22:45:11 INFO: Write Val Summary
+2019-12-29 22:45:11 INFO: Reset streaming metrics
+2019-12-29 22:45:40 INFO: Write Train Summary
+2019-12-29 22:51:48 INFO: Write Train Summary
+2019-12-29 22:57:56 INFO: Write Train Summary
+2019-12-29 23:04:02 INFO: Write Train Summary
+2019-12-29 23:10:08 INFO: Write Train Summary
+2019-12-29 23:16:14 INFO: Write Train Summary
+2019-12-29 23:22:20 INFO: Write Train Summary
+2019-12-29 23:28:26 INFO: Write Train Summary
+2019-12-29 23:32:56 INFO: Reset streaming metrics
+2019-12-29 23:34:35 INFO: Write Train Summary
+2019-12-29 23:40:42 INFO: Write Train Summary
+2019-12-29 23:46:49 INFO: Write Train Summary
+2019-12-29 23:52:55 INFO: Write Train Summary
+2019-12-29 23:59:01 INFO: Write Train Summary
+2019-12-30 00:05:08 INFO: Write Train Summary
+2019-12-30 00:11:15 INFO: Write Train Summary
+2019-12-30 00:17:24 INFO: Write Train Summary
+2019-12-30 00:20:42 INFO: Save Model
+2019-12-30 00:20:42 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt317-495154 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 00:20:43 INFO: Start Train Set Accuracy
+2019-12-30 00:20:43 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt317-495154
+2019-12-30 00:55:20 INFO: TRN ckpt-495154 avg_acc: 98.79% avg_loss: 0.9059
+2019-12-30 00:55:20 INFO: Write Train Summary
+2019-12-30 00:55:20 INFO: Start Validation
+2019-12-30 00:55:20 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt317-495154
+2019-12-30 01:02:15 INFO: VAL ckpt-495154 avg_acc: 79.82% avg_loss: 1.8705
+2019-12-30 01:02:15 INFO: Write Val Summary
+2019-12-30 01:02:15 INFO: Reset streaming metrics
+2019-12-30 01:05:04 INFO: Write Train Summary
+2019-12-30 01:11:11 INFO: Write Train Summary
+2019-12-30 01:17:19 INFO: Write Train Summary
+2019-12-30 01:23:28 INFO: Write Train Summary
+2019-12-30 01:29:32 INFO: Write Train Summary
+2019-12-30 01:35:38 INFO: Write Train Summary
+2019-12-30 01:41:45 INFO: Write Train Summary
+2019-12-30 01:47:52 INFO: Write Train Summary
+2019-12-30 01:50:00 INFO: Reset streaming metrics
+2019-12-30 01:53:59 INFO: Write Train Summary
+2019-12-30 02:00:06 INFO: Write Train Summary
+2019-12-30 02:06:14 INFO: Write Train Summary
+2019-12-30 02:12:21 INFO: Write Train Summary
+2019-12-30 02:18:30 INFO: Write Train Summary
+2019-12-30 02:24:38 INFO: Write Train Summary
+2019-12-30 02:30:47 INFO: Write Train Summary
+2019-12-30 02:36:55 INFO: Write Train Summary
+2019-12-30 02:37:54 INFO: Save Model
+2019-12-30 02:37:54 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt318-496716 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 02:37:55 INFO: Start Train Set Accuracy
+2019-12-30 02:37:55 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt318-496716
+2019-12-30 03:12:37 INFO: TRN ckpt-496716 avg_acc: 99.02% avg_loss: 0.9017
+2019-12-30 03:12:37 INFO: Write Train Summary
+2019-12-30 03:12:37 INFO: Start Validation
+2019-12-30 03:12:37 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt318-496716
+2019-12-30 03:19:33 INFO: VAL ckpt-496716 avg_acc: 79.76% avg_loss: 1.8679
+2019-12-30 03:19:33 INFO: Write Val Summary
+2019-12-30 03:19:33 INFO: Reset streaming metrics
+2019-12-30 03:24:42 INFO: Write Train Summary
+2019-12-30 03:30:50 INFO: Write Train Summary
+2019-12-30 03:36:59 INFO: Write Train Summary
+2019-12-30 03:43:05 INFO: Write Train Summary
+2019-12-30 03:49:11 INFO: Write Train Summary
+2019-12-30 03:55:17 INFO: Write Train Summary
+2019-12-30 04:01:24 INFO: Write Train Summary
+2019-12-30 04:07:19 INFO: Reset streaming metrics
+2019-12-30 04:07:30 INFO: Write Train Summary
+2019-12-30 04:13:36 INFO: Write Train Summary
+2019-12-30 04:19:42 INFO: Write Train Summary
+2019-12-30 04:25:49 INFO: Write Train Summary
+2019-12-30 04:31:55 INFO: Write Train Summary
+2019-12-30 04:38:01 INFO: Write Train Summary
+2019-12-30 04:44:07 INFO: Write Train Summary
+2019-12-30 04:50:13 INFO: Write Train Summary
+2019-12-30 04:54:57 INFO: Save Model
+2019-12-30 04:54:57 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt319-498278 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 04:54:58 INFO: Start Train Set Accuracy
+2019-12-30 04:54:58 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt319-498278
+2019-12-30 05:29:37 INFO: TRN ckpt-498278 avg_acc: 98.99% avg_loss: 0.8887
+2019-12-30 05:29:37 INFO: Write Train Summary
+2019-12-30 05:29:37 INFO: Start Validation
+2019-12-30 05:29:37 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt319-498278
+2019-12-30 05:36:32 INFO: VAL ckpt-498278 avg_acc: 79.34% avg_loss: 1.8634
+2019-12-30 05:36:32 INFO: Write Val Summary
+2019-12-30 05:36:32 INFO: Reset streaming metrics
+2019-12-30 05:37:53 INFO: Write Train Summary
+2019-12-30 05:44:00 INFO: Write Train Summary
+2019-12-30 05:50:07 INFO: Write Train Summary
+2019-12-30 05:56:11 INFO: Write Train Summary
+2019-12-30 06:02:18 INFO: Write Train Summary
+2019-12-30 06:08:25 INFO: Write Train Summary
+2019-12-30 06:14:33 INFO: Write Train Summary
+2019-12-30 06:20:40 INFO: Write Train Summary
+2019-12-30 06:24:17 INFO: Reset streaming metrics
+2019-12-30 06:26:47 INFO: Write Train Summary
+2019-12-30 06:32:54 INFO: Write Train Summary
+2019-12-30 06:39:03 INFO: Write Train Summary
+2019-12-30 06:45:10 INFO: Write Train Summary
+2019-12-30 06:51:18 INFO: Write Train Summary
+2019-12-30 06:57:25 INFO: Write Train Summary
+2019-12-30 07:03:31 INFO: Write Train Summary
+2019-12-30 07:09:37 INFO: Write Train Summary
+2019-12-30 07:12:04 INFO: Save Model
+2019-12-30 07:12:04 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt320-499840 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 07:12:04 INFO: Start Train Set Accuracy
+2019-12-30 07:12:04 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt320-499840
+2019-12-30 07:46:46 INFO: TRN ckpt-499840 avg_acc: 98.93% avg_loss: 0.8923
+2019-12-30 07:46:46 INFO: Write Train Summary
+2019-12-30 07:46:46 INFO: Start Validation
+2019-12-30 07:46:46 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt320-499840
+2019-12-30 07:53:42 INFO: VAL ckpt-499840 avg_acc: 79.18% avg_loss: 1.8690
+2019-12-30 07:53:42 INFO: Write Val Summary
+2019-12-30 07:53:42 INFO: Reset streaming metrics
+2019-12-30 07:57:22 INFO: Write Train Summary
+2019-12-30 08:03:29 INFO: Write Train Summary
+2019-12-30 08:09:33 INFO: Write Train Summary
+2019-12-30 08:15:40 INFO: Write Train Summary
+2019-12-30 08:21:47 INFO: Write Train Summary
+2019-12-30 08:27:54 INFO: Write Train Summary
+2019-12-30 08:34:02 INFO: Write Train Summary
+2019-12-30 08:40:09 INFO: Write Train Summary
+2019-12-30 08:41:27 INFO: Reset streaming metrics
+2019-12-30 08:46:17 INFO: Write Train Summary
+2019-12-30 08:52:23 INFO: Write Train Summary
+2019-12-30 08:58:30 INFO: Write Train Summary
+2019-12-30 09:04:38 INFO: Write Train Summary
+2019-12-30 09:10:45 INFO: Write Train Summary
+2019-12-30 09:16:53 INFO: Write Train Summary
+2019-12-30 09:22:59 INFO: Write Train Summary
+2019-12-30 09:29:03 INFO: Write Train Summary
+2019-12-30 09:29:10 INFO: Save Model
+2019-12-30 09:29:10 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt321-501402 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 09:29:11 INFO: Start Train Set Accuracy
+2019-12-30 09:29:11 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt321-501402
+2019-12-30 10:03:51 INFO: TRN ckpt-501402 avg_acc: 98.95% avg_loss: 0.8933
+2019-12-30 10:03:51 INFO: Write Train Summary
+2019-12-30 10:03:51 INFO: Start Validation
+2019-12-30 10:03:51 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt321-501402
+2019-12-30 10:10:47 INFO: VAL ckpt-501402 avg_acc: 79.34% avg_loss: 1.8815
+2019-12-30 10:10:47 INFO: Write Val Summary
+2019-12-30 10:10:47 INFO: Reset streaming metrics
+2019-12-30 10:16:47 INFO: Write Train Summary
+2019-12-30 10:22:51 INFO: Write Train Summary
+2019-12-30 10:28:58 INFO: Write Train Summary
+2019-12-30 10:35:04 INFO: Write Train Summary
+2019-12-30 10:41:10 INFO: Write Train Summary
+2019-12-30 10:47:17 INFO: Write Train Summary
+2019-12-30 10:53:25 INFO: Write Train Summary
+2019-12-30 10:58:30 INFO: Reset streaming metrics
+2019-12-30 10:59:33 INFO: Write Train Summary
+2019-12-30 11:05:40 INFO: Write Train Summary
+2019-12-30 11:11:45 INFO: Write Train Summary
+2019-12-30 11:17:52 INFO: Write Train Summary
+2019-12-30 11:24:00 INFO: Write Train Summary
+2019-12-30 11:30:07 INFO: Write Train Summary
+2019-12-30 11:36:13 INFO: Write Train Summary
+2019-12-30 11:42:20 INFO: Write Train Summary
+2019-12-30 11:46:14 INFO: Save Model
+2019-12-30 11:46:14 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt322-502964 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 11:46:15 INFO: Start Train Set Accuracy
+2019-12-30 11:46:15 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt322-502964
+2019-12-30 12:20:56 INFO: TRN ckpt-502964 avg_acc: 98.96% avg_loss: 0.8919
+2019-12-30 12:20:56 INFO: Write Train Summary
+2019-12-30 12:20:56 INFO: Start Validation
+2019-12-30 12:20:56 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt322-502964
+2019-12-30 12:27:52 INFO: VAL ckpt-502964 avg_acc: 78.92% avg_loss: 1.8693
+2019-12-30 12:27:52 INFO: Write Val Summary
+2019-12-30 12:27:52 INFO: Reset streaming metrics
+2019-12-30 12:30:03 INFO: Write Train Summary
+2019-12-30 12:36:10 INFO: Write Train Summary
+2019-12-30 12:42:16 INFO: Write Train Summary
+2019-12-30 12:48:21 INFO: Write Train Summary
+2019-12-30 12:54:29 INFO: Write Train Summary
+2019-12-30 13:00:36 INFO: Write Train Summary
+2019-12-30 13:06:43 INFO: Write Train Summary
+2019-12-30 13:12:51 INFO: Write Train Summary
+2019-12-30 13:15:37 INFO: Reset streaming metrics
+2019-12-30 13:18:59 INFO: Write Train Summary
+2019-12-30 13:25:04 INFO: Write Train Summary
+2019-12-30 13:31:11 INFO: Write Train Summary
+2019-12-30 13:37:19 INFO: Write Train Summary
+2019-12-30 13:43:24 INFO: Write Train Summary
+2019-12-30 13:49:30 INFO: Write Train Summary
+2019-12-30 13:55:38 INFO: Write Train Summary
+2019-12-30 14:01:44 INFO: Write Train Summary
+2019-12-30 14:03:20 INFO: Save Model
+2019-12-30 14:03:20 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt323-504526 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 14:03:20 INFO: Start Train Set Accuracy
+2019-12-30 14:03:20 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt323-504526
+2019-12-30 14:38:01 INFO: TRN ckpt-504526 avg_acc: 98.88% avg_loss: 0.8827
+2019-12-30 14:38:01 INFO: Write Train Summary
+2019-12-30 14:38:01 INFO: Start Validation
+2019-12-30 14:38:01 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt323-504526
+2019-12-30 14:44:56 INFO: VAL ckpt-504526 avg_acc: 79.01% avg_loss: 1.8620
+2019-12-30 14:44:56 INFO: Write Val Summary
+2019-12-30 14:44:56 INFO: Reset streaming metrics
+2019-12-30 14:49:27 INFO: Write Train Summary
+2019-12-30 14:55:34 INFO: Write Train Summary
+2019-12-30 15:01:41 INFO: Write Train Summary
+2019-12-30 15:07:50 INFO: Write Train Summary
+2019-12-30 15:13:56 INFO: Write Train Summary
+2019-12-30 15:20:01 INFO: Write Train Summary
+2019-12-30 15:26:08 INFO: Write Train Summary
+2019-12-30 15:32:16 INFO: Write Train Summary
+2019-12-30 15:32:41 INFO: Reset streaming metrics
+2019-12-30 15:38:23 INFO: Write Train Summary
+2019-12-30 15:44:32 INFO: Write Train Summary
+2019-12-30 15:50:39 INFO: Write Train Summary
+2019-12-30 15:56:44 INFO: Write Train Summary
+2019-12-30 16:02:51 INFO: Write Train Summary
+2019-12-30 16:08:58 INFO: Write Train Summary
+2019-12-30 16:15:03 INFO: Write Train Summary
+2019-12-30 16:20:27 INFO: Save Model
+2019-12-30 16:20:27 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt324-506088 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 16:20:28 INFO: Start Train Set Accuracy
+2019-12-30 16:20:28 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt324-506088
+2019-12-30 16:55:13 INFO: TRN ckpt-506088 avg_acc: 99.04% avg_loss: 0.8774
+2019-12-30 16:55:13 INFO: Write Train Summary
+2019-12-30 16:55:13 INFO: Start Validation
+2019-12-30 16:55:13 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt324-506088
+2019-12-30 17:02:09 INFO: VAL ckpt-506088 avg_acc: 79.44% avg_loss: 1.8623
+2019-12-30 17:02:09 INFO: Write Val Summary
+2019-12-30 17:02:09 INFO: Reset streaming metrics
+2019-12-30 17:02:53 INFO: Write Train Summary
+2019-12-30 17:08:59 INFO: Write Train Summary
+2019-12-30 17:15:06 INFO: Write Train Summary
+2019-12-30 17:21:14 INFO: Write Train Summary
+2019-12-30 17:27:22 INFO: Write Train Summary
+2019-12-30 17:33:30 INFO: Write Train Summary
+2019-12-30 17:39:37 INFO: Write Train Summary
+2019-12-30 17:45:43 INFO: Write Train Summary
+2019-12-30 17:49:56 INFO: Reset streaming metrics
+2019-12-30 17:51:50 INFO: Write Train Summary
+2019-12-30 17:57:57 INFO: Write Train Summary
+2019-12-30 18:04:04 INFO: Write Train Summary
+2019-12-30 18:10:09 INFO: Write Train Summary
+2019-12-30 18:16:16 INFO: Write Train Summary
+2019-12-30 18:22:21 INFO: Write Train Summary
+2019-12-30 18:28:28 INFO: Write Train Summary
+2019-12-30 18:34:34 INFO: Write Train Summary
+2019-12-30 18:37:38 INFO: Save Model
+2019-12-30 18:37:38 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt325-507650 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 18:37:39 INFO: Start Train Set Accuracy
+2019-12-30 18:37:39 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt325-507650
+2019-12-30 19:12:17 INFO: TRN ckpt-507650 avg_acc: 99.04% avg_loss: 0.8799
+2019-12-30 19:12:17 INFO: Write Train Summary
+2019-12-30 19:12:17 INFO: Start Validation
+2019-12-30 19:12:17 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt325-507650
+2019-12-30 19:19:12 INFO: VAL ckpt-507650 avg_acc: 79.42% avg_loss: 1.8719
+2019-12-30 19:19:12 INFO: Write Val Summary
+2019-12-30 19:19:12 INFO: Reset streaming metrics
+2019-12-30 19:22:16 INFO: Write Train Summary
+2019-12-30 19:28:24 INFO: Write Train Summary
+2019-12-30 19:34:32 INFO: Write Train Summary
+2019-12-30 19:40:40 INFO: Write Train Summary
+2019-12-30 19:46:47 INFO: Write Train Summary
+2019-12-30 19:52:53 INFO: Write Train Summary
+2019-12-30 19:59:01 INFO: Write Train Summary
+2019-12-30 20:05:09 INFO: Write Train Summary
+2019-12-30 20:07:03 INFO: Reset streaming metrics
+2019-12-30 20:11:16 INFO: Write Train Summary
+2019-12-30 20:17:22 INFO: Write Train Summary
+2019-12-30 20:23:29 INFO: Write Train Summary
+2019-12-30 20:29:37 INFO: Write Train Summary
+2019-12-30 20:35:45 INFO: Write Train Summary
+2019-12-30 20:41:52 INFO: Write Train Summary
+2019-12-30 20:48:00 INFO: Write Train Summary
+2019-12-30 20:54:10 INFO: Write Train Summary
+2019-12-30 20:54:54 INFO: Save Model
+2019-12-30 20:54:54 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt326-509212 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 20:54:55 INFO: Start Train Set Accuracy
+2019-12-30 20:54:55 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt326-509212
+2019-12-30 21:29:37 INFO: TRN ckpt-509212 avg_acc: 99.05% avg_loss: 0.8813
+2019-12-30 21:29:37 INFO: Write Train Summary
+2019-12-30 21:29:37 INFO: Start Validation
+2019-12-30 21:29:37 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt326-509212
+2019-12-30 21:36:34 INFO: VAL ckpt-509212 avg_acc: 79.30% avg_loss: 1.8836
+2019-12-30 21:36:34 INFO: Write Val Summary
+2019-12-30 21:36:34 INFO: Reset streaming metrics
+2019-12-30 21:41:58 INFO: Write Train Summary
+2019-12-30 21:48:05 INFO: Write Train Summary
+2019-12-30 21:54:13 INFO: Write Train Summary
+2019-12-30 22:00:19 INFO: Write Train Summary
+2019-12-30 22:06:27 INFO: Write Train Summary
+2019-12-30 22:12:32 INFO: Write Train Summary
+2019-12-30 22:18:40 INFO: Write Train Summary
+2019-12-30 22:24:21 INFO: Reset streaming metrics
+2019-12-30 22:24:46 INFO: Write Train Summary
+2019-12-30 22:30:54 INFO: Write Train Summary
+2019-12-30 22:37:01 INFO: Write Train Summary
+2019-12-30 22:43:08 INFO: Write Train Summary
+2019-12-30 22:49:14 INFO: Write Train Summary
+2019-12-30 22:55:20 INFO: Write Train Summary
+2019-12-30 23:01:28 INFO: Write Train Summary
+2019-12-30 23:07:35 INFO: Write Train Summary
+2019-12-30 23:12:08 INFO: Save Model
+2019-12-30 23:12:08 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt327-510774 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-30 23:12:09 INFO: Start Train Set Accuracy
+2019-12-30 23:12:09 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt327-510774
+2019-12-30 23:46:45 INFO: TRN ckpt-510774 avg_acc: 98.91% avg_loss: 0.8694
+2019-12-30 23:46:45 INFO: Write Train Summary
+2019-12-30 23:46:45 INFO: Start Validation
+2019-12-30 23:46:45 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt327-510774
+2019-12-30 23:53:40 INFO: VAL ckpt-510774 avg_acc: 79.36% avg_loss: 1.8899
+2019-12-30 23:53:40 INFO: Write Val Summary
+2019-12-30 23:53:40 INFO: Reset streaming metrics
+2019-12-30 23:55:15 INFO: Write Train Summary
+2019-12-31 00:01:24 INFO: Write Train Summary
+2019-12-31 00:07:30 INFO: Write Train Summary
+2019-12-31 00:13:36 INFO: Write Train Summary
+2019-12-31 00:19:42 INFO: Write Train Summary
+2019-12-31 00:25:50 INFO: Write Train Summary
+2019-12-31 00:31:57 INFO: Write Train Summary
+2019-12-31 00:38:03 INFO: Write Train Summary
+2019-12-31 00:41:24 INFO: Reset streaming metrics
+2019-12-31 00:44:08 INFO: Write Train Summary
+2019-12-31 00:50:15 INFO: Write Train Summary
+2019-12-31 00:56:20 INFO: Write Train Summary
+2019-12-31 01:02:26 INFO: Write Train Summary
+2019-12-31 01:08:33 INFO: Write Train Summary
+2019-12-31 01:14:41 INFO: Write Train Summary
+2019-12-31 01:20:49 INFO: Write Train Summary
+2019-12-31 01:26:55 INFO: Write Train Summary
+2019-12-31 01:29:08 INFO: Save Model
+2019-12-31 01:29:08 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt328-512336 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 01:29:09 INFO: Start Train Set Accuracy
+2019-12-31 01:29:09 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt328-512336
+2019-12-31 02:03:47 INFO: TRN ckpt-512336 avg_acc: 99.01% avg_loss: 0.8743
+2019-12-31 02:03:47 INFO: Write Train Summary
+2019-12-31 02:03:47 INFO: Start Validation
+2019-12-31 02:03:47 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt328-512336
+2019-12-31 02:10:42 INFO: VAL ckpt-512336 avg_acc: 79.04% avg_loss: 1.8739
+2019-12-31 02:10:42 INFO: Write Val Summary
+2019-12-31 02:10:42 INFO: Reset streaming metrics
+2019-12-31 02:14:37 INFO: Write Train Summary
+2019-12-31 02:20:45 INFO: Write Train Summary
+2019-12-31 02:26:52 INFO: Write Train Summary
+2019-12-31 02:33:00 INFO: Write Train Summary
+2019-12-31 02:39:06 INFO: Write Train Summary
+2019-12-31 02:45:15 INFO: Write Train Summary
+2019-12-31 02:51:23 INFO: Write Train Summary
+2019-12-31 02:57:30 INFO: Write Train Summary
+2019-12-31 02:58:33 INFO: Reset streaming metrics
+2019-12-31 03:03:38 INFO: Write Train Summary
+2019-12-31 03:09:44 INFO: Write Train Summary
+2019-12-31 03:15:51 INFO: Write Train Summary
+2019-12-31 03:21:59 INFO: Write Train Summary
+2019-12-31 03:28:07 INFO: Write Train Summary
+2019-12-31 03:34:15 INFO: Write Train Summary
+2019-12-31 03:40:23 INFO: Write Train Summary
+2019-12-31 03:46:23 INFO: Save Model
+2019-12-31 03:46:23 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt329-513898 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 03:46:24 INFO: Start Train Set Accuracy
+2019-12-31 03:46:24 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt329-513898
+2019-12-31 04:21:03 INFO: TRN ckpt-513898 avg_acc: 98.98% avg_loss: 0.8687
+2019-12-31 04:21:03 INFO: Write Train Summary
+2019-12-31 04:21:03 INFO: Start Validation
+2019-12-31 04:21:03 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt329-513898
+2019-12-31 04:27:58 INFO: VAL ckpt-513898 avg_acc: 79.49% avg_loss: 1.8575
+2019-12-31 04:27:58 INFO: Write Val Summary
+2019-12-31 04:27:58 INFO: Reset streaming metrics
+2019-12-31 04:28:06 INFO: Write Train Summary
+2019-12-31 04:34:12 INFO: Write Train Summary
+2019-12-31 04:40:19 INFO: Write Train Summary
+2019-12-31 04:46:26 INFO: Write Train Summary
+2019-12-31 04:52:35 INFO: Write Train Summary
+2019-12-31 04:58:41 INFO: Write Train Summary
+2019-12-31 05:04:47 INFO: Write Train Summary
+2019-12-31 05:10:53 INFO: Write Train Summary
+2019-12-31 05:15:42 INFO: Reset streaming metrics
+2019-12-31 05:16:59 INFO: Write Train Summary
+2019-12-31 05:23:07 INFO: Write Train Summary
+2019-12-31 05:29:14 INFO: Write Train Summary
+2019-12-31 05:35:21 INFO: Write Train Summary
+2019-12-31 05:41:30 INFO: Write Train Summary
+2019-12-31 05:47:38 INFO: Write Train Summary
+2019-12-31 05:53:46 INFO: Write Train Summary
+2019-12-31 05:59:54 INFO: Write Train Summary
+2019-12-31 06:03:35 INFO: Save Model
+2019-12-31 06:03:35 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt330-515460 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 06:03:36 INFO: Start Train Set Accuracy
+2019-12-31 06:03:36 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt330-515460
+2019-12-31 06:38:15 INFO: TRN ckpt-515460 avg_acc: 99.09% avg_loss: 0.8610
+2019-12-31 06:38:15 INFO: Write Train Summary
+2019-12-31 06:38:15 INFO: Start Validation
+2019-12-31 06:38:15 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt330-515460
+2019-12-31 06:45:10 INFO: VAL ckpt-515460 avg_acc: 79.84% avg_loss: 1.8498
+2019-12-31 06:45:10 INFO: Write Val Summary
+2019-12-31 06:45:10 INFO: Reset streaming metrics
+2019-12-31 06:47:37 INFO: Write Train Summary
+2019-12-31 06:53:45 INFO: Write Train Summary
+2019-12-31 06:59:52 INFO: Write Train Summary
+2019-12-31 07:06:00 INFO: Write Train Summary
+2019-12-31 07:12:09 INFO: Write Train Summary
+2019-12-31 07:18:17 INFO: Write Train Summary
+2019-12-31 07:24:23 INFO: Write Train Summary
+2019-12-31 07:30:27 INFO: Write Train Summary
+2019-12-31 07:32:58 INFO: Reset streaming metrics
+2019-12-31 07:36:35 INFO: Write Train Summary
+2019-12-31 07:42:43 INFO: Write Train Summary
+2019-12-31 07:48:49 INFO: Write Train Summary
+2019-12-31 07:54:57 INFO: Write Train Summary
+2019-12-31 08:01:03 INFO: Write Train Summary
+2019-12-31 08:07:10 INFO: Write Train Summary
+2019-12-31 08:13:18 INFO: Write Train Summary
+2019-12-31 08:19:25 INFO: Write Train Summary
+2019-12-31 08:20:46 INFO: Save Model
+2019-12-31 08:20:46 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt331-517022 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 08:20:47 INFO: Start Train Set Accuracy
+2019-12-31 08:20:47 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt331-517022
+2019-12-31 08:55:26 INFO: TRN ckpt-517022 avg_acc: 99.08% avg_loss: 0.8596
+2019-12-31 08:55:26 INFO: Write Train Summary
+2019-12-31 08:55:26 INFO: Start Validation
+2019-12-31 08:55:26 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt331-517022
+2019-12-31 09:02:22 INFO: VAL ckpt-517022 avg_acc: 79.36% avg_loss: 1.8494
+2019-12-31 09:02:22 INFO: Write Val Summary
+2019-12-31 09:02:22 INFO: Reset streaming metrics
+2019-12-31 09:07:08 INFO: Write Train Summary
+2019-12-31 09:13:17 INFO: Write Train Summary
+2019-12-31 09:19:25 INFO: Write Train Summary
+2019-12-31 09:25:31 INFO: Write Train Summary
+2019-12-31 09:31:38 INFO: Write Train Summary
+2019-12-31 09:37:45 INFO: Write Train Summary
+2019-12-31 09:43:52 INFO: Write Train Summary
+2019-12-31 09:50:01 INFO: Write Train Summary
+2019-12-31 09:50:12 INFO: Reset streaming metrics
+2019-12-31 09:56:10 INFO: Write Train Summary
+2019-12-31 10:02:17 INFO: Write Train Summary
+2019-12-31 10:08:25 INFO: Write Train Summary
+2019-12-31 10:14:34 INFO: Write Train Summary
+2019-12-31 10:20:42 INFO: Write Train Summary
+2019-12-31 10:26:50 INFO: Write Train Summary
+2019-12-31 10:32:57 INFO: Write Train Summary
+2019-12-31 10:38:06 INFO: Save Model
+2019-12-31 10:38:06 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt332-518584 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 10:38:07 INFO: Start Train Set Accuracy
+2019-12-31 10:38:07 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt332-518584
+2019-12-31 11:12:48 INFO: TRN ckpt-518584 avg_acc: 99.04% avg_loss: 0.8600
+2019-12-31 11:12:48 INFO: Write Train Summary
+2019-12-31 11:12:48 INFO: Start Validation
+2019-12-31 11:12:48 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt332-518584
+2019-12-31 11:19:45 INFO: VAL ckpt-518584 avg_acc: 79.85% avg_loss: 1.8472
+2019-12-31 11:19:45 INFO: Write Val Summary
+2019-12-31 11:19:45 INFO: Reset streaming metrics
+2019-12-31 11:20:43 INFO: Write Train Summary
+2019-12-31 11:26:51 INFO: Write Train Summary
+2019-12-31 11:32:57 INFO: Write Train Summary
+2019-12-31 11:39:03 INFO: Write Train Summary
+2019-12-31 11:45:09 INFO: Write Train Summary
+2019-12-31 11:51:15 INFO: Write Train Summary
+2019-12-31 11:57:21 INFO: Write Train Summary
+2019-12-31 12:03:27 INFO: Write Train Summary
+2019-12-31 12:07:26 INFO: Reset streaming metrics
+2019-12-31 12:09:35 INFO: Write Train Summary
+2019-12-31 12:15:43 INFO: Write Train Summary
+2019-12-31 12:21:50 INFO: Write Train Summary
+2019-12-31 12:27:57 INFO: Write Train Summary
+2019-12-31 12:34:05 INFO: Write Train Summary
+2019-12-31 12:40:12 INFO: Write Train Summary
+2019-12-31 12:46:19 INFO: Write Train Summary
+2019-12-31 12:52:25 INFO: Write Train Summary
+2019-12-31 12:55:13 INFO: Save Model
+2019-12-31 12:55:13 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt333-520146 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 12:55:14 INFO: Start Train Set Accuracy
+2019-12-31 12:55:14 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt333-520146
+2019-12-31 13:29:55 INFO: TRN ckpt-520146 avg_acc: 99.17% avg_loss: 0.8467
+2019-12-31 13:29:55 INFO: Write Train Summary
+2019-12-31 13:29:55 INFO: Start Validation
+2019-12-31 13:29:55 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt333-520146
+2019-12-31 13:36:49 INFO: VAL ckpt-520146 avg_acc: 79.60% avg_loss: 1.8509
+2019-12-31 13:36:49 INFO: Write Val Summary
+2019-12-31 13:36:49 INFO: Reset streaming metrics
+2019-12-31 13:40:08 INFO: Write Train Summary
+2019-12-31 13:46:15 INFO: Write Train Summary
+2019-12-31 13:52:22 INFO: Write Train Summary
+2019-12-31 13:58:27 INFO: Write Train Summary
+2019-12-31 14:04:35 INFO: Write Train Summary
+2019-12-31 14:10:42 INFO: Write Train Summary
+2019-12-31 14:16:47 INFO: Write Train Summary
+2019-12-31 14:22:56 INFO: Write Train Summary
+2019-12-31 14:24:35 INFO: Reset streaming metrics
+2019-12-31 14:29:04 INFO: Write Train Summary
+2019-12-31 14:35:13 INFO: Write Train Summary
+2019-12-31 14:41:21 INFO: Write Train Summary
+2019-12-31 14:47:28 INFO: Write Train Summary
+2019-12-31 14:53:36 INFO: Write Train Summary
+2019-12-31 14:59:43 INFO: Write Train Summary
+2019-12-31 15:05:48 INFO: Write Train Summary
+2019-12-31 15:11:54 INFO: Write Train Summary
+2019-12-31 15:12:24 INFO: Save Model
+2019-12-31 15:12:24 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt334-521708 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 15:12:25 INFO: Start Train Set Accuracy
+2019-12-31 15:12:25 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt334-521708
+2019-12-31 15:47:06 INFO: TRN ckpt-521708 avg_acc: 99.15% avg_loss: 0.8440
+2019-12-31 15:47:06 INFO: Write Train Summary
+2019-12-31 15:47:06 INFO: Start Validation
+2019-12-31 15:47:06 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt334-521708
+2019-12-31 15:54:01 INFO: VAL ckpt-521708 avg_acc: 79.27% avg_loss: 1.8619
+2019-12-31 15:54:01 INFO: Write Val Summary
+2019-12-31 15:54:01 INFO: Reset streaming metrics
+2019-12-31 15:59:40 INFO: Write Train Summary
+2019-12-31 16:05:46 INFO: Write Train Summary
+2019-12-31 16:11:53 INFO: Write Train Summary
+2019-12-31 16:18:00 INFO: Write Train Summary
+2019-12-31 16:24:10 INFO: Write Train Summary
+2019-12-31 16:30:17 INFO: Write Train Summary
+2019-12-31 16:36:24 INFO: Write Train Summary
+2019-12-31 16:41:51 INFO: Reset streaming metrics
+2019-12-31 16:42:32 INFO: Write Train Summary
+2019-12-31 16:48:39 INFO: Write Train Summary
+2019-12-31 16:54:48 INFO: Write Train Summary
+2019-12-31 17:00:57 INFO: Write Train Summary
+2019-12-31 17:07:04 INFO: Write Train Summary
+2019-12-31 17:13:13 INFO: Write Train Summary
+2019-12-31 17:19:18 INFO: Write Train Summary
+2019-12-31 17:25:25 INFO: Write Train Summary
+2019-12-31 17:29:42 INFO: Save Model
+2019-12-31 17:29:42 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt335-523270 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 17:29:43 INFO: Start Train Set Accuracy
+2019-12-31 17:29:43 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt335-523270
+2019-12-31 18:04:20 INFO: TRN ckpt-523270 avg_acc: 99.00% avg_loss: 0.8580
+2019-12-31 18:04:20 INFO: Write Train Summary
+2019-12-31 18:04:20 INFO: Start Validation
+2019-12-31 18:04:20 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt335-523270
+2019-12-31 18:11:15 INFO: VAL ckpt-523270 avg_acc: 78.83% avg_loss: 1.8771
+2019-12-31 18:11:15 INFO: Write Val Summary
+2019-12-31 18:11:15 INFO: Reset streaming metrics
+2019-12-31 18:13:04 INFO: Write Train Summary
+2019-12-31 18:19:10 INFO: Write Train Summary
+2019-12-31 18:25:16 INFO: Write Train Summary
+2019-12-31 18:31:21 INFO: Write Train Summary
+2019-12-31 18:37:29 INFO: Write Train Summary
+2019-12-31 18:43:36 INFO: Write Train Summary
+2019-12-31 18:49:42 INFO: Write Train Summary
+2019-12-31 18:55:50 INFO: Write Train Summary
+2019-12-31 18:58:57 INFO: Reset streaming metrics
+2019-12-31 19:01:58 INFO: Write Train Summary
+2019-12-31 19:08:06 INFO: Write Train Summary
+2019-12-31 19:14:12 INFO: Write Train Summary
+2019-12-31 19:20:20 INFO: Write Train Summary
+2019-12-31 19:26:28 INFO: Write Train Summary
+2019-12-31 19:32:33 INFO: Write Train Summary
+2019-12-31 19:38:39 INFO: Write Train Summary
+2019-12-31 19:44:47 INFO: Write Train Summary
+2019-12-31 19:46:44 INFO: Save Model
+2019-12-31 19:46:45 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt336-524832 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 19:46:45 INFO: Start Train Set Accuracy
+2019-12-31 19:46:45 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt336-524832
+2019-12-31 20:21:24 INFO: TRN ckpt-524832 avg_acc: 99.21% avg_loss: 0.8430
+2019-12-31 20:21:24 INFO: Write Train Summary
+2019-12-31 20:21:24 INFO: Start Validation
+2019-12-31 20:21:24 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt336-524832
+2019-12-31 20:28:18 INFO: VAL ckpt-524832 avg_acc: 78.85% avg_loss: 1.8667
+2019-12-31 20:28:18 INFO: Write Val Summary
+2019-12-31 20:28:18 INFO: Reset streaming metrics
+2019-12-31 20:32:27 INFO: Write Train Summary
+2019-12-31 20:38:35 INFO: Write Train Summary
+2019-12-31 20:44:43 INFO: Write Train Summary
+2019-12-31 20:50:50 INFO: Write Train Summary
+2019-12-31 20:56:56 INFO: Write Train Summary
+2019-12-31 21:03:03 INFO: Write Train Summary
+2019-12-31 21:09:11 INFO: Write Train Summary
+2019-12-31 21:15:18 INFO: Write Train Summary
+2019-12-31 21:16:06 INFO: Reset streaming metrics
+2019-12-31 21:21:26 INFO: Write Train Summary
+2019-12-31 21:27:32 INFO: Write Train Summary
+2019-12-31 21:33:40 INFO: Write Train Summary
+2019-12-31 21:39:48 INFO: Write Train Summary
+2019-12-31 21:45:52 INFO: Write Train Summary
+2019-12-31 21:52:00 INFO: Write Train Summary
+2019-12-31 21:58:06 INFO: Write Train Summary
+2019-12-31 22:03:52 INFO: Save Model
+2019-12-31 22:03:52 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt337-526394 is not in all_model_checkpoint_paths. Manually adding it.
+2019-12-31 22:03:53 INFO: Start Train Set Accuracy
+2019-12-31 22:03:53 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt337-526394
+2019-12-31 22:38:30 INFO: TRN ckpt-526394 avg_acc: 99.14% avg_loss: 0.8399
+2019-12-31 22:38:30 INFO: Write Train Summary
+2019-12-31 22:38:30 INFO: Start Validation
+2019-12-31 22:38:30 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt337-526394
+2019-12-31 22:45:24 INFO: VAL ckpt-526394 avg_acc: 79.30% avg_loss: 1.8547
+2019-12-31 22:45:24 INFO: Write Val Summary
+2019-12-31 22:45:24 INFO: Reset streaming metrics
+2019-12-31 22:45:46 INFO: Write Train Summary
+2019-12-31 22:51:52 INFO: Write Train Summary
+2019-12-31 22:57:59 INFO: Write Train Summary
+2019-12-31 23:04:08 INFO: Write Train Summary
+2019-12-31 23:10:16 INFO: Write Train Summary
+2019-12-31 23:16:23 INFO: Write Train Summary
+2019-12-31 23:22:31 INFO: Write Train Summary
+2019-12-31 23:28:39 INFO: Write Train Summary
+2019-12-31 23:33:15 INFO: Reset streaming metrics
+2019-12-31 23:34:47 INFO: Write Train Summary
+2019-12-31 23:40:54 INFO: Write Train Summary
+2019-12-31 23:47:02 INFO: Write Train Summary
+2019-12-31 23:53:10 INFO: Write Train Summary
+2019-12-31 23:59:14 INFO: Write Train Summary
+2020-01-01 00:05:22 INFO: Write Train Summary
+2020-01-01 00:11:28 INFO: Write Train Summary
+2020-01-01 00:17:34 INFO: Write Train Summary
+2020-01-01 00:21:00 INFO: Save Model
+2020-01-01 00:21:00 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt338-527956 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-01 00:21:01 INFO: Start Train Set Accuracy
+2020-01-01 00:21:01 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt338-527956
+2020-01-01 00:55:39 INFO: TRN ckpt-527956 avg_acc: 99.24% avg_loss: 0.8315
+2020-01-01 00:55:39 INFO: Write Train Summary
+2020-01-01 00:55:39 INFO: Start Validation
+2020-01-01 00:55:39 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt338-527956
+2020-01-01 01:02:36 INFO: VAL ckpt-527956 avg_acc: 79.17% avg_loss: 1.8546
+2020-01-01 01:02:36 INFO: Write Val Summary
+2020-01-01 01:02:36 INFO: Reset streaming metrics
+2020-01-01 01:05:18 INFO: Write Train Summary
+2020-01-01 01:11:26 INFO: Write Train Summary
+2020-01-01 01:17:33 INFO: Write Train Summary
+2020-01-01 01:23:39 INFO: Write Train Summary
+2020-01-01 01:29:47 INFO: Write Train Summary
+2020-01-01 01:35:57 INFO: Write Train Summary
+2020-01-01 01:42:05 INFO: Write Train Summary
+2020-01-01 01:48:15 INFO: Write Train Summary
+2020-01-01 01:50:31 INFO: Reset streaming metrics
+2020-01-01 01:54:24 INFO: Write Train Summary
+2020-01-01 02:00:34 INFO: Write Train Summary
+2020-01-01 02:06:41 INFO: Write Train Summary
+2020-01-01 02:12:47 INFO: Write Train Summary
+2020-01-01 02:18:55 INFO: Write Train Summary
+2020-01-01 02:25:00 INFO: Write Train Summary
+2020-01-01 02:31:07 INFO: Write Train Summary
+2020-01-01 02:37:15 INFO: Write Train Summary
+2020-01-01 02:38:22 INFO: Save Model
+2020-01-01 02:38:22 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt339-529518 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-01 02:38:23 INFO: Start Train Set Accuracy
+2020-01-01 02:38:23 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt339-529518
+2020-01-01 03:13:02 INFO: TRN ckpt-529518 avg_acc: 99.24% avg_loss: 0.8305
+2020-01-01 03:13:02 INFO: Write Train Summary
+2020-01-01 03:13:02 INFO: Start Validation
+2020-01-01 03:13:02 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt339-529518
+2020-01-01 03:19:57 INFO: VAL ckpt-529518 avg_acc: 79.23% avg_loss: 1.8602
+2020-01-01 03:19:57 INFO: Write Val Summary
+2020-01-01 03:19:57 INFO: Reset streaming metrics
+2020-01-01 03:24:58 INFO: Write Train Summary
+2020-01-01 03:31:05 INFO: Write Train Summary
+2020-01-01 03:37:11 INFO: Write Train Summary
+2020-01-01 03:43:17 INFO: Write Train Summary
+2020-01-01 03:49:25 INFO: Write Train Summary
+2020-01-01 03:55:33 INFO: Write Train Summary
+2020-01-01 04:01:42 INFO: Write Train Summary
+2020-01-01 04:07:48 INFO: Reset streaming metrics
+2020-01-01 04:07:51 INFO: Write Train Summary
+2020-01-01 04:14:00 INFO: Write Train Summary
+2020-01-01 04:20:09 INFO: Write Train Summary
+2020-01-01 04:26:15 INFO: Write Train Summary
+2020-01-01 04:32:22 INFO: Write Train Summary
+2020-01-01 04:38:29 INFO: Write Train Summary
+2020-01-01 04:44:37 INFO: Write Train Summary
+2020-01-01 04:50:44 INFO: Write Train Summary
+2020-01-01 04:55:40 INFO: Save Model
+2020-01-01 04:55:40 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt340-531080 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-01 04:55:41 INFO: Start Train Set Accuracy
+2020-01-01 04:55:41 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt340-531080
+2020-01-01 05:30:17 INFO: TRN ckpt-531080 avg_acc: 99.26% avg_loss: 0.8271
+2020-01-01 05:30:17 INFO: Write Train Summary
+2020-01-01 05:30:17 INFO: Start Validation
+2020-01-01 05:30:17 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt340-531080
+2020-01-01 05:37:14 INFO: VAL ckpt-531080 avg_acc: 79.15% avg_loss: 1.8586
+2020-01-01 05:37:14 INFO: Write Val Summary
+2020-01-01 05:37:14 INFO: Reset streaming metrics
+2020-01-01 05:38:28 INFO: Write Train Summary
+2020-01-01 05:44:35 INFO: Write Train Summary
+2020-01-01 05:50:43 INFO: Write Train Summary
+2020-01-01 05:56:49 INFO: Write Train Summary
+2020-01-01 06:02:56 INFO: Write Train Summary
+2020-01-01 06:09:04 INFO: Write Train Summary
+2020-01-01 06:15:12 INFO: Write Train Summary
+2020-01-01 06:21:20 INFO: Write Train Summary
+2020-01-01 06:25:04 INFO: Reset streaming metrics
+2020-01-01 06:27:28 INFO: Write Train Summary
+2020-01-01 06:33:36 INFO: Write Train Summary
+2020-01-01 06:39:43 INFO: Write Train Summary
+2020-01-01 06:45:50 INFO: Write Train Summary
+2020-01-01 06:51:57 INFO: Write Train Summary
+2020-01-01 06:58:02 INFO: Write Train Summary
+2020-01-01 07:04:09 INFO: Write Train Summary
+2020-01-01 07:10:15 INFO: Write Train Summary
+2020-01-01 07:12:49 INFO: Save Model
+2020-01-01 07:12:49 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt341-532642 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-01 07:12:50 INFO: Start Train Set Accuracy
+2020-01-01 07:12:50 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt341-532642
+2020-01-01 07:47:29 INFO: TRN ckpt-532642 avg_acc: 99.19% avg_loss: 0.8320
+2020-01-01 07:47:29 INFO: Write Train Summary
+2020-01-01 07:47:29 INFO: Start Validation
+2020-01-01 07:47:29 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt341-532642
+2020-01-01 07:54:25 INFO: VAL ckpt-532642 avg_acc: 79.18% avg_loss: 1.8564
+2020-01-01 07:54:25 INFO: Write Val Summary
+2020-01-01 07:54:25 INFO: Reset streaming metrics
+2020-01-01 07:57:57 INFO: Write Train Summary
+2020-01-01 08:04:03 INFO: Write Train Summary
+2020-01-01 08:10:11 INFO: Write Train Summary
+2020-01-01 08:16:18 INFO: Write Train Summary
+2020-01-01 08:22:24 INFO: Write Train Summary
+2020-01-01 08:28:32 INFO: Write Train Summary
+2020-01-01 08:34:39 INFO: Write Train Summary
+2020-01-01 08:40:47 INFO: Write Train Summary
+2020-01-01 08:42:11 INFO: Reset streaming metrics
+2020-01-01 08:46:52 INFO: Write Train Summary
+2020-01-01 08:52:56 INFO: Write Train Summary
+2020-01-01 08:59:01 INFO: Write Train Summary
+2020-01-01 09:05:08 INFO: Write Train Summary
+2020-01-01 09:11:15 INFO: Write Train Summary
+2020-01-01 09:17:23 INFO: Write Train Summary
+2020-01-01 09:23:30 INFO: Write Train Summary
+2020-01-01 09:29:38 INFO: Write Train Summary
+2020-01-01 09:29:53 INFO: Save Model
+2020-01-01 09:29:53 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt342-534204 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-01 09:29:54 INFO: Start Train Set Accuracy
+2020-01-01 09:29:54 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt342-534204
+2020-01-01 10:04:36 INFO: TRN ckpt-534204 avg_acc: 99.22% avg_loss: 0.8285
+2020-01-01 10:04:36 INFO: Write Train Summary
+2020-01-01 10:04:36 INFO: Start Validation
+2020-01-01 10:04:36 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt342-534204
+2020-01-01 10:11:52 INFO: VAL ckpt-534204 avg_acc: 79.32% avg_loss: 1.8601
+2020-01-01 10:11:52 INFO: Write Val Summary
+2020-01-01 10:11:52 INFO: Reset streaming metrics
+2020-01-01 10:18:15 INFO: Write Train Summary
+2020-01-01 10:24:54 INFO: Write Train Summary
+2020-01-01 10:31:33 INFO: Write Train Summary
+2020-01-01 10:38:12 INFO: Write Train Summary
+2020-01-01 10:44:50 INFO: Write Train Summary
+2020-01-01 10:51:28 INFO: Write Train Summary
+2020-01-01 10:58:02 INFO: Write Train Summary
+2020-01-01 11:03:40 INFO: Reset streaming metrics
+2020-01-01 11:04:40 INFO: Write Train Summary
+2020-01-01 11:11:20 INFO: Write Train Summary
+2020-01-01 11:18:00 INFO: Write Train Summary
+2020-01-01 11:24:35 INFO: Write Train Summary
+2020-01-01 11:31:11 INFO: Write Train Summary
+2020-01-01 11:37:42 INFO: Write Train Summary
+2020-01-01 11:44:13 INFO: Write Train Summary
+2020-01-01 11:50:45 INFO: Write Train Summary
+2020-01-01 11:54:58 INFO: Save Model
+2020-01-01 11:54:58 INFO: ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt343-535766 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-01 11:54:59 INFO: Start Train Set Accuracy
+2020-01-01 11:54:59 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt343-535766
+2020-01-01 12:30:44 INFO: TRN ckpt-535766 avg_acc: 99.33% avg_loss: 0.8288
+2020-01-01 12:30:44 INFO: Write Train Summary
+2020-01-01 12:30:44 INFO: Start Validation
+2020-01-01 12:30:44 INFO: Restoring parameters from ./logs/cifar10/bg_recon_2/20191225_13:38:42:637171_/train/checkpoint/model.ckpt343-535766
+2020-01-01 12:37:51 INFO: VAL ckpt-535766 avg_acc: 79.20% avg_loss: 1.8613
+2020-01-01 12:37:51 INFO: Write Val Summary
+2020-01-01 12:37:51 INFO: Reset streaming metrics
+2020-01-01 12:40:03 INFO: Write Train Summary
+2020-01-01 12:46:29 INFO: Write Train Summary
+2020-01-01 12:52:58 INFO: Write Train Summary
+2020-01-01 12:59:30 INFO: Write Train Summary
+2020-01-01 13:06:01 INFO: Write Train Summary
+2020-01-01 13:12:35 INFO: Write Train Summary
+2020-01-01 13:19:07 INFO: Write Train Summary
+2020-01-01 13:25:42 INFO: Write Train Summary
+2020-01-01 13:28:49 INFO: Reset streaming metrics
+2020-01-01 13:32:13 CRITICAL: Traceback (most recent call last):
+  File "train_val.py", line 512, in main
+    run_metadata=run_metadata)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 950, in run
+    run_metadata_ptr)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1173, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1350, in _do_run
+    run_metadata)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1356, in _do_call
+    return fn(*args)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1341, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1429, in _call_tf_sessionrun
+    run_metadata)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train_val.py", line 823, in <module>
+    tf.app.run()
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/platform/app.py", line 40, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/absl/app.py", line 300, in run
+    _run_main(main, args)
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/absl/app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "train_val.py", line 534, in main
+    sess_val.close()
+  File "/data/perry/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 747, in close
+    tf_session.TF_CloseSession(self._session)
+KeyboardInterrupt
+
