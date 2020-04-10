@@ -324,99 +324,68 @@ def build_arch_smallnorb(inp, is_train: bool, num_classes: int, y=None):
   return {'scores': class_activation_out, 'pose_out': class_pose_out}
 
 
-#------------------------------------------------------------------------------
-# BASELINE CNN FOR SMALLNORB
-#------------------------------------------------------------------------------
-def build_arch_baseline(input, is_train: bool, num_classes: int, y=None):
-  """Spread loss.
-  
-  "As the baseline for our experiments on generalization to novel viewpoints 
-  we train a CNN which has two convolutional layers with 32 and 64 channels
-  respectively. Both layers have a kernel size of 5 and a stride of 1 with a 
-  2 × 2 max pooling. The third layer is a 1024 unit fully connected layer 
-  with dropout and connects to the 5-way softmax output layer. All hidden units
-  use the ReLU non-linearity. We use the same image preparation for the CNN 
-  baseline as described above for the capsule network. Our baseline CNN was the
-  result of an extensive hyperparameter search over filter sizes, numbers of 
-  channels and learning rates.
-  
-  See Hinton et al. "Matrix Capsules with EM Routing" equation (3).
-  
-  Author:
-    Ashley Gritzman 19/10/2018  
-  Credit:
-    Adapted from Suofei Zhang's implementation on GitHub, "Matrix-Capsules-
-    EM-Tensorflow"
-    https://github.com/www0wwwjs1/Matrix-Capsules-EM-Tensorflow  
-  Args: 
-    input: 
-    is_train: 
-    num_classes: 
-  Returns:
-    output: 
-      mean loss for entire batch
-      (scalar)
-  """
-
-  bias_initializer = tf.truncated_normal_initializer(
-      mean=0.0, stddev=0.01)
-  
-  # The paper didnot mention any regularization, a common l2 regularizer to 
-  # weights is added here
-  weights_regularizer = tf.contrib.layers.l2_regularizer(5e-04)
-
-  logger.info('input shape: {}'.format(input.get_shape()))
-
-  # weights_initializer=initializer,
-  with slim.arg_scope([slim.conv2d, slim.fully_connected], 
-    trainable=is_train, 
-    biases_initializer=bias_initializer, 
-    weights_regularizer=weights_regularizer):
-    
-    #----- Conv1 -----#
-    with tf.variable_scope('relu_conv1') as scope:
-      output = slim.conv2d(
-          input, 
-          num_outputs=32, 
-          kernel_size=[5, 5], 
-          stride=1, 
-          padding='SAME', 
-          scope=scope, 
-          activation_fn=tf.nn.relu)
-      output = slim.max_pool2d(output, [2, 2], scope='max_2d_layer1')
-      logger.info('output shape: {}'.format(output.get_shape()))
-  
-    #----- Conv2 -----#
-    with tf.variable_scope('relu_conv2') as scope:
-      output = slim.conv2d(
-          output, 
-          num_outputs=64, 
-          kernel_size=[5, 5], 
-          stride=1, 
-          padding='SAME', 
-          scope=scope, 
-          activation_fn=tf.nn.relu)
-      output = slim.max_pool2d(output, [2, 2], scope='max_2d_layer2')
-      logger.info('output shape: {}'.format(output.get_shape()))
-    
-    #----- FC with Dropout -----#
-    output = slim.flatten(output)
-    output = slim.fully_connected(
-        output, 1024, 
-        scope='relu_fc3', 
-        activation_fn=tf.nn.relu)
-    logger.info('output shape: {}'.format(output.get_shape()))
-    output = slim.dropout(output, 0.5, scope='dropout')
-    
-    #----- FC final layer -----#
-    logits = slim.fully_connected(
-        output,
-        num_classes,
-        scope='final_layer', 
-        activation_fn=None)
-    logger.info('output shape: {}'.format(output.get_shape()))
-    
-    return {'scores': logits}
+def  build_arch_alexnet_modified(inp, is_train: bool, num_classes: int, y=None):
+  inp = tf.image.resize(inp, [224, 224])
+  scope='alexnet_v2'
+  weight_decay = 0.0005
+  with tf.compat.v1.variable_scope(scope, 'alexnet', [inp]) as sc:
+    with slim.arg_scope([slim.conv2d], padding='SAME'):
+      with slim.arg_scope([slim.max_pool2d], padding='VALID') as arg_sc:
+        with slim.arg_scope([slim.conv2d, slim.fully_connected],
+                          activation_fn=tf.nn.relu,
+                          biases_initializer=tf.compat.v1.constant_initializer(0.1),
+                          weights_regularizer=slim.l2_regularizer(weight_decay)):
+          net = slim.conv2d(inp, 64, [11, 11], 4, padding='VALID',
+                            scope='conv1')
+          net = slim.max_pool2d(net, [3, 3], 2, scope='pool1')
+          net = slim.conv2d(net, 192, [5, 5], scope='conv2')
+          net = slim.max_pool2d(net, [3, 3], 2, scope='pool2')
+          net = slim.conv2d(net, 384, [3, 3], scope='conv3')
+          net = slim.conv2d(net, 384, [3, 3], scope='conv4')
+          net = slim.conv2d(net, 256, [3, 3], scope='conv5')
+          net = slim.max_pool2d(net, [3, 3], 2, scope='pool5')
+          net = slim.flatten(net)
+          net = slim.fully_connected(net, 4096, scope='fc6')
+          net = slim.dropout(net, 0.5, is_training=is_train, scope='dropout6')
+          net = slim.fully_connected(net, 4096, scope='fc7')
+          net = slim.dropout(net, 0.5, is_training=is_train, scope='dropout7')
+          class_vectors = [slim.fully_connected(net, 16, scope='class_vector_%i'%class_num)
+                           for class_num in range(num_classes)]
+          class_logits = [slim.fully_connected(class_vectors[class_num], 1, activation_fn=None,
+                                               scope='fc8_%i'%class_num) for class_num in range(num_classes)]
+          class_vectors = tf.stack(class_vectors, axis=1)
+          class_logits = tf.concat(class_logits, axis=1)
+  if FLAGS.recon_loss:
+    if FLAGS.relu_recon:
+      recon_fn = tf.nn.relu
+    else:
+      recon_fn = tf.nn.tanh
+    if y is None:
+      selected_classes = tf.argmax(class_logits, axis=-1,
+                                   name="class_predictions")
+    else:
+      selected_classes = y
+    recon_mask = tf.one_hot(selected_classes, depth=num_classes,
+                            on_value=True, off_value=False, dtype=tf.bool,
+                            name="reconstruction_mask")
+    # dim(class_input) = [batch, matrix_size]
+    class_input = tf.boolean_mask(class_vectors, recon_mask, name="masked_pose")
+    output_size = int(np.prod(inp.get_shape()[1:]))
+    class_recon = slim.fully_connected(class_input, FLAGS.X,
+                                       activation_fn=recon_fn,
+                                       scope="class_recon_1")
+    if FLAGS.Y > 0:
+      class_recon = slim.fully_connected(class_recon, FLAGS.Y,
+                                         activation_fn=recon_fn,
+                                         scope="class_recon_2")
+    class_output = slim.fully_connected(class_recon, output_size,
+                                        activation_fn=tf.nn.sigmoid,
+                                        scope="class_output")
+    decoder_output = class_output
+    out_dict = {'scores': class_logits, 'pose_out': class_vectors,
+                'decoder_out': decoder_output, 'input': inp}
+    return out_dict
+  return {'scores': class_logits, 'pose_out': class_vectors}
 
 
 #------------------------------------------------------------------------------
@@ -529,7 +498,7 @@ def reconstruction_loss(input_images, decoder_output, batch_reduce=True):
 
  
 def total_loss(output, y):
-  """total_loss = spread_loss + regularization_loss.
+  """total_loss = spread_loss/cross_entropy_loss + regularization_loss.
   
   If the flag to regularize is set, the the total loss is the sum of the spread   loss and the regularization loss.
   
@@ -552,16 +521,23 @@ def total_loss(output, y):
       (scalar)
   """
   with tf.variable_scope('total_loss') as scope:
-    # spread loss
+    # classification loss
     scores = output["scores"]
-    total_loss = spread_loss(scores, y)
-    tf.summary.scalar('spread_loss', total_loss)
+    if FLAGS.cnn:
+      total = cross_ent_loss(y=y, logits=scores)
+    else:
+      total = spread_loss(scores, y)
+    tf.summary.scalar('spread_loss', total)
 
     if FLAGS.weight_reg:
       # Regularization
-      regularization = tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES)
-      reg_loss = tf.add_n(regularization)
-      total_loss += reg_loss
+      regularization_losses = tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES)
+      if regularization_losses:
+        reg_loss = tf.add_n(regularization_losses)
+      else:
+        print("NO REGULARIZED VARIABLE IN GRAPH")
+        reg_loss = tf.constant(0.0)
+      total += reg_loss
       tf.summary.scalar('regularization_loss', reg_loss)
     
     if FLAGS.recon_loss:
@@ -570,14 +546,14 @@ def total_loss(output, y):
       decoder_output = output["decoder_out"]
       recon_loss = FLAGS.recon_loss_lambda * reconstruction_loss(x,
                                                  decoder_output)
-      total_loss += recon_loss
+      total += recon_loss
       tf.summary.scalar('reconstruction_loss', recon_loss)
-      if FLAGS.new_bg_recon_arch:
+      if FLAGS.new_bg_recon_arch and FLAGS.num_bg_classes > 0:
         class_bg_distance_loss = -1 * FLAGS.recon_diff_lambda\
                                  * tf.reduce_mean(tf.square(output["class_out"] - output["bg_out"]))
-        total_loss += class_bg_distance_loss
+        total += class_bg_distance_loss
         tf.summary.scalar('class_bg_distance_loss', class_bg_distance_loss)
-  return total_loss
+  return total
 
 
 def carlini_wagner_loss(output, y, num_classes):

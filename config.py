@@ -30,7 +30,7 @@ flags.DEFINE_integer('epoch', 100, 'epoch')
 flags.DEFINE_integer('iter_routing', 2, 'number of iterations')
 flags.DEFINE_float('epsilon', 1e-9, 'epsilon')
 flags.DEFINE_float('lrn_rate', 3e-3, 'learning rate to use in Adam optimiser')
-flags.DEFINE_boolean('weight_reg', False,
+flags.DEFINE_boolean('weight_reg', True,
                      'train with regularization of weights')
 flags.DEFINE_float('nn_weight_reg_lambda', 2e-7, '''lagrange multiplier for
                     l2 weight regularization constraint of non-capsule weights''')
@@ -52,6 +52,8 @@ flags.DEFINE_boolean('dropout_extra', False, '''whether to apply extra dropout''
 #------------------------------------------------------------------------------
 # ARCHITECTURE PARAMETERS
 #------------------------------------------------------------------------------
+flags.DEFINE_boolean('cnn', False,
+                     '''run experiments on alexnet instead of capsnet''')
 flags.DEFINE_string('dataset', 'smallNORB',
                     '''dataset name: currently only "smallNORB, mnist,
                      cifar10, svhn, and imagenet" supported,
@@ -63,7 +65,7 @@ flags.DEFINE_integer('D', 16, 'number of channels in output from ConvCaps2')
 flags.DEFINE_integer('E', 0, 'number of channels in output from ConvCaps3')
 flags.DEFINE_integer('F', 0, 'number of channels in output from ConvCaps4')
 flags.DEFINE_integer('G', 0, 'number of channels in output from ConvCaps5')
-flags.DEFINE_boolean('recon_loss', False, '''whether to apply reconstruction
+flags.DEFINE_boolean('recon_loss', True, '''whether to apply reconstruction
                       loss''')
 flags.DEFINE_boolean('relu_recon', False, '''whether to use relu instead of tanh''')
 flags.DEFINE_boolean('multi_weighted_pred_recon', False, '''whether to use multiple
@@ -73,7 +75,7 @@ flags.DEFINE_integer('num_bg_classes', 0, '''number of background
                       classes for decoder''')
 flags.DEFINE_integer('X', 512, 'number of neurons in reconstructive layer 1')
 flags.DEFINE_integer('Y', 1024, 'number of neurons in reconstructive layer 2')
-flags.DEFINE_boolean('new_bg_recon_arch', False, '''instead of concat bg recon,
+flags.DEFINE_boolean('new_bg_recon_arch', True, '''instead of concat bg recon,
                                                     add after recon. also concat
                                                     activation instead of multiply''')
 flags.DEFINE_boolean('zeroed_bg_reconstruction', False, '''whether to return
@@ -329,5 +331,7 @@ def get_dataset_architecture(dataset_name: str):
   #            'mnist': mod.build_arch_smallnorb,
   #            'cifar10': mod.build_arch_smallnorb}
   # return options[dataset_name]
+  if FLAGS.cnn:
+    return mod.build_arch_alexnet_modified
   return mod.build_arch_smallnorb 
 
