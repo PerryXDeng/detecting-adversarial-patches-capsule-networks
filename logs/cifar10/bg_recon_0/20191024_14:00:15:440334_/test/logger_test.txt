@@ -3334,3 +3334,1251 @@ Use standard file APIs to check for files with this prefix.
 2020-02-20 17:42:33 INFO: csv saved at logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/test/logs_cifar10_bg0_adv_thou_20200214_15_54_40_388989__train_saved_patch_png_test.csv
 2020-02-20 18:40:13 INFO: writing to csv
 2020-02-20 18:40:14 INFO: csv saved at logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/test/logs_cifar10_bg0_adv_25_20200214_15_10_31_178573__train_saved_patch_png_test.csv
+2020-02-21 00:50:17 INFO: name: 20191024_14:00:15:440334_
+2020-02-21 00:50:17 INFO: parent_dir: logs/cifar10/bg_recon_0
+2020-02-21 00:50:17 INFO: test_dir: logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/test
+2020-02-21 00:50:17 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/train/params/params.json
+2020-02-21 00:50:17 INFO: Using dataset: cifar10
+2020-02-21 00:50:17 INFO: BUILD TEST GRAPH
+2020-02-21 00:50:17 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-02-21 00:50:17 INFO: Overwrite dataset info from restored data version.
+2020-02-21 00:50:17 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-02-21 00:50:17 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-02-21 00:50:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-02-21 00:50:19 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-02-21 00:50:19 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-02-21 00:50:19 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-02-21 00:50:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-02-21 00:50:19 INFO: input shape: (5, 32, 32, 3)
+2020-02-21 00:50:19 INFO: Scale of 0 disables regularizer.
+2020-02-21 00:50:19 INFO: relu_conv1 output shape: (5, 16, 16, 128)
+2020-02-21 00:50:19 INFO: primary_caps pose shape: (5, 16, 16, 24, 16)
+2020-02-21 00:50:19 INFO: primary_caps activation shape (5, 16, 16, 24, 1)
+2020-02-21 00:50:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-02-21 00:50:19 INFO: lyr.conv_caps1 votes shape: (245, 216, 24, 16)
+2020-02-21 00:50:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-02-21 00:50:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-02-21 00:50:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-02-21 00:50:19 INFO: lyr.conv_caps1 pose_out shape: (5, 7, 7, 24, 16)
+2020-02-21 00:50:19 INFO: lyr.conv_caps1 activation_out shape: (5, 7, 7, 24, 1)
+2020-02-21 00:50:19 INFO: lyr.conv_caps2 votes shape: (125, 216, 32, 16)
+2020-02-21 00:50:20 INFO: lyr.conv_caps2 pose_out shape: (5, 5, 5, 32, 16)
+2020-02-21 00:50:20 INFO: lyr.conv_caps2 activation_out shape: (5, 5, 5, 32, 1)
+2020-02-21 00:50:20 INFO: class_caps votes original shape: (125, 32, 10, 16)
+2020-02-21 00:50:20 INFO: class_caps votes in to routing shape: (5, 800, 10, 16)
+2020-02-21 00:50:20 INFO: class_caps activation shape: (5, 10)
+2020-02-21 00:50:20 INFO: class_caps pose shape: (5, 10, 16)
+2020-02-21 00:50:20 INFO: input shape: (5, 32, 32, 3)
+2020-02-21 00:50:20 INFO: Scale of 0 disables regularizer.
+2020-02-21 00:50:20 INFO: relu_conv1 output shape: (5, 16, 16, 128)
+2020-02-21 00:50:20 INFO: primary_caps pose shape: (5, 16, 16, 24, 16)
+2020-02-21 00:50:20 INFO: primary_caps activation shape (5, 16, 16, 24, 1)
+2020-02-21 00:50:20 INFO: lyr.conv_caps1 votes shape: (245, 216, 24, 16)
+2020-02-21 00:50:20 INFO: lyr.conv_caps1 pose_out shape: (5, 7, 7, 24, 16)
+2020-02-21 00:50:20 INFO: lyr.conv_caps1 activation_out shape: (5, 7, 7, 24, 1)
+2020-02-21 00:50:20 INFO: lyr.conv_caps2 votes shape: (125, 216, 32, 16)
+2020-02-21 00:50:20 INFO: lyr.conv_caps2 pose_out shape: (5, 5, 5, 32, 16)
+2020-02-21 00:50:20 INFO: lyr.conv_caps2 activation_out shape: (5, 5, 5, 32, 1)
+2020-02-21 00:50:20 INFO: class_caps votes original shape: (125, 32, 10, 16)
+2020-02-21 00:50:20 INFO: class_caps votes in to routing shape: (5, 800, 10, 16)
+2020-02-21 00:50:20 INFO: class_caps activation shape: (5, 10)
+2020-02-21 00:50:20 INFO: class_caps pose shape: (5, 10, 16)
+2020-02-21 00:50:21 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-02-21 00:50:21 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-02-21 00:50:21 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-02-21 00:50:21 INFO: Restoring parameters from logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/train/checkpoint/model.ckpt-178125
+2020-02-21 02:50:03 INFO: writing to csv
+2020-02-21 02:50:04 INFO: csv saved at logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/test/logs_cifar10_bg0_adv_tenk_20200215_11_10_36_091423__train_saved_patch_png_test.csv
+2020-02-28 17:27:29 INFO: name: 20191024_14:00:15:440334_
+2020-02-28 17:27:29 INFO: parent_dir: logs/cifar10/bg_recon_0
+2020-02-28 17:27:29 INFO: test_dir: logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/test
+2020-02-28 17:27:29 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/train/params/params.json
+2020-02-28 17:27:29 INFO: Using dataset: cifar10
+2020-02-28 17:27:29 INFO: BUILD TEST GRAPH
+2020-02-28 17:27:29 WARNING: From test.py:84: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-02-28 17:27:29 INFO: Overwrite dataset info from restored data version.
+2020-02-28 17:27:29 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-02-28 17:27:29 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-02-28 17:27:29 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-02-28 17:27:30 WARNING: From test.py:299: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-02-28 17:27:30 WARNING: From test.py:299: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-02-28 17:27:30 INFO: input shape: (5, 32, 32, 3)
+2020-02-28 17:27:30 INFO: Scale of 0 disables regularizer.
+2020-02-28 17:27:30 INFO: relu_conv1 output shape: (5, 16, 16, 128)
+2020-02-28 17:27:30 INFO: primary_caps pose shape: (5, 16, 16, 24, 16)
+2020-02-28 17:27:30 INFO: primary_caps activation shape (5, 16, 16, 24, 1)
+2020-02-28 17:27:30 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-02-28 17:27:30 INFO: lyr.conv_caps1 votes shape: (245, 216, 24, 16)
+2020-02-28 17:27:30 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-02-28 17:27:30 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-02-28 17:27:30 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-02-28 17:27:30 INFO: lyr.conv_caps1 pose_out shape: (5, 7, 7, 24, 16)
+2020-02-28 17:27:30 INFO: lyr.conv_caps1 activation_out shape: (5, 7, 7, 24, 1)
+2020-02-28 17:27:30 INFO: lyr.conv_caps2 votes shape: (125, 216, 32, 16)
+2020-02-28 17:27:30 INFO: lyr.conv_caps2 pose_out shape: (5, 5, 5, 32, 16)
+2020-02-28 17:27:30 INFO: lyr.conv_caps2 activation_out shape: (5, 5, 5, 32, 1)
+2020-02-28 17:27:30 INFO: class_caps votes original shape: (125, 32, 10, 16)
+2020-02-28 17:27:30 INFO: class_caps votes in to routing shape: (5, 800, 10, 16)
+2020-02-28 17:27:30 INFO: class_caps activation shape: (5, 10)
+2020-02-28 17:27:30 INFO: class_caps pose shape: (5, 10, 16)
+2020-02-28 17:27:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:464: The name tf.train.get_global_step is deprecated. Please use tf.compat.v1.train.get_global_step instead.
+
+2020-02-28 17:27:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:558: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+2020-02-28 17:27:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:562: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+2020-02-28 17:27:31 INFO: input shape: (5, 32, 32, 3)
+2020-02-28 17:27:31 INFO: Scale of 0 disables regularizer.
+2020-02-28 17:27:31 INFO: relu_conv1 output shape: (5, 16, 16, 128)
+2020-02-28 17:27:31 INFO: primary_caps pose shape: (5, 16, 16, 24, 16)
+2020-02-28 17:27:31 INFO: primary_caps activation shape (5, 16, 16, 24, 1)
+2020-02-28 17:27:31 INFO: lyr.conv_caps1 votes shape: (245, 216, 24, 16)
+2020-02-28 17:27:31 INFO: lyr.conv_caps1 pose_out shape: (5, 7, 7, 24, 16)
+2020-02-28 17:27:31 INFO: lyr.conv_caps1 activation_out shape: (5, 7, 7, 24, 1)
+2020-02-28 17:27:31 INFO: lyr.conv_caps2 votes shape: (125, 216, 32, 16)
+2020-02-28 17:27:31 INFO: lyr.conv_caps2 pose_out shape: (5, 5, 5, 32, 16)
+2020-02-28 17:27:31 INFO: lyr.conv_caps2 activation_out shape: (5, 5, 5, 32, 1)
+2020-02-28 17:27:31 INFO: class_caps votes original shape: (125, 32, 10, 16)
+2020-02-28 17:27:31 INFO: class_caps votes in to routing shape: (5, 800, 10, 16)
+2020-02-28 17:27:31 INFO: class_caps activation shape: (5, 10)
+2020-02-28 17:27:31 INFO: class_caps pose shape: (5, 10, 16)
+2020-02-28 17:27:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/metrics.py:27: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-02-28 17:27:31 WARNING: From test.py:168: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-02-28 17:27:31 WARNING: From test.py:171: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2020-02-28 17:27:32 WARNING: From test.py:191: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-02-28 17:27:32 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-02-28 17:27:32 INFO: Restoring parameters from logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/train/checkpoint/model.ckpt-178125
+2020-02-28 17:27:43 INFO: TEST ckpt-178125 bch-0 cum_acc: 80.00% cum_loss: 0.3341
+2020-02-28 17:27:43 INFO: TEST ckpt-178125 bch-1 cum_acc: 80.00% cum_loss: 0.3754
+2020-02-28 17:27:44 INFO: TEST ckpt-178125 bch-2 cum_acc: 86.67% cum_loss: 0.3484
+2020-02-28 17:27:44 INFO: TEST ckpt-178125 bch-3 cum_acc: 87.50% cum_loss: 0.3248
+2020-02-28 17:27:45 INFO: TEST ckpt-178125 bch-4 cum_acc: 86.00% cum_loss: 0.4225
+2020-02-28 17:27:45 INFO: TEST ckpt-178125 bch-5 cum_acc: 85.00% cum_loss: 0.4832
+2020-02-28 17:27:45 INFO: TEST ckpt-178125 bch-6 cum_acc: 82.86% cum_loss: 0.4680
+2020-02-28 17:27:46 INFO: TEST ckpt-178125 bch-7 cum_acc: 81.25% cum_loss: 0.4415
+2020-02-28 17:27:46 INFO: TEST ckpt-178125 bch-8 cum_acc: 83.33% cum_loss: 0.4102
+2020-02-28 17:27:47 INFO: TEST ckpt-178125 bch-9 cum_acc: 81.00% cum_loss: 0.4203
+2020-02-28 17:27:47 INFO: TEST ckpt-178125 bch-10 cum_acc: 80.00% cum_loss: 0.4133
+2020-02-28 17:27:47 INFO: TEST ckpt-178125 bch-11 cum_acc: 79.17% cum_loss: 0.4118
+2020-02-28 17:27:48 INFO: TEST ckpt-178125 bch-12 cum_acc: 78.46% cum_loss: 0.4083
+2020-02-28 17:27:48 INFO: TEST ckpt-178125 bch-13 cum_acc: 79.29% cum_loss: 0.4261
+2020-02-28 17:27:49 INFO: TEST ckpt-178125 bch-14 cum_acc: 79.33% cum_loss: 0.4270
+2020-02-28 17:27:49 INFO: TEST ckpt-178125 bch-15 cum_acc: 78.13% cum_loss: 0.4305
+2020-02-28 17:27:49 INFO: TEST ckpt-178125 bch-16 cum_acc: 75.88% cum_loss: 0.4935
+2020-02-28 17:27:50 INFO: TEST ckpt-178125 bch-17 cum_acc: 76.11% cum_loss: 0.5164
+2020-02-28 17:27:50 INFO: TEST ckpt-178125 bch-18 cum_acc: 75.79% cum_loss: 0.5202
+2020-02-28 17:27:50 INFO: TEST ckpt-178125 bch-19 cum_acc: 75.50% cum_loss: 0.5164
+2020-02-28 17:27:51 INFO: TEST ckpt-178125 bch-20 cum_acc: 75.71% cum_loss: 0.5079
+2020-02-28 17:27:51 INFO: TEST ckpt-178125 bch-21 cum_acc: 75.45% cum_loss: 0.5095
+2020-02-28 17:27:52 INFO: TEST ckpt-178125 bch-22 cum_acc: 74.78% cum_loss: 0.5058
+2020-02-28 17:27:52 INFO: TEST ckpt-178125 bch-23 cum_acc: 75.00% cum_loss: 0.5038
+2020-02-28 17:27:52 INFO: TEST ckpt-178125 bch-24 cum_acc: 75.60% cum_loss: 0.4971
+2020-02-28 17:27:53 INFO: TEST ckpt-178125 bch-25 cum_acc: 75.38% cum_loss: 0.4963
+2020-02-28 17:27:53 INFO: TEST ckpt-178125 bch-26 cum_acc: 74.81% cum_loss: 0.4989
+2020-02-28 17:27:54 INFO: TEST ckpt-178125 bch-27 cum_acc: 74.64% cum_loss: 0.5077
+2020-02-28 17:27:54 INFO: TEST ckpt-178125 bch-28 cum_acc: 73.79% cum_loss: 0.5314
+2020-02-28 17:27:54 INFO: TEST ckpt-178125 bch-29 cum_acc: 74.33% cum_loss: 0.5234
+2020-02-28 17:27:55 INFO: TEST ckpt-178125 bch-30 cum_acc: 73.55% cum_loss: 0.5344
+2020-02-28 17:27:55 INFO: TEST ckpt-178125 bch-31 cum_acc: 73.75% cum_loss: 0.5295
+2020-02-28 17:27:55 INFO: TEST ckpt-178125 bch-32 cum_acc: 73.94% cum_loss: 0.5271
+2020-02-28 17:27:56 INFO: TEST ckpt-178125 bch-33 cum_acc: 74.12% cum_loss: 0.5209
+2020-02-28 17:27:56 INFO: TEST ckpt-178125 bch-34 cum_acc: 74.29% cum_loss: 0.5149
+2020-02-28 17:27:57 INFO: TEST ckpt-178125 bch-35 cum_acc: 73.89% cum_loss: 0.5198
+2020-02-28 17:27:57 INFO: TEST ckpt-178125 bch-36 cum_acc: 73.51% cum_loss: 0.5198
+2020-02-28 17:27:57 INFO: TEST ckpt-178125 bch-37 cum_acc: 73.16% cum_loss: 0.5255
+2020-02-28 17:27:58 INFO: TEST ckpt-178125 bch-38 cum_acc: 73.08% cum_loss: 0.5300
+2020-02-28 17:27:58 INFO: TEST ckpt-178125 bch-39 cum_acc: 73.50% cum_loss: 0.5209
+2020-02-28 17:27:59 INFO: TEST ckpt-178125 bch-40 cum_acc: 73.66% cum_loss: 0.5165
+2020-02-28 17:27:59 INFO: TEST ckpt-178125 bch-41 cum_acc: 74.05% cum_loss: 0.5163
+2020-02-28 17:27:59 INFO: TEST ckpt-178125 bch-42 cum_acc: 73.02% cum_loss: 0.5287
+2020-02-28 17:28:00 INFO: TEST ckpt-178125 bch-43 cum_acc: 72.27% cum_loss: 0.5396
+2020-02-28 17:28:00 INFO: TEST ckpt-178125 bch-44 cum_acc: 72.67% cum_loss: 0.5344
+2020-02-28 17:28:01 INFO: TEST ckpt-178125 bch-45 cum_acc: 72.61% cum_loss: 0.5329
+2020-02-28 17:28:01 INFO: TEST ckpt-178125 bch-46 cum_acc: 72.77% cum_loss: 0.5344
+2020-02-28 17:28:01 INFO: TEST ckpt-178125 bch-47 cum_acc: 72.71% cum_loss: 0.5336
+2020-02-28 17:28:02 INFO: TEST ckpt-178125 bch-48 cum_acc: 72.65% cum_loss: 0.5346
+2020-02-28 17:28:02 INFO: TEST ckpt-178125 bch-49 cum_acc: 73.00% cum_loss: 0.5289
+2020-02-28 17:28:02 INFO: TEST ckpt-178125 bch-50 cum_acc: 72.75% cum_loss: 0.5369
+2020-02-28 17:28:03 INFO: TEST ckpt-178125 bch-51 cum_acc: 72.50% cum_loss: 0.5386
+2020-02-28 17:28:03 INFO: TEST ckpt-178125 bch-52 cum_acc: 72.45% cum_loss: 0.5364
+2020-02-28 17:28:04 INFO: TEST ckpt-178125 bch-53 cum_acc: 72.78% cum_loss: 0.5320
+2020-02-28 17:28:04 INFO: TEST ckpt-178125 bch-54 cum_acc: 72.55% cum_loss: 0.5373
+2020-02-28 17:28:04 INFO: TEST ckpt-178125 bch-55 cum_acc: 72.32% cum_loss: 0.5434
+2020-02-28 17:28:05 INFO: TEST ckpt-178125 bch-56 cum_acc: 72.46% cum_loss: 0.5397
+2020-02-28 17:28:05 INFO: TEST ckpt-178125 bch-57 cum_acc: 72.59% cum_loss: 0.5383
+2020-02-28 17:28:06 INFO: TEST ckpt-178125 bch-58 cum_acc: 72.88% cum_loss: 0.5340
+2020-02-28 17:28:06 INFO: TEST ckpt-178125 bch-59 cum_acc: 73.00% cum_loss: 0.5381
+2020-02-28 17:28:06 INFO: TEST ckpt-178125 bch-60 cum_acc: 73.11% cum_loss: 0.5358
+2020-02-28 17:28:07 INFO: TEST ckpt-178125 bch-61 cum_acc: 73.23% cum_loss: 0.5333
+2020-02-28 17:28:07 INFO: TEST ckpt-178125 bch-62 cum_acc: 73.17% cum_loss: 0.5367
+2020-02-28 17:28:07 INFO: TEST ckpt-178125 bch-63 cum_acc: 73.13% cum_loss: 0.5343
+2020-02-28 17:28:08 INFO: TEST ckpt-178125 bch-64 cum_acc: 73.08% cum_loss: 0.5320
+2020-02-28 17:28:08 INFO: TEST ckpt-178125 bch-65 cum_acc: 73.48% cum_loss: 0.5281
+2020-02-28 17:28:09 INFO: TEST ckpt-178125 bch-66 cum_acc: 73.58% cum_loss: 0.5265
+2020-02-28 17:28:09 INFO: TEST ckpt-178125 bch-67 cum_acc: 73.53% cum_loss: 0.5247
+2020-02-28 17:28:09 INFO: TEST ckpt-178125 bch-68 cum_acc: 73.48% cum_loss: 0.5253
+2020-02-28 17:28:10 INFO: TEST ckpt-178125 bch-69 cum_acc: 73.71% cum_loss: 0.5235
+2020-02-28 17:28:10 INFO: TEST ckpt-178125 bch-70 cum_acc: 73.66% cum_loss: 0.5220
+2020-02-28 17:28:11 INFO: TEST ckpt-178125 bch-71 cum_acc: 73.33% cum_loss: 0.5265
+2020-02-28 17:28:11 INFO: TEST ckpt-178125 bch-72 cum_acc: 73.42% cum_loss: 0.5240
+2020-02-28 17:28:11 INFO: TEST ckpt-178125 bch-73 cum_acc: 73.51% cum_loss: 0.5211
+2020-02-28 17:28:12 INFO: TEST ckpt-178125 bch-74 cum_acc: 73.73% cum_loss: 0.5196
+2020-02-28 17:28:12 INFO: TEST ckpt-178125 bch-75 cum_acc: 73.95% cum_loss: 0.5202
+2020-02-28 17:28:12 INFO: TEST ckpt-178125 bch-76 cum_acc: 74.16% cum_loss: 0.5164
+2020-02-28 17:28:13 INFO: TEST ckpt-178125 bch-77 cum_acc: 74.36% cum_loss: 0.5133
+2020-02-28 17:28:13 INFO: TEST ckpt-178125 bch-78 cum_acc: 74.30% cum_loss: 0.5130
+2020-02-28 17:28:14 INFO: TEST ckpt-178125 bch-79 cum_acc: 74.63% cum_loss: 0.5109
+2020-02-28 17:28:14 INFO: TEST ckpt-178125 bch-80 cum_acc: 74.44% cum_loss: 0.5169
+2020-02-28 17:28:14 INFO: TEST ckpt-178125 bch-81 cum_acc: 74.27% cum_loss: 0.5175
+2020-02-28 17:28:15 INFO: TEST ckpt-178125 bch-82 cum_acc: 74.22% cum_loss: 0.5160
+2020-02-28 17:28:15 INFO: TEST ckpt-178125 bch-83 cum_acc: 74.29% cum_loss: 0.5154
+2020-02-28 17:28:16 INFO: TEST ckpt-178125 bch-84 cum_acc: 74.59% cum_loss: 0.5130
+2020-02-28 17:28:16 INFO: TEST ckpt-178125 bch-85 cum_acc: 74.65% cum_loss: 0.5146
+2020-02-28 17:28:16 INFO: TEST ckpt-178125 bch-86 cum_acc: 74.83% cum_loss: 0.5111
+2020-02-28 17:28:17 INFO: TEST ckpt-178125 bch-87 cum_acc: 74.89% cum_loss: 0.5121
+2020-02-28 17:28:17 INFO: TEST ckpt-178125 bch-88 cum_acc: 74.94% cum_loss: 0.5110
+2020-02-28 17:28:18 INFO: TEST ckpt-178125 bch-89 cum_acc: 75.00% cum_loss: 0.5092
+2020-02-28 17:28:18 INFO: TEST ckpt-178125 bch-90 cum_acc: 75.05% cum_loss: 0.5089
+2020-02-28 17:28:18 INFO: TEST ckpt-178125 bch-91 cum_acc: 75.11% cum_loss: 0.5085
+2020-02-28 17:28:19 INFO: TEST ckpt-178125 bch-92 cum_acc: 75.27% cum_loss: 0.5083
+2020-02-28 17:28:19 INFO: TEST ckpt-178125 bch-93 cum_acc: 75.43% cum_loss: 0.5069
+2020-02-28 17:28:19 INFO: TEST ckpt-178125 bch-94 cum_acc: 75.58% cum_loss: 0.5057
+2020-02-28 17:28:20 INFO: TEST ckpt-178125 bch-95 cum_acc: 75.52% cum_loss: 0.5084
+2020-02-28 17:28:20 INFO: TEST ckpt-178125 bch-96 cum_acc: 75.57% cum_loss: 0.5075
+2020-02-28 17:28:21 INFO: TEST ckpt-178125 bch-97 cum_acc: 75.61% cum_loss: 0.5074
+2020-02-28 17:28:21 INFO: TEST ckpt-178125 bch-98 cum_acc: 75.56% cum_loss: 0.5102
+2020-02-28 17:28:21 INFO: TEST ckpt-178125 bch-99 cum_acc: 75.40% cum_loss: 0.5095
+2020-02-28 17:28:22 INFO: TEST ckpt-178125 bch-100 cum_acc: 75.45% cum_loss: 0.5121
+2020-02-28 17:28:22 INFO: TEST ckpt-178125 bch-101 cum_acc: 75.59% cum_loss: 0.5114
+2020-02-28 17:28:23 INFO: TEST ckpt-178125 bch-102 cum_acc: 75.83% cum_loss: 0.5090
+2020-02-28 17:28:23 INFO: TEST ckpt-178125 bch-103 cum_acc: 75.67% cum_loss: 0.5097
+2020-02-28 17:28:23 INFO: TEST ckpt-178125 bch-104 cum_acc: 75.71% cum_loss: 0.5110
+2020-02-28 17:28:24 INFO: TEST ckpt-178125 bch-105 cum_acc: 75.66% cum_loss: 0.5103
+2020-02-28 17:28:24 INFO: TEST ckpt-178125 bch-106 cum_acc: 75.70% cum_loss: 0.5089
+2020-02-28 17:28:24 INFO: TEST ckpt-178125 bch-107 cum_acc: 75.74% cum_loss: 0.5068
+2020-02-28 17:28:25 INFO: TEST ckpt-178125 bch-108 cum_acc: 75.78% cum_loss: 0.5050
+2020-02-28 17:28:25 INFO: TEST ckpt-178125 bch-109 cum_acc: 75.64% cum_loss: 0.5091
+2020-02-28 17:28:26 INFO: TEST ckpt-178125 bch-110 cum_acc: 75.68% cum_loss: 0.5082
+2020-02-28 17:28:26 INFO: TEST ckpt-178125 bch-111 cum_acc: 75.45% cum_loss: 0.5082
+2020-02-28 17:28:26 INFO: TEST ckpt-178125 bch-112 cum_acc: 75.49% cum_loss: 0.5080
+2020-02-28 17:28:27 INFO: TEST ckpt-178125 bch-113 cum_acc: 75.53% cum_loss: 0.5079
+2020-02-28 17:28:27 INFO: TEST ckpt-178125 bch-114 cum_acc: 75.30% cum_loss: 0.5105
+2020-02-28 17:28:28 INFO: TEST ckpt-178125 bch-115 cum_acc: 75.26% cum_loss: 0.5101
+2020-02-28 17:28:28 INFO: TEST ckpt-178125 bch-116 cum_acc: 75.30% cum_loss: 0.5102
+2020-02-28 17:28:28 INFO: TEST ckpt-178125 bch-117 cum_acc: 75.34% cum_loss: 0.5092
+2020-02-28 17:28:29 INFO: TEST ckpt-178125 bch-118 cum_acc: 75.29% cum_loss: 0.5111
+2020-02-28 17:28:29 INFO: TEST ckpt-178125 bch-119 cum_acc: 75.42% cum_loss: 0.5104
+2020-02-28 17:28:29 INFO: TEST ckpt-178125 bch-120 cum_acc: 75.54% cum_loss: 0.5092
+2020-02-28 17:28:30 INFO: TEST ckpt-178125 bch-121 cum_acc: 75.57% cum_loss: 0.5093
+2020-02-28 17:28:30 INFO: TEST ckpt-178125 bch-122 cum_acc: 75.61% cum_loss: 0.5072
+2020-02-28 17:28:31 INFO: TEST ckpt-178125 bch-123 cum_acc: 75.73% cum_loss: 0.5061
+2020-02-28 17:28:31 INFO: TEST ckpt-178125 bch-124 cum_acc: 75.52% cum_loss: 0.5093
+2020-02-28 17:28:31 INFO: TEST ckpt-178125 bch-125 cum_acc: 75.40% cum_loss: 0.5081
+2020-02-28 17:28:32 INFO: TEST ckpt-178125 bch-126 cum_acc: 75.35% cum_loss: 0.5098
+2020-02-28 17:28:32 INFO: TEST ckpt-178125 bch-127 cum_acc: 75.39% cum_loss: 0.5089
+2020-02-28 17:28:33 INFO: TEST ckpt-178125 bch-128 cum_acc: 75.43% cum_loss: 0.5141
+2020-02-28 17:28:33 INFO: TEST ckpt-178125 bch-129 cum_acc: 75.38% cum_loss: 0.5145
+2020-02-28 17:28:33 INFO: TEST ckpt-178125 bch-130 cum_acc: 75.57% cum_loss: 0.5126
+2020-02-28 17:28:34 INFO: TEST ckpt-178125 bch-131 cum_acc: 75.53% cum_loss: 0.5117
+2020-02-28 17:28:34 INFO: TEST ckpt-178125 bch-132 cum_acc: 75.56% cum_loss: 0.5110
+2020-02-28 17:28:35 INFO: TEST ckpt-178125 bch-133 cum_acc: 75.60% cum_loss: 0.5094
+2020-02-28 17:28:35 INFO: TEST ckpt-178125 bch-134 cum_acc: 75.48% cum_loss: 0.5117
+2020-02-28 17:28:35 INFO: TEST ckpt-178125 bch-135 cum_acc: 75.51% cum_loss: 0.5109
+2020-02-28 17:28:36 INFO: TEST ckpt-178125 bch-136 cum_acc: 75.55% cum_loss: 0.5104
+2020-02-28 17:28:36 INFO: TEST ckpt-178125 bch-137 cum_acc: 75.65% cum_loss: 0.5096
+2020-02-28 17:28:36 INFO: TEST ckpt-178125 bch-138 cum_acc: 75.68% cum_loss: 0.5086
+2020-02-28 17:28:37 INFO: TEST ckpt-178125 bch-139 cum_acc: 75.64% cum_loss: 0.5085
+2020-02-28 17:28:37 INFO: TEST ckpt-178125 bch-140 cum_acc: 75.67% cum_loss: 0.5079
+2020-02-28 17:28:38 INFO: TEST ckpt-178125 bch-141 cum_acc: 75.77% cum_loss: 0.5069
+2020-02-28 17:28:38 INFO: TEST ckpt-178125 bch-142 cum_acc: 75.94% cum_loss: 0.5053
+2020-02-28 17:28:38 INFO: TEST ckpt-178125 bch-143 cum_acc: 76.04% cum_loss: 0.5049
+2020-02-28 17:28:39 INFO: TEST ckpt-178125 bch-144 cum_acc: 76.14% cum_loss: 0.5051
+2020-02-28 17:28:39 INFO: TEST ckpt-178125 bch-145 cum_acc: 76.16% cum_loss: 0.5045
+2020-02-28 17:28:40 INFO: TEST ckpt-178125 bch-146 cum_acc: 76.19% cum_loss: 0.5040
+2020-02-28 17:28:40 INFO: TEST ckpt-178125 bch-147 cum_acc: 76.28% cum_loss: 0.5033
+2020-02-28 17:28:40 INFO: TEST ckpt-178125 bch-148 cum_acc: 76.24% cum_loss: 0.5034
+2020-02-28 17:28:41 INFO: TEST ckpt-178125 bch-149 cum_acc: 76.33% cum_loss: 0.5021
+2020-02-28 17:28:41 INFO: TEST ckpt-178125 bch-150 cum_acc: 76.29% cum_loss: 0.5023
+2020-02-28 17:28:41 INFO: TEST ckpt-178125 bch-151 cum_acc: 76.38% cum_loss: 0.5013
+2020-02-28 17:28:42 INFO: TEST ckpt-178125 bch-152 cum_acc: 76.47% cum_loss: 0.4998
+2020-02-28 17:28:42 INFO: TEST ckpt-178125 bch-153 cum_acc: 76.49% cum_loss: 0.4999
+2020-02-28 17:28:43 INFO: TEST ckpt-178125 bch-154 cum_acc: 76.32% cum_loss: 0.5040
+2020-02-28 17:28:43 INFO: TEST ckpt-178125 bch-155 cum_acc: 76.28% cum_loss: 0.5034
+2020-02-28 17:28:43 INFO: TEST ckpt-178125 bch-156 cum_acc: 76.31% cum_loss: 0.5026
+2020-02-28 17:28:44 INFO: TEST ckpt-178125 bch-157 cum_acc: 76.39% cum_loss: 0.5013
+2020-02-28 17:28:44 INFO: TEST ckpt-178125 bch-158 cum_acc: 76.42% cum_loss: 0.5016
+2020-02-28 17:28:45 INFO: TEST ckpt-178125 bch-159 cum_acc: 76.50% cum_loss: 0.5009
+2020-02-28 17:28:45 INFO: TEST ckpt-178125 bch-160 cum_acc: 76.65% cum_loss: 0.4992
+2020-02-28 17:28:45 INFO: TEST ckpt-178125 bch-161 cum_acc: 76.60% cum_loss: 0.4991
+2020-02-28 17:28:46 INFO: TEST ckpt-178125 bch-162 cum_acc: 76.63% cum_loss: 0.4985
+2020-02-28 17:28:46 INFO: TEST ckpt-178125 bch-163 cum_acc: 76.65% cum_loss: 0.4973
+2020-02-28 17:28:46 INFO: TEST ckpt-178125 bch-164 cum_acc: 76.55% cum_loss: 0.4977
+2020-02-28 17:28:47 INFO: TEST ckpt-178125 bch-165 cum_acc: 76.57% cum_loss: 0.4968
+2020-02-28 17:28:47 INFO: TEST ckpt-178125 bch-166 cum_acc: 76.59% cum_loss: 0.4957
+2020-02-28 17:28:48 INFO: TEST ckpt-178125 bch-167 cum_acc: 76.55% cum_loss: 0.4947
+2020-02-28 17:28:48 INFO: TEST ckpt-178125 bch-168 cum_acc: 76.57% cum_loss: 0.4940
+2020-02-28 17:28:48 INFO: TEST ckpt-178125 bch-169 cum_acc: 76.59% cum_loss: 0.4928
+2020-02-28 17:28:49 INFO: TEST ckpt-178125 bch-170 cum_acc: 76.55% cum_loss: 0.4929
+2020-02-28 17:28:49 INFO: TEST ckpt-178125 bch-171 cum_acc: 76.51% cum_loss: 0.4936
+2020-02-28 17:28:50 INFO: TEST ckpt-178125 bch-172 cum_acc: 76.47% cum_loss: 0.4937
+2020-02-28 17:28:50 INFO: TEST ckpt-178125 bch-173 cum_acc: 76.49% cum_loss: 0.4931
+2020-02-28 17:28:50 INFO: TEST ckpt-178125 bch-174 cum_acc: 76.57% cum_loss: 0.4926
+2020-02-28 17:28:51 INFO: TEST ckpt-178125 bch-175 cum_acc: 76.70% cum_loss: 0.4918
+2020-02-28 17:28:51 INFO: TEST ckpt-178125 bch-176 cum_acc: 76.61% cum_loss: 0.4920
+2020-02-28 17:28:51 INFO: TEST ckpt-178125 bch-177 cum_acc: 76.69% cum_loss: 0.4917
+2020-02-28 17:28:52 INFO: TEST ckpt-178125 bch-178 cum_acc: 76.70% cum_loss: 0.4919
+2020-02-28 17:28:52 INFO: TEST ckpt-178125 bch-179 cum_acc: 76.72% cum_loss: 0.4907
+2020-02-28 17:28:53 INFO: TEST ckpt-178125 bch-180 cum_acc: 76.80% cum_loss: 0.4906
+2020-02-28 17:28:53 INFO: TEST ckpt-178125 bch-181 cum_acc: 76.81% cum_loss: 0.4897
+2020-02-28 17:28:53 INFO: TEST ckpt-178125 bch-182 cum_acc: 76.78% cum_loss: 0.4893
+2020-02-28 17:28:54 INFO: TEST ckpt-178125 bch-183 cum_acc: 76.74% cum_loss: 0.4891
+2020-02-28 17:28:54 INFO: TEST ckpt-178125 bch-184 cum_acc: 76.65% cum_loss: 0.4922
+2020-02-28 17:28:55 INFO: TEST ckpt-178125 bch-185 cum_acc: 76.51% cum_loss: 0.4921
+2020-02-28 17:28:55 INFO: TEST ckpt-178125 bch-186 cum_acc: 76.52% cum_loss: 0.4924
+2020-02-28 17:28:55 INFO: TEST ckpt-178125 bch-187 cum_acc: 76.49% cum_loss: 0.4938
+2020-02-28 17:28:56 INFO: TEST ckpt-178125 bch-188 cum_acc: 76.56% cum_loss: 0.4948
+2020-02-28 17:28:56 INFO: TEST ckpt-178125 bch-189 cum_acc: 76.53% cum_loss: 0.4983
+2020-02-28 17:28:56 INFO: TEST ckpt-178125 bch-190 cum_acc: 76.65% cum_loss: 0.4970
+2020-02-28 17:28:57 INFO: TEST ckpt-178125 bch-191 cum_acc: 76.56% cum_loss: 0.4971
+2020-02-28 17:28:57 INFO: TEST ckpt-178125 bch-192 cum_acc: 76.48% cum_loss: 0.4970
+2020-02-28 17:28:58 INFO: TEST ckpt-178125 bch-193 cum_acc: 76.49% cum_loss: 0.4965
+2020-02-28 17:28:58 INFO: TEST ckpt-178125 bch-194 cum_acc: 76.46% cum_loss: 0.4958
+2020-02-28 17:28:58 INFO: TEST ckpt-178125 bch-195 cum_acc: 76.48% cum_loss: 0.4955
+2020-02-28 17:28:59 INFO: TEST ckpt-178125 bch-196 cum_acc: 76.55% cum_loss: 0.4944
+2020-02-28 17:28:59 INFO: TEST ckpt-178125 bch-197 cum_acc: 76.67% cum_loss: 0.4933
+2020-02-28 17:29:00 INFO: TEST ckpt-178125 bch-198 cum_acc: 76.68% cum_loss: 0.4935
+2020-02-28 17:29:00 INFO: TEST ckpt-178125 bch-199 cum_acc: 76.65% cum_loss: 0.4946
+2020-02-28 17:29:00 INFO: TEST ckpt-178125 bch-200 cum_acc: 76.67% cum_loss: 0.4947
+2020-02-28 17:29:01 INFO: TEST ckpt-178125 bch-201 cum_acc: 76.53% cum_loss: 0.4955
+2020-02-28 17:29:01 INFO: TEST ckpt-178125 bch-202 cum_acc: 76.45% cum_loss: 0.4952
+2020-02-28 17:29:01 INFO: TEST ckpt-178125 bch-203 cum_acc: 76.42% cum_loss: 0.4951
+2020-02-28 17:29:02 INFO: TEST ckpt-178125 bch-204 cum_acc: 76.44% cum_loss: 0.4963
+2020-02-28 17:29:02 INFO: TEST ckpt-178125 bch-205 cum_acc: 76.41% cum_loss: 0.4958
+2020-02-28 17:29:03 INFO: TEST ckpt-178125 bch-206 cum_acc: 76.47% cum_loss: 0.4951
+2020-02-28 17:29:03 INFO: TEST ckpt-178125 bch-207 cum_acc: 76.44% cum_loss: 0.4947
+2020-02-28 17:29:03 INFO: TEST ckpt-178125 bch-208 cum_acc: 76.46% cum_loss: 0.4936
+2020-02-28 17:29:04 INFO: TEST ckpt-178125 bch-209 cum_acc: 76.38% cum_loss: 0.4933
+2020-02-28 17:29:04 INFO: TEST ckpt-178125 bch-210 cum_acc: 76.45% cum_loss: 0.4928
+2020-02-28 17:29:05 INFO: TEST ckpt-178125 bch-211 cum_acc: 76.51% cum_loss: 0.4917
+2020-02-28 17:29:05 INFO: TEST ckpt-178125 bch-212 cum_acc: 76.48% cum_loss: 0.4915
+2020-02-28 17:29:05 INFO: TEST ckpt-178125 bch-213 cum_acc: 76.40% cum_loss: 0.4933
+2020-02-28 17:29:06 INFO: TEST ckpt-178125 bch-214 cum_acc: 76.33% cum_loss: 0.4940
+2020-02-28 17:29:06 INFO: TEST ckpt-178125 bch-215 cum_acc: 76.34% cum_loss: 0.4939
+2020-02-28 17:29:07 INFO: TEST ckpt-178125 bch-216 cum_acc: 76.36% cum_loss: 0.4935
+2020-02-28 17:29:07 INFO: TEST ckpt-178125 bch-217 cum_acc: 76.42% cum_loss: 0.4922
+2020-02-28 17:29:07 INFO: TEST ckpt-178125 bch-218 cum_acc: 76.39% cum_loss: 0.4917
+2020-02-28 17:29:08 INFO: TEST ckpt-178125 bch-219 cum_acc: 76.41% cum_loss: 0.4917
+2020-02-28 17:29:08 INFO: TEST ckpt-178125 bch-220 cum_acc: 76.43% cum_loss: 0.4907
+2020-02-28 17:29:08 INFO: TEST ckpt-178125 bch-221 cum_acc: 76.22% cum_loss: 0.4921
+2020-02-28 17:29:09 INFO: TEST ckpt-178125 bch-222 cum_acc: 76.23% cum_loss: 0.4914
+2020-02-28 17:29:09 INFO: TEST ckpt-178125 bch-223 cum_acc: 76.34% cum_loss: 0.4906
+2020-02-28 17:29:10 INFO: TEST ckpt-178125 bch-224 cum_acc: 76.31% cum_loss: 0.4918
+2020-02-28 17:29:10 INFO: TEST ckpt-178125 bch-225 cum_acc: 76.24% cum_loss: 0.4910
+2020-02-28 17:29:10 INFO: TEST ckpt-178125 bch-226 cum_acc: 76.21% cum_loss: 0.4904
+2020-02-28 17:29:11 INFO: TEST ckpt-178125 bch-227 cum_acc: 76.32% cum_loss: 0.4891
+2020-02-28 17:29:11 INFO: TEST ckpt-178125 bch-228 cum_acc: 76.29% cum_loss: 0.4884
+2020-02-28 17:29:12 INFO: TEST ckpt-178125 bch-229 cum_acc: 76.26% cum_loss: 0.4882
+2020-02-28 17:29:12 INFO: TEST ckpt-178125 bch-230 cum_acc: 76.32% cum_loss: 0.4882
+2020-02-28 17:29:12 INFO: TEST ckpt-178125 bch-231 cum_acc: 76.25% cum_loss: 0.4898
+2020-02-28 17:29:13 INFO: TEST ckpt-178125 bch-232 cum_acc: 76.18% cum_loss: 0.4893
+2020-02-28 17:29:13 INFO: TEST ckpt-178125 bch-233 cum_acc: 76.28% cum_loss: 0.4884
+2020-02-28 17:29:13 INFO: TEST ckpt-178125 bch-234 cum_acc: 76.26% cum_loss: 0.4885
+2020-02-28 17:29:14 INFO: TEST ckpt-178125 bch-235 cum_acc: 76.27% cum_loss: 0.4884
+2020-02-28 17:29:14 INFO: TEST ckpt-178125 bch-236 cum_acc: 76.33% cum_loss: 0.4882
+2020-02-28 17:29:15 INFO: TEST ckpt-178125 bch-237 cum_acc: 76.39% cum_loss: 0.4875
+2020-02-28 17:29:15 INFO: TEST ckpt-178125 bch-238 cum_acc: 76.32% cum_loss: 0.4885
+2020-02-28 17:29:15 INFO: TEST ckpt-178125 bch-239 cum_acc: 76.38% cum_loss: 0.4875
+2020-02-28 17:29:16 INFO: TEST ckpt-178125 bch-240 cum_acc: 76.27% cum_loss: 0.4888
+2020-02-28 17:29:16 INFO: TEST ckpt-178125 bch-241 cum_acc: 76.24% cum_loss: 0.4886
+2020-02-28 17:29:17 INFO: TEST ckpt-178125 bch-242 cum_acc: 76.13% cum_loss: 0.4889
+2020-02-28 17:29:17 INFO: TEST ckpt-178125 bch-243 cum_acc: 76.07% cum_loss: 0.4903
+2020-02-28 17:29:17 INFO: TEST ckpt-178125 bch-244 cum_acc: 76.04% cum_loss: 0.4899
+2020-02-28 17:29:18 INFO: TEST ckpt-178125 bch-245 cum_acc: 76.06% cum_loss: 0.4895
+2020-02-28 17:29:18 INFO: TEST ckpt-178125 bch-246 cum_acc: 76.03% cum_loss: 0.4891
+2020-02-28 17:29:19 INFO: TEST ckpt-178125 bch-247 cum_acc: 76.05% cum_loss: 0.4888
+2020-02-28 17:29:19 INFO: TEST ckpt-178125 bch-248 cum_acc: 76.06% cum_loss: 0.4888
+2020-02-28 17:29:19 INFO: TEST ckpt-178125 bch-249 cum_acc: 76.12% cum_loss: 0.4885
+2020-02-28 17:29:20 INFO: TEST ckpt-178125 bch-250 cum_acc: 76.06% cum_loss: 0.4884
+2020-02-28 17:29:20 INFO: TEST ckpt-178125 bch-251 cum_acc: 76.07% cum_loss: 0.4880
+2020-02-28 17:29:20 INFO: TEST ckpt-178125 bch-252 cum_acc: 76.05% cum_loss: 0.4876
+2020-02-28 17:29:21 INFO: TEST ckpt-178125 bch-253 cum_acc: 75.94% cum_loss: 0.4884
+2020-02-28 17:29:21 INFO: TEST ckpt-178125 bch-254 cum_acc: 75.92% cum_loss: 0.4878
+2020-02-28 17:29:22 INFO: TEST ckpt-178125 bch-255 cum_acc: 75.90% cum_loss: 0.4871
+2020-02-28 17:29:22 INFO: TEST ckpt-178125 bch-256 cum_acc: 75.88% cum_loss: 0.4876
+2020-02-28 17:29:22 INFO: TEST ckpt-178125 bch-257 cum_acc: 75.78% cum_loss: 0.4880
+2020-02-28 17:29:23 INFO: TEST ckpt-178125 bch-258 cum_acc: 75.83% cum_loss: 0.4873
+2020-02-28 17:29:23 INFO: TEST ckpt-178125 bch-259 cum_acc: 75.81% cum_loss: 0.4870
+2020-02-28 17:29:24 INFO: TEST ckpt-178125 bch-260 cum_acc: 75.82% cum_loss: 0.4866
+2020-02-28 17:29:24 INFO: TEST ckpt-178125 bch-261 cum_acc: 75.88% cum_loss: 0.4868
+2020-02-28 17:29:24 INFO: TEST ckpt-178125 bch-262 cum_acc: 75.86% cum_loss: 0.4866
+2020-02-28 17:29:25 INFO: TEST ckpt-178125 bch-263 cum_acc: 75.87% cum_loss: 0.4870
+2020-02-28 17:29:25 INFO: TEST ckpt-178125 bch-264 cum_acc: 75.92% cum_loss: 0.4861
+2020-02-28 17:29:25 INFO: TEST ckpt-178125 bch-265 cum_acc: 75.98% cum_loss: 0.4855
+2020-02-28 17:29:26 INFO: TEST ckpt-178125 bch-266 cum_acc: 75.96% cum_loss: 0.4862
+2020-02-28 17:29:26 INFO: TEST ckpt-178125 bch-267 cum_acc: 75.93% cum_loss: 0.4891
+2020-02-28 17:29:27 INFO: TEST ckpt-178125 bch-268 cum_acc: 75.95% cum_loss: 0.4893
+2020-02-28 17:29:27 INFO: TEST ckpt-178125 bch-269 cum_acc: 75.89% cum_loss: 0.4899
+2020-02-28 17:29:27 INFO: TEST ckpt-178125 bch-270 cum_acc: 75.79% cum_loss: 0.4901
+2020-02-28 17:29:28 INFO: TEST ckpt-178125 bch-271 cum_acc: 75.81% cum_loss: 0.4896
+2020-02-28 17:29:28 INFO: TEST ckpt-178125 bch-272 cum_acc: 75.79% cum_loss: 0.4896
+2020-02-28 17:29:29 INFO: TEST ckpt-178125 bch-273 cum_acc: 75.73% cum_loss: 0.4898
+2020-02-28 17:29:29 INFO: TEST ckpt-178125 bch-274 cum_acc: 75.75% cum_loss: 0.4897
+2020-02-28 17:29:29 INFO: TEST ckpt-178125 bch-275 cum_acc: 75.76% cum_loss: 0.4895
+2020-02-28 17:29:30 INFO: TEST ckpt-178125 bch-276 cum_acc: 75.81% cum_loss: 0.4894
+2020-02-28 17:29:30 INFO: TEST ckpt-178125 bch-277 cum_acc: 75.79% cum_loss: 0.4898
+2020-02-28 17:29:31 INFO: TEST ckpt-178125 bch-278 cum_acc: 75.84% cum_loss: 0.4893
+2020-02-28 17:29:31 INFO: TEST ckpt-178125 bch-279 cum_acc: 75.93% cum_loss: 0.4888
+2020-02-28 17:29:31 INFO: TEST ckpt-178125 bch-280 cum_acc: 75.91% cum_loss: 0.4883
+2020-02-28 17:29:32 INFO: TEST ckpt-178125 bch-281 cum_acc: 75.99% cum_loss: 0.4877
+2020-02-28 17:29:32 INFO: TEST ckpt-178125 bch-282 cum_acc: 76.01% cum_loss: 0.4868
+2020-02-28 17:29:32 INFO: TEST ckpt-178125 bch-283 cum_acc: 75.92% cum_loss: 0.4874
+2020-02-28 17:29:33 INFO: TEST ckpt-178125 bch-284 cum_acc: 76.00% cum_loss: 0.4869
+2020-02-28 17:29:33 INFO: TEST ckpt-178125 bch-285 cum_acc: 75.91% cum_loss: 0.4871
+2020-02-28 17:29:34 INFO: TEST ckpt-178125 bch-286 cum_acc: 75.85% cum_loss: 0.4874
+2020-02-28 17:29:34 INFO: TEST ckpt-178125 bch-287 cum_acc: 75.90% cum_loss: 0.4870
+2020-02-28 17:29:34 INFO: TEST ckpt-178125 bch-288 cum_acc: 75.95% cum_loss: 0.4868
+2020-02-28 17:29:35 INFO: TEST ckpt-178125 bch-289 cum_acc: 76.03% cum_loss: 0.4862
+2020-02-28 17:29:35 INFO: TEST ckpt-178125 bch-290 cum_acc: 76.08% cum_loss: 0.4857
+2020-02-28 17:29:36 INFO: TEST ckpt-178125 bch-291 cum_acc: 76.13% cum_loss: 0.4848
+2020-02-28 17:29:36 INFO: TEST ckpt-178125 bch-292 cum_acc: 76.04% cum_loss: 0.4861
+2020-02-28 17:29:36 INFO: TEST ckpt-178125 bch-293 cum_acc: 76.09% cum_loss: 0.4855
+2020-02-28 17:29:37 INFO: TEST ckpt-178125 bch-294 cum_acc: 76.10% cum_loss: 0.4849
+2020-02-28 17:29:37 INFO: TEST ckpt-178125 bch-295 cum_acc: 76.08% cum_loss: 0.4852
+2020-02-28 17:29:37 INFO: TEST ckpt-178125 bch-296 cum_acc: 76.09% cum_loss: 0.4848
+2020-02-28 17:29:38 INFO: TEST ckpt-178125 bch-297 cum_acc: 76.11% cum_loss: 0.4842
+2020-02-28 17:29:38 INFO: TEST ckpt-178125 bch-298 cum_acc: 76.09% cum_loss: 0.4850
+2020-02-28 17:29:39 INFO: TEST ckpt-178125 bch-299 cum_acc: 76.07% cum_loss: 0.4847
+2020-02-28 17:29:39 INFO: TEST ckpt-178125 bch-300 cum_acc: 76.11% cum_loss: 0.4847
+2020-02-28 17:29:39 INFO: TEST ckpt-178125 bch-301 cum_acc: 76.19% cum_loss: 0.4841
+2020-02-28 17:29:40 INFO: TEST ckpt-178125 bch-302 cum_acc: 76.17% cum_loss: 0.4860
+2020-02-28 17:29:40 INFO: TEST ckpt-178125 bch-303 cum_acc: 76.15% cum_loss: 0.4861
+2020-02-28 17:29:41 INFO: TEST ckpt-178125 bch-304 cum_acc: 76.07% cum_loss: 0.4866
+2020-02-28 17:29:41 INFO: TEST ckpt-178125 bch-305 cum_acc: 76.11% cum_loss: 0.4861
+2020-02-28 17:29:41 INFO: TEST ckpt-178125 bch-306 cum_acc: 76.09% cum_loss: 0.4866
+2020-02-28 17:29:42 INFO: TEST ckpt-178125 bch-307 cum_acc: 76.10% cum_loss: 0.4859
+2020-02-28 17:29:42 INFO: TEST ckpt-178125 bch-308 cum_acc: 76.02% cum_loss: 0.4864
+2020-02-28 17:29:43 INFO: TEST ckpt-178125 bch-309 cum_acc: 76.03% cum_loss: 0.4865
+2020-02-28 17:29:43 INFO: TEST ckpt-178125 bch-310 cum_acc: 76.08% cum_loss: 0.4860
+2020-02-28 17:29:43 INFO: TEST ckpt-178125 bch-311 cum_acc: 76.09% cum_loss: 0.4859
+2020-02-28 17:29:44 INFO: TEST ckpt-178125 bch-312 cum_acc: 76.10% cum_loss: 0.4863
+2020-02-28 17:29:44 INFO: TEST ckpt-178125 bch-313 cum_acc: 76.15% cum_loss: 0.4860
+2020-02-28 17:29:44 INFO: TEST ckpt-178125 bch-314 cum_acc: 76.16% cum_loss: 0.4864
+2020-02-28 17:29:45 INFO: TEST ckpt-178125 bch-315 cum_acc: 76.08% cum_loss: 0.4878
+2020-02-28 17:29:45 INFO: TEST ckpt-178125 bch-316 cum_acc: 76.15% cum_loss: 0.4872
+2020-02-28 17:29:46 INFO: TEST ckpt-178125 bch-317 cum_acc: 76.16% cum_loss: 0.4873
+2020-02-28 17:29:46 INFO: TEST ckpt-178125 bch-318 cum_acc: 76.21% cum_loss: 0.4866
+2020-02-28 17:29:46 INFO: TEST ckpt-178125 bch-319 cum_acc: 76.19% cum_loss: 0.4863
+2020-02-28 17:29:47 INFO: TEST ckpt-178125 bch-320 cum_acc: 76.20% cum_loss: 0.4859
+2020-02-28 17:29:47 INFO: TEST ckpt-178125 bch-321 cum_acc: 76.21% cum_loss: 0.4855
+2020-02-28 17:29:48 INFO: TEST ckpt-178125 bch-322 cum_acc: 76.28% cum_loss: 0.4853
+2020-02-28 17:29:48 INFO: TEST ckpt-178125 bch-323 cum_acc: 76.27% cum_loss: 0.4852
+2020-02-28 17:29:48 INFO: TEST ckpt-178125 bch-324 cum_acc: 76.28% cum_loss: 0.4848
+2020-02-28 17:29:49 INFO: TEST ckpt-178125 bch-325 cum_acc: 76.26% cum_loss: 0.4846
+2020-02-28 17:29:49 INFO: TEST ckpt-178125 bch-326 cum_acc: 76.24% cum_loss: 0.4847
+2020-02-28 17:29:49 INFO: TEST ckpt-178125 bch-327 cum_acc: 76.22% cum_loss: 0.4848
+2020-02-28 17:29:50 INFO: TEST ckpt-178125 bch-328 cum_acc: 76.23% cum_loss: 0.4844
+2020-02-28 17:29:50 INFO: TEST ckpt-178125 bch-329 cum_acc: 76.21% cum_loss: 0.4844
+2020-02-28 17:29:51 INFO: TEST ckpt-178125 bch-330 cum_acc: 76.16% cum_loss: 0.4850
+2020-02-28 17:29:51 INFO: TEST ckpt-178125 bch-331 cum_acc: 76.14% cum_loss: 0.4850
+2020-02-28 17:29:51 INFO: TEST ckpt-178125 bch-332 cum_acc: 76.16% cum_loss: 0.4849
+2020-02-28 17:29:52 INFO: TEST ckpt-178125 bch-333 cum_acc: 76.17% cum_loss: 0.4856
+2020-02-28 17:29:52 INFO: TEST ckpt-178125 bch-334 cum_acc: 76.18% cum_loss: 0.4850
+2020-02-28 17:29:53 INFO: TEST ckpt-178125 bch-335 cum_acc: 76.22% cum_loss: 0.4843
+2020-02-28 17:29:53 INFO: TEST ckpt-178125 bch-336 cum_acc: 76.17% cum_loss: 0.4845
+2020-02-28 17:29:53 INFO: TEST ckpt-178125 bch-337 cum_acc: 76.18% cum_loss: 0.4842
+2020-02-28 17:29:54 INFO: TEST ckpt-178125 bch-338 cum_acc: 76.14% cum_loss: 0.4847
+2020-02-28 17:29:54 INFO: TEST ckpt-178125 bch-339 cum_acc: 76.21% cum_loss: 0.4842
+2020-02-28 17:29:54 INFO: TEST ckpt-178125 bch-340 cum_acc: 76.19% cum_loss: 0.4839
+2020-02-28 17:29:55 INFO: TEST ckpt-178125 bch-341 cum_acc: 76.20% cum_loss: 0.4837
+2020-02-28 17:29:55 INFO: TEST ckpt-178125 bch-342 cum_acc: 76.15% cum_loss: 0.4836
+2020-02-28 17:29:56 INFO: TEST ckpt-178125 bch-343 cum_acc: 76.19% cum_loss: 0.4828
+2020-02-28 17:29:56 INFO: TEST ckpt-178125 bch-344 cum_acc: 76.14% cum_loss: 0.4827
+2020-02-28 17:29:56 INFO: TEST ckpt-178125 bch-345 cum_acc: 76.13% cum_loss: 0.4838
+2020-02-28 17:29:57 INFO: TEST ckpt-178125 bch-346 cum_acc: 76.14% cum_loss: 0.4832
+2020-02-28 17:29:57 INFO: TEST ckpt-178125 bch-347 cum_acc: 76.15% cum_loss: 0.4831
+2020-02-28 17:29:58 INFO: TEST ckpt-178125 bch-348 cum_acc: 76.19% cum_loss: 0.4824
+2020-02-28 17:29:58 INFO: TEST ckpt-178125 bch-349 cum_acc: 76.17% cum_loss: 0.4821
+2020-02-28 17:29:58 INFO: TEST ckpt-178125 bch-350 cum_acc: 76.15% cum_loss: 0.4827
+2020-02-28 17:29:59 INFO: TEST ckpt-178125 bch-351 cum_acc: 76.16% cum_loss: 0.4827
+2020-02-28 17:29:59 INFO: TEST ckpt-178125 bch-352 cum_acc: 76.12% cum_loss: 0.4825
+2020-02-28 17:29:59 INFO: TEST ckpt-178125 bch-353 cum_acc: 76.13% cum_loss: 0.4825
+2020-02-28 17:30:00 INFO: TEST ckpt-178125 bch-354 cum_acc: 76.11% cum_loss: 0.4826
+2020-02-28 17:30:00 INFO: TEST ckpt-178125 bch-355 cum_acc: 76.07% cum_loss: 0.4835
+2020-02-28 17:30:01 INFO: TEST ckpt-178125 bch-356 cum_acc: 76.08% cum_loss: 0.4847
+2020-02-28 17:30:01 INFO: TEST ckpt-178125 bch-357 cum_acc: 76.06% cum_loss: 0.4849
+2020-02-28 17:30:01 INFO: TEST ckpt-178125 bch-358 cum_acc: 76.02% cum_loss: 0.4848
+2020-02-28 17:30:02 INFO: TEST ckpt-178125 bch-359 cum_acc: 76.03% cum_loss: 0.4850
+2020-02-28 17:30:02 INFO: TEST ckpt-178125 bch-360 cum_acc: 76.04% cum_loss: 0.4846
+2020-02-28 17:30:03 INFO: TEST ckpt-178125 bch-361 cum_acc: 76.05% cum_loss: 0.4840
+2020-02-28 17:30:03 INFO: TEST ckpt-178125 bch-362 cum_acc: 76.06% cum_loss: 0.4841
+2020-02-28 17:30:03 INFO: TEST ckpt-178125 bch-363 cum_acc: 75.99% cum_loss: 0.4860
+2020-02-28 17:30:04 INFO: TEST ckpt-178125 bch-364 cum_acc: 75.97% cum_loss: 0.4856
+2020-02-28 17:30:04 INFO: TEST ckpt-178125 bch-365 cum_acc: 76.01% cum_loss: 0.4851
+2020-02-28 17:30:04 INFO: TEST ckpt-178125 bch-366 cum_acc: 75.94% cum_loss: 0.4853
+2020-02-28 17:30:05 INFO: TEST ckpt-178125 bch-367 cum_acc: 75.90% cum_loss: 0.4857
+2020-02-28 17:30:05 INFO: TEST ckpt-178125 bch-368 cum_acc: 75.85% cum_loss: 0.4858
+2020-02-28 17:30:06 INFO: TEST ckpt-178125 bch-369 cum_acc: 75.86% cum_loss: 0.4869
+2020-02-28 17:30:06 INFO: TEST ckpt-178125 bch-370 cum_acc: 75.90% cum_loss: 0.4866
+2020-02-28 17:30:06 INFO: TEST ckpt-178125 bch-371 cum_acc: 75.91% cum_loss: 0.4866
+2020-02-28 17:30:07 INFO: TEST ckpt-178125 bch-372 cum_acc: 75.92% cum_loss: 0.4863
+2020-02-28 17:30:07 INFO: TEST ckpt-178125 bch-373 cum_acc: 75.96% cum_loss: 0.4858
+2020-02-28 17:30:08 INFO: TEST ckpt-178125 bch-374 cum_acc: 75.95% cum_loss: 0.4859
+2020-02-28 17:30:08 INFO: TEST ckpt-178125 bch-375 cum_acc: 75.98% cum_loss: 0.4851
+2020-02-28 17:30:08 INFO: TEST ckpt-178125 bch-376 cum_acc: 76.05% cum_loss: 0.4847
+2020-02-28 17:30:09 INFO: TEST ckpt-178125 bch-377 cum_acc: 76.11% cum_loss: 0.4840
+2020-02-28 17:30:09 INFO: TEST ckpt-178125 bch-378 cum_acc: 76.04% cum_loss: 0.4860
+2020-02-28 17:30:09 INFO: TEST ckpt-178125 bch-379 cum_acc: 76.05% cum_loss: 0.4862
+2020-02-28 17:30:10 INFO: TEST ckpt-178125 bch-380 cum_acc: 76.04% cum_loss: 0.4861
+2020-02-28 17:30:10 INFO: TEST ckpt-178125 bch-381 cum_acc: 75.99% cum_loss: 0.4875
+2020-02-28 17:30:11 INFO: TEST ckpt-178125 bch-382 cum_acc: 76.01% cum_loss: 0.4874
+2020-02-28 17:30:11 INFO: TEST ckpt-178125 bch-383 cum_acc: 75.99% cum_loss: 0.4883
+2020-02-28 17:30:11 INFO: TEST ckpt-178125 bch-384 cum_acc: 75.97% cum_loss: 0.4885
+2020-02-28 17:30:12 INFO: TEST ckpt-178125 bch-385 cum_acc: 76.01% cum_loss: 0.4880
+2020-02-28 17:30:12 INFO: TEST ckpt-178125 bch-386 cum_acc: 76.05% cum_loss: 0.4877
+2020-02-28 17:30:13 INFO: TEST ckpt-178125 bch-387 cum_acc: 76.06% cum_loss: 0.4875
+2020-02-28 17:30:13 INFO: TEST ckpt-178125 bch-388 cum_acc: 76.07% cum_loss: 0.4882
+2020-02-28 17:30:13 INFO: TEST ckpt-178125 bch-389 cum_acc: 75.97% cum_loss: 0.4881
+2020-02-28 17:30:14 INFO: TEST ckpt-178125 bch-390 cum_acc: 75.96% cum_loss: 0.4881
+2020-02-28 17:30:14 INFO: TEST ckpt-178125 bch-391 cum_acc: 75.89% cum_loss: 0.4880
+2020-02-28 17:30:14 INFO: TEST ckpt-178125 bch-392 cum_acc: 75.88% cum_loss: 0.4893
+2020-02-28 17:30:15 INFO: TEST ckpt-178125 bch-393 cum_acc: 75.89% cum_loss: 0.4893
+2020-02-28 17:30:15 INFO: TEST ckpt-178125 bch-394 cum_acc: 75.87% cum_loss: 0.4905
+2020-02-28 17:30:16 INFO: TEST ckpt-178125 bch-395 cum_acc: 75.88% cum_loss: 0.4901
+2020-02-28 17:30:16 INFO: TEST ckpt-178125 bch-396 cum_acc: 75.82% cum_loss: 0.4918
+2020-02-28 17:30:16 INFO: TEST ckpt-178125 bch-397 cum_acc: 75.83% cum_loss: 0.4916
+2020-02-28 17:30:17 INFO: TEST ckpt-178125 bch-398 cum_acc: 75.81% cum_loss: 0.4915
+2020-02-28 17:30:17 INFO: TEST ckpt-178125 bch-399 cum_acc: 75.80% cum_loss: 0.4914
+2020-02-28 17:30:18 INFO: TEST ckpt-178125 bch-400 cum_acc: 75.81% cum_loss: 0.4914
+2020-02-28 17:30:18 INFO: TEST ckpt-178125 bch-401 cum_acc: 75.80% cum_loss: 0.4911
+2020-02-28 17:30:18 INFO: TEST ckpt-178125 bch-402 cum_acc: 75.78% cum_loss: 0.4911
+2020-02-28 17:30:19 INFO: TEST ckpt-178125 bch-403 cum_acc: 75.82% cum_loss: 0.4908
+2020-02-28 17:30:19 INFO: TEST ckpt-178125 bch-404 cum_acc: 75.83% cum_loss: 0.4907
+2020-02-28 17:30:19 INFO: TEST ckpt-178125 bch-405 cum_acc: 75.79% cum_loss: 0.4913
+2020-02-28 17:30:20 INFO: TEST ckpt-178125 bch-406 cum_acc: 75.75% cum_loss: 0.4925
+2020-02-28 17:30:20 INFO: TEST ckpt-178125 bch-407 cum_acc: 75.69% cum_loss: 0.4924
+2020-02-28 17:30:21 INFO: TEST ckpt-178125 bch-408 cum_acc: 75.65% cum_loss: 0.4928
+2020-02-28 17:30:21 INFO: TEST ckpt-178125 bch-409 cum_acc: 75.66% cum_loss: 0.4922
+2020-02-28 17:30:21 INFO: TEST ckpt-178125 bch-410 cum_acc: 75.69% cum_loss: 0.4919
+2020-02-28 17:30:22 INFO: TEST ckpt-178125 bch-411 cum_acc: 75.68% cum_loss: 0.4922
+2020-02-28 17:30:22 INFO: TEST ckpt-178125 bch-412 cum_acc: 75.67% cum_loss: 0.4920
+2020-02-28 17:30:23 INFO: TEST ckpt-178125 bch-413 cum_acc: 75.70% cum_loss: 0.4917
+2020-02-28 17:30:23 INFO: TEST ckpt-178125 bch-414 cum_acc: 75.71% cum_loss: 0.4914
+2020-02-28 17:30:23 INFO: TEST ckpt-178125 bch-415 cum_acc: 75.77% cum_loss: 0.4909
+2020-02-28 17:30:24 INFO: TEST ckpt-178125 bch-416 cum_acc: 75.73% cum_loss: 0.4912
+2020-02-28 17:30:24 INFO: TEST ckpt-178125 bch-417 cum_acc: 75.72% cum_loss: 0.4917
+2020-02-28 17:30:24 INFO: TEST ckpt-178125 bch-418 cum_acc: 75.66% cum_loss: 0.4932
+2020-02-28 17:30:25 INFO: TEST ckpt-178125 bch-419 cum_acc: 75.69% cum_loss: 0.4927
+2020-02-28 17:30:25 INFO: TEST ckpt-178125 bch-420 cum_acc: 75.72% cum_loss: 0.4925
+2020-02-28 17:30:26 INFO: TEST ckpt-178125 bch-421 cum_acc: 75.73% cum_loss: 0.4923
+2020-02-28 17:30:26 INFO: TEST ckpt-178125 bch-422 cum_acc: 75.77% cum_loss: 0.4919
+2020-02-28 17:30:26 INFO: TEST ckpt-178125 bch-423 cum_acc: 75.78% cum_loss: 0.4914
+2020-02-28 17:30:27 INFO: TEST ckpt-178125 bch-424 cum_acc: 75.79% cum_loss: 0.4910
+2020-02-28 17:30:27 INFO: TEST ckpt-178125 bch-425 cum_acc: 75.80% cum_loss: 0.4907
+2020-02-28 17:30:28 INFO: TEST ckpt-178125 bch-426 cum_acc: 75.85% cum_loss: 0.4899
+2020-02-28 17:30:28 INFO: TEST ckpt-178125 bch-427 cum_acc: 75.86% cum_loss: 0.4896
+2020-02-28 17:30:28 INFO: TEST ckpt-178125 bch-428 cum_acc: 75.90% cum_loss: 0.4893
+2020-02-28 17:30:29 INFO: TEST ckpt-178125 bch-429 cum_acc: 75.79% cum_loss: 0.4897
+2020-02-28 17:30:29 INFO: TEST ckpt-178125 bch-430 cum_acc: 75.80% cum_loss: 0.4896
+2020-02-28 17:30:29 INFO: TEST ckpt-178125 bch-431 cum_acc: 75.79% cum_loss: 0.4894
+2020-02-28 17:30:30 INFO: TEST ckpt-178125 bch-432 cum_acc: 75.82% cum_loss: 0.4891
+2020-02-28 17:30:30 INFO: TEST ckpt-178125 bch-433 cum_acc: 75.81% cum_loss: 0.4891
+2020-02-28 17:30:31 INFO: TEST ckpt-178125 bch-434 cum_acc: 75.75% cum_loss: 0.4898
+2020-02-28 17:30:31 INFO: TEST ckpt-178125 bch-435 cum_acc: 75.76% cum_loss: 0.4899
+2020-02-28 17:30:31 INFO: TEST ckpt-178125 bch-436 cum_acc: 75.77% cum_loss: 0.4897
+2020-02-28 17:30:32 INFO: TEST ckpt-178125 bch-437 cum_acc: 75.75% cum_loss: 0.4893
+2020-02-28 17:30:32 INFO: TEST ckpt-178125 bch-438 cum_acc: 75.76% cum_loss: 0.4898
+2020-02-28 17:30:33 INFO: TEST ckpt-178125 bch-439 cum_acc: 75.70% cum_loss: 0.4911
+2020-02-28 17:30:33 INFO: TEST ckpt-178125 bch-440 cum_acc: 75.69% cum_loss: 0.4907
+2020-02-28 17:30:33 INFO: TEST ckpt-178125 bch-441 cum_acc: 75.75% cum_loss: 0.4903
+2020-02-28 17:30:34 INFO: TEST ckpt-178125 bch-442 cum_acc: 75.73% cum_loss: 0.4910
+2020-02-28 17:30:34 INFO: TEST ckpt-178125 bch-443 cum_acc: 75.74% cum_loss: 0.4910
+2020-02-28 17:30:35 INFO: TEST ckpt-178125 bch-444 cum_acc: 75.71% cum_loss: 0.4908
+2020-02-28 17:30:35 INFO: TEST ckpt-178125 bch-445 cum_acc: 75.70% cum_loss: 0.4909
+2020-02-28 17:30:35 INFO: TEST ckpt-178125 bch-446 cum_acc: 75.70% cum_loss: 0.4905
+2020-02-28 17:30:36 INFO: TEST ckpt-178125 bch-447 cum_acc: 75.74% cum_loss: 0.4901
+2020-02-28 17:30:36 INFO: TEST ckpt-178125 bch-448 cum_acc: 75.72% cum_loss: 0.4899
+2020-02-28 17:30:36 INFO: TEST ckpt-178125 bch-449 cum_acc: 75.71% cum_loss: 0.4906
+2020-02-28 17:30:37 INFO: TEST ckpt-178125 bch-450 cum_acc: 75.70% cum_loss: 0.4909
+2020-02-28 17:30:37 INFO: TEST ckpt-178125 bch-451 cum_acc: 75.71% cum_loss: 0.4908
+2020-02-28 17:30:38 INFO: TEST ckpt-178125 bch-452 cum_acc: 75.70% cum_loss: 0.4907
+2020-02-28 17:30:38 INFO: TEST ckpt-178125 bch-453 cum_acc: 75.70% cum_loss: 0.4912
+2020-02-28 17:30:38 INFO: TEST ckpt-178125 bch-454 cum_acc: 75.67% cum_loss: 0.4916
+2020-02-28 17:30:39 INFO: TEST ckpt-178125 bch-455 cum_acc: 75.68% cum_loss: 0.4911
+2020-02-28 17:30:39 INFO: TEST ckpt-178125 bch-456 cum_acc: 75.67% cum_loss: 0.4908
+2020-02-28 17:30:40 INFO: TEST ckpt-178125 bch-457 cum_acc: 75.68% cum_loss: 0.4908
+2020-02-28 17:30:40 INFO: TEST ckpt-178125 bch-458 cum_acc: 75.69% cum_loss: 0.4912
+2020-02-28 17:30:40 INFO: TEST ckpt-178125 bch-459 cum_acc: 75.70% cum_loss: 0.4911
+2020-02-28 17:30:41 INFO: TEST ckpt-178125 bch-460 cum_acc: 75.70% cum_loss: 0.4907
+2020-02-28 17:30:41 INFO: TEST ckpt-178125 bch-461 cum_acc: 75.76% cum_loss: 0.4902
+2020-02-28 17:30:41 INFO: TEST ckpt-178125 bch-462 cum_acc: 75.79% cum_loss: 0.4900
+2020-02-28 17:30:42 INFO: TEST ckpt-178125 bch-463 cum_acc: 75.78% cum_loss: 0.4898
+2020-02-28 17:30:42 INFO: TEST ckpt-178125 bch-464 cum_acc: 75.76% cum_loss: 0.4898
+2020-02-28 17:30:43 INFO: TEST ckpt-178125 bch-465 cum_acc: 75.79% cum_loss: 0.4892
+2020-02-28 17:30:43 INFO: TEST ckpt-178125 bch-466 cum_acc: 75.76% cum_loss: 0.4891
+2020-02-28 17:30:43 INFO: TEST ckpt-178125 bch-467 cum_acc: 75.71% cum_loss: 0.4890
+2020-02-28 17:30:44 INFO: TEST ckpt-178125 bch-468 cum_acc: 75.63% cum_loss: 0.4898
+2020-02-28 17:30:44 INFO: TEST ckpt-178125 bch-469 cum_acc: 75.66% cum_loss: 0.4896
+2020-02-28 17:30:45 INFO: TEST ckpt-178125 bch-470 cum_acc: 75.71% cum_loss: 0.4892
+2020-02-28 17:30:45 INFO: TEST ckpt-178125 bch-471 cum_acc: 75.68% cum_loss: 0.4893
+2020-02-28 17:30:45 INFO: TEST ckpt-178125 bch-472 cum_acc: 75.67% cum_loss: 0.4889
+2020-02-28 17:30:46 INFO: TEST ckpt-178125 bch-473 cum_acc: 75.68% cum_loss: 0.4887
+2020-02-28 17:30:46 INFO: TEST ckpt-178125 bch-474 cum_acc: 75.64% cum_loss: 0.4889
+2020-02-28 17:30:46 INFO: TEST ckpt-178125 bch-475 cum_acc: 75.63% cum_loss: 0.4887
+2020-02-28 17:30:47 INFO: TEST ckpt-178125 bch-476 cum_acc: 75.62% cum_loss: 0.4884
+2020-02-28 17:30:47 INFO: TEST ckpt-178125 bch-477 cum_acc: 75.65% cum_loss: 0.4881
+2020-02-28 17:30:48 INFO: TEST ckpt-178125 bch-478 cum_acc: 75.70% cum_loss: 0.4877
+2020-02-28 17:30:48 INFO: TEST ckpt-178125 bch-479 cum_acc: 75.73% cum_loss: 0.4873
+2020-02-28 17:30:48 INFO: TEST ckpt-178125 bch-480 cum_acc: 75.74% cum_loss: 0.4871
+2020-02-28 17:30:49 INFO: TEST ckpt-178125 bch-481 cum_acc: 75.79% cum_loss: 0.4867
+2020-02-28 17:30:49 INFO: TEST ckpt-178125 bch-482 cum_acc: 75.80% cum_loss: 0.4869
+2020-02-28 17:30:50 INFO: TEST ckpt-178125 bch-483 cum_acc: 75.81% cum_loss: 0.4868
+2020-02-28 17:30:50 INFO: TEST ckpt-178125 bch-484 cum_acc: 75.79% cum_loss: 0.4866
+2020-02-28 17:30:50 INFO: TEST ckpt-178125 bch-485 cum_acc: 75.78% cum_loss: 0.4863
+2020-02-28 17:30:51 INFO: TEST ckpt-178125 bch-486 cum_acc: 75.79% cum_loss: 0.4864
+2020-02-28 17:30:51 INFO: TEST ckpt-178125 bch-487 cum_acc: 75.82% cum_loss: 0.4861
+2020-02-28 17:30:51 INFO: TEST ckpt-178125 bch-488 cum_acc: 75.83% cum_loss: 0.4858
+2020-02-28 17:30:52 INFO: TEST ckpt-178125 bch-489 cum_acc: 75.80% cum_loss: 0.4861
+2020-02-28 17:30:52 INFO: TEST ckpt-178125 bch-490 cum_acc: 75.78% cum_loss: 0.4859
+2020-02-28 17:30:53 INFO: TEST ckpt-178125 bch-491 cum_acc: 75.79% cum_loss: 0.4858
+2020-02-28 17:30:53 INFO: TEST ckpt-178125 bch-492 cum_acc: 75.80% cum_loss: 0.4856
+2020-02-28 17:30:53 INFO: TEST ckpt-178125 bch-493 cum_acc: 75.81% cum_loss: 0.4858
+2020-02-28 17:30:54 INFO: TEST ckpt-178125 bch-494 cum_acc: 75.80% cum_loss: 0.4856
+2020-02-28 17:30:54 INFO: TEST ckpt-178125 bch-495 cum_acc: 75.77% cum_loss: 0.4861
+2020-02-28 17:30:55 INFO: TEST ckpt-178125 bch-496 cum_acc: 75.79% cum_loss: 0.4855
+2020-02-28 17:30:55 INFO: TEST ckpt-178125 bch-497 cum_acc: 75.78% cum_loss: 0.4860
+2020-02-28 17:30:55 INFO: TEST ckpt-178125 bch-498 cum_acc: 75.79% cum_loss: 0.4859
+2020-02-28 17:30:56 INFO: TEST ckpt-178125 bch-499 cum_acc: 75.80% cum_loss: 0.4855
+2020-02-28 17:30:56 INFO: TEST ckpt-178125 bch-500 cum_acc: 75.79% cum_loss: 0.4856
+2020-02-28 17:30:56 INFO: TEST ckpt-178125 bch-501 cum_acc: 75.80% cum_loss: 0.4860
+2020-02-28 17:30:57 INFO: TEST ckpt-178125 bch-502 cum_acc: 75.79% cum_loss: 0.4860
+2020-02-28 17:30:57 INFO: TEST ckpt-178125 bch-503 cum_acc: 75.75% cum_loss: 0.4861
+2020-02-28 17:30:58 INFO: TEST ckpt-178125 bch-504 cum_acc: 75.76% cum_loss: 0.4865
+2020-02-28 17:30:58 INFO: TEST ckpt-178125 bch-505 cum_acc: 75.77% cum_loss: 0.4862
+2020-02-28 17:30:58 INFO: TEST ckpt-178125 bch-506 cum_acc: 75.76% cum_loss: 0.4861
+2020-02-28 17:30:59 INFO: TEST ckpt-178125 bch-507 cum_acc: 75.75% cum_loss: 0.4864
+2020-02-28 17:30:59 INFO: TEST ckpt-178125 bch-508 cum_acc: 75.76% cum_loss: 0.4868
+2020-02-28 17:31:00 INFO: TEST ckpt-178125 bch-509 cum_acc: 75.76% cum_loss: 0.4868
+2020-02-28 17:31:00 INFO: TEST ckpt-178125 bch-510 cum_acc: 75.75% cum_loss: 0.4872
+2020-02-28 17:31:00 INFO: TEST ckpt-178125 bch-511 cum_acc: 75.80% cum_loss: 0.4869
+2020-02-28 17:31:01 INFO: TEST ckpt-178125 bch-512 cum_acc: 75.77% cum_loss: 0.4871
+2020-02-28 17:31:01 INFO: TEST ckpt-178125 bch-513 cum_acc: 75.80% cum_loss: 0.4868
+2020-02-28 17:31:01 INFO: TEST ckpt-178125 bch-514 cum_acc: 75.81% cum_loss: 0.4864
+2020-02-28 17:31:02 INFO: TEST ckpt-178125 bch-515 cum_acc: 75.85% cum_loss: 0.4858
+2020-02-28 17:31:02 INFO: TEST ckpt-178125 bch-516 cum_acc: 75.86% cum_loss: 0.4859
+2020-02-28 17:31:03 INFO: TEST ckpt-178125 bch-517 cum_acc: 75.87% cum_loss: 0.4854
+2020-02-28 17:31:03 INFO: TEST ckpt-178125 bch-518 cum_acc: 75.90% cum_loss: 0.4860
+2020-02-28 17:31:03 INFO: TEST ckpt-178125 bch-519 cum_acc: 75.92% cum_loss: 0.4856
+2020-02-28 17:31:04 INFO: TEST ckpt-178125 bch-520 cum_acc: 75.95% cum_loss: 0.4854
+2020-02-28 17:31:04 INFO: TEST ckpt-178125 bch-521 cum_acc: 75.94% cum_loss: 0.4852
+2020-02-28 17:31:05 INFO: TEST ckpt-178125 bch-522 cum_acc: 75.95% cum_loss: 0.4851
+2020-02-28 17:31:05 INFO: TEST ckpt-178125 bch-523 cum_acc: 75.99% cum_loss: 0.4848
+2020-02-28 17:31:05 INFO: TEST ckpt-178125 bch-524 cum_acc: 76.02% cum_loss: 0.4844
+2020-02-28 17:31:06 INFO: TEST ckpt-178125 bch-525 cum_acc: 76.03% cum_loss: 0.4845
+2020-02-28 17:31:06 INFO: TEST ckpt-178125 bch-526 cum_acc: 76.02% cum_loss: 0.4844
+2020-02-28 17:31:07 INFO: TEST ckpt-178125 bch-527 cum_acc: 76.00% cum_loss: 0.4843
+2020-02-28 17:31:07 INFO: TEST ckpt-178125 bch-528 cum_acc: 76.01% cum_loss: 0.4842
+2020-02-28 17:31:07 INFO: TEST ckpt-178125 bch-529 cum_acc: 75.96% cum_loss: 0.4847
+2020-02-28 17:31:08 INFO: TEST ckpt-178125 bch-530 cum_acc: 75.91% cum_loss: 0.4849
+2020-02-28 17:31:08 INFO: TEST ckpt-178125 bch-531 cum_acc: 75.92% cum_loss: 0.4850
+2020-02-28 17:31:08 INFO: TEST ckpt-178125 bch-532 cum_acc: 75.91% cum_loss: 0.4852
+2020-02-28 17:31:09 INFO: TEST ckpt-178125 bch-533 cum_acc: 75.90% cum_loss: 0.4849
+2020-02-28 17:31:09 INFO: TEST ckpt-178125 bch-534 cum_acc: 75.89% cum_loss: 0.4848
+2020-02-28 17:31:10 INFO: TEST ckpt-178125 bch-535 cum_acc: 75.88% cum_loss: 0.4858
+2020-02-28 17:31:10 INFO: TEST ckpt-178125 bch-536 cum_acc: 75.85% cum_loss: 0.4861
+2020-02-28 17:31:10 INFO: TEST ckpt-178125 bch-537 cum_acc: 75.84% cum_loss: 0.4861
+2020-02-28 17:31:11 INFO: TEST ckpt-178125 bch-538 cum_acc: 75.83% cum_loss: 0.4860
+2020-02-28 17:31:11 INFO: TEST ckpt-178125 bch-539 cum_acc: 75.81% cum_loss: 0.4867
+2020-02-28 17:31:12 INFO: TEST ckpt-178125 bch-540 cum_acc: 75.79% cum_loss: 0.4870
+2020-02-28 17:31:12 INFO: TEST ckpt-178125 bch-541 cum_acc: 75.76% cum_loss: 0.4869
+2020-02-28 17:31:12 INFO: TEST ckpt-178125 bch-542 cum_acc: 75.73% cum_loss: 0.4870
+2020-02-28 17:31:13 INFO: TEST ckpt-178125 bch-543 cum_acc: 75.74% cum_loss: 0.4874
+2020-02-28 17:31:13 INFO: TEST ckpt-178125 bch-544 cum_acc: 75.76% cum_loss: 0.4875
+2020-02-28 17:31:13 INFO: TEST ckpt-178125 bch-545 cum_acc: 75.75% cum_loss: 0.4875
+2020-02-28 17:31:14 INFO: TEST ckpt-178125 bch-546 cum_acc: 75.72% cum_loss: 0.4881
+2020-02-28 17:31:14 INFO: TEST ckpt-178125 bch-547 cum_acc: 75.71% cum_loss: 0.4883
+2020-02-28 17:31:15 INFO: TEST ckpt-178125 bch-548 cum_acc: 75.70% cum_loss: 0.4885
+2020-02-28 17:31:15 INFO: TEST ckpt-178125 bch-549 cum_acc: 75.75% cum_loss: 0.4882
+2020-02-28 17:31:15 INFO: TEST ckpt-178125 bch-550 cum_acc: 75.74% cum_loss: 0.4880
+2020-02-28 17:31:16 INFO: TEST ckpt-178125 bch-551 cum_acc: 75.72% cum_loss: 0.4879
+2020-02-28 17:31:16 INFO: TEST ckpt-178125 bch-552 cum_acc: 75.73% cum_loss: 0.4877
+2020-02-28 17:31:17 INFO: TEST ckpt-178125 bch-553 cum_acc: 75.72% cum_loss: 0.4878
+2020-02-28 17:31:17 INFO: TEST ckpt-178125 bch-554 cum_acc: 75.75% cum_loss: 0.4875
+2020-02-28 17:31:17 INFO: TEST ckpt-178125 bch-555 cum_acc: 75.76% cum_loss: 0.4873
+2020-02-28 17:31:18 INFO: TEST ckpt-178125 bch-556 cum_acc: 75.78% cum_loss: 0.4870
+2020-02-28 17:31:18 INFO: TEST ckpt-178125 bch-557 cum_acc: 75.79% cum_loss: 0.4867
+2020-02-28 17:31:18 INFO: TEST ckpt-178125 bch-558 cum_acc: 75.74% cum_loss: 0.4874
+2020-02-28 17:31:19 INFO: TEST ckpt-178125 bch-559 cum_acc: 75.77% cum_loss: 0.4872
+2020-02-28 17:31:19 INFO: TEST ckpt-178125 bch-560 cum_acc: 75.79% cum_loss: 0.4875
+2020-02-28 17:31:20 INFO: TEST ckpt-178125 bch-561 cum_acc: 75.82% cum_loss: 0.4872
+2020-02-28 17:31:20 INFO: TEST ckpt-178125 bch-562 cum_acc: 75.81% cum_loss: 0.4876
+2020-02-28 17:31:20 INFO: TEST ckpt-178125 bch-563 cum_acc: 75.83% cum_loss: 0.4874
+2020-02-28 17:31:21 INFO: TEST ckpt-178125 bch-564 cum_acc: 75.82% cum_loss: 0.4879
+2020-02-28 17:31:21 INFO: TEST ckpt-178125 bch-565 cum_acc: 75.81% cum_loss: 0.4878
+2020-02-28 17:31:22 INFO: TEST ckpt-178125 bch-566 cum_acc: 75.80% cum_loss: 0.4883
+2020-02-28 17:31:22 INFO: TEST ckpt-178125 bch-567 cum_acc: 75.81% cum_loss: 0.4883
+2020-02-28 17:31:22 INFO: TEST ckpt-178125 bch-568 cum_acc: 75.83% cum_loss: 0.4879
+2020-02-28 17:31:23 INFO: TEST ckpt-178125 bch-569 cum_acc: 75.81% cum_loss: 0.4882
+2020-02-28 17:31:23 INFO: TEST ckpt-178125 bch-570 cum_acc: 75.85% cum_loss: 0.4879
+2020-02-28 17:31:23 INFO: TEST ckpt-178125 bch-571 cum_acc: 75.86% cum_loss: 0.4874
+2020-02-28 17:31:24 INFO: TEST ckpt-178125 bch-572 cum_acc: 75.85% cum_loss: 0.4873
+2020-02-28 17:31:24 INFO: TEST ckpt-178125 bch-573 cum_acc: 75.82% cum_loss: 0.4876
+2020-02-28 17:31:25 INFO: TEST ckpt-178125 bch-574 cum_acc: 75.81% cum_loss: 0.4877
+2020-02-28 17:31:25 INFO: TEST ckpt-178125 bch-575 cum_acc: 75.82% cum_loss: 0.4876
+2020-02-28 17:31:25 INFO: TEST ckpt-178125 bch-576 cum_acc: 75.82% cum_loss: 0.4874
+2020-02-28 17:31:26 INFO: TEST ckpt-178125 bch-577 cum_acc: 75.81% cum_loss: 0.4870
+2020-02-28 17:31:26 INFO: TEST ckpt-178125 bch-578 cum_acc: 75.85% cum_loss: 0.4865
+2020-02-28 17:31:27 INFO: TEST ckpt-178125 bch-579 cum_acc: 75.86% cum_loss: 0.4866
+2020-02-28 17:31:27 INFO: TEST ckpt-178125 bch-580 cum_acc: 75.89% cum_loss: 0.4862
+2020-02-28 17:31:27 INFO: TEST ckpt-178125 bch-581 cum_acc: 75.89% cum_loss: 0.4860
+2020-02-28 17:31:28 INFO: TEST ckpt-178125 bch-582 cum_acc: 75.90% cum_loss: 0.4859
+2020-02-28 17:31:28 INFO: TEST ckpt-178125 bch-583 cum_acc: 75.91% cum_loss: 0.4868
+2020-02-28 17:31:28 INFO: TEST ckpt-178125 bch-584 cum_acc: 75.93% cum_loss: 0.4871
+2020-02-28 17:31:29 INFO: TEST ckpt-178125 bch-585 cum_acc: 75.92% cum_loss: 0.4868
+2020-02-28 17:31:29 INFO: TEST ckpt-178125 bch-586 cum_acc: 75.91% cum_loss: 0.4870
+2020-02-28 17:31:30 INFO: TEST ckpt-178125 bch-587 cum_acc: 75.92% cum_loss: 0.4871
+2020-02-28 17:31:30 INFO: TEST ckpt-178125 bch-588 cum_acc: 75.94% cum_loss: 0.4869
+2020-02-28 17:31:30 INFO: TEST ckpt-178125 bch-589 cum_acc: 75.93% cum_loss: 0.4867
+2020-02-28 17:31:31 INFO: TEST ckpt-178125 bch-590 cum_acc: 75.94% cum_loss: 0.4864
+2020-02-28 17:31:31 INFO: TEST ckpt-178125 bch-591 cum_acc: 75.91% cum_loss: 0.4865
+2020-02-28 17:31:32 INFO: TEST ckpt-178125 bch-592 cum_acc: 75.92% cum_loss: 0.4863
+2020-02-28 17:31:32 INFO: TEST ckpt-178125 bch-593 cum_acc: 75.91% cum_loss: 0.4864
+2020-02-28 17:31:32 INFO: TEST ckpt-178125 bch-594 cum_acc: 75.90% cum_loss: 0.4866
+2020-02-28 17:31:33 INFO: TEST ckpt-178125 bch-595 cum_acc: 75.89% cum_loss: 0.4864
+2020-02-28 17:31:33 INFO: TEST ckpt-178125 bch-596 cum_acc: 75.88% cum_loss: 0.4862
+2020-02-28 17:31:33 INFO: TEST ckpt-178125 bch-597 cum_acc: 75.89% cum_loss: 0.4865
+2020-02-28 17:31:34 INFO: TEST ckpt-178125 bch-598 cum_acc: 75.91% cum_loss: 0.4864
+2020-02-28 17:31:34 INFO: TEST ckpt-178125 bch-599 cum_acc: 75.93% cum_loss: 0.4861
+2020-02-28 17:31:35 INFO: TEST ckpt-178125 bch-600 cum_acc: 75.92% cum_loss: 0.4860
+2020-02-28 17:31:35 INFO: TEST ckpt-178125 bch-601 cum_acc: 75.95% cum_loss: 0.4858
+2020-02-28 17:31:35 INFO: TEST ckpt-178125 bch-602 cum_acc: 75.94% cum_loss: 0.4867
+2020-02-28 17:31:36 INFO: TEST ckpt-178125 bch-603 cum_acc: 75.94% cum_loss: 0.4866
+2020-02-28 17:31:36 INFO: TEST ckpt-178125 bch-604 cum_acc: 75.95% cum_loss: 0.4868
+2020-02-28 17:31:37 INFO: TEST ckpt-178125 bch-605 cum_acc: 75.92% cum_loss: 0.4869
+2020-02-28 17:31:37 INFO: TEST ckpt-178125 bch-606 cum_acc: 75.90% cum_loss: 0.4876
+2020-02-28 17:31:37 INFO: TEST ckpt-178125 bch-607 cum_acc: 75.90% cum_loss: 0.4876
+2020-02-28 17:31:38 INFO: TEST ckpt-178125 bch-608 cum_acc: 75.93% cum_loss: 0.4876
+2020-02-28 17:31:38 INFO: TEST ckpt-178125 bch-609 cum_acc: 75.92% cum_loss: 0.4878
+2020-02-28 17:31:39 INFO: TEST ckpt-178125 bch-610 cum_acc: 75.92% cum_loss: 0.4876
+2020-02-28 17:31:39 INFO: TEST ckpt-178125 bch-611 cum_acc: 75.95% cum_loss: 0.4873
+2020-02-28 17:31:39 INFO: TEST ckpt-178125 bch-612 cum_acc: 75.97% cum_loss: 0.4871
+2020-02-28 17:31:40 INFO: TEST ckpt-178125 bch-613 cum_acc: 75.93% cum_loss: 0.4891
+2020-02-28 17:31:40 INFO: TEST ckpt-178125 bch-614 cum_acc: 75.92% cum_loss: 0.4894
+2020-02-28 17:31:40 INFO: TEST ckpt-178125 bch-615 cum_acc: 75.93% cum_loss: 0.4893
+2020-02-28 17:31:41 INFO: TEST ckpt-178125 bch-616 cum_acc: 75.93% cum_loss: 0.4889
+2020-02-28 17:31:41 INFO: TEST ckpt-178125 bch-617 cum_acc: 75.95% cum_loss: 0.4886
+2020-02-28 17:31:42 INFO: TEST ckpt-178125 bch-618 cum_acc: 75.95% cum_loss: 0.4887
+2020-02-28 17:31:42 INFO: TEST ckpt-178125 bch-619 cum_acc: 75.92% cum_loss: 0.4887
+2020-02-28 17:31:42 INFO: TEST ckpt-178125 bch-620 cum_acc: 75.94% cum_loss: 0.4883
+2020-02-28 17:31:43 INFO: TEST ckpt-178125 bch-621 cum_acc: 75.93% cum_loss: 0.4883
+2020-02-28 17:31:43 INFO: TEST ckpt-178125 bch-622 cum_acc: 75.94% cum_loss: 0.4883
+2020-02-28 17:31:44 INFO: TEST ckpt-178125 bch-623 cum_acc: 75.95% cum_loss: 0.4880
+2020-02-28 17:31:44 INFO: TEST ckpt-178125 bch-624 cum_acc: 75.95% cum_loss: 0.4879
+2020-02-28 17:31:44 INFO: TEST ckpt-178125 bch-625 cum_acc: 75.96% cum_loss: 0.4879
+2020-02-28 17:31:45 INFO: TEST ckpt-178125 bch-626 cum_acc: 75.96% cum_loss: 0.4878
+2020-02-28 17:31:45 INFO: TEST ckpt-178125 bch-627 cum_acc: 75.99% cum_loss: 0.4875
+2020-02-28 17:31:45 INFO: TEST ckpt-178125 bch-628 cum_acc: 75.99% cum_loss: 0.4872
+2020-02-28 17:31:46 INFO: TEST ckpt-178125 bch-629 cum_acc: 76.03% cum_loss: 0.4867
+2020-02-28 17:31:46 INFO: TEST ckpt-178125 bch-630 cum_acc: 76.04% cum_loss: 0.4868
+2020-02-28 17:31:47 INFO: TEST ckpt-178125 bch-631 cum_acc: 76.00% cum_loss: 0.4870
+2020-02-28 17:31:47 INFO: TEST ckpt-178125 bch-632 cum_acc: 76.03% cum_loss: 0.4867
+2020-02-28 17:31:47 INFO: TEST ckpt-178125 bch-633 cum_acc: 76.03% cum_loss: 0.4866
+2020-02-28 17:31:48 INFO: TEST ckpt-178125 bch-634 cum_acc: 76.00% cum_loss: 0.4870
+2020-02-28 17:31:48 INFO: TEST ckpt-178125 bch-635 cum_acc: 75.97% cum_loss: 0.4869
+2020-02-28 17:31:49 INFO: TEST ckpt-178125 bch-636 cum_acc: 75.97% cum_loss: 0.4872
+2020-02-28 17:31:49 INFO: TEST ckpt-178125 bch-637 cum_acc: 75.94% cum_loss: 0.4871
+2020-02-28 17:31:49 INFO: TEST ckpt-178125 bch-638 cum_acc: 75.95% cum_loss: 0.4870
+2020-02-28 17:31:50 INFO: TEST ckpt-178125 bch-639 cum_acc: 75.98% cum_loss: 0.4869
+2020-02-28 17:31:50 INFO: TEST ckpt-178125 bch-640 cum_acc: 75.98% cum_loss: 0.4869
+2020-02-28 17:31:50 INFO: TEST ckpt-178125 bch-641 cum_acc: 76.01% cum_loss: 0.4866
+2020-02-28 17:31:51 INFO: TEST ckpt-178125 bch-642 cum_acc: 76.03% cum_loss: 0.4862
+2020-02-28 17:31:51 INFO: TEST ckpt-178125 bch-643 cum_acc: 76.04% cum_loss: 0.4865
+2020-02-28 17:31:52 INFO: TEST ckpt-178125 bch-644 cum_acc: 76.02% cum_loss: 0.4864
+2020-02-28 17:31:52 INFO: TEST ckpt-178125 bch-645 cum_acc: 75.99% cum_loss: 0.4870
+2020-02-28 17:31:52 INFO: TEST ckpt-178125 bch-646 cum_acc: 76.01% cum_loss: 0.4871
+2020-02-28 17:31:53 INFO: TEST ckpt-178125 bch-647 cum_acc: 76.02% cum_loss: 0.4867
+2020-02-28 17:31:53 INFO: TEST ckpt-178125 bch-648 cum_acc: 76.04% cum_loss: 0.4864
+2020-02-28 17:31:54 INFO: TEST ckpt-178125 bch-649 cum_acc: 76.05% cum_loss: 0.4861
+2020-02-28 17:31:54 INFO: TEST ckpt-178125 bch-650 cum_acc: 76.05% cum_loss: 0.4860
+2020-02-28 17:31:54 INFO: TEST ckpt-178125 bch-651 cum_acc: 76.09% cum_loss: 0.4857
+2020-02-28 17:31:55 INFO: TEST ckpt-178125 bch-652 cum_acc: 76.08% cum_loss: 0.4855
+2020-02-28 17:31:55 INFO: TEST ckpt-178125 bch-653 cum_acc: 76.10% cum_loss: 0.4852
+2020-02-28 17:31:55 INFO: TEST ckpt-178125 bch-654 cum_acc: 76.09% cum_loss: 0.4852
+2020-02-28 17:31:56 INFO: TEST ckpt-178125 bch-655 cum_acc: 76.07% cum_loss: 0.4850
+2020-02-28 17:31:56 INFO: TEST ckpt-178125 bch-656 cum_acc: 76.06% cum_loss: 0.4850
+2020-02-28 17:31:57 INFO: TEST ckpt-178125 bch-657 cum_acc: 76.06% cum_loss: 0.4848
+2020-02-28 17:31:57 INFO: TEST ckpt-178125 bch-658 cum_acc: 76.07% cum_loss: 0.4846
+2020-02-28 17:31:57 INFO: TEST ckpt-178125 bch-659 cum_acc: 76.08% cum_loss: 0.4849
+2020-02-28 17:31:58 INFO: TEST ckpt-178125 bch-660 cum_acc: 76.07% cum_loss: 0.4851
+2020-02-28 17:31:58 INFO: TEST ckpt-178125 bch-661 cum_acc: 76.04% cum_loss: 0.4852
+2020-02-28 17:31:59 INFO: TEST ckpt-178125 bch-662 cum_acc: 76.03% cum_loss: 0.4849
+2020-02-28 17:31:59 INFO: TEST ckpt-178125 bch-663 cum_acc: 76.05% cum_loss: 0.4846
+2020-02-28 17:31:59 INFO: TEST ckpt-178125 bch-664 cum_acc: 76.06% cum_loss: 0.4846
+2020-02-28 17:32:00 INFO: TEST ckpt-178125 bch-665 cum_acc: 76.05% cum_loss: 0.4846
+2020-02-28 17:32:00 INFO: TEST ckpt-178125 bch-666 cum_acc: 76.04% cum_loss: 0.4845
+2020-02-28 17:32:00 INFO: TEST ckpt-178125 bch-667 cum_acc: 76.08% cum_loss: 0.4842
+2020-02-28 17:32:01 INFO: TEST ckpt-178125 bch-668 cum_acc: 76.10% cum_loss: 0.4841
+2020-02-28 17:32:01 INFO: TEST ckpt-178125 bch-669 cum_acc: 76.10% cum_loss: 0.4839
+2020-02-28 17:32:02 INFO: TEST ckpt-178125 bch-670 cum_acc: 76.13% cum_loss: 0.4837
+2020-02-28 17:32:02 INFO: TEST ckpt-178125 bch-671 cum_acc: 76.15% cum_loss: 0.4834
+2020-02-28 17:32:02 INFO: TEST ckpt-178125 bch-672 cum_acc: 76.15% cum_loss: 0.4832
+2020-02-28 17:32:03 INFO: TEST ckpt-178125 bch-673 cum_acc: 76.17% cum_loss: 0.4834
+2020-02-28 17:32:03 INFO: TEST ckpt-178125 bch-674 cum_acc: 76.19% cum_loss: 0.4835
+2020-02-28 17:32:04 INFO: TEST ckpt-178125 bch-675 cum_acc: 76.18% cum_loss: 0.4835
+2020-02-28 17:32:04 INFO: TEST ckpt-178125 bch-676 cum_acc: 76.19% cum_loss: 0.4837
+2020-02-28 17:32:04 INFO: TEST ckpt-178125 bch-677 cum_acc: 76.18% cum_loss: 0.4836
+2020-02-28 17:32:05 INFO: TEST ckpt-178125 bch-678 cum_acc: 76.19% cum_loss: 0.4837
+2020-02-28 17:32:05 INFO: TEST ckpt-178125 bch-679 cum_acc: 76.21% cum_loss: 0.4834
+2020-02-28 17:32:06 INFO: TEST ckpt-178125 bch-680 cum_acc: 76.20% cum_loss: 0.4838
+2020-02-28 17:32:06 INFO: TEST ckpt-178125 bch-681 cum_acc: 76.19% cum_loss: 0.4837
+2020-02-28 17:32:06 INFO: TEST ckpt-178125 bch-682 cum_acc: 76.18% cum_loss: 0.4836
+2020-02-28 17:32:07 INFO: TEST ckpt-178125 bch-683 cum_acc: 76.18% cum_loss: 0.4834
+2020-02-28 17:32:07 INFO: TEST ckpt-178125 bch-684 cum_acc: 76.18% cum_loss: 0.4835
+2020-02-28 17:32:07 INFO: TEST ckpt-178125 bch-685 cum_acc: 76.18% cum_loss: 0.4840
+2020-02-28 17:32:08 INFO: TEST ckpt-178125 bch-686 cum_acc: 76.19% cum_loss: 0.4841
+2020-02-28 17:32:08 INFO: TEST ckpt-178125 bch-687 cum_acc: 76.19% cum_loss: 0.4841
+2020-02-28 17:32:09 INFO: TEST ckpt-178125 bch-688 cum_acc: 76.21% cum_loss: 0.4838
+2020-02-28 17:32:09 INFO: TEST ckpt-178125 bch-689 cum_acc: 76.17% cum_loss: 0.4840
+2020-02-28 17:32:09 INFO: TEST ckpt-178125 bch-690 cum_acc: 76.15% cum_loss: 0.4844
+2020-02-28 17:32:10 INFO: TEST ckpt-178125 bch-691 cum_acc: 76.16% cum_loss: 0.4845
+2020-02-28 17:32:10 INFO: TEST ckpt-178125 bch-692 cum_acc: 76.15% cum_loss: 0.4846
+2020-02-28 17:32:11 INFO: TEST ckpt-178125 bch-693 cum_acc: 76.17% cum_loss: 0.4844
+2020-02-28 17:32:11 INFO: TEST ckpt-178125 bch-694 cum_acc: 76.19% cum_loss: 0.4843
+2020-02-28 17:32:11 INFO: TEST ckpt-178125 bch-695 cum_acc: 76.21% cum_loss: 0.4840
+2020-02-28 17:32:12 INFO: TEST ckpt-178125 bch-696 cum_acc: 76.21% cum_loss: 0.4840
+2020-02-28 17:32:12 INFO: TEST ckpt-178125 bch-697 cum_acc: 76.20% cum_loss: 0.4839
+2020-02-28 17:32:12 INFO: TEST ckpt-178125 bch-698 cum_acc: 76.22% cum_loss: 0.4838
+2020-02-28 17:32:13 INFO: TEST ckpt-178125 bch-699 cum_acc: 76.24% cum_loss: 0.4836
+2020-02-28 17:32:13 INFO: TEST ckpt-178125 bch-700 cum_acc: 76.23% cum_loss: 0.4840
+2020-02-28 17:32:14 INFO: TEST ckpt-178125 bch-701 cum_acc: 76.24% cum_loss: 0.4844
+2020-02-28 17:32:14 INFO: TEST ckpt-178125 bch-702 cum_acc: 76.22% cum_loss: 0.4845
+2020-02-28 17:32:14 INFO: TEST ckpt-178125 bch-703 cum_acc: 76.21% cum_loss: 0.4844
+2020-02-28 17:32:15 INFO: TEST ckpt-178125 bch-704 cum_acc: 76.18% cum_loss: 0.4845
+2020-02-28 17:32:15 INFO: TEST ckpt-178125 bch-705 cum_acc: 76.19% cum_loss: 0.4842
+2020-02-28 17:32:16 INFO: TEST ckpt-178125 bch-706 cum_acc: 76.20% cum_loss: 0.4841
+2020-02-28 17:32:16 INFO: TEST ckpt-178125 bch-707 cum_acc: 76.21% cum_loss: 0.4839
+2020-02-28 17:32:16 INFO: TEST ckpt-178125 bch-708 cum_acc: 76.23% cum_loss: 0.4838
+2020-02-28 17:32:17 INFO: TEST ckpt-178125 bch-709 cum_acc: 76.24% cum_loss: 0.4841
+2020-02-28 17:32:17 INFO: TEST ckpt-178125 bch-710 cum_acc: 76.22% cum_loss: 0.4841
+2020-02-28 17:32:17 INFO: TEST ckpt-178125 bch-711 cum_acc: 76.24% cum_loss: 0.4840
+2020-02-28 17:32:18 INFO: TEST ckpt-178125 bch-712 cum_acc: 76.21% cum_loss: 0.4842
+2020-02-28 17:32:18 INFO: TEST ckpt-178125 bch-713 cum_acc: 76.23% cum_loss: 0.4841
+2020-02-28 17:32:19 INFO: TEST ckpt-178125 bch-714 cum_acc: 76.18% cum_loss: 0.4843
+2020-02-28 17:32:19 INFO: TEST ckpt-178125 bch-715 cum_acc: 76.16% cum_loss: 0.4844
+2020-02-28 17:32:19 INFO: TEST ckpt-178125 bch-716 cum_acc: 76.16% cum_loss: 0.4844
+2020-02-28 17:32:20 INFO: TEST ckpt-178125 bch-717 cum_acc: 76.18% cum_loss: 0.4842
+2020-02-28 17:32:20 INFO: TEST ckpt-178125 bch-718 cum_acc: 76.20% cum_loss: 0.4838
+2020-02-28 17:32:21 INFO: TEST ckpt-178125 bch-719 cum_acc: 76.18% cum_loss: 0.4837
+2020-02-28 17:32:21 INFO: TEST ckpt-178125 bch-720 cum_acc: 76.14% cum_loss: 0.4838
+2020-02-28 17:32:21 INFO: TEST ckpt-178125 bch-721 cum_acc: 76.14% cum_loss: 0.4839
+2020-02-28 17:32:22 INFO: TEST ckpt-178125 bch-722 cum_acc: 76.11% cum_loss: 0.4842
+2020-02-28 17:32:22 INFO: TEST ckpt-178125 bch-723 cum_acc: 76.12% cum_loss: 0.4840
+2020-02-28 17:32:22 INFO: TEST ckpt-178125 bch-724 cum_acc: 76.12% cum_loss: 0.4842
+2020-02-28 17:32:23 INFO: TEST ckpt-178125 bch-725 cum_acc: 76.13% cum_loss: 0.4841
+2020-02-28 17:32:23 INFO: TEST ckpt-178125 bch-726 cum_acc: 76.13% cum_loss: 0.4839
+2020-02-28 17:32:24 INFO: TEST ckpt-178125 bch-727 cum_acc: 76.17% cum_loss: 0.4836
+2020-02-28 17:32:24 INFO: TEST ckpt-178125 bch-728 cum_acc: 76.13% cum_loss: 0.4839
+2020-02-28 17:32:24 INFO: TEST ckpt-178125 bch-729 cum_acc: 76.11% cum_loss: 0.4839
+2020-02-28 17:32:25 INFO: TEST ckpt-178125 bch-730 cum_acc: 76.10% cum_loss: 0.4838
+2020-02-28 17:32:25 INFO: TEST ckpt-178125 bch-731 cum_acc: 76.11% cum_loss: 0.4838
+2020-02-28 17:32:26 INFO: TEST ckpt-178125 bch-732 cum_acc: 76.11% cum_loss: 0.4838
+2020-02-28 17:32:26 INFO: TEST ckpt-178125 bch-733 cum_acc: 76.12% cum_loss: 0.4836
+2020-02-28 17:32:26 INFO: TEST ckpt-178125 bch-734 cum_acc: 76.14% cum_loss: 0.4833
+2020-02-28 17:32:27 INFO: TEST ckpt-178125 bch-735 cum_acc: 76.13% cum_loss: 0.4832
+2020-02-28 17:32:27 INFO: TEST ckpt-178125 bch-736 cum_acc: 76.13% cum_loss: 0.4829
+2020-02-28 17:32:27 INFO: TEST ckpt-178125 bch-737 cum_acc: 76.15% cum_loss: 0.4826
+2020-02-28 17:32:28 INFO: TEST ckpt-178125 bch-738 cum_acc: 76.14% cum_loss: 0.4828
+2020-02-28 17:32:28 INFO: TEST ckpt-178125 bch-739 cum_acc: 76.16% cum_loss: 0.4828
+2020-02-28 17:32:29 INFO: TEST ckpt-178125 bch-740 cum_acc: 76.18% cum_loss: 0.4826
+2020-02-28 17:32:29 INFO: TEST ckpt-178125 bch-741 cum_acc: 76.17% cum_loss: 0.4829
+2020-02-28 17:32:29 INFO: TEST ckpt-178125 bch-742 cum_acc: 76.19% cum_loss: 0.4827
+2020-02-28 17:32:30 INFO: TEST ckpt-178125 bch-743 cum_acc: 76.17% cum_loss: 0.4828
+2020-02-28 17:32:30 INFO: TEST ckpt-178125 bch-744 cum_acc: 76.15% cum_loss: 0.4829
+2020-02-28 17:32:31 INFO: TEST ckpt-178125 bch-745 cum_acc: 76.13% cum_loss: 0.4829
+2020-02-28 17:32:31 INFO: TEST ckpt-178125 bch-746 cum_acc: 76.16% cum_loss: 0.4826
+2020-02-28 17:32:31 INFO: TEST ckpt-178125 bch-747 cum_acc: 76.16% cum_loss: 0.4825
+2020-02-28 17:32:32 INFO: TEST ckpt-178125 bch-748 cum_acc: 76.17% cum_loss: 0.4824
+2020-02-28 17:32:32 INFO: TEST ckpt-178125 bch-749 cum_acc: 76.19% cum_loss: 0.4822
+2020-02-28 17:32:32 INFO: TEST ckpt-178125 bch-750 cum_acc: 76.21% cum_loss: 0.4819
+2020-02-28 17:32:33 INFO: TEST ckpt-178125 bch-751 cum_acc: 76.21% cum_loss: 0.4818
+2020-02-28 17:32:33 INFO: TEST ckpt-178125 bch-752 cum_acc: 76.22% cum_loss: 0.4817
+2020-02-28 17:32:34 INFO: TEST ckpt-178125 bch-753 cum_acc: 76.22% cum_loss: 0.4815
+2020-02-28 17:32:34 INFO: TEST ckpt-178125 bch-754 cum_acc: 76.20% cum_loss: 0.4820
+2020-02-28 17:32:34 INFO: TEST ckpt-178125 bch-755 cum_acc: 76.18% cum_loss: 0.4823
+2020-02-28 17:32:35 INFO: TEST ckpt-178125 bch-756 cum_acc: 76.17% cum_loss: 0.4825
+2020-02-28 17:32:35 INFO: TEST ckpt-178125 bch-757 cum_acc: 76.19% cum_loss: 0.4821
+2020-02-28 17:32:36 INFO: TEST ckpt-178125 bch-758 cum_acc: 76.18% cum_loss: 0.4821
+2020-02-28 17:32:36 INFO: TEST ckpt-178125 bch-759 cum_acc: 76.17% cum_loss: 0.4821
+2020-02-28 17:32:36 INFO: TEST ckpt-178125 bch-760 cum_acc: 76.16% cum_loss: 0.4821
+2020-02-28 17:32:37 INFO: TEST ckpt-178125 bch-761 cum_acc: 76.15% cum_loss: 0.4822
+2020-02-28 17:32:37 INFO: TEST ckpt-178125 bch-762 cum_acc: 76.13% cum_loss: 0.4823
+2020-02-28 17:32:38 INFO: TEST ckpt-178125 bch-763 cum_acc: 76.10% cum_loss: 0.4822
+2020-02-28 17:32:38 INFO: TEST ckpt-178125 bch-764 cum_acc: 76.10% cum_loss: 0.4820
+2020-02-28 17:32:38 INFO: TEST ckpt-178125 bch-765 cum_acc: 76.10% cum_loss: 0.4819
+2020-02-28 17:32:39 INFO: TEST ckpt-178125 bch-766 cum_acc: 76.10% cum_loss: 0.4819
+2020-02-28 17:32:39 INFO: TEST ckpt-178125 bch-767 cum_acc: 76.11% cum_loss: 0.4817
+2020-02-28 17:32:39 INFO: TEST ckpt-178125 bch-768 cum_acc: 76.14% cum_loss: 0.4814
+2020-02-28 17:32:40 INFO: TEST ckpt-178125 bch-769 cum_acc: 76.14% cum_loss: 0.4813
+2020-02-28 17:32:40 INFO: TEST ckpt-178125 bch-770 cum_acc: 76.11% cum_loss: 0.4815
+2020-02-28 17:32:41 INFO: TEST ckpt-178125 bch-771 cum_acc: 76.14% cum_loss: 0.4811
+2020-02-28 17:32:41 INFO: TEST ckpt-178125 bch-772 cum_acc: 76.14% cum_loss: 0.4813
+2020-02-28 17:32:41 INFO: TEST ckpt-178125 bch-773 cum_acc: 76.15% cum_loss: 0.4811
+2020-02-28 17:32:42 INFO: TEST ckpt-178125 bch-774 cum_acc: 76.14% cum_loss: 0.4810
+2020-02-28 17:32:42 INFO: TEST ckpt-178125 bch-775 cum_acc: 76.16% cum_loss: 0.4811
+2020-02-28 17:32:43 INFO: TEST ckpt-178125 bch-776 cum_acc: 76.16% cum_loss: 0.4817
+2020-02-28 17:32:43 INFO: TEST ckpt-178125 bch-777 cum_acc: 76.16% cum_loss: 0.4817
+2020-02-28 17:32:43 INFO: TEST ckpt-178125 bch-778 cum_acc: 76.16% cum_loss: 0.4816
+2020-02-28 17:32:44 INFO: TEST ckpt-178125 bch-779 cum_acc: 76.19% cum_loss: 0.4813
+2020-02-28 17:32:44 INFO: TEST ckpt-178125 bch-780 cum_acc: 76.17% cum_loss: 0.4813
+2020-02-28 17:32:44 INFO: TEST ckpt-178125 bch-781 cum_acc: 76.18% cum_loss: 0.4813
+2020-02-28 17:32:45 INFO: TEST ckpt-178125 bch-782 cum_acc: 76.18% cum_loss: 0.4809
+2020-02-28 17:32:45 INFO: TEST ckpt-178125 bch-783 cum_acc: 76.20% cum_loss: 0.4807
+2020-02-28 17:32:46 INFO: TEST ckpt-178125 bch-784 cum_acc: 76.20% cum_loss: 0.4809
+2020-02-28 17:32:46 INFO: TEST ckpt-178125 bch-785 cum_acc: 76.23% cum_loss: 0.4807
+2020-02-28 17:32:46 INFO: TEST ckpt-178125 bch-786 cum_acc: 76.26% cum_loss: 0.4805
+2020-02-28 17:32:47 INFO: TEST ckpt-178125 bch-787 cum_acc: 76.27% cum_loss: 0.4805
+2020-02-28 17:32:47 INFO: TEST ckpt-178125 bch-788 cum_acc: 76.29% cum_loss: 0.4803
+2020-02-28 17:32:48 INFO: TEST ckpt-178125 bch-789 cum_acc: 76.28% cum_loss: 0.4802
+2020-02-28 17:32:48 INFO: TEST ckpt-178125 bch-790 cum_acc: 76.28% cum_loss: 0.4802
+2020-02-28 17:32:48 INFO: TEST ckpt-178125 bch-791 cum_acc: 76.29% cum_loss: 0.4801
+2020-02-28 17:32:49 INFO: TEST ckpt-178125 bch-792 cum_acc: 76.31% cum_loss: 0.4800
+2020-02-28 17:32:49 INFO: TEST ckpt-178125 bch-793 cum_acc: 76.30% cum_loss: 0.4800
+2020-02-28 17:32:50 INFO: TEST ckpt-178125 bch-794 cum_acc: 76.30% cum_loss: 0.4798
+2020-02-28 17:32:50 INFO: TEST ckpt-178125 bch-795 cum_acc: 76.29% cum_loss: 0.4801
+2020-02-28 17:32:50 INFO: TEST ckpt-178125 bch-796 cum_acc: 76.30% cum_loss: 0.4800
+2020-02-28 17:32:51 INFO: TEST ckpt-178125 bch-797 cum_acc: 76.29% cum_loss: 0.4801
+2020-02-28 17:32:51 INFO: TEST ckpt-178125 bch-798 cum_acc: 76.31% cum_loss: 0.4800
+2020-02-28 17:32:51 INFO: TEST ckpt-178125 bch-799 cum_acc: 76.31% cum_loss: 0.4798
+2020-02-28 17:32:52 INFO: TEST ckpt-178125 bch-800 cum_acc: 76.28% cum_loss: 0.4803
+2020-02-28 17:32:52 INFO: TEST ckpt-178125 bch-801 cum_acc: 76.27% cum_loss: 0.4802
+2020-02-28 17:32:53 INFO: TEST ckpt-178125 bch-802 cum_acc: 76.29% cum_loss: 0.4800
+2020-02-28 17:32:53 INFO: TEST ckpt-178125 bch-803 cum_acc: 76.28% cum_loss: 0.4802
+2020-02-28 17:32:53 INFO: TEST ckpt-178125 bch-804 cum_acc: 76.27% cum_loss: 0.4804
+2020-02-28 17:32:54 INFO: TEST ckpt-178125 bch-805 cum_acc: 76.28% cum_loss: 0.4803
+2020-02-28 17:32:54 INFO: TEST ckpt-178125 bch-806 cum_acc: 76.26% cum_loss: 0.4803
+2020-02-28 17:32:55 INFO: TEST ckpt-178125 bch-807 cum_acc: 76.27% cum_loss: 0.4803
+2020-02-28 17:32:55 INFO: TEST ckpt-178125 bch-808 cum_acc: 76.23% cum_loss: 0.4808
+2020-02-28 17:32:55 INFO: TEST ckpt-178125 bch-809 cum_acc: 76.23% cum_loss: 0.4809
+2020-02-28 17:32:56 INFO: TEST ckpt-178125 bch-810 cum_acc: 76.24% cum_loss: 0.4807
+2020-02-28 17:32:56 INFO: TEST ckpt-178125 bch-811 cum_acc: 76.22% cum_loss: 0.4811
+2020-02-28 17:32:56 INFO: TEST ckpt-178125 bch-812 cum_acc: 76.21% cum_loss: 0.4809
+2020-02-28 17:32:57 INFO: TEST ckpt-178125 bch-813 cum_acc: 76.22% cum_loss: 0.4808
+2020-02-28 17:32:57 INFO: TEST ckpt-178125 bch-814 cum_acc: 76.21% cum_loss: 0.4807
+2020-02-28 17:32:58 INFO: TEST ckpt-178125 bch-815 cum_acc: 76.21% cum_loss: 0.4807
+2020-02-28 17:32:58 INFO: TEST ckpt-178125 bch-816 cum_acc: 76.23% cum_loss: 0.4804
+2020-02-28 17:32:58 INFO: TEST ckpt-178125 bch-817 cum_acc: 76.23% cum_loss: 0.4807
+2020-02-28 17:32:59 INFO: TEST ckpt-178125 bch-818 cum_acc: 76.24% cum_loss: 0.4807
+2020-02-28 17:32:59 INFO: TEST ckpt-178125 bch-819 cum_acc: 76.26% cum_loss: 0.4804
+2020-02-28 17:33:00 INFO: TEST ckpt-178125 bch-820 cum_acc: 76.25% cum_loss: 0.4804
+2020-02-28 17:33:00 INFO: TEST ckpt-178125 bch-821 cum_acc: 76.28% cum_loss: 0.4803
+2020-02-28 17:33:00 INFO: TEST ckpt-178125 bch-822 cum_acc: 76.31% cum_loss: 0.4801
+2020-02-28 17:33:01 INFO: TEST ckpt-178125 bch-823 cum_acc: 76.31% cum_loss: 0.4803
+2020-02-28 17:33:01 INFO: TEST ckpt-178125 bch-824 cum_acc: 76.32% cum_loss: 0.4801
+2020-02-28 17:33:01 INFO: TEST ckpt-178125 bch-825 cum_acc: 76.30% cum_loss: 0.4801
+2020-02-28 17:33:02 INFO: TEST ckpt-178125 bch-826 cum_acc: 76.29% cum_loss: 0.4804
+2020-02-28 17:33:02 INFO: TEST ckpt-178125 bch-827 cum_acc: 76.28% cum_loss: 0.4803
+2020-02-28 17:33:03 INFO: TEST ckpt-178125 bch-828 cum_acc: 76.30% cum_loss: 0.4802
+2020-02-28 17:33:03 INFO: TEST ckpt-178125 bch-829 cum_acc: 76.31% cum_loss: 0.4799
+2020-02-28 17:33:03 INFO: TEST ckpt-178125 bch-830 cum_acc: 76.31% cum_loss: 0.4801
+2020-02-28 17:33:04 INFO: TEST ckpt-178125 bch-831 cum_acc: 76.30% cum_loss: 0.4801
+2020-02-28 17:33:04 INFO: TEST ckpt-178125 bch-832 cum_acc: 76.30% cum_loss: 0.4799
+2020-02-28 17:33:05 INFO: TEST ckpt-178125 bch-833 cum_acc: 76.27% cum_loss: 0.4806
+2020-02-28 17:33:05 INFO: TEST ckpt-178125 bch-834 cum_acc: 76.28% cum_loss: 0.4804
+2020-02-28 17:33:05 INFO: TEST ckpt-178125 bch-835 cum_acc: 76.24% cum_loss: 0.4805
+2020-02-28 17:33:06 INFO: TEST ckpt-178125 bch-836 cum_acc: 76.22% cum_loss: 0.4805
+2020-02-28 17:33:06 INFO: TEST ckpt-178125 bch-837 cum_acc: 76.24% cum_loss: 0.4803
+2020-02-28 17:33:07 INFO: TEST ckpt-178125 bch-838 cum_acc: 76.26% cum_loss: 0.4803
+2020-02-28 17:33:07 INFO: TEST ckpt-178125 bch-839 cum_acc: 76.26% cum_loss: 0.4803
+2020-02-28 17:33:07 INFO: TEST ckpt-178125 bch-840 cum_acc: 76.28% cum_loss: 0.4801
+2020-02-28 17:33:08 INFO: TEST ckpt-178125 bch-841 cum_acc: 76.29% cum_loss: 0.4799
+2020-02-28 17:33:08 INFO: TEST ckpt-178125 bch-842 cum_acc: 76.29% cum_loss: 0.4798
+2020-02-28 17:33:08 INFO: TEST ckpt-178125 bch-843 cum_acc: 76.27% cum_loss: 0.4803
+2020-02-28 17:33:09 INFO: TEST ckpt-178125 bch-844 cum_acc: 76.26% cum_loss: 0.4803
+2020-02-28 17:33:09 INFO: TEST ckpt-178125 bch-845 cum_acc: 76.24% cum_loss: 0.4803
+2020-02-28 17:33:10 INFO: TEST ckpt-178125 bch-846 cum_acc: 76.22% cum_loss: 0.4803
+2020-02-28 17:33:10 INFO: TEST ckpt-178125 bch-847 cum_acc: 76.21% cum_loss: 0.4802
+2020-02-28 17:33:10 INFO: TEST ckpt-178125 bch-848 cum_acc: 76.23% cum_loss: 0.4800
+2020-02-28 17:33:11 INFO: TEST ckpt-178125 bch-849 cum_acc: 76.26% cum_loss: 0.4798
+2020-02-28 17:33:11 INFO: TEST ckpt-178125 bch-850 cum_acc: 76.27% cum_loss: 0.4795
+2020-02-28 17:33:12 INFO: TEST ckpt-178125 bch-851 cum_acc: 76.28% cum_loss: 0.4793
+2020-02-28 17:33:12 INFO: TEST ckpt-178125 bch-852 cum_acc: 76.28% cum_loss: 0.4792
+2020-02-28 17:33:12 INFO: TEST ckpt-178125 bch-853 cum_acc: 76.28% cum_loss: 0.4800
+2020-02-28 17:33:13 INFO: TEST ckpt-178125 bch-854 cum_acc: 76.30% cum_loss: 0.4798
+2020-02-28 17:33:13 INFO: TEST ckpt-178125 bch-855 cum_acc: 76.32% cum_loss: 0.4798
+2020-02-28 17:33:13 INFO: TEST ckpt-178125 bch-856 cum_acc: 76.31% cum_loss: 0.4798
+2020-02-28 17:33:14 INFO: TEST ckpt-178125 bch-857 cum_acc: 76.32% cum_loss: 0.4797
+2020-02-28 17:33:14 INFO: TEST ckpt-178125 bch-858 cum_acc: 76.32% cum_loss: 0.4795
+2020-02-28 17:33:15 INFO: TEST ckpt-178125 bch-859 cum_acc: 76.31% cum_loss: 0.4804
+2020-02-28 17:33:15 INFO: TEST ckpt-178125 bch-860 cum_acc: 76.31% cum_loss: 0.4809
+2020-02-28 17:33:15 INFO: TEST ckpt-178125 bch-861 cum_acc: 76.29% cum_loss: 0.4810
+2020-02-28 17:33:16 INFO: TEST ckpt-178125 bch-862 cum_acc: 76.27% cum_loss: 0.4809
+2020-02-28 17:33:16 INFO: TEST ckpt-178125 bch-863 cum_acc: 76.26% cum_loss: 0.4811
+2020-02-28 17:33:17 INFO: TEST ckpt-178125 bch-864 cum_acc: 76.27% cum_loss: 0.4809
+2020-02-28 17:33:17 INFO: TEST ckpt-178125 bch-865 cum_acc: 76.26% cum_loss: 0.4808
+2020-02-28 17:33:17 INFO: TEST ckpt-178125 bch-866 cum_acc: 76.25% cum_loss: 0.4811
+2020-02-28 17:33:18 INFO: TEST ckpt-178125 bch-867 cum_acc: 76.27% cum_loss: 0.4811
+2020-02-28 17:33:18 INFO: TEST ckpt-178125 bch-868 cum_acc: 76.25% cum_loss: 0.4812
+2020-02-28 17:33:18 INFO: TEST ckpt-178125 bch-869 cum_acc: 76.22% cum_loss: 0.4815
+2020-02-28 17:33:19 INFO: TEST ckpt-178125 bch-870 cum_acc: 76.21% cum_loss: 0.4812
+2020-02-28 17:33:19 INFO: TEST ckpt-178125 bch-871 cum_acc: 76.22% cum_loss: 0.4814
+2020-02-28 17:33:20 INFO: TEST ckpt-178125 bch-872 cum_acc: 76.19% cum_loss: 0.4815
+2020-02-28 17:33:20 INFO: TEST ckpt-178125 bch-873 cum_acc: 76.18% cum_loss: 0.4814
+2020-02-28 17:33:20 INFO: TEST ckpt-178125 bch-874 cum_acc: 76.17% cum_loss: 0.4813
+2020-02-28 17:33:21 INFO: TEST ckpt-178125 bch-875 cum_acc: 76.16% cum_loss: 0.4813
+2020-02-28 17:33:21 INFO: TEST ckpt-178125 bch-876 cum_acc: 76.19% cum_loss: 0.4811
+2020-02-28 17:33:22 INFO: TEST ckpt-178125 bch-877 cum_acc: 76.21% cum_loss: 0.4810
+2020-02-28 17:33:22 INFO: TEST ckpt-178125 bch-878 cum_acc: 76.20% cum_loss: 0.4808
+2020-02-28 17:33:22 INFO: TEST ckpt-178125 bch-879 cum_acc: 76.20% cum_loss: 0.4807
+2020-02-28 17:33:23 INFO: TEST ckpt-178125 bch-880 cum_acc: 76.23% cum_loss: 0.4805
+2020-02-28 17:33:23 INFO: TEST ckpt-178125 bch-881 cum_acc: 76.24% cum_loss: 0.4811
+2020-02-28 17:33:23 INFO: TEST ckpt-178125 bch-882 cum_acc: 76.24% cum_loss: 0.4809
+2020-02-28 17:33:24 INFO: TEST ckpt-178125 bch-883 cum_acc: 76.26% cum_loss: 0.4808
+2020-02-28 17:33:24 INFO: TEST ckpt-178125 bch-884 cum_acc: 76.27% cum_loss: 0.4807
+2020-02-28 17:33:25 INFO: TEST ckpt-178125 bch-885 cum_acc: 76.29% cum_loss: 0.4804
+2020-02-28 17:33:25 INFO: TEST ckpt-178125 bch-886 cum_acc: 76.30% cum_loss: 0.4804
+2020-02-28 17:33:25 INFO: TEST ckpt-178125 bch-887 cum_acc: 76.32% cum_loss: 0.4803
+2020-02-28 17:33:26 INFO: TEST ckpt-178125 bch-888 cum_acc: 76.31% cum_loss: 0.4803
+2020-02-28 17:33:26 INFO: TEST ckpt-178125 bch-889 cum_acc: 76.28% cum_loss: 0.4805
+2020-02-28 17:33:27 INFO: TEST ckpt-178125 bch-890 cum_acc: 76.30% cum_loss: 0.4803
+2020-02-28 17:33:27 INFO: TEST ckpt-178125 bch-891 cum_acc: 76.31% cum_loss: 0.4801
+2020-02-28 17:33:27 INFO: TEST ckpt-178125 bch-892 cum_acc: 76.30% cum_loss: 0.4801
+2020-02-28 17:33:28 INFO: TEST ckpt-178125 bch-893 cum_acc: 76.29% cum_loss: 0.4802
+2020-02-28 17:33:28 INFO: TEST ckpt-178125 bch-894 cum_acc: 76.27% cum_loss: 0.4802
+2020-02-28 17:33:29 INFO: TEST ckpt-178125 bch-895 cum_acc: 76.26% cum_loss: 0.4802
+2020-02-28 17:33:29 INFO: TEST ckpt-178125 bch-896 cum_acc: 76.24% cum_loss: 0.4802
+2020-02-28 17:33:29 INFO: TEST ckpt-178125 bch-897 cum_acc: 76.24% cum_loss: 0.4801
+2020-02-28 17:33:30 INFO: TEST ckpt-178125 bch-898 cum_acc: 76.24% cum_loss: 0.4801
+2020-02-28 17:33:30 INFO: TEST ckpt-178125 bch-899 cum_acc: 76.23% cum_loss: 0.4802
+2020-02-28 17:33:30 INFO: TEST ckpt-178125 bch-900 cum_acc: 76.23% cum_loss: 0.4802
+2020-02-28 17:33:31 INFO: TEST ckpt-178125 bch-901 cum_acc: 76.23% cum_loss: 0.4800
+2020-02-28 17:33:31 INFO: TEST ckpt-178125 bch-902 cum_acc: 76.23% cum_loss: 0.4799
+2020-02-28 17:33:32 INFO: TEST ckpt-178125 bch-903 cum_acc: 76.24% cum_loss: 0.4798
+2020-02-28 17:33:32 INFO: TEST ckpt-178125 bch-904 cum_acc: 76.24% cum_loss: 0.4796
+2020-02-28 17:33:32 INFO: TEST ckpt-178125 bch-905 cum_acc: 76.24% cum_loss: 0.4797
+2020-02-28 17:33:33 INFO: TEST ckpt-178125 bch-906 cum_acc: 76.26% cum_loss: 0.4795
+2020-02-28 17:33:33 INFO: TEST ckpt-178125 bch-907 cum_acc: 76.27% cum_loss: 0.4794
+2020-02-28 17:33:34 INFO: TEST ckpt-178125 bch-908 cum_acc: 76.28% cum_loss: 0.4793
+2020-02-28 17:33:34 INFO: TEST ckpt-178125 bch-909 cum_acc: 76.30% cum_loss: 0.4792
+2020-02-28 17:33:34 INFO: TEST ckpt-178125 bch-910 cum_acc: 76.31% cum_loss: 0.4792
+2020-02-28 17:33:35 INFO: TEST ckpt-178125 bch-911 cum_acc: 76.29% cum_loss: 0.4794
+2020-02-28 17:33:35 INFO: TEST ckpt-178125 bch-912 cum_acc: 76.32% cum_loss: 0.4791
+2020-02-28 17:33:36 INFO: TEST ckpt-178125 bch-913 cum_acc: 76.33% cum_loss: 0.4792
+2020-02-28 17:33:36 INFO: TEST ckpt-178125 bch-914 cum_acc: 76.35% cum_loss: 0.4790
+2020-02-28 17:33:36 INFO: TEST ckpt-178125 bch-915 cum_acc: 76.38% cum_loss: 0.4788
+2020-02-28 17:33:37 INFO: TEST ckpt-178125 bch-916 cum_acc: 76.39% cum_loss: 0.4786
+2020-02-28 17:33:37 INFO: TEST ckpt-178125 bch-917 cum_acc: 76.41% cum_loss: 0.4788
+2020-02-28 17:33:37 INFO: TEST ckpt-178125 bch-918 cum_acc: 76.41% cum_loss: 0.4790
+2020-02-28 17:33:38 INFO: TEST ckpt-178125 bch-919 cum_acc: 76.41% cum_loss: 0.4790
+2020-02-28 17:33:38 INFO: TEST ckpt-178125 bch-920 cum_acc: 76.40% cum_loss: 0.4790
+2020-02-28 17:33:39 INFO: TEST ckpt-178125 bch-921 cum_acc: 76.41% cum_loss: 0.4788
+2020-02-28 17:33:39 INFO: TEST ckpt-178125 bch-922 cum_acc: 76.42% cum_loss: 0.4787
+2020-02-28 17:33:39 INFO: TEST ckpt-178125 bch-923 cum_acc: 76.42% cum_loss: 0.4786
+2020-02-28 17:33:40 INFO: TEST ckpt-178125 bch-924 cum_acc: 76.42% cum_loss: 0.4785
+2020-02-28 17:33:40 INFO: TEST ckpt-178125 bch-925 cum_acc: 76.40% cum_loss: 0.4788
+2020-02-28 17:33:41 INFO: TEST ckpt-178125 bch-926 cum_acc: 76.41% cum_loss: 0.4786
+2020-02-28 17:33:41 INFO: TEST ckpt-178125 bch-927 cum_acc: 76.41% cum_loss: 0.4787
+2020-02-28 17:33:41 INFO: TEST ckpt-178125 bch-928 cum_acc: 76.43% cum_loss: 0.4785
+2020-02-28 17:33:42 INFO: TEST ckpt-178125 bch-929 cum_acc: 76.43% cum_loss: 0.4785
+2020-02-28 17:33:42 INFO: TEST ckpt-178125 bch-930 cum_acc: 76.41% cum_loss: 0.4787
+2020-02-28 17:33:42 INFO: TEST ckpt-178125 bch-931 cum_acc: 76.41% cum_loss: 0.4785
+2020-02-28 17:33:43 INFO: TEST ckpt-178125 bch-932 cum_acc: 76.42% cum_loss: 0.4784
+2020-02-28 17:33:43 INFO: TEST ckpt-178125 bch-933 cum_acc: 76.43% cum_loss: 0.4782
+2020-02-28 17:33:44 INFO: TEST ckpt-178125 bch-934 cum_acc: 76.44% cum_loss: 0.4780
+2020-02-28 17:33:44 INFO: TEST ckpt-178125 bch-935 cum_acc: 76.41% cum_loss: 0.4782
+2020-02-28 17:33:44 INFO: TEST ckpt-178125 bch-936 cum_acc: 76.41% cum_loss: 0.4781
+2020-02-28 17:33:45 INFO: TEST ckpt-178125 bch-937 cum_acc: 76.38% cum_loss: 0.4786
+2020-02-28 17:33:45 INFO: TEST ckpt-178125 bch-938 cum_acc: 76.39% cum_loss: 0.4784
+2020-02-28 17:33:46 INFO: TEST ckpt-178125 bch-939 cum_acc: 76.38% cum_loss: 0.4784
+2020-02-28 17:33:46 INFO: TEST ckpt-178125 bch-940 cum_acc: 76.35% cum_loss: 0.4783
+2020-02-28 17:33:46 INFO: TEST ckpt-178125 bch-941 cum_acc: 76.34% cum_loss: 0.4783
+2020-02-28 17:33:47 INFO: TEST ckpt-178125 bch-942 cum_acc: 76.33% cum_loss: 0.4781
+2020-02-28 17:33:47 INFO: TEST ckpt-178125 bch-943 cum_acc: 76.31% cum_loss: 0.4780
+2020-02-28 17:33:48 INFO: TEST ckpt-178125 bch-944 cum_acc: 76.34% cum_loss: 0.4777
+2020-02-28 17:33:48 INFO: TEST ckpt-178125 bch-945 cum_acc: 76.35% cum_loss: 0.4777
+2020-02-28 17:33:48 INFO: TEST ckpt-178125 bch-946 cum_acc: 76.37% cum_loss: 0.4776
+2020-02-28 17:33:49 INFO: TEST ckpt-178125 bch-947 cum_acc: 76.36% cum_loss: 0.4778
+2020-02-28 17:33:49 INFO: TEST ckpt-178125 bch-948 cum_acc: 76.35% cum_loss: 0.4779
+2020-02-28 17:33:49 INFO: TEST ckpt-178125 bch-949 cum_acc: 76.36% cum_loss: 0.4777
+2020-02-28 17:33:50 INFO: TEST ckpt-178125 bch-950 cum_acc: 76.35% cum_loss: 0.4777
+2020-02-28 17:33:50 INFO: TEST ckpt-178125 bch-951 cum_acc: 76.37% cum_loss: 0.4775
+2020-02-28 17:33:51 INFO: TEST ckpt-178125 bch-952 cum_acc: 76.38% cum_loss: 0.4775
+2020-02-28 17:33:51 INFO: TEST ckpt-178125 bch-953 cum_acc: 76.35% cum_loss: 0.4778
+2020-02-28 17:33:51 INFO: TEST ckpt-178125 bch-954 cum_acc: 76.34% cum_loss: 0.4780
+2020-02-28 17:33:52 INFO: TEST ckpt-178125 bch-955 cum_acc: 76.30% cum_loss: 0.4784
+2020-02-28 17:33:52 INFO: TEST ckpt-178125 bch-956 cum_acc: 76.29% cum_loss: 0.4783
+2020-02-28 17:33:53 INFO: TEST ckpt-178125 bch-957 cum_acc: 76.27% cum_loss: 0.4784
+2020-02-28 17:33:53 INFO: TEST ckpt-178125 bch-958 cum_acc: 76.27% cum_loss: 0.4791
+2020-02-28 17:33:53 INFO: TEST ckpt-178125 bch-959 cum_acc: 76.28% cum_loss: 0.4789
+2020-02-28 17:33:54 INFO: TEST ckpt-178125 bch-960 cum_acc: 76.27% cum_loss: 0.4789
+2020-02-28 17:33:54 INFO: TEST ckpt-178125 bch-961 cum_acc: 76.28% cum_loss: 0.4788
+2020-02-28 17:33:54 INFO: TEST ckpt-178125 bch-962 cum_acc: 76.29% cum_loss: 0.4786
+2020-02-28 17:33:55 INFO: TEST ckpt-178125 bch-963 cum_acc: 76.29% cum_loss: 0.4791
+2020-02-28 17:33:55 INFO: TEST ckpt-178125 bch-964 cum_acc: 76.29% cum_loss: 0.4790
+2020-02-28 17:33:56 INFO: TEST ckpt-178125 bch-965 cum_acc: 76.29% cum_loss: 0.4789
+2020-02-28 17:33:56 INFO: TEST ckpt-178125 bch-966 cum_acc: 76.30% cum_loss: 0.4788
+2020-02-28 17:33:56 INFO: TEST ckpt-178125 bch-967 cum_acc: 76.31% cum_loss: 0.4789
+2020-02-28 17:33:57 INFO: TEST ckpt-178125 bch-968 cum_acc: 76.28% cum_loss: 0.4793
+2020-02-28 17:33:57 INFO: TEST ckpt-178125 bch-969 cum_acc: 76.29% cum_loss: 0.4794
+2020-02-28 17:33:58 INFO: TEST ckpt-178125 bch-970 cum_acc: 76.28% cum_loss: 0.4793
+2020-02-28 17:33:58 INFO: TEST ckpt-178125 bch-971 cum_acc: 76.30% cum_loss: 0.4791
+2020-02-28 17:33:58 INFO: TEST ckpt-178125 bch-972 cum_acc: 76.28% cum_loss: 0.4793
+2020-02-28 17:33:59 INFO: TEST ckpt-178125 bch-973 cum_acc: 76.28% cum_loss: 0.4791
+2020-02-28 17:33:59 INFO: TEST ckpt-178125 bch-974 cum_acc: 76.29% cum_loss: 0.4790
+2020-02-28 17:33:59 INFO: TEST ckpt-178125 bch-975 cum_acc: 76.27% cum_loss: 0.4790
+2020-02-28 17:34:00 INFO: TEST ckpt-178125 bch-976 cum_acc: 76.25% cum_loss: 0.4792
+2020-02-28 17:34:00 INFO: TEST ckpt-178125 bch-977 cum_acc: 76.26% cum_loss: 0.4792
+2020-02-28 17:34:01 INFO: TEST ckpt-178125 bch-978 cum_acc: 76.26% cum_loss: 0.4791
+2020-02-28 17:34:01 INFO: TEST ckpt-178125 bch-979 cum_acc: 76.27% cum_loss: 0.4790
+2020-02-28 17:34:01 INFO: TEST ckpt-178125 bch-980 cum_acc: 76.27% cum_loss: 0.4789
+2020-02-28 17:34:02 INFO: TEST ckpt-178125 bch-981 cum_acc: 76.27% cum_loss: 0.4790
+2020-02-28 17:34:02 INFO: TEST ckpt-178125 bch-982 cum_acc: 76.27% cum_loss: 0.4788
+2020-02-28 17:34:03 INFO: TEST ckpt-178125 bch-983 cum_acc: 76.26% cum_loss: 0.4787
+2020-02-28 17:34:03 INFO: TEST ckpt-178125 bch-984 cum_acc: 76.24% cum_loss: 0.4790
+2020-02-28 17:34:03 INFO: TEST ckpt-178125 bch-985 cum_acc: 76.26% cum_loss: 0.4788
+2020-02-28 17:34:04 INFO: TEST ckpt-178125 bch-986 cum_acc: 76.28% cum_loss: 0.4786
+2020-02-28 17:34:04 INFO: TEST ckpt-178125 bch-987 cum_acc: 76.27% cum_loss: 0.4788
+2020-02-28 17:34:04 INFO: TEST ckpt-178125 bch-988 cum_acc: 76.27% cum_loss: 0.4790
+2020-02-28 17:34:05 INFO: TEST ckpt-178125 bch-989 cum_acc: 76.25% cum_loss: 0.4790
+2020-02-28 17:34:05 INFO: TEST ckpt-178125 bch-990 cum_acc: 76.25% cum_loss: 0.4788
+2020-02-28 17:34:06 INFO: TEST ckpt-178125 bch-991 cum_acc: 76.25% cum_loss: 0.4789
+2020-02-28 17:34:06 INFO: TEST ckpt-178125 bch-992 cum_acc: 76.22% cum_loss: 0.4791
+2020-02-28 17:34:06 INFO: TEST ckpt-178125 bch-993 cum_acc: 76.23% cum_loss: 0.4790
+2020-02-28 17:34:07 INFO: TEST ckpt-178125 bch-994 cum_acc: 76.20% cum_loss: 0.4791
+2020-02-28 17:34:07 INFO: TEST ckpt-178125 bch-995 cum_acc: 76.20% cum_loss: 0.4790
+2020-02-28 17:34:08 INFO: TEST ckpt-178125 bch-996 cum_acc: 76.20% cum_loss: 0.4790
+2020-02-28 17:34:08 INFO: TEST ckpt-178125 bch-997 cum_acc: 76.20% cum_loss: 0.4789
+2020-02-28 17:34:08 INFO: TEST ckpt-178125 bch-998 cum_acc: 76.21% cum_loss: 0.4793
+2020-02-28 17:34:09 INFO: TEST ckpt-178125 bch-999 cum_acc: 76.21% cum_loss: 0.4792
+2020-02-28 17:34:09 INFO: TEST ckpt-178125 avg_acc: 76.21% avg_loss: 0.4792
+2020-02-28 17:34:09 INFO: Write Test Summary
+2020-04-14 10:56:03 INFO: name: 20191024_14:00:15:440334_
+2020-04-14 10:56:03 INFO: parent_dir: logs/cifar10/bg_recon_0
+2020-04-14 10:56:04 INFO: test_dir: logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/test
+2020-04-14 10:56:04 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/train/params/params.json
+2020-04-14 10:56:04 INFO: Using dataset: cifar10
+2020-04-14 10:56:04 INFO: BUILD TEST GRAPH
+2020-04-14 10:56:04 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-04-14 10:56:04 INFO: Overwrite dataset info from restored data version.
+2020-04-14 10:56:04 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-04-14 10:56:04 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-04-14 10:56:06 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-04-14 10:56:06 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-04-14 10:56:06 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-04-14 10:56:06 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-04-14 10:56:06 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-04-14 10:56:06 INFO: input shape: (5, 32, 32, 3)
+2020-04-14 10:56:06 INFO: Scale of 0 disables regularizer.
+2020-04-14 10:56:06 INFO: relu_conv1 output shape: (5, 16, 16, 128)
+2020-04-14 10:56:06 INFO: primary_caps pose shape: (5, 16, 16, 24, 16)
+2020-04-14 10:56:06 INFO: primary_caps activation shape (5, 16, 16, 24, 1)
+2020-04-14 10:56:06 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-04-14 10:56:06 INFO: lyr.conv_caps1 votes shape: (245, 216, 24, 16)
+2020-04-14 10:56:06 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-04-14 10:56:06 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-04-14 10:56:06 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-04-14 10:56:06 INFO: lyr.conv_caps1 pose_out shape: (5, 7, 7, 24, 16)
+2020-04-14 10:56:06 INFO: lyr.conv_caps1 activation_out shape: (5, 7, 7, 24, 1)
+2020-04-14 10:56:06 INFO: lyr.conv_caps2 votes shape: (125, 216, 32, 16)
+2020-04-14 10:56:07 INFO: lyr.conv_caps2 pose_out shape: (5, 5, 5, 32, 16)
+2020-04-14 10:56:07 INFO: lyr.conv_caps2 activation_out shape: (5, 5, 5, 32, 1)
+2020-04-14 10:56:07 INFO: class_caps votes original shape: (125, 32, 10, 16)
+2020-04-14 10:56:07 INFO: class_caps votes in to routing shape: (5, 800, 10, 16)
+2020-04-14 10:56:07 INFO: class_caps activation shape: (5, 10)
+2020-04-14 10:56:07 INFO: class_caps pose shape: (5, 10, 16)
+2020-04-14 10:56:07 INFO: input shape: (5, 32, 32, 3)
+2020-04-14 10:56:07 INFO: Scale of 0 disables regularizer.
+2020-04-14 10:56:07 INFO: relu_conv1 output shape: (5, 16, 16, 128)
+2020-04-14 10:56:07 INFO: primary_caps pose shape: (5, 16, 16, 24, 16)
+2020-04-14 10:56:07 INFO: primary_caps activation shape (5, 16, 16, 24, 1)
+2020-04-14 10:56:07 INFO: lyr.conv_caps1 votes shape: (245, 216, 24, 16)
+2020-04-14 10:56:07 INFO: lyr.conv_caps1 pose_out shape: (5, 7, 7, 24, 16)
+2020-04-14 10:56:07 INFO: lyr.conv_caps1 activation_out shape: (5, 7, 7, 24, 1)
+2020-04-14 10:56:07 INFO: lyr.conv_caps2 votes shape: (125, 216, 32, 16)
+2020-04-14 10:56:08 INFO: lyr.conv_caps2 pose_out shape: (5, 5, 5, 32, 16)
+2020-04-14 10:56:08 INFO: lyr.conv_caps2 activation_out shape: (5, 5, 5, 32, 1)
+2020-04-14 10:56:08 INFO: class_caps votes original shape: (125, 32, 10, 16)
+2020-04-14 10:56:08 INFO: class_caps votes in to routing shape: (5, 800, 10, 16)
+2020-04-14 10:56:08 INFO: class_caps activation shape: (5, 10)
+2020-04-14 10:56:08 INFO: class_caps pose shape: (5, 10, 16)
+2020-04-14 10:56:08 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-04-14 10:56:08 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-04-14 10:56:09 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-04-14 10:56:09 INFO: Restoring parameters from logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/train/checkpoint/model.ckpt-178125
+2020-04-14 12:07:28 INFO: writing to csv
+2020-04-14 12:07:29 INFO: csv saved at logs/cifar10/bg_recon_0/20191024_14:00:15:440334_/test/logs_cifar10_rescaled_bg0_00_20200412_23_50_42_623464__train_saved_patch_png_test.csv

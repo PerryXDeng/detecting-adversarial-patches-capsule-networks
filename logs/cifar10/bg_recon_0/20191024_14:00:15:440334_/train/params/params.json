@@ -46,6 +46,7 @@
     "G":16,
     "recon_loss":true,
     "num_bg_classes":0,
+    "new_bg_recon_arch":false,
     "X":512,
     "Y":1024,
     "zeroed_bg_reconstruction":false,
