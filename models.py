@@ -333,6 +333,7 @@ def  build_arch_alexnet_modified(inp, is_train: bool, num_classes: int, y=None):
       with slim.arg_scope([slim.max_pool2d], padding='VALID') as arg_sc:
         with slim.arg_scope([slim.conv2d, slim.fully_connected],
                           activation_fn=tf.nn.relu,
+                          weights_initializer=tf.compat.v1.truncated_normal_initializer(0.0, 0.005),
                           biases_initializer=tf.compat.v1.constant_initializer(0.1),
                           weights_regularizer=slim.l2_regularizer(weight_decay)):
           net = slim.conv2d(inp, 64, [11, 11], 4, padding='VALID',
