@@ -3,4 +3,4 @@
 # python3 train_val.py --load_dir=logs/cifar10/bg_recon_0/20200110_01\:47\:59\:339266_/ --epoch=1000 --dataset=cifar10 --num_gpus=2 --capsule_weight_reg_lambda=0.00000002 --batch_size=32 --logdir=bg_recon_0
 # python3 train_val.py --batch_size 8 --num_gpus 1 --epoch 1 --logdir testi
 # python3 train_val.py --dataset=cifar10 --logdir=new_bg_recon_2 --batch_size=32 --num_gpus=2 --A=256 --B=32 --C=32 --D=32 --E=0 --F=0 --recon_loss_lambda=1.0 --num_bg_classes=2 --X=512 --Y=1024 --multi_weighted_pred_recon=False --weight_reg=True --nn_weight_reg_lambda=2e-08 --capsule_weight_reg_lambda=2e-08 --affine_voting=True --drop_rate=0.5 --dropout=True --dropconnect=false --dropout_extra=True
-python3 train_val.py --dataset=cifar10 --batch_size=24 --cnn=True
+python3 train_val.py --epoch=50 --lrn_rate=0.00003 --num_gpus=2 --dataset=cifar10 --batch_size=24 --cnn=True --logdir=cnn_low_lr

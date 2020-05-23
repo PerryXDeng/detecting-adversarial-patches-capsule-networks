@@ -410,7 +410,7 @@ def main(args):
       tf.summary.scalar("val_success_rate", val_acc)
         
       # Saver
-      saver = tf.train.Saver(max_to_keep=None)
+      saver = tf.train.Saver(max_to_keep=1)
       
       # Set summary op
       val_summary = tf.summary.merge_all()
