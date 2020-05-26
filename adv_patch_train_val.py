@@ -864,7 +864,7 @@ def tower_fn(build_arch,
   
   with tf.variable_scope(tf.get_variable_scope(), reuse=reuse_variables):
     x, patch = patch_inputs(x, is_train=is_train, reuse=reuse_variables)
-    output = build_arch(x, is_train, num_classes=num_classes)
+    output = build_arch(x, False, num_classes=num_classes)
   targets = tf.fill(dims=y.get_shape().as_list(), value=FLAGS.target_class, name="adversarial_targets")
   if FLAGS.carliniwagner:
     # carlini wagner adversarial objective

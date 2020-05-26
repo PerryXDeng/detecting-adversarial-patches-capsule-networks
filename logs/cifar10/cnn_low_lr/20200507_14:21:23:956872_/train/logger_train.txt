@@ -1,0 +1,1664 @@
+2020-05-07 14:21:23 INFO: Parameters saved to file: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-07 14:21:23 INFO: Using dataset: cifar10
+2020-05-07 14:21:23 INFO: cifar10 pipeline is not set up for validation, using test set for validation instead
+2020-05-07 14:21:23 INFO: BUILD TRAIN GRAPH
+2020-05-07 14:21:23 WARNING: From train_val.py:85: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-07 14:21:23 WARNING: From train_val.py:94: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+2020-05-07 14:21:23 WARNING: From train_val.py:98: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+2020-05-07 14:21:23 WARNING: From train_val.py:99: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2020-05-07 14:21:23 INFO: Overwrite dataset info from restored data version.
+2020-05-07 14:21:24 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-07 14:21:24 INFO: Constructing tf.data.Dataset for split train, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-07 14:21:26 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-07 14:21:26 INFO: TOWER 0
+2020-05-07 14:21:26 WARNING: From train_val.py:692: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-07 14:21:26 WARNING: From train_val.py:692: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-07 14:21:26 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-07 14:21:27 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-07 14:21:27 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:482: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2020-05-07 14:21:27 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:534: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+2020-05-07 14:21:28 INFO: TOWER 1
+2020-05-07 14:21:29 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/metrics.py:27: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-05-07 14:21:29 WARNING: From train_val.py:210: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-07 14:21:29 INFO: Trainable Parameters: 201687818
+2020-05-07 14:21:29 WARNING: From train_val.py:218: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2020-05-07 14:21:29 INFO: BUILD TRAINING SET ACCURACY GRAPH
+2020-05-07 14:21:29 INFO: Overwrite dataset info from restored data version.
+2020-05-07 14:21:29 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-07 14:21:29 INFO: Constructing tf.data.Dataset for split train, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-07 14:21:30 WARNING: From train_val.py:275: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-05-07 14:21:30 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:433: The name tf.train.get_global_step is deprecated. Please use tf.compat.v1.train.get_global_step instead.
+
+2020-05-07 14:21:30 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:433: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-05-07 14:21:30 INFO: BUILD VALIDATION GRAPH
+2020-05-07 14:21:30 INFO: Overwrite dataset info from restored data version.
+2020-05-07 14:21:30 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-07 14:21:30 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-07 14:21:39 WARNING: From train_val.py:435: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-07 14:21:46 INFO: Write Train Summary
+2020-05-07 14:21:46 INFO: Save Model
+2020-05-07 14:21:48 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt0-0 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 14:21:48 INFO: Start Train Set Accuracy
+2020-05-07 14:21:49 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-07 14:21:49 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt0-0
+2020-05-07 14:25:02 INFO: TRN ckpt-0 avg_acc: 10.00% avg_loss: 1.8563
+2020-05-07 14:25:02 INFO: Write Train Summary
+2020-05-07 14:25:02 INFO: Start Validation
+2020-05-07 14:25:02 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt0-0
+2020-05-07 14:25:43 INFO: VAL ckpt-0 avg_acc: 10.02% avg_loss: 1.8545
+2020-05-07 14:25:43 INFO: Write Val Summary
+2020-05-07 14:25:43 INFO: Reset streaming metrics
+2020-05-07 14:26:32 INFO: Write Train Summary
+2020-05-07 14:27:21 INFO: Write Train Summary
+2020-05-07 14:28:10 INFO: Write Train Summary
+2020-05-07 14:29:00 INFO: Write Train Summary
+2020-05-07 14:29:49 INFO: Write Train Summary
+2020-05-07 14:30:38 INFO: Write Train Summary
+2020-05-07 14:31:27 INFO: Write Train Summary
+2020-05-07 14:32:16 INFO: Write Train Summary
+2020-05-07 14:33:05 INFO: Write Train Summary
+2020-05-07 14:33:54 INFO: Write Train Summary
+2020-05-07 14:34:43 INFO: Write Train Summary
+2020-05-07 14:35:33 INFO: Write Train Summary
+2020-05-07 14:36:22 INFO: Write Train Summary
+2020-05-07 14:37:11 INFO: Write Train Summary
+2020-05-07 14:38:00 INFO: Write Train Summary
+2020-05-07 14:38:49 INFO: Write Train Summary
+2020-05-07 14:39:38 INFO: Write Train Summary
+2020-05-07 14:40:27 INFO: Write Train Summary
+2020-05-07 14:41:16 INFO: Write Train Summary
+2020-05-07 14:42:05 INFO: Write Train Summary
+2020-05-07 14:42:46 INFO: Save Model
+2020-05-07 14:42:47 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt1-2083 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 14:42:48 INFO: Start Train Set Accuracy
+2020-05-07 14:42:48 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt1-2083
+2020-05-07 14:46:01 INFO: TRN ckpt-2083 avg_acc: 47.98% avg_loss: 2.6104
+2020-05-07 14:46:01 INFO: Write Train Summary
+2020-05-07 14:46:01 INFO: Start Validation
+2020-05-07 14:46:01 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt1-2083
+2020-05-07 14:46:41 INFO: VAL ckpt-2083 avg_acc: 47.64% avg_loss: 2.6045
+2020-05-07 14:46:41 INFO: Write Val Summary
+2020-05-07 14:46:41 INFO: Reset streaming metrics
+2020-05-07 14:46:49 INFO: Write Train Summary
+2020-05-07 14:47:38 INFO: Write Train Summary
+2020-05-07 14:48:28 INFO: Write Train Summary
+2020-05-07 14:49:17 INFO: Write Train Summary
+2020-05-07 14:50:06 INFO: Write Train Summary
+2020-05-07 14:50:55 INFO: Write Train Summary
+2020-05-07 14:51:44 INFO: Write Train Summary
+2020-05-07 14:52:33 INFO: Write Train Summary
+2020-05-07 14:53:22 INFO: Write Train Summary
+2020-05-07 14:54:11 INFO: Write Train Summary
+2020-05-07 14:55:00 INFO: Write Train Summary
+2020-05-07 14:55:49 INFO: Write Train Summary
+2020-05-07 14:56:38 INFO: Write Train Summary
+2020-05-07 14:57:27 INFO: Write Train Summary
+2020-05-07 14:58:17 INFO: Write Train Summary
+2020-05-07 14:59:06 INFO: Write Train Summary
+2020-05-07 14:59:55 INFO: Write Train Summary
+2020-05-07 15:00:44 INFO: Write Train Summary
+2020-05-07 15:01:33 INFO: Write Train Summary
+2020-05-07 15:02:22 INFO: Write Train Summary
+2020-05-07 15:03:11 INFO: Write Train Summary
+2020-05-07 15:03:44 INFO: Save Model
+2020-05-07 15:03:45 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt2-4166 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 15:03:46 INFO: Start Train Set Accuracy
+2020-05-07 15:03:46 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt2-4166
+2020-05-07 15:06:59 INFO: TRN ckpt-4166 avg_acc: 57.93% avg_loss: 2.4444
+2020-05-07 15:06:59 INFO: Write Train Summary
+2020-05-07 15:06:59 INFO: Start Validation
+2020-05-07 15:06:59 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt2-4166
+2020-05-07 15:07:39 INFO: VAL ckpt-4166 avg_acc: 56.92% avg_loss: 2.6135
+2020-05-07 15:07:39 INFO: Write Val Summary
+2020-05-07 15:07:39 INFO: Reset streaming metrics
+2020-05-07 15:07:56 INFO: Write Train Summary
+2020-05-07 15:08:45 INFO: Write Train Summary
+2020-05-07 15:09:34 INFO: Write Train Summary
+2020-05-07 15:10:23 INFO: Write Train Summary
+2020-05-07 15:11:12 INFO: Write Train Summary
+2020-05-07 15:12:01 INFO: Write Train Summary
+2020-05-07 15:12:50 INFO: Write Train Summary
+2020-05-07 15:13:40 INFO: Write Train Summary
+2020-05-07 15:14:28 INFO: Write Train Summary
+2020-05-07 15:15:18 INFO: Write Train Summary
+2020-05-07 15:16:07 INFO: Write Train Summary
+2020-05-07 15:16:56 INFO: Write Train Summary
+2020-05-07 15:17:45 INFO: Write Train Summary
+2020-05-07 15:18:34 INFO: Write Train Summary
+2020-05-07 15:19:23 INFO: Write Train Summary
+2020-05-07 15:20:12 INFO: Write Train Summary
+2020-05-07 15:21:01 INFO: Write Train Summary
+2020-05-07 15:21:50 INFO: Write Train Summary
+2020-05-07 15:22:39 INFO: Write Train Summary
+2020-05-07 15:23:29 INFO: Write Train Summary
+2020-05-07 15:24:17 INFO: Write Train Summary
+2020-05-07 15:24:41 INFO: Save Model
+2020-05-07 15:24:43 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt3-6249 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 15:24:43 INFO: Start Train Set Accuracy
+2020-05-07 15:24:43 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt3-6249
+2020-05-07 15:27:57 INFO: TRN ckpt-6249 avg_acc: 63.03% avg_loss: 2.4162
+2020-05-07 15:27:57 INFO: Write Train Summary
+2020-05-07 15:27:57 INFO: Start Validation
+2020-05-07 15:27:57 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt3-6249
+2020-05-07 15:28:37 INFO: VAL ckpt-6249 avg_acc: 61.20% avg_loss: 2.7527
+2020-05-07 15:28:37 INFO: Write Val Summary
+2020-05-07 15:28:37 INFO: Reset streaming metrics
+2020-05-07 15:29:02 INFO: Write Train Summary
+2020-05-07 15:29:51 INFO: Write Train Summary
+2020-05-07 15:30:40 INFO: Write Train Summary
+2020-05-07 15:31:29 INFO: Write Train Summary
+2020-05-07 15:32:18 INFO: Write Train Summary
+2020-05-07 15:33:07 INFO: Write Train Summary
+2020-05-07 15:33:56 INFO: Write Train Summary
+2020-05-07 15:34:46 INFO: Write Train Summary
+2020-05-07 15:35:35 INFO: Write Train Summary
+2020-05-07 15:36:24 INFO: Write Train Summary
+2020-05-07 15:37:13 INFO: Write Train Summary
+2020-05-07 15:38:02 INFO: Write Train Summary
+2020-05-07 15:38:51 INFO: Write Train Summary
+2020-05-07 15:39:40 INFO: Write Train Summary
+2020-05-07 15:40:29 INFO: Write Train Summary
+2020-05-07 15:41:18 INFO: Write Train Summary
+2020-05-07 15:42:07 INFO: Write Train Summary
+2020-05-07 15:42:56 INFO: Write Train Summary
+2020-05-07 15:43:45 INFO: Write Train Summary
+2020-05-07 15:44:34 INFO: Write Train Summary
+2020-05-07 15:45:23 INFO: Write Train Summary
+2020-05-07 15:45:39 INFO: Save Model
+2020-05-07 15:45:40 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt4-8332 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 15:45:41 INFO: Start Train Set Accuracy
+2020-05-07 15:45:41 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt4-8332
+2020-05-07 15:48:54 INFO: TRN ckpt-8332 avg_acc: 70.86% avg_loss: 1.7064
+2020-05-07 15:48:54 INFO: Write Train Summary
+2020-05-07 15:48:54 INFO: Start Validation
+2020-05-07 15:48:54 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt4-8332
+2020-05-07 15:49:34 INFO: VAL ckpt-8332 avg_acc: 67.26% avg_loss: 2.2692
+2020-05-07 15:49:34 INFO: Write Val Summary
+2020-05-07 15:49:34 INFO: Reset streaming metrics
+2020-05-07 15:50:07 INFO: Write Train Summary
+2020-05-07 15:50:56 INFO: Write Train Summary
+2020-05-07 15:51:45 INFO: Write Train Summary
+2020-05-07 15:52:35 INFO: Write Train Summary
+2020-05-07 15:53:24 INFO: Write Train Summary
+2020-05-07 15:54:13 INFO: Write Train Summary
+2020-05-07 15:55:02 INFO: Write Train Summary
+2020-05-07 15:55:51 INFO: Write Train Summary
+2020-05-07 15:56:40 INFO: Write Train Summary
+2020-05-07 15:57:29 INFO: Write Train Summary
+2020-05-07 15:58:18 INFO: Write Train Summary
+2020-05-07 15:59:07 INFO: Write Train Summary
+2020-05-07 15:59:56 INFO: Write Train Summary
+2020-05-07 16:00:46 INFO: Write Train Summary
+2020-05-07 16:01:35 INFO: Write Train Summary
+2020-05-07 16:02:24 INFO: Write Train Summary
+2020-05-07 16:03:13 INFO: Write Train Summary
+2020-05-07 16:04:02 INFO: Write Train Summary
+2020-05-07 16:04:51 INFO: Write Train Summary
+2020-05-07 16:05:40 INFO: Write Train Summary
+2020-05-07 16:06:29 INFO: Write Train Summary
+2020-05-07 16:06:37 INFO: Save Model
+2020-05-07 16:06:38 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt5-10415 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 16:06:39 INFO: Start Train Set Accuracy
+2020-05-07 16:06:39 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt5-10415
+2020-05-07 16:09:52 INFO: TRN ckpt-10415 avg_acc: 76.22% avg_loss: 1.4732
+2020-05-07 16:09:52 INFO: Write Train Summary
+2020-05-07 16:09:52 INFO: Start Validation
+2020-05-07 16:09:52 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt5-10415
+2020-05-07 16:10:32 INFO: VAL ckpt-10415 avg_acc: 71.19% avg_loss: 2.2885
+2020-05-07 16:10:32 INFO: Write Val Summary
+2020-05-07 16:10:32 INFO: Reset streaming metrics
+2020-05-07 16:11:14 INFO: Write Train Summary
+2020-05-07 16:12:03 INFO: Write Train Summary
+2020-05-07 16:12:52 INFO: Write Train Summary
+2020-05-07 16:13:41 INFO: Write Train Summary
+2020-05-07 16:14:30 INFO: Write Train Summary
+2020-05-07 16:15:19 INFO: Write Train Summary
+2020-05-07 16:16:08 INFO: Write Train Summary
+2020-05-07 16:16:57 INFO: Write Train Summary
+2020-05-07 16:17:46 INFO: Write Train Summary
+2020-05-07 16:18:35 INFO: Write Train Summary
+2020-05-07 16:19:24 INFO: Write Train Summary
+2020-05-07 16:20:13 INFO: Write Train Summary
+2020-05-07 16:21:02 INFO: Write Train Summary
+2020-05-07 16:21:52 INFO: Write Train Summary
+2020-05-07 16:22:41 INFO: Write Train Summary
+2020-05-07 16:23:30 INFO: Write Train Summary
+2020-05-07 16:24:19 INFO: Write Train Summary
+2020-05-07 16:25:08 INFO: Write Train Summary
+2020-05-07 16:25:57 INFO: Write Train Summary
+2020-05-07 16:26:46 INFO: Write Train Summary
+2020-05-07 16:27:34 INFO: Save Model
+2020-05-07 16:27:36 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt6-12498 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 16:27:36 INFO: Start Train Set Accuracy
+2020-05-07 16:27:36 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt6-12498
+2020-05-07 16:30:49 INFO: TRN ckpt-12498 avg_acc: 80.52% avg_loss: 1.0820
+2020-05-07 16:30:49 INFO: Write Train Summary
+2020-05-07 16:30:49 INFO: Start Validation
+2020-05-07 16:30:49 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt6-12498
+2020-05-07 16:31:29 INFO: VAL ckpt-12498 avg_acc: 73.38% avg_loss: 2.0610
+2020-05-07 16:31:29 INFO: Write Val Summary
+2020-05-07 16:31:29 INFO: Reset streaming metrics
+2020-05-07 16:31:30 INFO: Write Train Summary
+2020-05-07 16:32:19 INFO: Write Train Summary
+2020-05-07 16:33:08 INFO: Write Train Summary
+2020-05-07 16:33:57 INFO: Write Train Summary
+2020-05-07 16:34:47 INFO: Write Train Summary
+2020-05-07 16:35:36 INFO: Write Train Summary
+2020-05-07 16:36:25 INFO: Write Train Summary
+2020-05-07 16:37:14 INFO: Write Train Summary
+2020-05-07 16:38:02 INFO: Write Train Summary
+2020-05-07 16:38:51 INFO: Write Train Summary
+2020-05-07 16:39:41 INFO: Write Train Summary
+2020-05-07 16:40:30 INFO: Write Train Summary
+2020-05-07 16:41:19 INFO: Write Train Summary
+2020-05-07 16:42:08 INFO: Write Train Summary
+2020-05-07 16:42:57 INFO: Write Train Summary
+2020-05-07 16:43:46 INFO: Write Train Summary
+2020-05-07 16:44:35 INFO: Write Train Summary
+2020-05-07 16:45:25 INFO: Write Train Summary
+2020-05-07 16:46:14 INFO: Write Train Summary
+2020-05-07 16:47:03 INFO: Write Train Summary
+2020-05-07 16:47:51 INFO: Write Train Summary
+2020-05-07 16:48:31 INFO: Save Model
+2020-05-07 16:48:33 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt7-14581 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 16:48:33 INFO: Start Train Set Accuracy
+2020-05-07 16:48:33 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt7-14581
+2020-05-07 16:51:46 INFO: TRN ckpt-14581 avg_acc: 83.32% avg_loss: 0.8861
+2020-05-07 16:51:46 INFO: Write Train Summary
+2020-05-07 16:51:46 INFO: Start Validation
+2020-05-07 16:51:46 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt7-14581
+2020-05-07 16:52:27 INFO: VAL ckpt-14581 avg_acc: 74.64% avg_loss: 2.3749
+2020-05-07 16:52:27 INFO: Write Val Summary
+2020-05-07 16:52:27 INFO: Reset streaming metrics
+2020-05-07 16:52:36 INFO: Write Train Summary
+2020-05-07 16:53:25 INFO: Write Train Summary
+2020-05-07 16:54:14 INFO: Write Train Summary
+2020-05-07 16:55:03 INFO: Write Train Summary
+2020-05-07 16:55:52 INFO: Write Train Summary
+2020-05-07 16:56:41 INFO: Write Train Summary
+2020-05-07 16:57:30 INFO: Write Train Summary
+2020-05-07 16:58:19 INFO: Write Train Summary
+2020-05-07 16:59:08 INFO: Write Train Summary
+2020-05-07 16:59:57 INFO: Write Train Summary
+2020-05-07 17:00:46 INFO: Write Train Summary
+2020-05-07 17:01:35 INFO: Write Train Summary
+2020-05-07 17:02:24 INFO: Write Train Summary
+2020-05-07 17:03:13 INFO: Write Train Summary
+2020-05-07 17:04:02 INFO: Write Train Summary
+2020-05-07 17:04:51 INFO: Write Train Summary
+2020-05-07 17:05:40 INFO: Write Train Summary
+2020-05-07 17:06:29 INFO: Write Train Summary
+2020-05-07 17:07:18 INFO: Write Train Summary
+2020-05-07 17:08:07 INFO: Write Train Summary
+2020-05-07 17:08:56 INFO: Write Train Summary
+2020-05-07 17:09:28 INFO: Save Model
+2020-05-07 17:09:29 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt8-16664 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 17:09:29 INFO: Start Train Set Accuracy
+2020-05-07 17:09:30 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt8-16664
+2020-05-07 17:12:43 INFO: TRN ckpt-16664 avg_acc: 87.81% avg_loss: 0.6301
+2020-05-07 17:12:43 INFO: Write Train Summary
+2020-05-07 17:12:43 INFO: Start Validation
+2020-05-07 17:12:43 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt8-16664
+2020-05-07 17:13:23 INFO: VAL ckpt-16664 avg_acc: 76.49% avg_loss: 2.5226
+2020-05-07 17:13:23 INFO: Write Val Summary
+2020-05-07 17:13:23 INFO: Reset streaming metrics
+2020-05-07 17:13:41 INFO: Write Train Summary
+2020-05-07 17:14:30 INFO: Write Train Summary
+2020-05-07 17:15:19 INFO: Write Train Summary
+2020-05-07 17:16:08 INFO: Write Train Summary
+2020-05-07 17:16:57 INFO: Write Train Summary
+2020-05-07 17:17:46 INFO: Write Train Summary
+2020-05-07 17:18:35 INFO: Write Train Summary
+2020-05-07 17:19:25 INFO: Write Train Summary
+2020-05-07 17:20:14 INFO: Write Train Summary
+2020-05-07 17:21:03 INFO: Write Train Summary
+2020-05-07 17:21:52 INFO: Write Train Summary
+2020-05-07 17:22:41 INFO: Write Train Summary
+2020-05-07 17:23:30 INFO: Write Train Summary
+2020-05-07 17:24:19 INFO: Write Train Summary
+2020-05-07 17:25:08 INFO: Write Train Summary
+2020-05-07 17:25:58 INFO: Write Train Summary
+2020-05-07 17:26:47 INFO: Write Train Summary
+2020-05-07 17:27:36 INFO: Write Train Summary
+2020-05-07 17:28:25 INFO: Write Train Summary
+2020-05-07 17:29:14 INFO: Write Train Summary
+2020-05-07 17:30:03 INFO: Write Train Summary
+2020-05-07 17:30:26 INFO: Save Model
+2020-05-07 17:30:28 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt9-18747 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 17:30:28 INFO: Start Train Set Accuracy
+2020-05-07 17:30:28 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt9-18747
+2020-05-07 17:33:41 INFO: TRN ckpt-18747 avg_acc: 89.93% avg_loss: 0.5474
+2020-05-07 17:33:41 INFO: Write Train Summary
+2020-05-07 17:33:41 INFO: Start Validation
+2020-05-07 17:33:41 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt9-18747
+2020-05-07 17:34:21 INFO: VAL ckpt-18747 avg_acc: 77.25% avg_loss: 2.9264
+2020-05-07 17:34:21 INFO: Write Val Summary
+2020-05-07 17:34:21 INFO: Reset streaming metrics
+2020-05-07 17:34:48 INFO: Write Train Summary
+2020-05-07 17:35:37 INFO: Write Train Summary
+2020-05-07 17:36:26 INFO: Write Train Summary
+2020-05-07 17:37:15 INFO: Write Train Summary
+2020-05-07 17:38:04 INFO: Write Train Summary
+2020-05-07 17:38:53 INFO: Write Train Summary
+2020-05-07 17:39:42 INFO: Write Train Summary
+2020-05-07 17:40:31 INFO: Write Train Summary
+2020-05-07 17:41:20 INFO: Write Train Summary
+2020-05-07 17:42:09 INFO: Write Train Summary
+2020-05-07 17:42:58 INFO: Write Train Summary
+2020-05-07 17:43:47 INFO: Write Train Summary
+2020-05-07 17:44:36 INFO: Write Train Summary
+2020-05-07 17:45:25 INFO: Write Train Summary
+2020-05-07 17:46:14 INFO: Write Train Summary
+2020-05-07 17:47:03 INFO: Write Train Summary
+2020-05-07 17:47:52 INFO: Write Train Summary
+2020-05-07 17:48:42 INFO: Write Train Summary
+2020-05-07 17:49:30 INFO: Write Train Summary
+2020-05-07 17:50:20 INFO: Write Train Summary
+2020-05-07 17:51:09 INFO: Write Train Summary
+2020-05-07 17:51:23 INFO: Save Model
+2020-05-07 17:51:25 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt10-20830 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 17:51:25 INFO: Start Train Set Accuracy
+2020-05-07 17:51:25 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt10-20830
+2020-05-07 17:54:39 INFO: TRN ckpt-20830 avg_acc: 92.91% avg_loss: 0.3298
+2020-05-07 17:54:39 INFO: Write Train Summary
+2020-05-07 17:54:39 INFO: Start Validation
+2020-05-07 17:54:39 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt10-20830
+2020-05-07 17:55:19 INFO: VAL ckpt-20830 avg_acc: 77.97% avg_loss: 3.3017
+2020-05-07 17:55:19 INFO: Write Val Summary
+2020-05-07 17:55:19 INFO: Reset streaming metrics
+2020-05-07 17:55:53 INFO: Write Train Summary
+2020-05-07 17:56:42 INFO: Write Train Summary
+2020-05-07 17:57:32 INFO: Write Train Summary
+2020-05-07 17:58:21 INFO: Write Train Summary
+2020-05-07 17:59:10 INFO: Write Train Summary
+2020-05-07 17:59:59 INFO: Write Train Summary
+2020-05-07 18:00:48 INFO: Write Train Summary
+2020-05-07 18:01:37 INFO: Write Train Summary
+2020-05-07 18:02:26 INFO: Write Train Summary
+2020-05-07 18:03:15 INFO: Write Train Summary
+2020-05-07 18:04:04 INFO: Write Train Summary
+2020-05-07 18:04:53 INFO: Write Train Summary
+2020-05-07 18:05:43 INFO: Write Train Summary
+2020-05-07 18:06:32 INFO: Write Train Summary
+2020-05-07 18:07:21 INFO: Write Train Summary
+2020-05-07 18:08:11 INFO: Write Train Summary
+2020-05-07 18:09:00 INFO: Write Train Summary
+2020-05-07 18:09:49 INFO: Write Train Summary
+2020-05-07 18:10:38 INFO: Write Train Summary
+2020-05-07 18:11:27 INFO: Write Train Summary
+2020-05-07 18:12:16 INFO: Write Train Summary
+2020-05-07 18:12:22 INFO: Save Model
+2020-05-07 18:12:24 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt11-22913 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 18:12:24 INFO: Start Train Set Accuracy
+2020-05-07 18:12:24 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt11-22913
+2020-05-07 18:15:38 INFO: TRN ckpt-22913 avg_acc: 95.05% avg_loss: 0.2005
+2020-05-07 18:15:38 INFO: Write Train Summary
+2020-05-07 18:15:38 INFO: Start Validation
+2020-05-07 18:15:38 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt11-22913
+2020-05-07 18:16:18 INFO: VAL ckpt-22913 avg_acc: 77.65% avg_loss: 4.1359
+2020-05-07 18:16:18 INFO: Write Val Summary
+2020-05-07 18:16:18 INFO: Reset streaming metrics
+2020-05-07 18:17:01 INFO: Write Train Summary
+2020-05-07 18:17:50 INFO: Write Train Summary
+2020-05-07 18:18:39 INFO: Write Train Summary
+2020-05-07 18:19:28 INFO: Write Train Summary
+2020-05-07 18:20:17 INFO: Write Train Summary
+2020-05-07 18:21:06 INFO: Write Train Summary
+2020-05-07 18:21:55 INFO: Write Train Summary
+2020-05-07 18:22:44 INFO: Write Train Summary
+2020-05-07 18:23:33 INFO: Write Train Summary
+2020-05-07 18:24:22 INFO: Write Train Summary
+2020-05-07 18:25:11 INFO: Write Train Summary
+2020-05-07 18:26:00 INFO: Write Train Summary
+2020-05-07 18:26:49 INFO: Write Train Summary
+2020-05-07 18:27:38 INFO: Write Train Summary
+2020-05-07 18:28:28 INFO: Write Train Summary
+2020-05-07 18:29:16 INFO: Write Train Summary
+2020-05-07 18:30:05 INFO: Write Train Summary
+2020-05-07 18:30:55 INFO: Write Train Summary
+2020-05-07 18:31:44 INFO: Write Train Summary
+2020-05-07 18:32:33 INFO: Write Train Summary
+2020-05-07 18:33:20 INFO: Save Model
+2020-05-07 18:33:22 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt12-24996 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 18:33:22 INFO: Start Train Set Accuracy
+2020-05-07 18:33:22 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt12-24996
+2020-05-07 18:36:36 INFO: TRN ckpt-24996 avg_acc: 95.74% avg_loss: 0.1837
+2020-05-07 18:36:36 INFO: Write Train Summary
+2020-05-07 18:36:36 INFO: Start Validation
+2020-05-07 18:36:36 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt12-24996
+2020-05-07 18:37:16 INFO: VAL ckpt-24996 avg_acc: 77.69% avg_loss: 5.0405
+2020-05-07 18:37:16 INFO: Write Val Summary
+2020-05-07 18:37:16 INFO: Reset streaming metrics
+2020-05-07 18:37:18 INFO: Write Train Summary
+2020-05-07 18:38:07 INFO: Write Train Summary
+2020-05-07 18:38:56 INFO: Write Train Summary
+2020-05-07 18:39:45 INFO: Write Train Summary
+2020-05-07 18:40:34 INFO: Write Train Summary
+2020-05-07 18:41:23 INFO: Write Train Summary
+2020-05-07 18:42:13 INFO: Write Train Summary
+2020-05-07 18:43:02 INFO: Write Train Summary
+2020-05-07 18:43:51 INFO: Write Train Summary
+2020-05-07 18:44:40 INFO: Write Train Summary
+2020-05-07 18:45:30 INFO: Write Train Summary
+2020-05-07 18:46:19 INFO: Write Train Summary
+2020-05-07 18:47:08 INFO: Write Train Summary
+2020-05-07 18:47:57 INFO: Write Train Summary
+2020-05-07 18:48:46 INFO: Write Train Summary
+2020-05-07 18:49:35 INFO: Write Train Summary
+2020-05-07 18:50:24 INFO: Write Train Summary
+2020-05-07 18:51:14 INFO: Write Train Summary
+2020-05-07 18:52:03 INFO: Write Train Summary
+2020-05-07 18:52:52 INFO: Write Train Summary
+2020-05-07 18:53:41 INFO: Write Train Summary
+2020-05-07 18:54:20 INFO: Save Model
+2020-05-07 18:54:22 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt13-27079 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 18:54:22 INFO: Start Train Set Accuracy
+2020-05-07 18:54:22 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt13-27079
+2020-05-07 18:57:35 INFO: TRN ckpt-27079 avg_acc: 96.88% avg_loss: 0.1251
+2020-05-07 18:57:35 INFO: Write Train Summary
+2020-05-07 18:57:35 INFO: Start Validation
+2020-05-07 18:57:35 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt13-27079
+2020-05-07 18:58:16 INFO: VAL ckpt-27079 avg_acc: 78.04% avg_loss: 5.8482
+2020-05-07 18:58:16 INFO: Write Val Summary
+2020-05-07 18:58:16 INFO: Reset streaming metrics
+2020-05-07 18:58:26 INFO: Write Train Summary
+2020-05-07 18:59:15 INFO: Write Train Summary
+2020-05-07 19:00:04 INFO: Write Train Summary
+2020-05-07 19:00:53 INFO: Write Train Summary
+2020-05-07 19:01:42 INFO: Write Train Summary
+2020-05-07 19:02:31 INFO: Write Train Summary
+2020-05-07 19:03:20 INFO: Write Train Summary
+2020-05-07 19:04:09 INFO: Write Train Summary
+2020-05-07 19:04:58 INFO: Write Train Summary
+2020-05-07 19:05:47 INFO: Write Train Summary
+2020-05-07 19:06:37 INFO: Write Train Summary
+2020-05-07 19:07:25 INFO: Write Train Summary
+2020-05-07 19:08:14 INFO: Write Train Summary
+2020-05-07 19:09:03 INFO: Write Train Summary
+2020-05-07 19:09:52 INFO: Write Train Summary
+2020-05-07 19:10:41 INFO: Write Train Summary
+2020-05-07 19:11:30 INFO: Write Train Summary
+2020-05-07 19:12:19 INFO: Write Train Summary
+2020-05-07 19:13:08 INFO: Write Train Summary
+2020-05-07 19:13:57 INFO: Write Train Summary
+2020-05-07 19:14:46 INFO: Write Train Summary
+2020-05-07 19:15:16 INFO: Save Model
+2020-05-07 19:15:18 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt14-29162 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 19:15:18 INFO: Start Train Set Accuracy
+2020-05-07 19:15:18 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt14-29162
+2020-05-07 19:18:32 INFO: TRN ckpt-29162 avg_acc: 98.34% avg_loss: 0.0593
+2020-05-07 19:18:32 INFO: Write Train Summary
+2020-05-07 19:18:32 INFO: Start Validation
+2020-05-07 19:18:32 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt14-29162
+2020-05-07 19:19:12 INFO: VAL ckpt-29162 avg_acc: 78.49% avg_loss: 6.0843
+2020-05-07 19:19:12 INFO: Write Val Summary
+2020-05-07 19:19:12 INFO: Reset streaming metrics
+2020-05-07 19:19:31 INFO: Write Train Summary
+2020-05-07 19:20:20 INFO: Write Train Summary
+2020-05-07 19:21:09 INFO: Write Train Summary
+2020-05-07 19:21:58 INFO: Write Train Summary
+2020-05-07 19:22:47 INFO: Write Train Summary
+2020-05-07 19:23:36 INFO: Write Train Summary
+2020-05-07 19:24:25 INFO: Write Train Summary
+2020-05-07 19:25:14 INFO: Write Train Summary
+2020-05-07 19:26:03 INFO: Write Train Summary
+2020-05-07 19:26:52 INFO: Write Train Summary
+2020-05-07 19:27:41 INFO: Write Train Summary
+2020-05-07 19:28:30 INFO: Write Train Summary
+2020-05-07 19:29:19 INFO: Write Train Summary
+2020-05-07 19:30:09 INFO: Write Train Summary
+2020-05-07 19:30:58 INFO: Write Train Summary
+2020-05-07 19:31:47 INFO: Write Train Summary
+2020-05-07 19:32:36 INFO: Write Train Summary
+2020-05-07 19:33:25 INFO: Write Train Summary
+2020-05-07 19:34:14 INFO: Write Train Summary
+2020-05-07 19:35:03 INFO: Write Train Summary
+2020-05-07 19:35:52 INFO: Write Train Summary
+2020-05-07 19:36:14 INFO: Save Model
+2020-05-07 19:36:16 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt15-31245 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 19:36:16 INFO: Start Train Set Accuracy
+2020-05-07 19:36:16 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt15-31245
+2020-05-07 19:39:30 INFO: TRN ckpt-31245 avg_acc: 97.86% avg_loss: 0.0940
+2020-05-07 19:39:30 INFO: Write Train Summary
+2020-05-07 19:39:30 INFO: Start Validation
+2020-05-07 19:39:30 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt15-31245
+2020-05-07 19:40:10 INFO: VAL ckpt-31245 avg_acc: 77.78% avg_loss: 7.0628
+2020-05-07 19:40:10 INFO: Write Val Summary
+2020-05-07 19:40:10 INFO: Reset streaming metrics
+2020-05-07 19:40:37 INFO: Write Train Summary
+2020-05-07 19:41:26 INFO: Write Train Summary
+2020-05-07 19:42:15 INFO: Write Train Summary
+2020-05-07 19:43:05 INFO: Write Train Summary
+2020-05-07 19:43:54 INFO: Write Train Summary
+2020-05-07 19:44:43 INFO: Write Train Summary
+2020-05-07 19:45:32 INFO: Write Train Summary
+2020-05-07 19:46:21 INFO: Write Train Summary
+2020-05-07 19:47:10 INFO: Write Train Summary
+2020-05-07 19:47:59 INFO: Write Train Summary
+2020-05-07 19:48:49 INFO: Write Train Summary
+2020-05-07 19:49:38 INFO: Write Train Summary
+2020-05-07 19:50:27 INFO: Write Train Summary
+2020-05-07 19:51:16 INFO: Write Train Summary
+2020-05-07 19:52:05 INFO: Write Train Summary
+2020-05-07 19:52:54 INFO: Write Train Summary
+2020-05-07 19:53:43 INFO: Write Train Summary
+2020-05-07 19:54:32 INFO: Write Train Summary
+2020-05-07 19:55:22 INFO: Write Train Summary
+2020-05-07 19:56:11 INFO: Write Train Summary
+2020-05-07 19:57:00 INFO: Write Train Summary
+2020-05-07 19:57:13 INFO: Save Model
+2020-05-07 19:57:15 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt16-33328 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 19:57:16 INFO: Start Train Set Accuracy
+2020-05-07 19:57:16 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt16-33328
+2020-05-07 20:00:29 INFO: TRN ckpt-33328 avg_acc: 97.87% avg_loss: 0.0998
+2020-05-07 20:00:29 INFO: Write Train Summary
+2020-05-07 20:00:29 INFO: Start Validation
+2020-05-07 20:00:29 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt16-33328
+2020-05-07 20:01:09 INFO: VAL ckpt-33328 avg_acc: 77.56% avg_loss: 8.2922
+2020-05-07 20:01:09 INFO: Write Val Summary
+2020-05-07 20:01:09 INFO: Reset streaming metrics
+2020-05-07 20:01:44 INFO: Write Train Summary
+2020-05-07 20:02:34 INFO: Write Train Summary
+2020-05-07 20:03:23 INFO: Write Train Summary
+2020-05-07 20:04:12 INFO: Write Train Summary
+2020-05-07 20:05:01 INFO: Write Train Summary
+2020-05-07 20:05:50 INFO: Write Train Summary
+2020-05-07 20:06:39 INFO: Write Train Summary
+2020-05-07 20:07:28 INFO: Write Train Summary
+2020-05-07 20:08:17 INFO: Write Train Summary
+2020-05-07 20:09:06 INFO: Write Train Summary
+2020-05-07 20:09:55 INFO: Write Train Summary
+2020-05-07 20:10:45 INFO: Write Train Summary
+2020-05-07 20:11:34 INFO: Write Train Summary
+2020-05-07 20:12:23 INFO: Write Train Summary
+2020-05-07 20:13:12 INFO: Write Train Summary
+2020-05-07 20:14:01 INFO: Write Train Summary
+2020-05-07 20:14:50 INFO: Write Train Summary
+2020-05-07 20:15:40 INFO: Write Train Summary
+2020-05-07 20:16:29 INFO: Write Train Summary
+2020-05-07 20:17:18 INFO: Write Train Summary
+2020-05-07 20:18:07 INFO: Write Train Summary
+2020-05-07 20:18:12 INFO: Save Model
+2020-05-07 20:18:14 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt17-35411 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 20:18:15 INFO: Start Train Set Accuracy
+2020-05-07 20:18:15 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt17-35411
+2020-05-07 20:21:28 INFO: TRN ckpt-35411 avg_acc: 98.74% avg_loss: 0.0418
+2020-05-07 20:21:28 INFO: Write Train Summary
+2020-05-07 20:21:28 INFO: Start Validation
+2020-05-07 20:21:28 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt17-35411
+2020-05-07 20:22:08 INFO: VAL ckpt-35411 avg_acc: 78.37% avg_loss: 7.6803
+2020-05-07 20:22:08 INFO: Write Val Summary
+2020-05-07 20:22:08 INFO: Reset streaming metrics
+2020-05-07 20:22:52 INFO: Write Train Summary
+2020-05-07 20:23:41 INFO: Write Train Summary
+2020-05-07 20:24:30 INFO: Write Train Summary
+2020-05-07 20:25:19 INFO: Write Train Summary
+2020-05-07 20:26:08 INFO: Write Train Summary
+2020-05-07 20:26:58 INFO: Write Train Summary
+2020-05-07 20:27:47 INFO: Write Train Summary
+2020-05-07 20:28:36 INFO: Write Train Summary
+2020-05-07 20:29:25 INFO: Write Train Summary
+2020-05-07 20:30:15 INFO: Write Train Summary
+2020-05-07 20:31:04 INFO: Write Train Summary
+2020-05-07 20:31:53 INFO: Write Train Summary
+2020-05-07 20:32:43 INFO: Write Train Summary
+2020-05-07 20:33:32 INFO: Write Train Summary
+2020-05-07 20:34:21 INFO: Write Train Summary
+2020-05-07 20:35:10 INFO: Write Train Summary
+2020-05-07 20:35:59 INFO: Write Train Summary
+2020-05-07 20:36:49 INFO: Write Train Summary
+2020-05-07 20:37:38 INFO: Write Train Summary
+2020-05-07 20:38:27 INFO: Write Train Summary
+2020-05-07 20:39:13 INFO: Save Model
+2020-05-07 20:39:15 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt18-37494 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 20:39:15 INFO: Start Train Set Accuracy
+2020-05-07 20:39:15 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt18-37494
+2020-05-07 20:42:28 INFO: TRN ckpt-37494 avg_acc: 98.66% avg_loss: 0.0511
+2020-05-07 20:42:28 INFO: Write Train Summary
+2020-05-07 20:42:28 INFO: Start Validation
+2020-05-07 20:42:28 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt18-37494
+2020-05-07 20:43:09 INFO: VAL ckpt-37494 avg_acc: 78.33% avg_loss: 8.5621
+2020-05-07 20:43:09 INFO: Write Val Summary
+2020-05-07 20:43:09 INFO: Reset streaming metrics
+2020-05-07 20:43:12 INFO: Write Train Summary
+2020-05-07 20:44:01 INFO: Write Train Summary
+2020-05-07 20:44:50 INFO: Write Train Summary
+2020-05-07 20:45:39 INFO: Write Train Summary
+2020-05-07 20:46:29 INFO: Write Train Summary
+2020-05-07 20:47:18 INFO: Write Train Summary
+2020-05-07 20:48:07 INFO: Write Train Summary
+2020-05-07 20:48:57 INFO: Write Train Summary
+2020-05-07 20:49:46 INFO: Write Train Summary
+2020-05-07 20:50:35 INFO: Write Train Summary
+2020-05-07 20:51:24 INFO: Write Train Summary
+2020-05-07 20:52:13 INFO: Write Train Summary
+2020-05-07 20:53:02 INFO: Write Train Summary
+2020-05-07 20:53:52 INFO: Write Train Summary
+2020-05-07 20:54:41 INFO: Write Train Summary
+2020-05-07 20:55:30 INFO: Write Train Summary
+2020-05-07 20:56:19 INFO: Write Train Summary
+2020-05-07 20:57:08 INFO: Write Train Summary
+2020-05-07 20:57:58 INFO: Write Train Summary
+2020-05-07 20:58:47 INFO: Write Train Summary
+2020-05-07 20:59:36 INFO: Write Train Summary
+2020-05-07 21:00:14 INFO: Save Model
+2020-05-07 21:00:16 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt19-39577 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 21:00:17 INFO: Start Train Set Accuracy
+2020-05-07 21:00:17 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt19-39577
+2020-05-07 21:03:30 INFO: TRN ckpt-39577 avg_acc: 98.56% avg_loss: 0.0582
+2020-05-07 21:03:30 INFO: Write Train Summary
+2020-05-07 21:03:30 INFO: Start Validation
+2020-05-07 21:03:30 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt19-39577
+2020-05-07 21:04:10 INFO: VAL ckpt-39577 avg_acc: 77.84% avg_loss: 8.1571
+2020-05-07 21:04:10 INFO: Write Val Summary
+2020-05-07 21:04:10 INFO: Reset streaming metrics
+2020-05-07 21:04:22 INFO: Write Train Summary
+2020-05-07 21:05:11 INFO: Write Train Summary
+2020-05-07 21:06:00 INFO: Write Train Summary
+2020-05-07 21:06:50 INFO: Write Train Summary
+2020-05-07 21:07:39 INFO: Write Train Summary
+2020-05-07 21:08:28 INFO: Write Train Summary
+2020-05-07 21:09:17 INFO: Write Train Summary
+2020-05-07 21:10:07 INFO: Write Train Summary
+2020-05-07 21:10:56 INFO: Write Train Summary
+2020-05-07 21:11:45 INFO: Write Train Summary
+2020-05-07 21:12:34 INFO: Write Train Summary
+2020-05-07 21:13:23 INFO: Write Train Summary
+2020-05-07 21:14:13 INFO: Write Train Summary
+2020-05-07 21:15:02 INFO: Write Train Summary
+2020-05-07 21:15:51 INFO: Write Train Summary
+2020-05-07 21:16:40 INFO: Write Train Summary
+2020-05-07 21:17:29 INFO: Write Train Summary
+2020-05-07 21:18:18 INFO: Write Train Summary
+2020-05-07 21:19:07 INFO: Write Train Summary
+2020-05-07 21:19:56 INFO: Write Train Summary
+2020-05-07 21:20:46 INFO: Write Train Summary
+2020-05-07 21:21:15 INFO: Save Model
+2020-05-07 21:21:17 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt20-41660 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 21:21:17 INFO: Start Train Set Accuracy
+2020-05-07 21:21:17 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt20-41660
+2020-05-07 21:24:31 INFO: TRN ckpt-41660 avg_acc: 99.25% avg_loss: 0.0272
+2020-05-07 21:24:31 INFO: Write Train Summary
+2020-05-07 21:24:31 INFO: Start Validation
+2020-05-07 21:24:31 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt20-41660
+2020-05-07 21:25:11 INFO: VAL ckpt-41660 avg_acc: 78.99% avg_loss: 8.0565
+2020-05-07 21:25:11 INFO: Write Val Summary
+2020-05-07 21:25:11 INFO: Reset streaming metrics
+2020-05-07 21:25:31 INFO: Write Train Summary
+2020-05-07 21:26:20 INFO: Write Train Summary
+2020-05-07 21:27:09 INFO: Write Train Summary
+2020-05-07 21:27:59 INFO: Write Train Summary
+2020-05-07 21:28:48 INFO: Write Train Summary
+2020-05-07 21:29:37 INFO: Write Train Summary
+2020-05-07 21:30:26 INFO: Write Train Summary
+2020-05-07 21:31:15 INFO: Write Train Summary
+2020-05-07 21:32:05 INFO: Write Train Summary
+2020-05-07 21:32:54 INFO: Write Train Summary
+2020-05-07 21:33:43 INFO: Write Train Summary
+2020-05-07 21:34:32 INFO: Write Train Summary
+2020-05-07 21:35:21 INFO: Write Train Summary
+2020-05-07 21:36:10 INFO: Write Train Summary
+2020-05-07 21:37:00 INFO: Write Train Summary
+2020-05-07 21:37:49 INFO: Write Train Summary
+2020-05-07 21:38:38 INFO: Write Train Summary
+2020-05-07 21:39:27 INFO: Write Train Summary
+2020-05-07 21:40:16 INFO: Write Train Summary
+2020-05-07 21:41:05 INFO: Write Train Summary
+2020-05-07 21:41:54 INFO: Write Train Summary
+2020-05-07 21:42:15 INFO: Save Model
+2020-05-07 21:42:17 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt21-43743 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 21:42:17 INFO: Start Train Set Accuracy
+2020-05-07 21:42:17 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt21-43743
+2020-05-07 21:45:30 INFO: TRN ckpt-43743 avg_acc: 99.22% avg_loss: 0.0302
+2020-05-07 21:45:30 INFO: Write Train Summary
+2020-05-07 21:45:30 INFO: Start Validation
+2020-05-07 21:45:30 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt21-43743
+2020-05-07 21:46:10 INFO: VAL ckpt-43743 avg_acc: 78.93% avg_loss: 8.2992
+2020-05-07 21:46:10 INFO: Write Val Summary
+2020-05-07 21:46:10 INFO: Reset streaming metrics
+2020-05-07 21:46:38 INFO: Write Train Summary
+2020-05-07 21:47:27 INFO: Write Train Summary
+2020-05-07 21:48:17 INFO: Write Train Summary
+2020-05-07 21:49:06 INFO: Write Train Summary
+2020-05-07 21:49:55 INFO: Write Train Summary
+2020-05-07 21:50:44 INFO: Write Train Summary
+2020-05-07 21:51:33 INFO: Write Train Summary
+2020-05-07 21:52:22 INFO: Write Train Summary
+2020-05-07 21:53:11 INFO: Write Train Summary
+2020-05-07 21:54:00 INFO: Write Train Summary
+2020-05-07 21:54:50 INFO: Write Train Summary
+2020-05-07 21:55:39 INFO: Write Train Summary
+2020-05-07 21:56:28 INFO: Write Train Summary
+2020-05-07 21:57:17 INFO: Write Train Summary
+2020-05-07 21:58:06 INFO: Write Train Summary
+2020-05-07 21:58:55 INFO: Write Train Summary
+2020-05-07 21:59:44 INFO: Write Train Summary
+2020-05-07 22:00:33 INFO: Write Train Summary
+2020-05-07 22:01:23 INFO: Write Train Summary
+2020-05-07 22:02:12 INFO: Write Train Summary
+2020-05-07 22:03:01 INFO: Write Train Summary
+2020-05-07 22:03:13 INFO: Save Model
+2020-05-07 22:03:15 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt22-45826 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 22:03:15 INFO: Start Train Set Accuracy
+2020-05-07 22:03:15 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt22-45826
+2020-05-07 22:06:29 INFO: TRN ckpt-45826 avg_acc: 99.32% avg_loss: 0.0266
+2020-05-07 22:06:29 INFO: Write Train Summary
+2020-05-07 22:06:29 INFO: Start Validation
+2020-05-07 22:06:29 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt22-45826
+2020-05-07 22:07:09 INFO: VAL ckpt-45826 avg_acc: 79.04% avg_loss: 8.4501
+2020-05-07 22:07:09 INFO: Write Val Summary
+2020-05-07 22:07:09 INFO: Reset streaming metrics
+2020-05-07 22:07:45 INFO: Write Train Summary
+2020-05-07 22:08:34 INFO: Write Train Summary
+2020-05-07 22:09:24 INFO: Write Train Summary
+2020-05-07 22:10:13 INFO: Write Train Summary
+2020-05-07 22:11:02 INFO: Write Train Summary
+2020-05-07 22:11:51 INFO: Write Train Summary
+2020-05-07 22:12:40 INFO: Write Train Summary
+2020-05-07 22:13:29 INFO: Write Train Summary
+2020-05-07 22:14:18 INFO: Write Train Summary
+2020-05-07 22:15:08 INFO: Write Train Summary
+2020-05-07 22:15:57 INFO: Write Train Summary
+2020-05-07 22:16:46 INFO: Write Train Summary
+2020-05-07 22:17:35 INFO: Write Train Summary
+2020-05-07 22:18:24 INFO: Write Train Summary
+2020-05-07 22:19:14 INFO: Write Train Summary
+2020-05-07 22:20:03 INFO: Write Train Summary
+2020-05-07 22:20:52 INFO: Write Train Summary
+2020-05-07 22:21:41 INFO: Write Train Summary
+2020-05-07 22:22:30 INFO: Write Train Summary
+2020-05-07 22:23:19 INFO: Write Train Summary
+2020-05-07 22:24:08 INFO: Write Train Summary
+2020-05-07 22:24:12 INFO: Save Model
+2020-05-07 22:24:14 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt23-47909 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 22:24:14 INFO: Start Train Set Accuracy
+2020-05-07 22:24:14 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt23-47909
+2020-05-07 22:27:28 INFO: TRN ckpt-47909 avg_acc: 99.27% avg_loss: 0.0256
+2020-05-07 22:27:28 INFO: Write Train Summary
+2020-05-07 22:27:28 INFO: Start Validation
+2020-05-07 22:27:28 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt23-47909
+2020-05-07 22:28:08 INFO: VAL ckpt-47909 avg_acc: 78.86% avg_loss: 9.3042
+2020-05-07 22:28:08 INFO: Write Val Summary
+2020-05-07 22:28:08 INFO: Reset streaming metrics
+2020-05-07 22:28:53 INFO: Write Train Summary
+2020-05-07 22:29:42 INFO: Write Train Summary
+2020-05-07 22:30:31 INFO: Write Train Summary
+2020-05-07 22:31:20 INFO: Write Train Summary
+2020-05-07 22:32:09 INFO: Write Train Summary
+2020-05-07 22:32:58 INFO: Write Train Summary
+2020-05-07 22:33:47 INFO: Write Train Summary
+2020-05-07 22:34:36 INFO: Write Train Summary
+2020-05-07 22:35:25 INFO: Write Train Summary
+2020-05-07 22:36:14 INFO: Write Train Summary
+2020-05-07 22:37:04 INFO: Write Train Summary
+2020-05-07 22:37:53 INFO: Write Train Summary
+2020-05-07 22:38:42 INFO: Write Train Summary
+2020-05-07 22:39:31 INFO: Write Train Summary
+2020-05-07 22:40:20 INFO: Write Train Summary
+2020-05-07 22:41:09 INFO: Write Train Summary
+2020-05-07 22:41:58 INFO: Write Train Summary
+2020-05-07 22:42:47 INFO: Write Train Summary
+2020-05-07 22:43:36 INFO: Write Train Summary
+2020-05-07 22:44:26 INFO: Write Train Summary
+2020-05-07 22:45:10 INFO: Save Model
+2020-05-07 22:45:12 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt24-49992 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 22:45:12 INFO: Start Train Set Accuracy
+2020-05-07 22:45:12 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt24-49992
+2020-05-07 22:48:26 INFO: TRN ckpt-49992 avg_acc: 99.18% avg_loss: 0.0313
+2020-05-07 22:48:26 INFO: Write Train Summary
+2020-05-07 22:48:26 INFO: Start Validation
+2020-05-07 22:48:26 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt24-49992
+2020-05-07 22:49:06 INFO: VAL ckpt-49992 avg_acc: 78.29% avg_loss: 9.2998
+2020-05-07 22:49:06 INFO: Write Val Summary
+2020-05-07 22:49:06 INFO: Reset streaming metrics
+2020-05-07 22:49:10 INFO: Write Train Summary
+2020-05-07 22:49:59 INFO: Write Train Summary
+2020-05-07 22:50:48 INFO: Write Train Summary
+2020-05-07 22:51:37 INFO: Write Train Summary
+2020-05-07 22:52:26 INFO: Write Train Summary
+2020-05-07 22:53:15 INFO: Write Train Summary
+2020-05-07 22:54:05 INFO: Write Train Summary
+2020-05-07 22:54:54 INFO: Write Train Summary
+2020-05-07 22:55:43 INFO: Write Train Summary
+2020-05-07 22:56:32 INFO: Write Train Summary
+2020-05-07 22:57:22 INFO: Write Train Summary
+2020-05-07 22:58:11 INFO: Write Train Summary
+2020-05-07 22:59:00 INFO: Write Train Summary
+2020-05-07 22:59:49 INFO: Write Train Summary
+2020-05-07 23:00:37 INFO: Write Train Summary
+2020-05-07 23:01:26 INFO: Write Train Summary
+2020-05-07 23:02:15 INFO: Write Train Summary
+2020-05-07 23:03:04 INFO: Write Train Summary
+2020-05-07 23:03:54 INFO: Write Train Summary
+2020-05-07 23:04:43 INFO: Write Train Summary
+2020-05-07 23:05:32 INFO: Write Train Summary
+2020-05-07 23:06:08 INFO: Save Model
+2020-05-07 23:06:10 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt25-52075 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 23:06:10 INFO: Start Train Set Accuracy
+2020-05-07 23:06:10 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt25-52075
+2020-05-07 23:09:24 INFO: TRN ckpt-52075 avg_acc: 99.59% avg_loss: 0.0143
+2020-05-07 23:09:24 INFO: Write Train Summary
+2020-05-07 23:09:24 INFO: Start Validation
+2020-05-07 23:09:24 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt25-52075
+2020-05-07 23:10:04 INFO: VAL ckpt-52075 avg_acc: 79.32% avg_loss: 8.9431
+2020-05-07 23:10:04 INFO: Write Val Summary
+2020-05-07 23:10:04 INFO: Reset streaming metrics
+2020-05-07 23:10:16 INFO: Write Train Summary
+2020-05-07 23:11:06 INFO: Write Train Summary
+2020-05-07 23:11:55 INFO: Write Train Summary
+2020-05-07 23:12:44 INFO: Write Train Summary
+2020-05-07 23:13:33 INFO: Write Train Summary
+2020-05-07 23:14:22 INFO: Write Train Summary
+2020-05-07 23:15:11 INFO: Write Train Summary
+2020-05-07 23:16:00 INFO: Write Train Summary
+2020-05-07 23:16:49 INFO: Write Train Summary
+2020-05-07 23:17:38 INFO: Write Train Summary
+2020-05-07 23:18:27 INFO: Write Train Summary
+2020-05-07 23:19:16 INFO: Write Train Summary
+2020-05-07 23:20:05 INFO: Write Train Summary
+2020-05-07 23:20:54 INFO: Write Train Summary
+2020-05-07 23:21:43 INFO: Write Train Summary
+2020-05-07 23:22:32 INFO: Write Train Summary
+2020-05-07 23:23:21 INFO: Write Train Summary
+2020-05-07 23:24:11 INFO: Write Train Summary
+2020-05-07 23:25:00 INFO: Write Train Summary
+2020-05-07 23:25:49 INFO: Write Train Summary
+2020-05-07 23:26:38 INFO: Write Train Summary
+2020-05-07 23:27:06 INFO: Save Model
+2020-05-07 23:27:08 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt26-54158 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 23:27:08 INFO: Start Train Set Accuracy
+2020-05-07 23:27:08 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt26-54158
+2020-05-07 23:30:21 INFO: TRN ckpt-54158 avg_acc: 99.55% avg_loss: 0.0151
+2020-05-07 23:30:21 INFO: Write Train Summary
+2020-05-07 23:30:21 INFO: Start Validation
+2020-05-07 23:30:21 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt26-54158
+2020-05-07 23:31:02 INFO: VAL ckpt-54158 avg_acc: 79.81% avg_loss: 8.9800
+2020-05-07 23:31:02 INFO: Write Val Summary
+2020-05-07 23:31:02 INFO: Reset streaming metrics
+2020-05-07 23:31:23 INFO: Write Train Summary
+2020-05-07 23:32:12 INFO: Write Train Summary
+2020-05-07 23:33:01 INFO: Write Train Summary
+2020-05-07 23:33:50 INFO: Write Train Summary
+2020-05-07 23:34:39 INFO: Write Train Summary
+2020-05-07 23:35:28 INFO: Write Train Summary
+2020-05-07 23:36:17 INFO: Write Train Summary
+2020-05-07 23:37:06 INFO: Write Train Summary
+2020-05-07 23:37:55 INFO: Write Train Summary
+2020-05-07 23:38:44 INFO: Write Train Summary
+2020-05-07 23:39:33 INFO: Write Train Summary
+2020-05-07 23:40:22 INFO: Write Train Summary
+2020-05-07 23:41:11 INFO: Write Train Summary
+2020-05-07 23:42:00 INFO: Write Train Summary
+2020-05-07 23:42:50 INFO: Write Train Summary
+2020-05-07 23:43:39 INFO: Write Train Summary
+2020-05-07 23:44:28 INFO: Write Train Summary
+2020-05-07 23:45:17 INFO: Write Train Summary
+2020-05-07 23:46:06 INFO: Write Train Summary
+2020-05-07 23:46:56 INFO: Write Train Summary
+2020-05-07 23:47:45 INFO: Write Train Summary
+2020-05-07 23:48:05 INFO: Save Model
+2020-05-07 23:48:06 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt27-56241 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-07 23:48:07 INFO: Start Train Set Accuracy
+2020-05-07 23:48:07 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt27-56241
+2020-05-07 23:51:20 INFO: TRN ckpt-56241 avg_acc: 99.63% avg_loss: 0.0121
+2020-05-07 23:51:20 INFO: Write Train Summary
+2020-05-07 23:51:20 INFO: Start Validation
+2020-05-07 23:51:20 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt27-56241
+2020-05-07 23:52:00 INFO: VAL ckpt-56241 avg_acc: 79.71% avg_loss: 8.7289
+2020-05-07 23:52:00 INFO: Write Val Summary
+2020-05-07 23:52:00 INFO: Reset streaming metrics
+2020-05-07 23:52:29 INFO: Write Train Summary
+2020-05-07 23:53:18 INFO: Write Train Summary
+2020-05-07 23:54:08 INFO: Write Train Summary
+2020-05-07 23:54:57 INFO: Write Train Summary
+2020-05-07 23:55:46 INFO: Write Train Summary
+2020-05-07 23:56:35 INFO: Write Train Summary
+2020-05-07 23:57:24 INFO: Write Train Summary
+2020-05-07 23:58:13 INFO: Write Train Summary
+2020-05-07 23:59:02 INFO: Write Train Summary
+2020-05-07 23:59:51 INFO: Write Train Summary
+2020-05-08 00:00:40 INFO: Write Train Summary
+2020-05-08 00:01:29 INFO: Write Train Summary
+2020-05-08 00:02:19 INFO: Write Train Summary
+2020-05-08 00:03:08 INFO: Write Train Summary
+2020-05-08 00:03:57 INFO: Write Train Summary
+2020-05-08 00:04:46 INFO: Write Train Summary
+2020-05-08 00:05:35 INFO: Write Train Summary
+2020-05-08 00:06:24 INFO: Write Train Summary
+2020-05-08 00:07:13 INFO: Write Train Summary
+2020-05-08 00:08:03 INFO: Write Train Summary
+2020-05-08 00:08:52 INFO: Write Train Summary
+2020-05-08 00:09:03 INFO: Save Model
+2020-05-08 00:09:05 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt28-58324 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 00:09:05 INFO: Start Train Set Accuracy
+2020-05-08 00:09:05 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt28-58324
+2020-05-08 00:12:19 INFO: TRN ckpt-58324 avg_acc: 99.47% avg_loss: 0.0166
+2020-05-08 00:12:19 INFO: Write Train Summary
+2020-05-08 00:12:19 INFO: Start Validation
+2020-05-08 00:12:19 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt28-58324
+2020-05-08 00:12:59 INFO: VAL ckpt-58324 avg_acc: 79.48% avg_loss: 8.0820
+2020-05-08 00:12:59 INFO: Write Val Summary
+2020-05-08 00:12:59 INFO: Reset streaming metrics
+2020-05-08 00:13:37 INFO: Write Train Summary
+2020-05-08 00:14:26 INFO: Write Train Summary
+2020-05-08 00:15:15 INFO: Write Train Summary
+2020-05-08 00:16:04 INFO: Write Train Summary
+2020-05-08 00:16:53 INFO: Write Train Summary
+2020-05-08 00:17:42 INFO: Write Train Summary
+2020-05-08 00:18:31 INFO: Write Train Summary
+2020-05-08 00:19:20 INFO: Write Train Summary
+2020-05-08 00:20:09 INFO: Write Train Summary
+2020-05-08 00:20:58 INFO: Write Train Summary
+2020-05-08 00:21:47 INFO: Write Train Summary
+2020-05-08 00:22:36 INFO: Write Train Summary
+2020-05-08 00:23:25 INFO: Write Train Summary
+2020-05-08 00:24:14 INFO: Write Train Summary
+2020-05-08 00:25:03 INFO: Write Train Summary
+2020-05-08 00:25:52 INFO: Write Train Summary
+2020-05-08 00:26:41 INFO: Write Train Summary
+2020-05-08 00:27:30 INFO: Write Train Summary
+2020-05-08 00:28:19 INFO: Write Train Summary
+2020-05-08 00:29:09 INFO: Write Train Summary
+2020-05-08 00:29:57 INFO: Write Train Summary
+2020-05-08 00:30:01 INFO: Save Model
+2020-05-08 00:30:02 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt29-60407 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 00:30:03 INFO: Start Train Set Accuracy
+2020-05-08 00:30:03 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt29-60407
+2020-05-08 00:33:16 INFO: TRN ckpt-60407 avg_acc: 99.44% avg_loss: 0.0184
+2020-05-08 00:33:16 INFO: Write Train Summary
+2020-05-08 00:33:16 INFO: Start Validation
+2020-05-08 00:33:16 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt29-60407
+2020-05-08 00:33:56 INFO: VAL ckpt-60407 avg_acc: 78.99% avg_loss: 8.9322
+2020-05-08 00:33:56 INFO: Write Val Summary
+2020-05-08 00:33:56 INFO: Reset streaming metrics
+2020-05-08 00:34:43 INFO: Write Train Summary
+2020-05-08 00:35:32 INFO: Write Train Summary
+2020-05-08 00:36:21 INFO: Write Train Summary
+2020-05-08 00:37:10 INFO: Write Train Summary
+2020-05-08 00:37:59 INFO: Write Train Summary
+2020-05-08 00:38:48 INFO: Write Train Summary
+2020-05-08 00:39:37 INFO: Write Train Summary
+2020-05-08 00:40:26 INFO: Write Train Summary
+2020-05-08 00:41:15 INFO: Write Train Summary
+2020-05-08 00:42:04 INFO: Write Train Summary
+2020-05-08 00:42:54 INFO: Write Train Summary
+2020-05-08 00:43:43 INFO: Write Train Summary
+2020-05-08 00:44:32 INFO: Write Train Summary
+2020-05-08 00:45:21 INFO: Write Train Summary
+2020-05-08 00:46:10 INFO: Write Train Summary
+2020-05-08 00:46:59 INFO: Write Train Summary
+2020-05-08 00:47:48 INFO: Write Train Summary
+2020-05-08 00:48:37 INFO: Write Train Summary
+2020-05-08 00:49:26 INFO: Write Train Summary
+2020-05-08 00:50:15 INFO: Write Train Summary
+2020-05-08 00:50:59 INFO: Save Model
+2020-05-08 00:51:01 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt30-62490 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 00:51:01 INFO: Start Train Set Accuracy
+2020-05-08 00:51:01 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt30-62490
+2020-05-08 00:54:15 INFO: TRN ckpt-62490 avg_acc: 99.71% avg_loss: 0.0123
+2020-05-08 00:54:15 INFO: Write Train Summary
+2020-05-08 00:54:15 INFO: Start Validation
+2020-05-08 00:54:15 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt30-62490
+2020-05-08 00:54:55 INFO: VAL ckpt-62490 avg_acc: 79.74% avg_loss: 8.4793
+2020-05-08 00:54:55 INFO: Write Val Summary
+2020-05-08 00:54:55 INFO: Reset streaming metrics
+2020-05-08 00:55:00 INFO: Write Train Summary
+2020-05-08 00:55:50 INFO: Write Train Summary
+2020-05-08 00:56:39 INFO: Write Train Summary
+2020-05-08 00:57:28 INFO: Write Train Summary
+2020-05-08 00:58:17 INFO: Write Train Summary
+2020-05-08 00:59:06 INFO: Write Train Summary
+2020-05-08 00:59:55 INFO: Write Train Summary
+2020-05-08 01:00:44 INFO: Write Train Summary
+2020-05-08 01:01:33 INFO: Write Train Summary
+2020-05-08 01:02:23 INFO: Write Train Summary
+2020-05-08 01:03:12 INFO: Write Train Summary
+2020-05-08 01:04:01 INFO: Write Train Summary
+2020-05-08 01:04:50 INFO: Write Train Summary
+2020-05-08 01:05:39 INFO: Write Train Summary
+2020-05-08 01:06:28 INFO: Write Train Summary
+2020-05-08 01:07:17 INFO: Write Train Summary
+2020-05-08 01:08:06 INFO: Write Train Summary
+2020-05-08 01:08:55 INFO: Write Train Summary
+2020-05-08 01:09:44 INFO: Write Train Summary
+2020-05-08 01:10:33 INFO: Write Train Summary
+2020-05-08 01:11:22 INFO: Write Train Summary
+2020-05-08 01:11:58 INFO: Save Model
+2020-05-08 01:12:00 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt31-64573 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 01:12:00 INFO: Start Train Set Accuracy
+2020-05-08 01:12:00 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt31-64573
+2020-05-08 01:15:14 INFO: TRN ckpt-64573 avg_acc: 99.13% avg_loss: 0.0431
+2020-05-08 01:15:14 INFO: Write Train Summary
+2020-05-08 01:15:14 INFO: Start Validation
+2020-05-08 01:15:14 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt31-64573
+2020-05-08 01:15:54 INFO: VAL ckpt-64573 avg_acc: 78.16% avg_loss: 9.7978
+2020-05-08 01:15:54 INFO: Write Val Summary
+2020-05-08 01:15:54 INFO: Reset streaming metrics
+2020-05-08 01:16:07 INFO: Write Train Summary
+2020-05-08 01:16:56 INFO: Write Train Summary
+2020-05-08 01:17:45 INFO: Write Train Summary
+2020-05-08 01:18:35 INFO: Write Train Summary
+2020-05-08 01:19:24 INFO: Write Train Summary
+2020-05-08 01:20:13 INFO: Write Train Summary
+2020-05-08 01:21:02 INFO: Write Train Summary
+2020-05-08 01:21:51 INFO: Write Train Summary
+2020-05-08 01:22:41 INFO: Write Train Summary
+2020-05-08 01:23:30 INFO: Write Train Summary
+2020-05-08 01:24:19 INFO: Write Train Summary
+2020-05-08 01:25:08 INFO: Write Train Summary
+2020-05-08 01:25:57 INFO: Write Train Summary
+2020-05-08 01:26:46 INFO: Write Train Summary
+2020-05-08 01:27:35 INFO: Write Train Summary
+2020-05-08 01:28:24 INFO: Write Train Summary
+2020-05-08 01:29:13 INFO: Write Train Summary
+2020-05-08 01:30:02 INFO: Write Train Summary
+2020-05-08 01:30:51 INFO: Write Train Summary
+2020-05-08 01:31:40 INFO: Write Train Summary
+2020-05-08 01:32:29 INFO: Write Train Summary
+2020-05-08 01:32:57 INFO: Save Model
+2020-05-08 01:32:59 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt32-66656 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 01:32:59 INFO: Start Train Set Accuracy
+2020-05-08 01:32:59 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt32-66656
+2020-05-08 01:36:12 INFO: TRN ckpt-66656 avg_acc: 99.81% avg_loss: 0.0047
+2020-05-08 01:36:12 INFO: Write Train Summary
+2020-05-08 01:36:12 INFO: Start Validation
+2020-05-08 01:36:12 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt32-66656
+2020-05-08 01:36:53 INFO: VAL ckpt-66656 avg_acc: 79.56% avg_loss: 8.6223
+2020-05-08 01:36:53 INFO: Write Val Summary
+2020-05-08 01:36:53 INFO: Reset streaming metrics
+2020-05-08 01:37:14 INFO: Write Train Summary
+2020-05-08 01:38:03 INFO: Write Train Summary
+2020-05-08 01:38:53 INFO: Write Train Summary
+2020-05-08 01:39:42 INFO: Write Train Summary
+2020-05-08 01:40:31 INFO: Write Train Summary
+2020-05-08 01:41:20 INFO: Write Train Summary
+2020-05-08 01:42:09 INFO: Write Train Summary
+2020-05-08 01:42:58 INFO: Write Train Summary
+2020-05-08 01:43:47 INFO: Write Train Summary
+2020-05-08 01:44:36 INFO: Write Train Summary
+2020-05-08 01:45:25 INFO: Write Train Summary
+2020-05-08 01:46:14 INFO: Write Train Summary
+2020-05-08 01:47:03 INFO: Write Train Summary
+2020-05-08 01:47:52 INFO: Write Train Summary
+2020-05-08 01:48:41 INFO: Write Train Summary
+2020-05-08 01:49:30 INFO: Write Train Summary
+2020-05-08 01:50:19 INFO: Write Train Summary
+2020-05-08 01:51:08 INFO: Write Train Summary
+2020-05-08 01:51:57 INFO: Write Train Summary
+2020-05-08 01:52:46 INFO: Write Train Summary
+2020-05-08 01:53:35 INFO: Write Train Summary
+2020-05-08 01:53:54 INFO: Save Model
+2020-05-08 01:53:56 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt33-68739 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 01:53:56 INFO: Start Train Set Accuracy
+2020-05-08 01:53:56 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt33-68739
+2020-05-08 01:57:09 INFO: TRN ckpt-68739 avg_acc: 99.61% avg_loss: 0.0174
+2020-05-08 01:57:09 INFO: Write Train Summary
+2020-05-08 01:57:09 INFO: Start Validation
+2020-05-08 01:57:09 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt33-68739
+2020-05-08 01:57:49 INFO: VAL ckpt-68739 avg_acc: 79.07% avg_loss: 8.5211
+2020-05-08 01:57:49 INFO: Write Val Summary
+2020-05-08 01:57:49 INFO: Reset streaming metrics
+2020-05-08 01:58:19 INFO: Write Train Summary
+2020-05-08 01:59:09 INFO: Write Train Summary
+2020-05-08 01:59:58 INFO: Write Train Summary
+2020-05-08 02:00:47 INFO: Write Train Summary
+2020-05-08 02:01:36 INFO: Write Train Summary
+2020-05-08 02:02:26 INFO: Write Train Summary
+2020-05-08 02:03:15 INFO: Write Train Summary
+2020-05-08 02:04:04 INFO: Write Train Summary
+2020-05-08 02:04:53 INFO: Write Train Summary
+2020-05-08 02:05:42 INFO: Write Train Summary
+2020-05-08 02:06:32 INFO: Write Train Summary
+2020-05-08 02:07:21 INFO: Write Train Summary
+2020-05-08 02:08:10 INFO: Write Train Summary
+2020-05-08 02:08:59 INFO: Write Train Summary
+2020-05-08 02:09:48 INFO: Write Train Summary
+2020-05-08 02:10:37 INFO: Write Train Summary
+2020-05-08 02:11:27 INFO: Write Train Summary
+2020-05-08 02:12:16 INFO: Write Train Summary
+2020-05-08 02:13:05 INFO: Write Train Summary
+2020-05-08 02:13:54 INFO: Write Train Summary
+2020-05-08 02:14:43 INFO: Write Train Summary
+2020-05-08 02:14:54 INFO: Save Model
+2020-05-08 02:14:55 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt34-70822 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 02:14:56 INFO: Start Train Set Accuracy
+2020-05-08 02:14:56 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt34-70822
+2020-05-08 02:18:09 INFO: TRN ckpt-70822 avg_acc: 99.69% avg_loss: 0.0094
+2020-05-08 02:18:09 INFO: Write Train Summary
+2020-05-08 02:18:09 INFO: Start Validation
+2020-05-08 02:18:09 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt34-70822
+2020-05-08 02:18:49 INFO: VAL ckpt-70822 avg_acc: 79.81% avg_loss: 9.0680
+2020-05-08 02:18:49 INFO: Write Val Summary
+2020-05-08 02:18:49 INFO: Reset streaming metrics
+2020-05-08 02:19:28 INFO: Write Train Summary
+2020-05-08 02:20:17 INFO: Write Train Summary
+2020-05-08 02:21:06 INFO: Write Train Summary
+2020-05-08 02:21:55 INFO: Write Train Summary
+2020-05-08 02:22:44 INFO: Write Train Summary
+2020-05-08 02:23:33 INFO: Write Train Summary
+2020-05-08 02:24:22 INFO: Write Train Summary
+2020-05-08 02:25:11 INFO: Write Train Summary
+2020-05-08 02:26:00 INFO: Write Train Summary
+2020-05-08 02:26:49 INFO: Write Train Summary
+2020-05-08 02:27:38 INFO: Write Train Summary
+2020-05-08 02:28:27 INFO: Write Train Summary
+2020-05-08 02:29:16 INFO: Write Train Summary
+2020-05-08 02:30:05 INFO: Write Train Summary
+2020-05-08 02:30:55 INFO: Write Train Summary
+2020-05-08 02:31:44 INFO: Write Train Summary
+2020-05-08 02:32:33 INFO: Write Train Summary
+2020-05-08 02:33:22 INFO: Write Train Summary
+2020-05-08 02:34:11 INFO: Write Train Summary
+2020-05-08 02:35:00 INFO: Write Train Summary
+2020-05-08 02:35:49 INFO: Write Train Summary
+2020-05-08 02:35:51 INFO: Save Model
+2020-05-08 02:35:53 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt35-72905 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 02:35:53 INFO: Start Train Set Accuracy
+2020-05-08 02:35:53 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt35-72905
+2020-05-08 02:39:07 INFO: TRN ckpt-72905 avg_acc: 99.75% avg_loss: 0.0089
+2020-05-08 02:39:07 INFO: Write Train Summary
+2020-05-08 02:39:07 INFO: Start Validation
+2020-05-08 02:39:07 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt35-72905
+2020-05-08 02:39:47 INFO: VAL ckpt-72905 avg_acc: 79.73% avg_loss: 9.3121
+2020-05-08 02:39:47 INFO: Write Val Summary
+2020-05-08 02:39:47 INFO: Reset streaming metrics
+2020-05-08 02:40:34 INFO: Write Train Summary
+2020-05-08 02:41:23 INFO: Write Train Summary
+2020-05-08 02:42:12 INFO: Write Train Summary
+2020-05-08 02:43:01 INFO: Write Train Summary
+2020-05-08 02:43:50 INFO: Write Train Summary
+2020-05-08 02:44:39 INFO: Write Train Summary
+2020-05-08 02:45:28 INFO: Write Train Summary
+2020-05-08 02:46:17 INFO: Write Train Summary
+2020-05-08 02:47:06 INFO: Write Train Summary
+2020-05-08 02:47:56 INFO: Write Train Summary
+2020-05-08 02:48:45 INFO: Write Train Summary
+2020-05-08 02:49:34 INFO: Write Train Summary
+2020-05-08 02:50:24 INFO: Write Train Summary
+2020-05-08 02:51:13 INFO: Write Train Summary
+2020-05-08 02:52:02 INFO: Write Train Summary
+2020-05-08 02:52:52 INFO: Write Train Summary
+2020-05-08 02:53:41 INFO: Write Train Summary
+2020-05-08 02:54:30 INFO: Write Train Summary
+2020-05-08 02:55:19 INFO: Write Train Summary
+2020-05-08 02:56:09 INFO: Write Train Summary
+2020-05-08 02:56:52 INFO: Save Model
+2020-05-08 02:56:54 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt36-74988 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 02:56:54 INFO: Start Train Set Accuracy
+2020-05-08 02:56:54 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt36-74988
+2020-05-08 03:00:08 INFO: TRN ckpt-74988 avg_acc: 99.53% avg_loss: 0.0182
+2020-05-08 03:00:08 INFO: Write Train Summary
+2020-05-08 03:00:08 INFO: Start Validation
+2020-05-08 03:00:08 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt36-74988
+2020-05-08 03:00:48 INFO: VAL ckpt-74988 avg_acc: 79.16% avg_loss: 10.2452
+2020-05-08 03:00:48 INFO: Write Val Summary
+2020-05-08 03:00:48 INFO: Reset streaming metrics
+2020-05-08 03:00:55 INFO: Write Train Summary
+2020-05-08 03:01:44 INFO: Write Train Summary
+2020-05-08 03:02:33 INFO: Write Train Summary
+2020-05-08 03:03:22 INFO: Write Train Summary
+2020-05-08 03:04:11 INFO: Write Train Summary
+2020-05-08 03:05:01 INFO: Write Train Summary
+2020-05-08 03:05:50 INFO: Write Train Summary
+2020-05-08 03:06:39 INFO: Write Train Summary
+2020-05-08 03:07:29 INFO: Write Train Summary
+2020-05-08 03:08:18 INFO: Write Train Summary
+2020-05-08 03:09:07 INFO: Write Train Summary
+2020-05-08 03:09:56 INFO: Write Train Summary
+2020-05-08 03:10:45 INFO: Write Train Summary
+2020-05-08 03:11:35 INFO: Write Train Summary
+2020-05-08 03:12:24 INFO: Write Train Summary
+2020-05-08 03:13:13 INFO: Write Train Summary
+2020-05-08 03:14:02 INFO: Write Train Summary
+2020-05-08 03:14:51 INFO: Write Train Summary
+2020-05-08 03:15:41 INFO: Write Train Summary
+2020-05-08 03:16:30 INFO: Write Train Summary
+2020-05-08 03:17:19 INFO: Write Train Summary
+2020-05-08 03:17:54 INFO: Save Model
+2020-05-08 03:17:56 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt37-77071 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 03:17:56 INFO: Start Train Set Accuracy
+2020-05-08 03:17:56 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt37-77071
+2020-05-08 03:21:09 INFO: TRN ckpt-77071 avg_acc: 99.80% avg_loss: 0.0063
+2020-05-08 03:21:09 INFO: Write Train Summary
+2020-05-08 03:21:09 INFO: Start Validation
+2020-05-08 03:21:09 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt37-77071
+2020-05-08 03:21:50 INFO: VAL ckpt-77071 avg_acc: 79.96% avg_loss: 8.5470
+2020-05-08 03:21:50 INFO: Write Val Summary
+2020-05-08 03:21:50 INFO: Reset streaming metrics
+2020-05-08 03:22:04 INFO: Write Train Summary
+2020-05-08 03:22:54 INFO: Write Train Summary
+2020-05-08 03:23:43 INFO: Write Train Summary
+2020-05-08 03:24:32 INFO: Write Train Summary
+2020-05-08 03:25:21 INFO: Write Train Summary
+2020-05-08 03:26:11 INFO: Write Train Summary
+2020-05-08 03:27:00 INFO: Write Train Summary
+2020-05-08 03:27:49 INFO: Write Train Summary
+2020-05-08 03:28:38 INFO: Write Train Summary
+2020-05-08 03:29:28 INFO: Write Train Summary
+2020-05-08 03:30:17 INFO: Write Train Summary
+2020-05-08 03:31:06 INFO: Write Train Summary
+2020-05-08 03:31:55 INFO: Write Train Summary
+2020-05-08 03:32:44 INFO: Write Train Summary
+2020-05-08 03:33:33 INFO: Write Train Summary
+2020-05-08 03:34:23 INFO: Write Train Summary
+2020-05-08 03:35:12 INFO: Write Train Summary
+2020-05-08 03:36:01 INFO: Write Train Summary
+2020-05-08 03:36:51 INFO: Write Train Summary
+2020-05-08 03:37:40 INFO: Write Train Summary
+2020-05-08 03:38:29 INFO: Write Train Summary
+2020-05-08 03:38:56 INFO: Save Model
+2020-05-08 03:38:58 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt38-79154 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 03:38:58 INFO: Start Train Set Accuracy
+2020-05-08 03:38:58 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt38-79154
+2020-05-08 03:42:11 INFO: TRN ckpt-79154 avg_acc: 99.77% avg_loss: 0.0066
+2020-05-08 03:42:11 INFO: Write Train Summary
+2020-05-08 03:42:11 INFO: Start Validation
+2020-05-08 03:42:11 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt38-79154
+2020-05-08 03:42:51 INFO: VAL ckpt-79154 avg_acc: 80.22% avg_loss: 9.0935
+2020-05-08 03:42:51 INFO: Write Val Summary
+2020-05-08 03:42:51 INFO: Reset streaming metrics
+2020-05-08 03:43:14 INFO: Write Train Summary
+2020-05-08 03:44:03 INFO: Write Train Summary
+2020-05-08 03:44:53 INFO: Write Train Summary
+2020-05-08 03:45:42 INFO: Write Train Summary
+2020-05-08 03:46:31 INFO: Write Train Summary
+2020-05-08 03:47:20 INFO: Write Train Summary
+2020-05-08 03:48:09 INFO: Write Train Summary
+2020-05-08 03:48:58 INFO: Write Train Summary
+2020-05-08 03:49:47 INFO: Write Train Summary
+2020-05-08 03:50:37 INFO: Write Train Summary
+2020-05-08 03:51:25 INFO: Write Train Summary
+2020-05-08 03:52:15 INFO: Write Train Summary
+2020-05-08 03:53:04 INFO: Write Train Summary
+2020-05-08 03:53:53 INFO: Write Train Summary
+2020-05-08 03:54:43 INFO: Write Train Summary
+2020-05-08 03:55:32 INFO: Write Train Summary
+2020-05-08 03:56:21 INFO: Write Train Summary
+2020-05-08 03:57:11 INFO: Write Train Summary
+2020-05-08 03:58:00 INFO: Write Train Summary
+2020-05-08 03:58:49 INFO: Write Train Summary
+2020-05-08 03:59:38 INFO: Write Train Summary
+2020-05-08 03:59:56 INFO: Save Model
+2020-05-08 03:59:58 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt39-81237 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 03:59:58 INFO: Start Train Set Accuracy
+2020-05-08 03:59:58 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt39-81237
+2020-05-08 04:03:11 INFO: TRN ckpt-81237 avg_acc: 99.67% avg_loss: 0.0135
+2020-05-08 04:03:11 INFO: Write Train Summary
+2020-05-08 04:03:11 INFO: Start Validation
+2020-05-08 04:03:11 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt39-81237
+2020-05-08 04:03:51 INFO: VAL ckpt-81237 avg_acc: 79.47% avg_loss: 9.5408
+2020-05-08 04:03:51 INFO: Write Val Summary
+2020-05-08 04:03:51 INFO: Reset streaming metrics
+2020-05-08 04:04:23 INFO: Write Train Summary
+2020-05-08 04:05:12 INFO: Write Train Summary
+2020-05-08 04:06:02 INFO: Write Train Summary
+2020-05-08 04:06:51 INFO: Write Train Summary
+2020-05-08 04:07:40 INFO: Write Train Summary
+2020-05-08 04:08:29 INFO: Write Train Summary
+2020-05-08 04:09:18 INFO: Write Train Summary
+2020-05-08 04:10:07 INFO: Write Train Summary
+2020-05-08 04:10:57 INFO: Write Train Summary
+2020-05-08 04:11:46 INFO: Write Train Summary
+2020-05-08 04:12:35 INFO: Write Train Summary
+2020-05-08 04:13:24 INFO: Write Train Summary
+2020-05-08 04:14:13 INFO: Write Train Summary
+2020-05-08 04:15:03 INFO: Write Train Summary
+2020-05-08 04:15:52 INFO: Write Train Summary
+2020-05-08 04:16:41 INFO: Write Train Summary
+2020-05-08 04:17:31 INFO: Write Train Summary
+2020-05-08 04:18:20 INFO: Write Train Summary
+2020-05-08 04:19:09 INFO: Write Train Summary
+2020-05-08 04:19:58 INFO: Write Train Summary
+2020-05-08 04:20:47 INFO: Write Train Summary
+2020-05-08 04:20:57 INFO: Save Model
+2020-05-08 04:20:59 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt40-83320 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 04:20:59 INFO: Start Train Set Accuracy
+2020-05-08 04:20:59 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt40-83320
+2020-05-08 04:24:12 INFO: TRN ckpt-83320 avg_acc: 99.77% avg_loss: 0.0071
+2020-05-08 04:24:12 INFO: Write Train Summary
+2020-05-08 04:24:12 INFO: Start Validation
+2020-05-08 04:24:12 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt40-83320
+2020-05-08 04:24:52 INFO: VAL ckpt-83320 avg_acc: 79.77% avg_loss: 9.0998
+2020-05-08 04:24:52 INFO: Write Val Summary
+2020-05-08 04:24:52 INFO: Reset streaming metrics
+2020-05-08 04:25:32 INFO: Write Train Summary
+2020-05-08 04:26:20 INFO: Write Train Summary
+2020-05-08 04:27:10 INFO: Write Train Summary
+2020-05-08 04:27:59 INFO: Write Train Summary
+2020-05-08 04:28:49 INFO: Write Train Summary
+2020-05-08 04:29:38 INFO: Write Train Summary
+2020-05-08 04:30:27 INFO: Write Train Summary
+2020-05-08 04:31:16 INFO: Write Train Summary
+2020-05-08 04:32:05 INFO: Write Train Summary
+2020-05-08 04:32:55 INFO: Write Train Summary
+2020-05-08 04:33:43 INFO: Write Train Summary
+2020-05-08 04:34:33 INFO: Write Train Summary
+2020-05-08 04:35:22 INFO: Write Train Summary
+2020-05-08 04:36:11 INFO: Write Train Summary
+2020-05-08 04:37:00 INFO: Write Train Summary
+2020-05-08 04:37:49 INFO: Write Train Summary
+2020-05-08 04:38:38 INFO: Write Train Summary
+2020-05-08 04:39:27 INFO: Write Train Summary
+2020-05-08 04:40:16 INFO: Write Train Summary
+2020-05-08 04:41:05 INFO: Write Train Summary
+2020-05-08 04:41:54 INFO: Write Train Summary
+2020-05-08 04:41:56 INFO: Save Model
+2020-05-08 04:41:57 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt41-85403 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 04:41:58 INFO: Start Train Set Accuracy
+2020-05-08 04:41:58 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt41-85403
+2020-05-08 04:45:11 INFO: TRN ckpt-85403 avg_acc: 99.83% avg_loss: 0.0040
+2020-05-08 04:45:11 INFO: Write Train Summary
+2020-05-08 04:45:11 INFO: Start Validation
+2020-05-08 04:45:11 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt41-85403
+2020-05-08 04:45:51 INFO: VAL ckpt-85403 avg_acc: 80.09% avg_loss: 8.8186
+2020-05-08 04:45:51 INFO: Write Val Summary
+2020-05-08 04:45:51 INFO: Reset streaming metrics
+2020-05-08 04:46:39 INFO: Write Train Summary
+2020-05-08 04:47:29 INFO: Write Train Summary
+2020-05-08 04:48:18 INFO: Write Train Summary
+2020-05-08 04:49:07 INFO: Write Train Summary
+2020-05-08 04:49:56 INFO: Write Train Summary
+2020-05-08 04:50:45 INFO: Write Train Summary
+2020-05-08 04:51:34 INFO: Write Train Summary
+2020-05-08 04:52:23 INFO: Write Train Summary
+2020-05-08 04:53:12 INFO: Write Train Summary
+2020-05-08 04:54:01 INFO: Write Train Summary
+2020-05-08 04:54:50 INFO: Write Train Summary
+2020-05-08 04:55:39 INFO: Write Train Summary
+2020-05-08 04:56:28 INFO: Write Train Summary
+2020-05-08 04:57:17 INFO: Write Train Summary
+2020-05-08 04:58:06 INFO: Write Train Summary
+2020-05-08 04:58:56 INFO: Write Train Summary
+2020-05-08 04:59:45 INFO: Write Train Summary
+2020-05-08 05:00:34 INFO: Write Train Summary
+2020-05-08 05:01:23 INFO: Write Train Summary
+2020-05-08 05:02:12 INFO: Write Train Summary
+2020-05-08 05:02:55 INFO: Save Model
+2020-05-08 05:02:57 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt42-87486 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 05:02:57 INFO: Start Train Set Accuracy
+2020-05-08 05:02:57 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt42-87486
+2020-05-08 05:06:10 INFO: TRN ckpt-87486 avg_acc: 99.80% avg_loss: 0.0062
+2020-05-08 05:06:10 INFO: Write Train Summary
+2020-05-08 05:06:10 INFO: Start Validation
+2020-05-08 05:06:10 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt42-87486
+2020-05-08 05:06:50 INFO: VAL ckpt-87486 avg_acc: 80.10% avg_loss: 9.3170
+2020-05-08 05:06:50 INFO: Write Val Summary
+2020-05-08 05:06:50 INFO: Reset streaming metrics
+2020-05-08 05:06:57 INFO: Write Train Summary
+2020-05-08 05:07:47 INFO: Write Train Summary
+2020-05-08 05:08:36 INFO: Write Train Summary
+2020-05-08 05:09:25 INFO: Write Train Summary
+2020-05-08 05:10:14 INFO: Write Train Summary
+2020-05-08 05:11:03 INFO: Write Train Summary
+2020-05-08 05:11:53 INFO: Write Train Summary
+2020-05-08 05:12:42 INFO: Write Train Summary
+2020-05-08 05:13:31 INFO: Write Train Summary
+2020-05-08 05:14:20 INFO: Write Train Summary
+2020-05-08 05:15:10 INFO: Write Train Summary
+2020-05-08 05:15:59 INFO: Write Train Summary
+2020-05-08 05:16:48 INFO: Write Train Summary
+2020-05-08 05:17:37 INFO: Write Train Summary
+2020-05-08 05:18:27 INFO: Write Train Summary
+2020-05-08 05:19:16 INFO: Write Train Summary
+2020-05-08 05:20:05 INFO: Write Train Summary
+2020-05-08 05:20:54 INFO: Write Train Summary
+2020-05-08 05:21:43 INFO: Write Train Summary
+2020-05-08 05:22:32 INFO: Write Train Summary
+2020-05-08 05:23:22 INFO: Write Train Summary
+2020-05-08 05:23:55 INFO: Save Model
+2020-05-08 05:23:57 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt43-89569 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 05:23:57 INFO: Start Train Set Accuracy
+2020-05-08 05:23:57 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt43-89569
+2020-05-08 05:27:11 INFO: TRN ckpt-89569 avg_acc: 99.80% avg_loss: 0.0063
+2020-05-08 05:27:11 INFO: Write Train Summary
+2020-05-08 05:27:11 INFO: Start Validation
+2020-05-08 05:27:11 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt43-89569
+2020-05-08 05:27:51 INFO: VAL ckpt-89569 avg_acc: 80.12% avg_loss: 9.4023
+2020-05-08 05:27:51 INFO: Write Val Summary
+2020-05-08 05:27:51 INFO: Reset streaming metrics
+2020-05-08 05:28:07 INFO: Write Train Summary
+2020-05-08 05:28:56 INFO: Write Train Summary
+2020-05-08 05:29:46 INFO: Write Train Summary
+2020-05-08 05:30:35 INFO: Write Train Summary
+2020-05-08 05:31:24 INFO: Write Train Summary
+2020-05-08 05:32:13 INFO: Write Train Summary
+2020-05-08 05:33:02 INFO: Write Train Summary
+2020-05-08 05:33:51 INFO: Write Train Summary
+2020-05-08 05:34:41 INFO: Write Train Summary
+2020-05-08 05:35:30 INFO: Write Train Summary
+2020-05-08 05:36:19 INFO: Write Train Summary
+2020-05-08 05:37:08 INFO: Write Train Summary
+2020-05-08 05:37:58 INFO: Write Train Summary
+2020-05-08 05:38:47 INFO: Write Train Summary
+2020-05-08 05:39:36 INFO: Write Train Summary
+2020-05-08 05:40:25 INFO: Write Train Summary
+2020-05-08 05:41:14 INFO: Write Train Summary
+2020-05-08 05:42:03 INFO: Write Train Summary
+2020-05-08 05:42:53 INFO: Write Train Summary
+2020-05-08 05:43:42 INFO: Write Train Summary
+2020-05-08 05:44:31 INFO: Write Train Summary
+2020-05-08 05:44:57 INFO: Save Model
+2020-05-08 05:44:59 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt44-91652 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 05:44:59 INFO: Start Train Set Accuracy
+2020-05-08 05:44:59 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt44-91652
+2020-05-08 05:48:12 INFO: TRN ckpt-91652 avg_acc: 99.83% avg_loss: 0.0042
+2020-05-08 05:48:12 INFO: Write Train Summary
+2020-05-08 05:48:12 INFO: Start Validation
+2020-05-08 05:48:12 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt44-91652
+2020-05-08 05:48:52 INFO: VAL ckpt-91652 avg_acc: 80.01% avg_loss: 9.2842
+2020-05-08 05:48:52 INFO: Write Val Summary
+2020-05-08 05:48:52 INFO: Reset streaming metrics
+2020-05-08 05:49:16 INFO: Write Train Summary
+2020-05-08 05:50:06 INFO: Write Train Summary
+2020-05-08 05:50:55 INFO: Write Train Summary
+2020-05-08 05:51:44 INFO: Write Train Summary
+2020-05-08 05:52:33 INFO: Write Train Summary
+2020-05-08 05:53:22 INFO: Write Train Summary
+2020-05-08 05:54:12 INFO: Write Train Summary
+2020-05-08 05:55:01 INFO: Write Train Summary
+2020-05-08 05:55:50 INFO: Write Train Summary
+2020-05-08 05:56:39 INFO: Write Train Summary
+2020-05-08 05:57:28 INFO: Write Train Summary
+2020-05-08 05:58:17 INFO: Write Train Summary
+2020-05-08 05:59:06 INFO: Write Train Summary
+2020-05-08 05:59:56 INFO: Write Train Summary
+2020-05-08 06:00:45 INFO: Write Train Summary
+2020-05-08 06:01:34 INFO: Write Train Summary
+2020-05-08 06:02:24 INFO: Write Train Summary
+2020-05-08 06:03:13 INFO: Write Train Summary
+2020-05-08 06:04:02 INFO: Write Train Summary
+2020-05-08 06:04:51 INFO: Write Train Summary
+2020-05-08 06:05:40 INFO: Write Train Summary
+2020-05-08 06:05:57 INFO: Save Model
+2020-05-08 06:05:59 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt45-93735 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 06:05:59 INFO: Start Train Set Accuracy
+2020-05-08 06:05:59 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt45-93735
+2020-05-08 06:09:13 INFO: TRN ckpt-93735 avg_acc: 99.51% avg_loss: 0.0178
+2020-05-08 06:09:13 INFO: Write Train Summary
+2020-05-08 06:09:13 INFO: Start Validation
+2020-05-08 06:09:13 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt45-93735
+2020-05-08 06:09:53 INFO: VAL ckpt-93735 avg_acc: 78.56% avg_loss: 9.4789
+2020-05-08 06:09:53 INFO: Write Val Summary
+2020-05-08 06:09:53 INFO: Reset streaming metrics
+2020-05-08 06:10:25 INFO: Write Train Summary
+2020-05-08 06:11:14 INFO: Write Train Summary
+2020-05-08 06:12:04 INFO: Write Train Summary
+2020-05-08 06:12:53 INFO: Write Train Summary
+2020-05-08 06:13:42 INFO: Write Train Summary
+2020-05-08 06:14:31 INFO: Write Train Summary
+2020-05-08 06:15:19 INFO: Write Train Summary
+2020-05-08 06:16:09 INFO: Write Train Summary
+2020-05-08 06:16:58 INFO: Write Train Summary
+2020-05-08 06:17:47 INFO: Write Train Summary
+2020-05-08 06:18:36 INFO: Write Train Summary
+2020-05-08 06:19:25 INFO: Write Train Summary
+2020-05-08 06:20:14 INFO: Write Train Summary
+2020-05-08 06:21:03 INFO: Write Train Summary
+2020-05-08 06:21:52 INFO: Write Train Summary
+2020-05-08 06:22:41 INFO: Write Train Summary
+2020-05-08 06:23:31 INFO: Write Train Summary
+2020-05-08 06:24:20 INFO: Write Train Summary
+2020-05-08 06:25:09 INFO: Write Train Summary
+2020-05-08 06:25:58 INFO: Write Train Summary
+2020-05-08 06:26:47 INFO: Write Train Summary
+2020-05-08 06:26:56 INFO: Save Model
+2020-05-08 06:26:58 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt46-95818 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 06:26:58 INFO: Start Train Set Accuracy
+2020-05-08 06:26:58 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt46-95818
+2020-05-08 06:30:11 INFO: TRN ckpt-95818 avg_acc: 99.75% avg_loss: 0.0076
+2020-05-08 06:30:11 INFO: Write Train Summary
+2020-05-08 06:30:11 INFO: Start Validation
+2020-05-08 06:30:11 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt46-95818
+2020-05-08 06:30:51 INFO: VAL ckpt-95818 avg_acc: 79.57% avg_loss: 8.8702
+2020-05-08 06:30:51 INFO: Write Val Summary
+2020-05-08 06:30:51 INFO: Reset streaming metrics
+2020-05-08 06:31:32 INFO: Write Train Summary
+2020-05-08 06:32:21 INFO: Write Train Summary
+2020-05-08 06:33:10 INFO: Write Train Summary
+2020-05-08 06:34:00 INFO: Write Train Summary
+2020-05-08 06:34:49 INFO: Write Train Summary
+2020-05-08 06:35:38 INFO: Write Train Summary
+2020-05-08 06:36:27 INFO: Write Train Summary
+2020-05-08 06:37:16 INFO: Write Train Summary
+2020-05-08 06:38:06 INFO: Write Train Summary
+2020-05-08 06:38:55 INFO: Write Train Summary
+2020-05-08 06:39:44 INFO: Write Train Summary
+2020-05-08 06:40:33 INFO: Write Train Summary
+2020-05-08 06:41:23 INFO: Write Train Summary
+2020-05-08 06:42:12 INFO: Write Train Summary
+2020-05-08 06:43:01 INFO: Write Train Summary
+2020-05-08 06:43:50 INFO: Write Train Summary
+2020-05-08 06:44:39 INFO: Write Train Summary
+2020-05-08 06:45:28 INFO: Write Train Summary
+2020-05-08 06:46:18 INFO: Write Train Summary
+2020-05-08 06:47:07 INFO: Write Train Summary
+2020-05-08 06:47:56 INFO: Write Train Summary
+2020-05-08 06:47:57 INFO: Save Model
+2020-05-08 06:47:58 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt47-97901 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 06:47:59 INFO: Start Train Set Accuracy
+2020-05-08 06:47:59 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt47-97901
+2020-05-08 06:51:12 INFO: TRN ckpt-97901 avg_acc: 99.66% avg_loss: 0.0123
+2020-05-08 06:51:12 INFO: Write Train Summary
+2020-05-08 06:51:12 INFO: Start Validation
+2020-05-08 06:51:12 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt47-97901
+2020-05-08 06:51:53 INFO: VAL ckpt-97901 avg_acc: 79.66% avg_loss: 9.0669
+2020-05-08 06:51:53 INFO: Write Val Summary
+2020-05-08 06:51:53 INFO: Reset streaming metrics
+2020-05-08 06:52:42 INFO: Write Train Summary
+2020-05-08 06:53:31 INFO: Write Train Summary
+2020-05-08 06:54:20 INFO: Write Train Summary
+2020-05-08 06:55:09 INFO: Write Train Summary
+2020-05-08 06:55:59 INFO: Write Train Summary
+2020-05-08 06:56:48 INFO: Write Train Summary
+2020-05-08 06:57:37 INFO: Write Train Summary
+2020-05-08 06:58:26 INFO: Write Train Summary
+2020-05-08 06:59:15 INFO: Write Train Summary
+2020-05-08 07:00:04 INFO: Write Train Summary
+2020-05-08 07:00:54 INFO: Write Train Summary
+2020-05-08 07:01:43 INFO: Write Train Summary
+2020-05-08 07:02:32 INFO: Write Train Summary
+2020-05-08 07:03:21 INFO: Write Train Summary
+2020-05-08 07:04:11 INFO: Write Train Summary
+2020-05-08 07:05:00 INFO: Write Train Summary
+2020-05-08 07:05:49 INFO: Write Train Summary
+2020-05-08 07:06:38 INFO: Write Train Summary
+2020-05-08 07:07:27 INFO: Write Train Summary
+2020-05-08 07:08:16 INFO: Write Train Summary
+2020-05-08 07:08:57 INFO: Save Model
+2020-05-08 07:08:59 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt48-99984 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 07:08:59 INFO: Start Train Set Accuracy
+2020-05-08 07:08:59 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt48-99984
+2020-05-08 07:12:12 INFO: TRN ckpt-99984 avg_acc: 99.69% avg_loss: 0.0088
+2020-05-08 07:12:12 INFO: Write Train Summary
+2020-05-08 07:12:12 INFO: Start Validation
+2020-05-08 07:12:12 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt48-99984
+2020-05-08 07:12:52 INFO: VAL ckpt-99984 avg_acc: 79.32% avg_loss: 8.5924
+2020-05-08 07:12:52 INFO: Write Val Summary
+2020-05-08 07:12:52 INFO: Reset streaming metrics
+2020-05-08 07:13:01 INFO: Write Train Summary
+2020-05-08 07:13:50 INFO: Write Train Summary
+2020-05-08 07:14:39 INFO: Write Train Summary
+2020-05-08 07:15:28 INFO: Write Train Summary
+2020-05-08 07:16:17 INFO: Write Train Summary
+2020-05-08 07:17:07 INFO: Write Train Summary
+2020-05-08 07:17:56 INFO: Write Train Summary
+2020-05-08 07:18:45 INFO: Write Train Summary
+2020-05-08 07:19:34 INFO: Write Train Summary
+2020-05-08 07:20:23 INFO: Write Train Summary
+2020-05-08 07:21:13 INFO: Write Train Summary
+2020-05-08 07:22:02 INFO: Write Train Summary
+2020-05-08 07:22:51 INFO: Write Train Summary
+2020-05-08 07:23:40 INFO: Write Train Summary
+2020-05-08 07:24:29 INFO: Write Train Summary
+2020-05-08 07:25:19 INFO: Write Train Summary
+2020-05-08 07:26:08 INFO: Write Train Summary
+2020-05-08 07:26:57 INFO: Write Train Summary
+2020-05-08 07:27:47 INFO: Write Train Summary
+2020-05-08 07:28:36 INFO: Write Train Summary
+2020-05-08 07:29:25 INFO: Write Train Summary
+2020-05-08 07:29:58 INFO: Save Model
+2020-05-08 07:30:00 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 07:30:00 INFO: Start Train Set Accuracy
+2020-05-08 07:30:00 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-08 07:33:14 INFO: TRN ckpt-102067 avg_acc: 99.92% avg_loss: 0.0025
+2020-05-08 07:33:14 INFO: Write Train Summary
+2020-05-08 07:33:14 INFO: Start Validation
+2020-05-08 07:33:14 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-08 07:33:54 INFO: VAL ckpt-102067 avg_acc: 80.81% avg_loss: 8.3956
+2020-05-08 07:33:54 INFO: Write Val Summary
+2020-05-08 07:33:54 INFO: Reset streaming metrics
+2020-05-08 07:34:10 INFO: Write Train Summary
+2020-05-08 07:35:00 INFO: Write Train Summary
+2020-05-08 07:35:49 INFO: Write Train Summary
+2020-05-08 07:36:38 INFO: Write Train Summary
+2020-05-08 07:37:27 INFO: Write Train Summary
+2020-05-08 07:38:16 INFO: Write Train Summary
+2020-05-08 07:39:05 INFO: Write Train Summary
+2020-05-08 07:39:55 INFO: Write Train Summary
+2020-05-08 07:40:44 INFO: Write Train Summary
+2020-05-08 07:41:33 INFO: Write Train Summary
+2020-05-08 07:42:22 INFO: Write Train Summary
+2020-05-08 07:43:11 INFO: Write Train Summary
+2020-05-08 07:44:01 INFO: Write Train Summary
+2020-05-08 07:44:50 INFO: Write Train Summary
+2020-05-08 07:45:39 INFO: Write Train Summary
+2020-05-08 07:46:29 INFO: Write Train Summary
+2020-05-08 07:47:18 INFO: Write Train Summary
+2020-05-08 07:48:07 INFO: Write Train Summary
+2020-05-08 07:48:56 INFO: Write Train Summary
+2020-05-08 07:49:45 INFO: Write Train Summary
+2020-05-08 07:50:34 INFO: Write Train Summary
+2020-05-08 07:50:58 INFO: Save Model
+2020-05-08 07:51:00 INFO: ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt50-104150 is not in all_model_checkpoint_paths. Manually adding it.
+2020-05-08 07:51:01 INFO: Start Train Set Accuracy
+2020-05-08 07:51:01 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt50-104150
+2020-05-08 07:54:14 INFO: TRN ckpt-104150 avg_acc: 99.59% avg_loss: 0.0150
+2020-05-08 07:54:14 INFO: Write Train Summary
+2020-05-08 07:54:14 INFO: Start Validation
+2020-05-08 07:54:14 INFO: Restoring parameters from ./logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt50-104150
+2020-05-08 07:54:54 INFO: VAL ckpt-104150 avg_acc: 79.09% avg_loss: 8.9844
+2020-05-08 07:54:54 INFO: Write Val Summary
