@@ -312,8 +312,7 @@ def tower_fn(build_arch,
     output = build_arch(x, is_train, num_classes=num_classes)
   if FLAGS.save_patch:
     return None, None, patch
-  decoder_out = output["decoder_out"]
-  recon_loss = mod.reconstruction_loss(x, decoder_out, batch_reduce=False)
+  recon_loss = mod.reconstruction_loss(output["input"], output["decoder_out"], batch_reduce=False)
   return output['scores'], recon_loss, patch
  
 
