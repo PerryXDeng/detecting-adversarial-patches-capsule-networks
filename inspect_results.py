@@ -68,6 +68,8 @@ def main(args):
   logger.info("name: " + name)
   logger.info("parent_dir: " + parent_dir)
   logger.info("test_dir: " + test_dir)
+  if FLAGS.patch_path:
+    logger.info("patch_path: " + FLAGS.patch_path)
   
   # Load hyperparameters from train run
   conf.load_or_save_hyperparams()
