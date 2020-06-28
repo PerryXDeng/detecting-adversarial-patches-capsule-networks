@@ -1,0 +1,1022 @@
+2020-06-25 15:52:41 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 15:52:41 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 15:52:41 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 15:52:41 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 15:52:41 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 15:52:41 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 15:52:41 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 15:52:41 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 15:52:41 INFO: Using dataset: cifar10
+2020-06-25 15:52:41 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 15:52:41 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 15:52:41 INFO: BUILD TEST GRAPH
+2020-06-25 15:52:41 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 15:52:42 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 15:52:42 INFO: Using dataset: cifar10
+.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 15:52:42 INFO: Using dataset: cifar10
+2020-06-25 15:52:42 INFO: BUILD TEST GRAPH
+ info from restored data version.
+2020-06-25 15:52:42 INFO: BUILD TEST GRAPH
+2020-06-25 15:52:42 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 15:52:42 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 15:52:42 INFO: Overwrite dataset info from restored data version.
+2020-06-25 15:52:42 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 15:52:42 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 15:52:42 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+_datasets/cifar10/1.0.2
+2020-06-25 15:52:42 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 15:52:42 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 15:52:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 15:52:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 15:52:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 15:52:43 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 15:52:43 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+ead.
+
+2020-06-25 15:52:43 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 15:52:43 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 15:52:43 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 15:52:43 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 15:52:44 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 15:52:44 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 15:52:44 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 15:52:44 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 15:52:44 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 15:52:44 INFO: Scale of 0 disables regularizer.
+2020-06-25 15:52:44 INFO: Scale of 0 disables regularizer.
+2020-06-25 15:52:44 INFO: Scale of 0 disables regularizer.
+2020-06-25 15:52:44 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 15:52:44 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 15:52:44 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 15:52:44 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 15:52:44 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 15:52:44 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 15:52:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+, 1)
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 15:52:44 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 15:52:44 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 15:52:44 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 15:52:45 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 15:52:45 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+, 1)
+2020-06-25 15:52:45 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 15:52:45 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 15:52:45 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 15:52:45 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 15:52:45 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 15:52:45 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 15:52:45 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 15:52:45 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 15:52:45 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 15:52:45 INFO: class_caps activation shape: (12, 10)
+2020-06-25 15:52:45 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 15:52:45 INFO: class_caps activation shape: (12, 10)
+2020-06-25 15:52:45 INFO: class_caps activation shape: (12, 10)
+2020-06-25 15:52:45 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 15:52:45 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 15:52:45 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 15:52:45 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 15:52:45 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 15:52:46 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 15:52:46 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 15:52:46 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 15:52:46 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 15:52:46 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 15:52:46 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 15:52:46 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 15:52:46 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 15:52:46 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 15:53:30 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 15:53:30 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 15:53:30 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 15:53:30 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 15:53:30 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 15:53:30 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 15:53:30 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 15:53:30 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 15:53:30 INFO: Using dataset: cifar10
+2020-06-25 15:53:30 INFO: Using dataset: cifar10
+2020-06-25 15:53:30 INFO: BUILD TEST GRAPH
+2020-06-25 15:53:30 INFO: BUILD TEST GRAPH
+2020-06-25 15:53:30 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 15:53:30 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 15:53:30 INFO: Overwrite dataset info from restored data version.
+2020-06-25 15:53:30 INFO: Overwrite dataset info from restored data version.
+2020-06-25 15:53:30 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 15:53:30 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 15:53:30 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 15:53:30 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 15:53:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 15:53:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 15:53:31 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 15:53:31 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 15:53:31 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 15:53:31 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 15:53:31 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 15:53:31 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 15:53:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 15:53:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 15:53:31 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 15:53:31 INFO: Scale of 0 disables regularizer.
+2020-06-25 15:53:31 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 15:53:31 INFO: Scale of 0 disables regularizer.
+2020-06-25 15:53:31 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 15:53:31 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 15:53:31 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 15:53:31 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 15:53:32 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 15:53:32 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 15:53:32 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 15:53:32 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 15:53:32 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 15:53:32 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 15:53:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 15:53:32 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 15:53:32 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 15:53:32 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 15:53:32 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 15:53:32 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 15:53:32 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 15:53:32 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 15:53:32 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 15:53:32 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 15:53:32 INFO: class_caps activation shape: (12, 10)
+2020-06-25 15:53:32 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 15:53:32 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 15:53:32 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 15:53:32 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 15:53:32 INFO: class_caps activation shape: (12, 10)
+2020-06-25 15:53:32 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 15:53:32 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 15:53:33 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 15:53:33 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 15:53:33 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 15:53:33 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 15:53:33 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 15:53:33 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 15:53:33 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:17:44 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:17:44 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:17:44 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:17:44 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:17:44 INFO: Using dataset: cifar10
+2020-06-25 16:17:44 INFO: BUILD TEST GRAPH
+2020-06-25 16:17:44 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:17:44 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:17:44 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:17:44 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:17:45 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:17:45 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:17:45 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:17:45 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:17:45 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:17:46 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:17:46 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:17:46 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:17:46 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:17:46 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:17:46 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:17:46 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:17:46 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:17:46 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:17:46 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:17:46 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:17:46 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:17:46 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:17:47 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:17:47 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:17:47 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:17:47 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:17:47 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:17:47 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:17:47 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:17:48 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:17:48 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:17:48 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:19:31 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:19:31 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:19:31 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:19:31 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:19:31 INFO: Using dataset: cifar10
+2020-06-25 16:19:31 INFO: BUILD TEST GRAPH
+2020-06-25 16:19:31 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:19:31 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:19:31 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:19:31 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:19:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:19:31 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:19:31 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:19:31 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:19:31 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:19:32 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:19:32 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:19:32 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:19:32 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:19:32 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:19:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:19:32 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:19:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:19:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:19:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:19:32 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:19:32 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:19:32 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:19:33 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:19:33 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:19:33 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:19:33 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:19:33 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:19:33 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:19:33 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:19:34 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:19:34 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:19:34 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:26:22 INFO: writing to csv
+2020-06-25 16:26:22 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_00_20200613_18_35_13_374847__train_saved_patch_png_test.csv
+2020-06-25 16:26:34 INFO: writing to csv
+2020-06-25 16:26:35 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_05_20200613_18_35_13_374465__train_saved_patch_png_test.csv
+2020-06-25 16:26:36 INFO: writing to csv
+2020-06-25 16:26:36 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_10_20200613_18_35_13_374209__train_saved_patch_png_test.csv
+2020-06-25 16:26:40 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:26:40 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:26:40 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:26:40 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:26:40 INFO: Using dataset: cifar10
+2020-06-25 16:26:40 INFO: BUILD TEST GRAPH
+2020-06-25 16:26:40 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:26:40 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:26:40 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:26:40 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:26:40 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:26:40 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:26:40 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:26:40 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:26:40 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:26:40 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:26:41 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:26:41 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:26:41 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:26:41 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:26:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:26:41 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:26:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:26:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:26:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:26:41 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:26:41 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:26:41 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:26:41 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:26:41 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:26:41 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:26:41 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:26:41 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:26:41 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:26:42 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:26:42 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:26:42 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:26:42 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:26:59 INFO: writing to csv
+2020-06-25 16:26:59 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_15_20200613_18_35_13_374872__train_saved_patch_png_test.csv
+2020-06-25 16:27:09 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:27:09 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:27:09 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:27:09 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:27:09 INFO: Using dataset: cifar10
+2020-06-25 16:27:09 INFO: BUILD TEST GRAPH
+2020-06-25 16:27:09 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:27:09 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:27:10 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:27:10 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:27:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:27:10 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:27:10 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:27:10 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:27:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:27:10 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:27:10 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:27:10 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:27:10 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:27:10 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:27:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:27:10 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:27:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:27:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:27:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:27:11 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:27:11 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:27:11 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:27:11 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:27:11 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:27:11 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:27:11 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:27:11 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:27:11 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:27:12 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:27:12 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:27:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:27:12 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:27:18 INFO: writing to csv
+2020-06-25 16:27:19 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_20_20200613_18_35_13_374281__train_saved_patch_png_test.csv
+2020-06-25 16:27:47 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:27:47 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:27:47 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:27:47 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:27:47 INFO: Using dataset: cifar10
+2020-06-25 16:27:47 INFO: BUILD TEST GRAPH
+2020-06-25 16:27:47 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:27:47 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:27:48 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:27:48 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:27:48 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:27:48 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:27:48 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:27:48 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:27:48 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:27:48 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:27:48 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:27:49 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:27:49 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:27:49 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:27:49 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:27:49 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:27:49 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:27:49 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:27:49 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:27:49 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:27:49 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:27:49 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:27:49 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:27:49 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:27:49 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:27:49 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:27:50 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:27:50 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:27:50 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:27:50 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:27:51 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:27:51 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:28:39 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:28:40 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:28:40 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:28:40 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:28:40 INFO: Using dataset: cifar10
+2020-06-25 16:28:40 INFO: BUILD TEST GRAPH
+2020-06-25 16:28:40 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:28:40 INFO: name: 20200605_07:48:18:537613_
+ored data version.
+2020-06-25 16:28:40 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:28:40 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:28:40 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:28:40 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:28:40 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:28:40 INFO: Using dataset: cifar10
+2020-06-25 16:28:40 INFO: BUILD TEST GRAPH
+2020-06-25 16:28:40 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:28:40 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:28:40 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:28:40 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:28:40 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:28:40 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:28:40 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:28:40 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:28:40 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:28:40 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:28:40 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:28:40 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:28:40 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:28:41 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:28:41 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:28:41 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:28:41 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:28:41 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+ 8, 1)
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:28:41 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:28:41 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:28:41 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:28:41 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:28:41 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:28:41 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:28:41 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:28:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:28:41 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:28:41 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:28:41 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:28:41 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:28:41 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:28:41 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:28:42 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:28:42 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:28:42 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:28:42 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:28:42 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:28:42 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:28:42 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:28:42 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:28:42 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:28:42 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:28:42 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:28:42 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:28:42 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:28:43 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:28:43 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:28:43 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:28:43 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:30:49 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:30:49 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:30:49 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:30:49 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:30:49 INFO: Using dataset: cifar10
+2020-06-25 16:30:49 INFO: BUILD TEST GRAPH
+2020-06-25 16:30:49 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:30:49 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:30:49 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:30:49 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:30:50 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:30:50 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:30:50 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:30:50 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:30:50 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:30:50 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:30:50 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:30:50 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:30:50 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:30:50 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:30:50 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:30:50 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:30:50 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:30:50 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:30:50 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:30:51 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:30:51 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:30:51 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:30:51 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:30:51 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:30:51 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:30:51 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:30:51 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:30:51 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:30:51 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:30:52 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:30:52 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:30:52 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:31:09 INFO: name: 20200605_07:48:18:537613_
+2020-06-25 16:31:09 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-25 16:31:09 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-25 16:31:09 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-25 16:31:09 INFO: Using dataset: cifar10
+2020-06-25 16:31:09 INFO: BUILD TEST GRAPH
+2020-06-25 16:31:09 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 16:31:09 INFO: Overwrite dataset info from restored data version.
+2020-06-25 16:31:09 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 16:31:09 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 16:31:09 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 16:31:09 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 16:31:09 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 16:31:10 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 16:31:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 16:31:10 INFO: input shape: (12, 32, 32, 3)
+2020-06-25 16:31:10 INFO: Scale of 0 disables regularizer.
+2020-06-25 16:31:10 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-25 16:31:10 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-25 16:31:10 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-25 16:31:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-25 16:31:10 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-25 16:31:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-25 16:31:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 16:31:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-25 16:31:10 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-25 16:31:10 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-25 16:31:10 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-25 16:31:11 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-25 16:31:11 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-25 16:31:11 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-25 16:31:11 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-25 16:31:11 INFO: class_caps activation shape: (12, 10)
+2020-06-25 16:31:11 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-25 16:31:12 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 16:31:12 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 16:31:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 16:31:13 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-25 16:52:11 INFO: writing to csv
+2020-06-25 16:52:11 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_25_20200613_18_35_13_374389__train_saved_patch_png_test.csv
+2020-06-25 16:53:17 INFO: writing to csv
+2020-06-25 16:53:17 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_30_20200613_18_35_13_374212__train_saved_patch_png_test.csv
+2020-06-25 17:00:25 INFO: writing to csv
+2020-06-25 17:00:26 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_35_20200613_18_35_13_375187__train_saved_patch_png_test.csv
+2020-06-25 17:00:40 INFO: writing to csv
+2020-06-25 17:00:40 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_45_20200613_22_16_44_483310__train_saved_patch_png_test.csv
+2020-06-25 17:02:07 INFO: writing to csv
+2020-06-25 17:02:08 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_40_20200613_18_35_13_375622__train_saved_patch_png_test.csv
+2020-06-25 17:02:24 INFO: writing to csv
+2020-06-25 17:02:25 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_50_20200614_08_21_42_296891__train_saved_patch_png_test.csv
+2020-06-25 17:02:28 INFO: writing to csv
+2020-06-25 17:02:28 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_hun_20200615_08_40_27_291575__train_saved_patch_png_test.csv
+2020-06-25 17:04:36 INFO: writing to csv
+2020-06-25 17:04:37 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_ten_20200615_08_40_14_844708__train_saved_patch_png_test.csv
+2020-06-25 17:05:10 INFO: writing to csv
+2020-06-25 17:05:11 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_tho_20200615_08_41_52_990910__train_saved_patch_png_test.csv
+2020-06-26 04:18:47 INFO: name: 20200605_07:48:18:537613_
+2020-06-26 04:18:47 INFO: parent_dir: logs/cifar10/nomod_cap
+2020-06-26 04:18:47 INFO: test_dir: logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test
+2020-06-26 04:18:47 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/params/params.json
+2020-06-26 04:18:47 INFO: Using dataset: cifar10
+2020-06-26 04:18:47 INFO: BUILD TEST GRAPH
+2020-06-26 04:18:47 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-26 04:18:47 INFO: Overwrite dataset info from restored data version.
+2020-06-26 04:18:47 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-26 04:18:47 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-26 04:18:47 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-26 04:18:47 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-26 04:18:47 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-26 04:18:47 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-26 04:18:47 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-26 04:18:47 INFO: input shape: (12, 32, 32, 3)
+2020-06-26 04:18:47 INFO: Scale of 0 disables regularizer.
+2020-06-26 04:18:47 INFO: relu_conv1 output shape: (12, 16, 16, 64)
+2020-06-26 04:18:47 INFO: primary_caps pose shape: (12, 16, 16, 8, 16)
+2020-06-26 04:18:47 INFO: primary_caps activation shape (12, 16, 16, 8, 1)
+2020-06-26 04:18:47 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/models.py:116: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+2020-06-26 04:18:47 INFO: lyr.conv_caps1 votes shape: (588, 72, 16, 16)
+2020-06-26 04:18:47 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/em_routing.py:347: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+2020-06-26 04:18:47 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:383: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-26 04:18:47 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/utils.py:570: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+2020-06-26 04:18:48 INFO: lyr.conv_caps1 pose_out shape: (12, 7, 7, 16, 16)
+2020-06-26 04:18:48 INFO: lyr.conv_caps1 activation_out shape: (12, 7, 7, 16, 1)
+2020-06-26 04:18:48 INFO: lyr.conv_caps2 votes shape: (300, 144, 16, 16)
+2020-06-26 04:18:48 INFO: lyr.conv_caps2 pose_out shape: (12, 5, 5, 16, 16)
+2020-06-26 04:18:48 INFO: lyr.conv_caps2 activation_out shape: (12, 5, 5, 16, 1)
+2020-06-26 04:18:48 INFO: class_caps votes original shape: (300, 16, 10, 16)
+2020-06-26 04:18:48 INFO: class_caps votes in to routing shape: (12, 400, 10, 16)
+2020-06-26 04:18:48 INFO: class_caps activation shape: (12, 10)
+2020-06-26 04:18:48 INFO: class_caps pose shape: (12, 10, 16)
+2020-06-26 04:18:48 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-26 04:18:48 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-26 04:18:49 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-26 04:18:49 INFO: Restoring parameters from logs/cifar10/nomod_cap/20200605_07:48:18:537613_/train/checkpoint/model.ckpt42-32802
+2020-06-26 04:53:27 INFO: writing to csv
+2020-06-26 04:53:27 INFO: csv saved at logs/cifar10/nomod_cap/20200605_07:48:18:537613_/test/logs_cifar10_nomod_adv_tnk_20200615_08_45_32_183880__train_saved_patch_png_test.csv

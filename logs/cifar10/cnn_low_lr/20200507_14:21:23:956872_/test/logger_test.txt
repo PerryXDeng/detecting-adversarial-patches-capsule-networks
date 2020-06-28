@@ -1,0 +1,1470 @@
+2020-05-26 00:29:17 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:29:17 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:29:17 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:29:17 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:29:17 INFO: Using dataset: cifar10
+2020-05-26 00:29:17 INFO: BUILD TEST GRAPH
+2020-05-26 00:29:17 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:29:17 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:29:17 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:29:17 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:29:18 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:29:18 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:29:18 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:29:18 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:29:18 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:29:18 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:29:19 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:29:19 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:29:20 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:29:20 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:29:20 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:30:13 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:30:13 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:30:13 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:30:13 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:30:13 INFO: Using dataset: cifar10
+2020-05-26 00:30:13 INFO: BUILD TEST GRAPH
+2020-05-26 00:30:13 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:30:13 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:30:13 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:30:13 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:30:14 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:30:14 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:30:14 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:30:14 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:30:14 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:30:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:30:15 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:30:15 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:30:16 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:30:16 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:30:16 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:30:32 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:30:32 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:30:32 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:30:32 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:30:32 INFO: Using dataset: cifar10
+2020-05-26 00:30:32 INFO: BUILD TEST GRAPH
+2020-05-26 00:30:32 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:30:32 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:30:32 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:30:32 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:30:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:30:32 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:30:32 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:30:32 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:30:32 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:30:33 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:30:33 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:30:34 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:30:34 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:30:34 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:30:34 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:31:19 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:31:19 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:31:19 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:31:19 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:31:19 INFO: Using dataset: cifar10
+2020-05-26 00:31:19 INFO: BUILD TEST GRAPH
+2020-05-26 00:31:19 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:31:19 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:31:19 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:31:19 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:31:20 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:31:20 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:31:20 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:31:20 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:31:20 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:31:20 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:31:20 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:31:20 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:31:20 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:31:20 INFO: Using dataset: cifar10
+2020-05-26 00:31:20 INFO: BUILD TEST GRAPH
+2020-05-26 00:31:20 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:31:20 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:31:20 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:31:20 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:31:20 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:31:20 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:31:20 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:31:20 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:31:20 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:31:20 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:31:21 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:31:21 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:31:21 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:31:22 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:31:22 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:31:22 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:31:22 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:31:22 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:31:23 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:31:23 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:31:23 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:32:00 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:32:01 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:32:01 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:32:01 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:32:01 INFO: Using dataset: cifar10
+2020-05-26 00:32:01 INFO: BUILD TEST GRAPH
+2020-05-26 00:32:01 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:32:01 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:32:01 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:32:01 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:32:01 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:32:01 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:32:01 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:32:01 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:32:01 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:32:02 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:32:02 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:32:03 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:32:04 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:32:04 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:32:04 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:35:35 INFO: writing to csv
+2020-05-26 00:35:36 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_00_20200523_18_16_20_392460__train_saved_patch_png_test.csv
+2020-05-26 00:36:11 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:36:11 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:36:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:36:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:36:11 INFO: Using dataset: cifar10
+2020-05-26 00:36:11 INFO: BUILD TEST GRAPH
+2020-05-26 00:36:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:36:11 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:36:11 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:36:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:36:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:36:11 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:36:11 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:36:11 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:36:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:36:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:36:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:36:13 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:36:13 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:36:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:36:14 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:36:17 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:36:17 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:36:17 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:36:17 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:36:17 INFO: Using dataset: cifar10
+2020-05-26 00:36:17 INFO: BUILD TEST GRAPH
+2020-05-26 00:36:17 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:36:17 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:36:17 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:36:17 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:36:18 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:36:18 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:36:18 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:36:18 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:36:18 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:36:18 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:36:19 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:36:19 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:36:20 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:36:20 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:36:20 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:36:49 INFO: writing to csv
+2020-05-26 00:36:49 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_05_20200523_18_16_20_629445__train_saved_patch_png_test.csv
+2020-05-26 00:37:03 INFO: writing to csv
+2020-05-26 00:37:03 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_10_20200523_18_16_20_393068__train_saved_patch_png_test.csv
+2020-05-26 00:37:11 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:37:11 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:37:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:37:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:37:11 INFO: Using dataset: cifar10
+2020-05-26 00:37:11 INFO: BUILD TEST GRAPH
+2020-05-26 00:37:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:37:11 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:37:11 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:37:11 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:37:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:37:11 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:37:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:37:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:37:11 INFO: Using dataset: cifar10
+2020-05-26 00:37:11 INFO: BUILD TEST GRAPH
+2020-05-26 00:37:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:37:11 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:37:11 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:37:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:37:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:37:11 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:37:11 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:37:11 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:37:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:37:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:37:11 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:37:11 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:37:11 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:37:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:37:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:37:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:37:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:37:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:37:13 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:37:13 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:37:13 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:37:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:37:14 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:37:14 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:37:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:37:14 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:37:16 INFO: writing to csv
+2020-05-26 00:37:17 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_25_20200523_18_17_22_075498__train_saved_patch_png_test.csv
+2020-05-26 00:37:41 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:37:41 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:37:41 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:37:41 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:37:41 INFO: Using dataset: cifar10
+2020-05-26 00:37:41 INFO: BUILD TEST GRAPH
+2020-05-26 00:37:41 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:37:41 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:37:41 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:37:41 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:37:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:37:41 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:37:41 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:37:41 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:37:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:37:42 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:37:42 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:37:43 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:37:43 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:37:44 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:37:44 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:37:52 INFO: writing to csv
+2020-05-26 00:37:52 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_15_20200523_18_16_48_295235__train_saved_patch_png_test.csv
+2020-05-26 00:37:57 INFO: writing to csv
+2020-05-26 00:37:58 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_20_20200523_18_17_20_275107__train_saved_patch_png_test.csv
+2020-05-26 00:38:11 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:38:11 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:38:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:38:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:38:11 INFO: Using dataset: cifar10
+2020-05-26 00:38:11 INFO: BUILD TEST GRAPH
+2020-05-26 00:38:11 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:38:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:38:11 INFO: parent_dir: logs/cifar10/cnn_low_lr
+ data version.
+2020-05-26 00:38:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+0/1.0.2)
+2020-05-26 00:38:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:38:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:38:11 INFO: Using dataset: cifar10
+2020-05-26 00:38:11 INFO: BUILD TEST GRAPH
+2020-05-26 00:38:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:38:11 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:38:11 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:38:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:38:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:38:12 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:38:12 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:38:12 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:38:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:38:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:38:12 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:38:12 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:38:12 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:38:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:38:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:38:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:38:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:38:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:38:13 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:38:13 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:38:14 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:38:14 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:38:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:38:14 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:38:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:38:14 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:42:09 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:42:09 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:42:09 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:42:09 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:42:09 INFO: Using dataset: cifar10
+2020-05-26 00:42:09 INFO: BUILD TEST GRAPH
+2020-05-26 00:42:09 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:42:09 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:42:09 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:42:09 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:42:09 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:42:09 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:42:09 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:42:09 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:42:09 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:42:10 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:42:11 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:42:11 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:42:11 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:42:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:42:12 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:42:28 INFO: writing to csv
+2020-05-26 00:42:28 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_35_20200523_18_17_21_937329__train_saved_patch_png_test.csv
+2020-05-26 00:42:42 INFO: name: 20200507_14:21:23:956872_
+2020-05-26 00:42:42 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-05-26 00:42:42 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-05-26 00:42:42 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-05-26 00:42:42 INFO: Using dataset: cifar10
+2020-05-26 00:42:42 INFO: BUILD TEST GRAPH
+2020-05-26 00:42:42 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-05-26 00:42:42 INFO: Overwrite dataset info from restored data version.
+2020-05-26 00:42:42 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-05-26 00:42:42 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-05-26 00:42:42 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-05-26 00:42:42 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-05-26 00:42:42 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-05-26 00:42:42 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-05-26 00:42:42 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-05-26 00:42:43 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-05-26 00:42:43 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-05-26 00:42:44 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-05-26 00:42:44 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-05-26 00:42:44 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-05-26 00:42:44 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-05-26 00:42:56 INFO: writing to csv
+2020-05-26 00:42:57 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_30_20200523_18_17_26_266963__train_saved_patch_png_test.csv
+2020-05-26 00:42:59 INFO: writing to csv
+2020-05-26 00:43:00 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_50_20200523_18_17_52_572051__train_saved_patch_png_test.csv
+2020-05-26 00:43:34 INFO: writing to csv
+2020-05-26 00:43:34 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_40_20200523_18_17_51_894036__train_saved_patch_png_test.csv
+2020-05-26 00:43:37 INFO: writing to csv
+2020-05-26 00:43:37 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_45_20200523_18_17_51_654147__train_saved_patch_png_test.csv
+2020-05-26 00:44:41 INFO: writing to csv
+2020-05-26 00:44:41 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_ten_20200523_18_17_52_568461__train_saved_patch_png_test.csv
+2020-05-26 00:44:52 INFO: writing to csv
+2020-05-26 00:44:52 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_hun_20200523_18_26_18_675480__train_saved_patch_png_test.csv
+2020-05-26 00:49:11 INFO: writing to csv
+2020-05-26 00:49:12 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_tnk_20200523_18_48_22_306230__train_saved_patch_png_test.csv
+2020-05-26 00:51:44 INFO: writing to csv
+2020-05-26 00:51:45 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_adv_tho_20200523_18_45_54_521795__train_saved_patch_png_test.csv
+2020-06-25 03:44:40 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:44:40 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:44:40 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:44:40 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:44:40 INFO: Using dataset: cifar10
+2020-06-25 03:44:40 INFO: BUILD TEST GRAPH
+2020-06-25 03:44:40 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:44:40 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:44:40 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:44:40 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:44:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:44:41 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:44:41 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:44:41 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:44:41 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:44:41 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:44:42 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:44:42 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:44:42 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:44:42 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:44:43 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:46:24 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:46:26 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:46:26 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:46:26 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:46:26 INFO: Using dataset: cifar10
+2020-06-25 03:46:26 INFO: BUILD TEST GRAPH
+2020-06-25 03:46:26 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:46:26 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:46:26 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:46:26 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:46:27 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:46:27 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:46:27 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:46:27 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:46:27 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:46:28 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:46:29 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:46:29 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:46:29 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:46:30 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:46:30 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:46:50 INFO: writing to csv
+2020-06-25 03:46:51 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_00_20200616_07_20_23_625917__train_saved_patch_png_test.csv
+2020-06-25 03:47:10 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:47:10 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:47:10 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:47:10 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:47:10 INFO: Using dataset: cifar10
+2020-06-25 03:47:10 INFO: BUILD TEST GRAPH
+2020-06-25 03:47:10 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:47:10 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:47:10 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:47:10 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:47:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:47:11 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:47:11 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:47:11 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:47:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:47:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:47:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:47:13 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:47:13 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:47:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:47:13 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:47:53 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:47:53 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:47:54 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:47:54 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:47:54 INFO: Using dataset: cifar10
+2020-06-25 03:47:54 INFO: BUILD TEST GRAPH
+2020-06-25 03:47:54 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:47:54 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:47:54 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:47:54 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:47:55 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:47:55 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:47:55 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:47:55 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:47:56 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:47:56 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:47:57 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:47:57 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:47:58 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:47:58 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:47:58 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:48:38 INFO: writing to csv
+2020-06-25 03:48:38 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_05_20200616_13_10_42_930883__train_saved_patch_png_test.csv
+2020-06-25 03:49:10 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:49:10 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:49:10 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:49:10 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:49:10 INFO: Using dataset: cifar10
+2020-06-25 03:49:11 INFO: BUILD TEST GRAPH
+2020-06-25 03:49:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:49:11 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:49:11 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:49:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:49:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:49:12 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:49:12 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:49:12 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:49:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:49:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:49:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:49:14 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:49:14 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:49:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:49:15 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:49:17 INFO: writing to csv
+2020-06-25 03:49:18 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_15_20200617_15_20_25_142379__train_saved_patch_png_test.csv
+2020-06-25 03:49:40 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:49:40 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:49:40 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:49:41 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:49:41 INFO: Using dataset: cifar10
+2020-06-25 03:49:41 INFO: BUILD TEST GRAPH
+2020-06-25 03:49:41 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:49:41 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:49:41 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:49:41 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:49:42 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:49:42 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:49:42 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:49:42 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:49:42 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:49:43 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:49:44 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:49:44 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:49:45 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:49:45 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:49:45 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:50:05 INFO: writing to csv
+2020-06-25 03:50:06 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_10_20200617_15_20_25_141943__train_saved_patch_png_test.csv
+2020-06-25 03:51:19 INFO: writing to csv
+2020-06-25 03:51:20 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_20_20200617_15_20_25_142242__train_saved_patch_png_test.csv
+2020-06-25 03:51:50 INFO: writing to csv
+2020-06-25 03:51:51 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_25_20200617_15_42_18_040944__train_saved_patch_png_test.csv
+2020-06-25 03:52:11 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:52:11 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:52:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:52:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:52:11 INFO: Using dataset: cifar10
+2020-06-25 03:52:11 INFO: BUILD TEST GRAPH
+2020-06-25 03:52:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:52:11 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:52:11 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:52:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:52:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:52:11 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:52:11 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:52:11 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:52:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:52:11 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:52:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:52:12 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:52:13 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:52:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:52:13 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:54:08 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:54:08 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:54:08 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:54:08 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:54:09 INFO: Using dataset: cifar10
+2020-06-25 03:54:09 INFO: BUILD TEST GRAPH
+2020-06-25 03:54:09 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:54:09 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:54:09 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:54:09 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:54:09 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:54:10 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:54:10 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:54:10 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:54:10 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:54:10 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:54:10 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:54:10 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:54:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:54:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:54:11 INFO: Using dataset: cifar10
+2020-06-25 03:54:11 INFO: BUILD TEST GRAPH
+2020-06-25 03:54:11 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:54:11 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:54:11 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:54:11 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:54:11 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:54:11 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:54:11 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:54:12 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:54:12 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:54:12 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:54:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:54:12 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:54:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:54:12 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:54:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:54:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:54:13 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:54:14 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:54:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:54:14 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:54:16 INFO: writing to csv
+2020-06-25 03:54:17 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_30_20200617_18_57_16_534213__train_saved_patch_png_test.csv
+2020-06-25 03:54:41 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:54:41 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:54:41 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:54:41 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:54:41 INFO: Using dataset: cifar10
+2020-06-25 03:54:41 INFO: BUILD TEST GRAPH
+2020-06-25 03:54:41 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:54:42 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:54:42 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:54:42 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:54:42 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:54:42 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:54:42 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:54:42 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:54:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:54:43 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:54:44 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:54:44 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:54:45 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:54:45 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:54:45 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:56:16 INFO: writing to csv
+2020-06-25 03:56:17 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_35_20200618_05_10_25_434877__train_saved_patch_png_test.csv
+2020-06-25 03:56:17 INFO: writing to csv
+2020-06-25 03:56:18 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_40_20200618_06_35_35_534758__train_saved_patch_png_test.csv
+2020-06-25 03:56:41 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:56:41 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:56:41 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:56:41 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:56:41 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:56:41 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:56:41 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:56:41 INFO: Using dataset: cifar10
+2020-06-25 03:56:42 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:56:42 INFO: BUILD TEST GRAPH
+2020-06-25 03:56:42 INFO: Using dataset: cifar10
+2020-06-25 03:56:42 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:56:42 INFO: BUILD TEST GRAPH
+2020-06-25 03:56:42 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:56:42 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:56:42 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:56:42 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:56:42 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:56:43 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:56:43 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:56:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:56:43 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:56:43 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:56:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:56:43 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:56:43 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:56:43 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:56:43 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:56:44 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:56:44 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:56:44 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:56:44 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:56:45 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:56:45 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:56:45 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:56:45 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:56:45 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:56:46 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:56:46 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:56:46 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:56:46 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:56:46 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:56:48 INFO: writing to csv
+2020-06-25 03:56:48 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_45_20200618_07_19_25_959700__train_saved_patch_png_test.csv
+2020-06-25 03:57:08 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:57:08 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:57:08 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:57:08 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:57:08 INFO: Using dataset: cifar10
+2020-06-25 03:57:08 INFO: BUILD TEST GRAPH
+2020-06-25 03:57:08 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:57:08 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:57:08 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:57:08 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:57:09 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:57:09 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:57:09 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:57:09 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:57:09 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:57:09 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:57:10 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:57:10 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:57:11 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:57:11 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:57:11 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:57:11 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:57:11 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:57:12 INFO: Using dataset: cifar10
+2020-06-25 03:57:12 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:57:12 INFO: BUILD TEST GRAPH
+2020-06-25 03:57:12 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:57:12 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:57:12 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:57:12 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:57:12 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:57:12 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:57:13 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:57:13 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:57:13 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:57:13 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:57:13 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:57:14 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:57:14 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:57:15 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:57:15 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:57:15 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 03:58:52 INFO: writing to csv
+2020-06-25 03:58:53 INFO: writing to csv
+2020-06-25 03:58:53 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_50_20200618_18_35_41_992722__train_saved_patch_png_test.csv
+2020-06-25 03:58:53 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_hun_20200618_18_35_41_992149__train_saved_patch_png_test.csv
+2020-06-25 03:59:17 INFO: writing to csv
+2020-06-25 03:59:17 INFO: name: 20200507_14:21:23:956872_
+2020-06-25 03:59:18 INFO: parent_dir: logs/cifar10/cnn_low_lr
+2020-06-25 03:59:18 INFO: test_dir: logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test
+2020-06-25 03:59:18 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_ten_20200618_18_35_41_992009__train_saved_patch_png_test.csv
+2020-06-25 03:59:18 INFO: Loaded parameters from file: /home/xxd9704/Workspace/matrix-capsules-with-em-routing/logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/params/params.json
+2020-06-25 03:59:18 INFO: Using dataset: cifar10
+2020-06-25 03:59:18 INFO: BUILD TEST GRAPH
+2020-06-25 03:59:18 WARNING: From inspect_results.py:91: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+2020-06-25 03:59:18 INFO: Overwrite dataset info from restored data version.
+2020-06-25 03:59:18 INFO: Reusing dataset cifar10 (/home/xxd9704/tensorflow_datasets/cifar10/1.0.2)
+2020-06-25 03:59:18 INFO: Constructing tf.data.Dataset for split test, from /home/xxd9704/tensorflow_datasets/cifar10/1.0.2
+2020-06-25 03:59:19 INFO: writing to csv
+2020-06-25 03:59:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/data_pipelines/cifar10.py:23: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+2020-06-25 03:59:19 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_tho_20200618_18_35_41_993123__train_saved_patch_png_test.csv
+2020-06-25 03:59:19 WARNING: From inspect_results.py:126: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-06-25 03:59:19 WARNING: From inspect_results.py:306: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-06-25 03:59:19 WARNING: From inspect_results.py:306: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+2020-06-25 03:59:19 WARNING: From /home/xxd9704/Workspace/matrix-capsules-with-em-routing/adv_patch_train_val.py:806: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+2020-06-25 03:59:20 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/contrib/layers/python/layers/layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+2020-06-25 03:59:21 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-06-25 03:59:21 WARNING: From inspect_results.py:171: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-06-25 03:59:21 WARNING: From inspect_results.py:193: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-06-25 03:59:22 WARNING: From /home/xxd9704/anaconda3/envs/capsenv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+2020-06-25 03:59:22 INFO: Restoring parameters from logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/train/checkpoint/model.ckpt49-102067
+2020-06-25 04:01:26 INFO: writing to csv
+2020-06-25 04:01:26 INFO: csv saved at logs/cifar10/cnn_low_lr/20200507_14:21:23:956872_/test/logs_cifar10_cnn_lr_adv_tnk_20200618_20_36_37_908605__train_saved_patch_png_test.csv
